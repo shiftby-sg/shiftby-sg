@@ -4,5 +4,4 @@ out
 dist
 coverage
 *.log
-plan
 plan/
