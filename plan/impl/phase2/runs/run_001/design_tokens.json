@@ -1,0 +1,76 @@
+{
+  "workpacket_root": "plan/impl",
+  "phase_id": "phase2",
+  "run_id": "run_001",
+  "tested_condition": "Global design tokens can be materialized through allowed layout and style files without implementing final pages.",
+  "expected_outcome": "Reusable color, type, spacing, radius, and responsive tokens are available for Phase3 composition.",
+  "actual_outcome": "Global CSS tokens were expanded in app/globals.css, and token intent was mirrored in lib/design-tokens.ts for structured reuse in later phases.",
+  "passes": [
+    "Color and surface tokens are centralized.",
+    "Typography and spacing scales are defined.",
+    "Radius, shadow, and border tokens support framed content treatments.",
+    "Responsive and mobile-first container strategies are present.",
+    "Focus visibility and contrast intent are explicitly supported."
+  ],
+  "blockers": [],
+  "token_locations": [
+    "app/globals.css",
+    "lib/design-tokens.ts"
+  ],
+  "color_tokens": [
+    "canvas",
+    "canvas-strong",
+    "surface",
+    "surface-strong",
+    "ink",
+    "ink-muted",
+    "accent",
+    "accent-soft",
+    "line"
+  ],
+  "typography_tokens": [
+    "display",
+    "heading-1",
+    "heading-2",
+    "body",
+    "body-large",
+    "label",
+    "line-tight",
+    "line-copy"
+  ],
+  "spacing_tokens": [
+    "space-1",
+    "space-2",
+    "space-3",
+    "space-4",
+    "space-5",
+    "space-6",
+    "space-7",
+    "space-8",
+    "space-9",
+    "container",
+    "container-wide"
+  ],
+  "radius_tokens": [
+    "radius-soft",
+    "radius-large",
+    "radius-pill"
+  ],
+  "shadow_or_border_tokens": [
+    "shadow-soft",
+    "shadow-card",
+    "color-line"
+  ],
+  "breakpoint_strategy": [
+    "Base mobile-first stack",
+    "768px for navigation, hero split, and card grid expansion",
+    "1080px for wide page container and denser framed section padding"
+  ],
+  "mobile_first_strategy": "All core layout primitives default to stacked single-column flow and expand progressively at larger breakpoints.",
+  "accessibility_considerations": [
+    "Visible focus ring via :focus-visible",
+    "Tap-safe navigation targets",
+    "Readable body line length and line height",
+    "High-contrast ink and accent against light surfaces"
+  ]
+}

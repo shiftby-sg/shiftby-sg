@@ -1,0 +1,13 @@
+{
+  "phase_id": "phase0",
+  "phase_name": "Repository Assessment",
+  "status": "completed",
+  "execution_ready": false,
+  "current_run_folder": null,
+  "last_run_folder": "/home/manandakrishna/myprojects/shiftby-sg/plan/impl/phase0/runs/run_001",
+  "blocked_reason": null,
+  "depends_on": [],
+  "allowed_writes_summary": "Writes limited to plan/impl/phase0/** for future assessment evidence and status artifacts.",
+  "forbidden_writes_summary": "No writes to plan/impl/design/**, application source, package files, deployment files, generated assets, or content outside plan/impl/**.",
+  "evidence_required": true
+}

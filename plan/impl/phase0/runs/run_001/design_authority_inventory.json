@@ -1,0 +1,51 @@
+{
+  "workpacket_root": "plan/impl",
+  "phase_id": "phase0",
+  "run_id": "run_001",
+  "tested_condition": "Design authority inventory under plan/impl/design can be enumerated and compared against the approved narrative sequence.",
+  "expected_outcome": "Complete design authority inventory for all approved pages.",
+  "actual_outcome": "The design authority root exists and contains seven PDF artifacts. Home, Capabilities, Where ShiftBy Helps, Perspective, Explorations, Services, and About are represented. Contact is intentionally absent from the approved design source and does not participate in the Phase0 inventory gate.",
+  "passes": [
+    "Design authority root exists.",
+    "Design artifacts were enumerated without modification.",
+    "Perspective is represented by thinking.pdf."
+  ],
+  "blockers": [],
+  "design_root": "plan/impl/design",
+  "design_root_exists": true,
+  "discovered_design_files": [
+    "plan/impl/design/about.pdf",
+    "plan/impl/design/capabilities.pdf",
+    "plan/impl/design/explorations.pdf",
+    "plan/impl/design/index.pdf",
+    "plan/impl/design/services.pdf",
+    "plan/impl/design/thinking.pdf",
+    "plan/impl/design/where-shiftby-helps.pdf"
+  ],
+  "discovered_page_designs": [
+    "Home",
+    "Capabilities",
+    "Where ShiftBy Helps",
+    "Perspective",
+    "Explorations",
+    "Services",
+    "About"
+  ],
+  "expected_page_designs": [
+    "Home",
+    "Capabilities",
+    "Where ShiftBy Helps",
+    "Perspective",
+    "Explorations",
+    "Services",
+    "About"
+  ],
+  "missing_expected_page_designs": [],
+  "extra_design_artifacts": [
+    "thinking.pdf"
+  ],
+  "contact_design_status": "intentionally_absent_from_design_source",
+  "contact_design_required_for_inventory": false,
+  "contact_design_reconciliation": "plan/impl/phase0/runs/run_001/contact_design_reconciliation.json",
+  "design_inventory_complete": true
+}

@@ -1,0 +1,52 @@
+{
+  "phase_id": "phase3",
+  "phase_name": "Page Materialization",
+  "purpose": "Implement approved pages.",
+  "expected_outcome": "Page parity with approved designs.",
+  "mode": "bounded execution",
+  "depends_on": [
+    "phase2"
+  ],
+  "allowed_writes": [
+    "plan/impl/phase3/**"
+  ],
+  "forbidden_writes": [
+    "plan/impl/design/**",
+    "doctrine rewriting",
+    "narrative resequencing",
+    "generated website assets",
+    "content outside plan/impl/** during control-plane scaffolding"
+  ],
+  "read_only_authority": [
+    "plan/impl/design/**",
+    "plan/impl/authority.json",
+    "plan/impl/implementation_intent.json"
+  ],
+  "validation_required": true,
+  "evidence_required": true,
+  "completion_criteria": [
+    "All approved pages implemented.",
+    "Narrative sequence preserved.",
+    "Doctrine language preserved.",
+    "Explorations positioning preserved."
+  ],
+  "failure_classifications": [
+    "doctrine_deviation",
+    "narrative_deviation",
+    "design_fidelity_failure",
+    "implementation_boundary_failure"
+  ],
+  "next_phase_on_success": "phase4",
+  "no_auto_progression": true,
+  "future_run_evidence_requirements": [
+    "workpacket_root",
+    "phase_id",
+    "run_id",
+    "tested_condition",
+    "expected_outcome",
+    "actual_outcome",
+    "passes",
+    "blockers",
+    "created_at or generated_at where available"
+  ]
+}

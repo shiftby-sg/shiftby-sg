@@ -1,0 +1,15 @@
+{
+  "all_required_evidence_files_exist": true,
+  "all_required_evidence_files_parse_as_json": true,
+  "allowed_writes_only": true,
+  "design_root_unchanged": true,
+  "phase0_evidence_unchanged": true,
+  "phase1_evidence_unchanged": true,
+  "page_route_files_unchanged": true,
+  "no_content_rewrite": true,
+  "no_doctrine_change": true,
+  "no_final_page_materialization": true,
+  "no_release_readiness_claim": true,
+  "design_system_ready_for_phase3": true,
+  "passes": true
+}

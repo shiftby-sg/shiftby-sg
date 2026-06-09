@@ -1,0 +1,51 @@
+{
+  "phase_id": "phase2",
+  "phase_name": "Design System Materialization",
+  "purpose": "Implement approved design language.",
+  "expected_outcome": "Reusable design components.",
+  "mode": "bounded execution",
+  "depends_on": [
+    "phase1"
+  ],
+  "allowed_writes": [
+    "plan/impl/phase2/**"
+  ],
+  "forbidden_writes": [
+    "plan/impl/design/**",
+    "design reinterpretation",
+    "deployment files",
+    "generated website assets",
+    "content outside plan/impl/** during control-plane scaffolding"
+  ],
+  "read_only_authority": [
+    "plan/impl/design/**",
+    "plan/impl/authority.json",
+    "plan/impl/implementation_intent.json"
+  ],
+  "validation_required": true,
+  "evidence_required": true,
+  "completion_criteria": [
+    "Reusable design components defined.",
+    "Visual identity preserved.",
+    "Spacing, rhythm, and typography intent preserved.",
+    "Mobile-first behavior confirmed."
+  ],
+  "failure_classifications": [
+    "design_fidelity_failure",
+    "mobile_responsiveness_failure",
+    "implementation_boundary_failure"
+  ],
+  "next_phase_on_success": "phase3",
+  "no_auto_progression": true,
+  "future_run_evidence_requirements": [
+    "workpacket_root",
+    "phase_id",
+    "run_id",
+    "tested_condition",
+    "expected_outcome",
+    "actual_outcome",
+    "passes",
+    "blockers",
+    "created_at or generated_at where available"
+  ]
+}

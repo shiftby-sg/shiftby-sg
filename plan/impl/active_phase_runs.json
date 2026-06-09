@@ -1,0 +1,21 @@
+{
+  "active_runs": [],
+  "completed_runs": [
+    {
+      "phase_id": "phase0",
+      "run_id": "run_001",
+      "status": "completed",
+      "run_folder": "/home/manandakrishna/myprojects/shiftby-sg/plan/impl/phase0/runs/run_001",
+      "blocked_reason": null
+    },
+    {
+      "phase_id": "phase1",
+      "run_id": "run_001",
+      "status": "completed",
+      "run_folder": "/home/manandakrishna/myprojects/shiftby-sg/plan/impl/phase1/runs/run_001",
+      "blocked_reason": null
+    }
+  ],
+  "failed_runs": [],
+  "next_phase": "phase2"
+}

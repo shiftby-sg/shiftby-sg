@@ -1,0 +1,1298 @@
+<!doctype html>
+<html lang="en">
+<head><script data-od-sandbox-shim>(function(){
+  function makeStore(){
+    var data = {};
+    var api = {
+      getItem: function(k){ return Object.prototype.hasOwnProperty.call(data, k) ? data[k] : null; },
+      setItem: function(k, v){ data[k] = String(v); },
+      removeItem: function(k){ delete data[k]; },
+      clear: function(){ data = {}; },
+      key: function(i){ return Object.keys(data)[i] || null; }
+    };
+    Object.defineProperty(api, 'length', { get: function(){ return Object.keys(data).length; } });
+    return api;
+  }
+  function tryShim(name){
+    var works = false;
+    try { works = !!window[name] && typeof window[name].getItem === 'function'; void window[name].length; }
+    catch (_) { works = false; }
+    if (works) return;
+    try { Object.defineProperty(window, name, { configurable: true, value: makeStore() }); }
+    catch (_) { try { window[name] = makeStore(); } catch (__) {} }
+  }
+  tryShim('localStorage');
+  tryShim('sessionStorage');
+  document.addEventListener('click', (e) => {
+    if (!e.target || !(e.target instanceof Element)) return;
+    var link = e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    if (href === null) return;
+    var isAnchor = href.startsWith('#') || href === '';
+    if (isAnchor) {
+      e.preventDefault();
+      if (href === '' || href === '#') {
+        window.scrollTo({ top: 0 });
+        history.replaceState(null, '', ' ');
+      } else {
+        var targetId = href.slice(1);
+        var target = targetId ? document.getElementById(targetId) : null;
+        if (target) {
+          target.scrollIntoView();
+          location.hash === href && history.replaceState(null, '', ' ');
+          location.hash = href;
+        }
+      }
+    } else if (link.getAttribute('target') === '_blank') {
+      e.preventDefault();
+      let safe = false;
+      try {
+        var url = new URL(href, location.href);
+        safe =
+          url.protocol === 'http:' ||
+          url.protocol === 'https:' ||
+          url.protocol === 'mailto:';
+      } catch (_) {}
+      safe && window.open(href, '_blank', 'noopener,noreferrer');
+    }
+  });
+})();</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explorations | ShiftBy</title>
+  <meta name="description" content="ShiftBy explorations into how organizations preserve understanding of execution, meaning, and discovery as they change.">
+  <style>
+    :root {
+      --bg: oklch(98% 0.004 250);
+      --surface: oklch(100% 0 0);
+      --fg: oklch(17% 0.012 250);
+      --muted: oklch(47% 0.014 250);
+      --border: oklch(88% 0.008 250);
+      --accent: oklch(48% 0.15 280);
+      --accent-soft: oklch(94% 0.028 280);
+      --slate: oklch(62% 0.018 250);
+      --success: #17A34A;
+      --warn: #EAB308;
+      --danger: #DC2626;
+      --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif;
+      --font-mono: ui-monospace, 'JetBrains Mono', Menlo, Consolas, monospace;
+      --max: 1200px;
+      --gutter: clamp(18px, 4vw, 32px);
+      --section: clamp(64px, 8.5vw, 118px);
+      --section-tight: clamp(46px, 6.5vw, 80px);
+      --measure: 760px;
+      --measure-wide: 980px;
+      --type-hero: clamp(46px, 6vw, 76px);
+      --type-large: clamp(36px, 4.6vw, 58px);
+      --type-section: clamp(30px, 3.7vw, 48px);
+      --type-title: clamp(23px, 2.4vw, 34px);
+      --type-lead: clamp(19px, 1.8vw, 22px);
+      --type-body: clamp(17px, 1.35vw, 19px);
+      --type-small: clamp(15px, 1.15vw, 17px);
+      --split-grid: minmax(0, 0.4fr) minmax(0, 0.6fr);
+      --split-gap: clamp(44px, 7vw, 104px);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.no-scroll { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+    .skip {
+      position: absolute;
+      left: 16px;
+      top: -80px;
+      z-index: 20;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+    .skip:focus { top: 16px; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: color-mix(in oklch, var(--bg) 94%, transparent);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .nav {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 14px var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2.4vw, 28px);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .nav-links a[aria-current="page"] { color: var(--fg); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      background: transparent;
+      color: var(--fg);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+      cursor: pointer;
+      transition: border-color 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+    .button:hover { transform: translateY(-1px); }
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+    .menu-button {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--fg);
+    }
+    .menu-button span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+    }
+
+    main { overflow: hidden; }
+    .section {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: var(--section) var(--gutter);
+    }
+    .quiet-band {
+      background: color-mix(in oklch, var(--surface), var(--bg) 45%);
+      border-block: 1px solid var(--border);
+    }
+    .kicker {
+      display: inline-flex;
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      color: var(--fg);
+      font-family: var(--font-display);
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+    h1 {
+      max-width: 970px;
+      font-size: var(--type-hero);
+      line-height: 1.02;
+      font-weight: 690;
+    }
+    h2 {
+      max-width: 900px;
+      font-size: var(--type-section);
+      line-height: 1.08;
+      font-weight: 670;
+    }
+    h3 {
+      font-size: var(--type-title);
+      line-height: 1.13;
+      font-weight: 650;
+    }
+    h4 {
+      font-size: 13px;
+      line-height: 1.2;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: var(--type-body);
+      line-height: 1.54;
+      text-wrap: pretty;
+    }
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: var(--type-lead);
+      line-height: 1.42;
+    }
+    .text-link {
+      display: inline-flex;
+      color: var(--accent);
+      font-weight: 650;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 5px;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: var(--split-grid);
+      gap: var(--split-gap);
+      align-items: start;
+    }
+    .section-copy {
+      display: grid;
+      gap: 16px;
+      max-width: var(--measure);
+    }
+    .section-copy.offset {
+      margin-top: clamp(28px, 4vw, 44px);
+    }
+
+    .hero {
+      min-height: clamp(420px, 52vh, 610px);
+      display: grid;
+      align-content: center;
+      gap: clamp(30px, 4.5vw, 58px);
+      padding-top: clamp(48px, 6vw, 82px);
+      padding-bottom: clamp(42px, 6vw, 74px);
+    }
+    .hero-copy {
+      display: grid;
+      grid-template-columns: minmax(0, 0.64fr) minmax(340px, 0.52fr);
+      gap: clamp(28px, 5vw, 72px);
+      align-items: start;
+      max-width: 1080px;
+    }
+    .hero-lines {
+      display: grid;
+      gap: 10px;
+      max-width: 650px;
+      border-top: 1px solid var(--border);
+      padding-top: clamp(18px, 2.6vw, 30px);
+    }
+    .hero-tension {
+      color: var(--fg);
+      font-family: var(--font-body);
+      font-size: clamp(18px, 1.45vw, 21px);
+      line-height: 1.5;
+      letter-spacing: 0;
+      font-weight: 500;
+    }
+    .hero-note {
+      display: grid;
+      gap: 12px;
+      max-width: 540px;
+      border-top: 1px solid var(--border);
+      padding-top: clamp(20px, 2.8vw, 34px);
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-size: clamp(25px, 2.45vw, 37px);
+      line-height: 1.16;
+      letter-spacing: -0.01em;
+      font-weight: 690;
+    }
+    .hero-note span {
+      display: block;
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: var(--type-small);
+      line-height: 1.48;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+
+    .existence-lines {
+      display: grid;
+      gap: clamp(9px, 1.1vw, 14px);
+      border-top: 1px solid var(--border);
+      padding-top: clamp(18px, 2.4vw, 30px);
+      max-width: 620px;
+    }
+    .existence-lines p {
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: clamp(18px, 1.5vw, 22px);
+      line-height: 1.34;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+    .existence-lines .plain-emphasis {
+      color: var(--fg);
+    }
+    .existence-lines .existence-conclusion {
+      margin-top: clamp(10px, 1.4vw, 18px);
+      padding-top: clamp(10px, 1.1vw, 14px);
+      border-top: 1px solid var(--border);
+      color: var(--fg);
+      font-size: clamp(19px, 1.65vw, 24px);
+      line-height: 1.28;
+      font-weight: 620;
+    }
+    .existence-list li + li::before {
+      content: "·";
+      margin-inline: 0.6em;
+      color: var(--border-strong);
+    }
+
+    .relevance-bridge {
+      padding-top: var(--section-tight);
+      padding-bottom: var(--section-tight);
+    }
+    .bridge-copy {
+      display: grid;
+      gap: clamp(16px, 2vw, 24px);
+    }
+    .bridge-copy .lead {
+      max-width: 650px;
+      color: var(--fg);
+    }
+    .bridge-copy p:not(.lead) {
+      max-width: 670px;
+    }
+    .bridge-signals {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(12px, 1.5vw, 18px);
+      padding-top: clamp(18px, 2vw, 24px);
+      border-top: 1px solid var(--border);
+    }
+    .bridge-signals li {
+      display: grid;
+      gap: 8px;
+    }
+    .bridge-signals span {
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .bridge-signals strong {
+      color: var(--fg);
+      font-size: clamp(15px, 1.15vw, 17px);
+      line-height: 1.32;
+      font-weight: 610;
+      text-wrap: balance;
+    }
+
+    .investigation-overview {
+      display: grid;
+      gap: clamp(8px, 0.85vw, 12px);
+      padding-top: clamp(24px, 2.8vw, 36px);
+      padding-bottom: clamp(24px, 2.8vw, 36px);
+    }
+    .overview-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.46fr) minmax(320px, 0.54fr);
+      gap: clamp(14px, 2.1vw, 28px);
+      align-items: end;
+    }
+    .investigation-overview h2 {
+      max-width: 620px;
+      font-size: clamp(26px, 2.45vw, 34px);
+      line-height: 1.1;
+    }
+    .investigation-overview .lead {
+      color: color-mix(in oklch, var(--muted), transparent 14%);
+      font-size: clamp(13px, 0.92vw, 14px);
+      line-height: 1.42;
+      max-width: 500px;
+    }
+    .distinction {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(12px, 1.4vw, 18px);
+      counter-reset: dimensions;
+    }
+    .distinction a {
+      counter-increment: dimensions;
+      position: relative;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto auto;
+      gap: clamp(9px, 0.9vw, 12px);
+      min-height: clamp(270px, 27vh, 330px);
+      padding: clamp(18px, 1.8vw, 24px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      transition: border-color 180ms ease, color 180ms ease, opacity 180ms ease, transform 180ms ease;
+    }
+    .distinction a:before {
+      content: "0" counter(dimensions);
+      position: absolute;
+      top: clamp(16px, 1.5vw, 20px);
+      right: clamp(16px, 1.5vw, 20px);
+      color: color-mix(in oklch, var(--muted), transparent 70%);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      transition: color 180ms ease, transform 180ms ease;
+    }
+    .distinction a:hover {
+      background: var(--surface);
+      color: var(--fg);
+      border-color: color-mix(in oklch, var(--fg), var(--border) 68%);
+      transform: translateY(-2px);
+    }
+    .distinction a:hover:before,
+    .distinction a:focus-visible:before {
+      color: color-mix(in oklch, var(--accent), var(--fg) 16%);
+    }
+    .distinction a:hover .concept,
+    .distinction a:focus-visible .concept {
+      color: color-mix(in oklch, var(--fg), var(--accent) 10%);
+    }
+    .distinction a:hover .distinction-copy,
+    .distinction a:focus-visible .distinction-copy {
+      color: color-mix(in oklch, var(--fg), var(--accent) 12%);
+    }
+    .distinction a:hover .distinction-explore,
+    .distinction a:focus-visible .distinction-explore {
+      color: var(--accent);
+      transform: translateX(6px);
+      text-decoration-color: currentColor;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .distinction:has(a:hover) a:not(:hover) {
+        opacity: 0.58;
+      }
+    }
+    .distinction small {
+      color: color-mix(in oklch, var(--fg), var(--muted) 34%);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .distinction .concept {
+      display: block;
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-size: clamp(23px, 2vw, 30px);
+      line-height: 1;
+      letter-spacing: -0.015em;
+      font-weight: 660;
+    }
+    .dimension-line {
+      display: block;
+      margin: 2px 0 3px;
+      color: var(--muted);
+      font-size: clamp(13px, 0.95vw, 15px);
+      line-height: 1.28;
+      letter-spacing: 0;
+      font-weight: 500;
+    }
+    .distinction .distinction-copy {
+      display: block;
+      max-width: 100%;
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-size: clamp(16px, 1.08vw, 18px);
+      line-height: 1.32;
+      letter-spacing: -0.01em;
+      font-weight: 610;
+      padding-bottom: 0;
+      text-wrap: balance;
+    }
+    .distinction-question {
+      display: grid;
+      gap: 5px;
+      align-self: start;
+      padding-top: clamp(10px, 1vw, 14px);
+      border-top: 1px solid var(--border);
+    }
+    .distinction-question span {
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .distinction-question em {
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: var(--type-small);
+      font-style: normal;
+      line-height: 1.45;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+    .distinction-detail {
+      display: grid;
+      gap: clamp(10px, 1vw, 14px);
+    }
+    .distinction-explore {
+      width: max-content;
+      color: color-mix(in oklch, var(--fg), var(--accent) 30%);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-decoration-color: color-mix(in oklch, var(--accent), transparent 78%);
+      text-underline-offset: 5px;
+      transition: color 180ms ease, transform 180ms ease, text-decoration-color 180ms ease;
+    }
+    .investigation-synthesis {
+      display: grid;
+      grid-template-columns: minmax(210px, 0.32fr) minmax(0, 0.68fr);
+      gap: var(--split-gap);
+      align-items: start;
+      margin-top: clamp(20px, 2.4vw, 32px);
+      padding-top: clamp(22px, 2.4vw, 32px);
+      border-top: 1px solid var(--border);
+    }
+    .investigation-synthesis h3 {
+      max-width: 430px;
+      color: var(--fg);
+      font-size: clamp(21px, 1.8vw, 28px);
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+    }
+    .synthesis-copy {
+      display: grid;
+      gap: 14px;
+      max-width: 760px;
+    }
+    .synthesis-copy .lead {
+      max-width: 660px;
+      color: color-mix(in oklch, var(--fg), var(--muted) 22%);
+      font-family: var(--font-display);
+      font-size: clamp(19px, 1.5vw, 24px);
+      line-height: 1.28;
+      letter-spacing: -0.01em;
+      font-weight: 610;
+    }
+    .synthesis-lines {
+      display: grid;
+      gap: 5px;
+      color: var(--muted);
+      font-size: var(--type-small);
+      line-height: 1.5;
+    }
+    .synthesis-lines p:last-child {
+      margin-top: 6px;
+      color: color-mix(in oklch, var(--fg), var(--muted) 12%);
+    }
+
+    .exploration {
+      border-top: 1px solid var(--border);
+      display: none;
+    }
+    .exploration.quiet-band {
+      background: transparent;
+      border-block: 0;
+      border-top: 1px solid var(--border);
+    }
+    .exploration .section {
+      padding-top: clamp(38px, 4.4vw, 60px);
+      padding-bottom: clamp(38px, 4.4vw, 60px);
+    }
+    .exploration + .exploration .section {
+      padding-top: clamp(36px, 4.2vw, 58px);
+    }
+    .exploration:last-of-type {
+      border-bottom: 1px solid var(--border);
+    }
+    .exploration-header {
+      display: grid;
+      grid-template-columns: var(--split-grid);
+      gap: clamp(26px, 4vw, 58px);
+      align-items: start;
+    }
+    .exploration-title {
+      display: grid;
+      gap: 12px;
+    }
+    .exploration-title .kicker {
+      color: var(--chapter-accent, var(--accent));
+    }
+    .exploration-title h2 {
+      font-size: clamp(28px, 3vw, 40px);
+      line-height: 1.08;
+    }
+    .exploration-title p {
+      max-width: 360px;
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: var(--type-body);
+      line-height: 1.48;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+    .exploration-summary {
+      display: grid;
+      gap: 12px;
+      max-width: 720px;
+    }
+    .exploration-summary .lead {
+      max-width: 720px;
+    }
+    .chapter-tension {
+      max-width: 640px;
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-size: clamp(23px, 2.35vw, 33px);
+      line-height: 1.2;
+      letter-spacing: -0.012em;
+      font-weight: 620;
+      text-wrap: balance;
+    }
+    .preview-stack {
+      display: grid;
+      gap: clamp(14px, 1.65vw, 21px);
+      max-width: 760px;
+    }
+    .preview-block {
+      display: grid;
+      gap: 8px;
+      max-width: 700px;
+    }
+    .preview-block h4 {
+      color: color-mix(in oklch, var(--muted), transparent 10%);
+    }
+    .preview-block p {
+      color: var(--muted);
+      font-size: var(--type-small);
+      line-height: 1.52;
+    }
+    .preview-observation p {
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-size: clamp(20px, 1.7vw, 27px);
+      line-height: 1.24;
+      letter-spacing: -0.015em;
+      font-weight: 620;
+      text-wrap: balance;
+    }
+    .preview-insight p {
+      max-width: 640px;
+      color: color-mix(in oklch, var(--fg), var(--muted) 38%);
+      font-size: clamp(15px, 1.05vw, 17px);
+      line-height: 1.52;
+    }
+    .preview-themes {
+      gap: 10px;
+      max-width: 580px;
+    }
+    .preview-themes ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px clamp(18px, 2.6vw, 34px);
+    }
+    .preview-themes li {
+      color: var(--muted);
+      font-size: clamp(13px, 0.95vw, 15px);
+      line-height: 1.35;
+    }
+    .preview-question {
+      margin-top: clamp(8px, 1.1vw, 16px);
+      border-top: 1px solid color-mix(in oklch, var(--fg), var(--border) 76%);
+      padding-top: clamp(14px, 1.6vw, 22px);
+    }
+    .preview-question h4 {
+      color: color-mix(in oklch, var(--accent), var(--fg) 28%);
+    }
+    .preview-question p {
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-size: clamp(21px, 1.75vw, 28px);
+      line-height: 1.34;
+      letter-spacing: -0.01em;
+      font-weight: 620;
+    }
+    .preview-continuation {
+      margin-top: clamp(-2px, 0.2vw, 4px);
+    }
+    .preview-continuation a {
+      display: inline-flex;
+      align-items: center;
+      width: max-content;
+      color: color-mix(in oklch, var(--fg), var(--accent) 30%);
+      font-family: var(--font-body);
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 560;
+      letter-spacing: 0;
+      text-transform: none;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-decoration-color: color-mix(in oklch, var(--accent), transparent 76%);
+      text-underline-offset: 4px;
+      transition: color 180ms ease, transform 180ms ease, text-decoration-color 180ms ease;
+    }
+    .preview-continuation a:hover,
+    .preview-continuation a:focus-visible {
+      color: var(--accent);
+      transform: translateX(4px);
+      text-decoration-color: currentColor;
+    }
+    .chapter-row,
+    .insight-copy,
+    .reflection-lines,
+    .pattern-copy,
+    .uncertainty-copy,
+    .chapter-analysis {
+      display: none;
+    }
+    .reflection-lines p:not(:first-child) {
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: var(--type-small);
+      line-height: 1.5;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+    .learning {
+      display: grid;
+      grid-template-columns: minmax(210px, 0.32fr) minmax(0, 0.68fr);
+      gap: var(--split-gap);
+      align-items: start;
+    }
+    .learning h2 {
+      max-width: 420px;
+      color: var(--muted);
+      font-size: clamp(19px, 1.65vw, 28px);
+      line-height: 1.22;
+      letter-spacing: -0.01em;
+      font-weight: 560;
+    }
+    .learning .section-copy {
+      margin-top: clamp(18px, 2.4vw, 28px);
+      max-width: 390px;
+    }
+    .learning .section-copy p {
+      color: color-mix(in oklch, var(--fg), var(--muted) 20%);
+      font-family: var(--font-display);
+      font-size: clamp(18px, 1.28vw, 22px);
+      line-height: 1.32;
+      letter-spacing: -0.005em;
+      font-weight: 610;
+      text-wrap: balance;
+    }
+    .learning-lines {
+      display: grid;
+      gap: 9px;
+      border-top: 1px solid var(--border);
+      padding-top: clamp(14px, 1.8vw, 21px);
+      max-width: 650px;
+    }
+    .learning-lines p {
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: var(--type-small);
+      line-height: 1.55;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+    .learning-lines p:not(:last-child) {
+      color: var(--muted);
+    }
+    .learning-copy {
+      display: grid;
+      gap: 15px;
+      max-width: 760px;
+    }
+    .learning-copy.offset {
+      margin-top: clamp(8px, 1.4vw, 16px);
+    }
+    .learning-copy .synthesis-core {
+      display: block;
+      margin-top: 0;
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-size: clamp(31px, 3.4vw, 52px);
+      line-height: 1.13;
+      letter-spacing: -0.01em;
+      font-weight: 660;
+      max-width: 820px;
+    }
+    .synthesis-bridge {
+      display: block;
+      max-width: 620px;
+      color: color-mix(in oklch, var(--fg), var(--accent) 10%);
+      font-family: var(--font-display);
+      font-size: clamp(19px, 1.55vw, 24px);
+      font-weight: 650;
+      letter-spacing: -0.01em;
+      line-height: 1.24;
+    }
+    .learning-copy .emphasis {
+      color: color-mix(in oklch, var(--fg), var(--accent) 8%);
+      font-family: var(--font-display);
+      font-size: clamp(21px, 1.8vw, 28px);
+      line-height: 1.26;
+      letter-spacing: -0.01em;
+      font-weight: 640;
+      max-width: 720px;
+      margin-top: 0;
+      padding-top: clamp(12px, 1.7vw, 20px);
+      border-top: 1px solid var(--border);
+    }
+    .learning-copy p:not(.emphasis) {
+      max-width: 590px;
+      font-size: var(--type-small);
+    }
+    .learning-copy p:first-child {
+      color: var(--muted);
+      font-size: var(--type-small);
+      line-height: 1.5;
+      max-width: 760px;
+    }
+
+    .conversation {
+      min-height: clamp(360px, 45vh, 520px);
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(280px, 0.28fr);
+      gap: clamp(36px, 7vw, 92px);
+      align-items: center;
+    }
+    .conversation h2 {
+      max-width: 940px;
+      font-size: clamp(42px, 5vw, 76px);
+      line-height: 1.06;
+    }
+    .conversation-copy {
+      display: grid;
+      gap: 16px;
+      max-width: 680px;
+      margin-top: clamp(20px, 3vw, 34px);
+    }
+    .conversation-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      margin-top: clamp(26px, 4vw, 42px);
+      align-items: center;
+    }
+    .conversation-actions .button.primary {
+      min-width: 260px;
+      min-height: 48px;
+    }
+    .conversation-actions .button.secondary {
+      color: var(--muted);
+      background: transparent;
+      border-color: transparent;
+      padding-inline: 4px;
+      min-width: auto;
+    }
+    .conversation-note {
+      border-top: 1px solid var(--border);
+      padding-top: clamp(22px, 3vw, 34px);
+    }
+    .conversation-note p {
+      color: var(--muted);
+      font-family: var(--font-display);
+      font-size: clamp(15px, 1vw, 17px);
+      line-height: 1.34;
+      letter-spacing: -0.01em;
+      font-weight: 520;
+    }
+    .conversation-note span {
+      display: block;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: var(--type-small);
+      line-height: 1.45;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: color-mix(in oklch, var(--surface), var(--bg) 45%);
+    }
+    .footer-inner {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 30px var(--gutter);
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer-inner p {
+      margin-top: 6px;
+      font-size: 14px;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        position: fixed;
+        inset: 65px 14px auto 14px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--surface);
+        box-shadow: 0 8px 22px color-mix(in oklch, var(--fg), transparent 92%);
+      }
+      .nav-links[data-open="true"] { display: flex; }
+      .nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        padding: 0 10px;
+      }
+      .nav-actions .button { display: none; }
+      .menu-button { display: block; }
+      .hero-copy,
+      .overview-head,
+      .investigation-synthesis,
+      .exploration-header,
+      .chapter-analysis,
+      .learning,
+      .conversation {
+        grid-template-columns: 1fr;
+      }
+      .distinction {
+        grid-template-columns: 1fr;
+      }
+      .distinction a {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 14px;
+        align-items: start;
+      }
+      .distinction a:before {
+        position: static;
+        order: -1;
+      }
+      .distinction-detail {
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: 720px) {
+      :root {
+        --section: clamp(42px, 12vw, 66px);
+        --section-tight: clamp(34px, 10vw, 54px);
+      }
+      .section { padding-inline: var(--gutter); }
+      .split,
+      .chapter-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .bridge-signals {
+        grid-template-columns: 1fr;
+      }
+      .chapter-row h4 { padding-top: 0; }
+      .chapter-row.observation-row {
+        grid-template-columns: 1fr;
+      }
+      .distinction .concept {
+        font-size: clamp(34px, 10vw, 48px);
+        line-height: 1;
+      }
+      .preview-themes ul {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        min-height: auto;
+        padding-top: 42px;
+      }
+      .conversation-actions .button {
+        width: 100%;
+      }
+      .conversation-actions .button.secondary {
+        width: auto;
+      }
+      .footer-inner {
+        flex-direction: column;
+      }
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html">ShiftBy</a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="where-shiftby-helps.html">Where ShiftBy Helps</a>
+        <a href="thinking.html">Perspective</a>
+        <a href="explorations.html" aria-current="page">Explorations</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button" href="thinking.html">Return to perspective</a>
+        <a class="button primary" href="contact.html">Continue the conversation</a>
+        <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section hero" aria-labelledby="hero-title">
+      <div>
+        <span class="kicker">Explorations</span>
+        <h1 id="hero-title">Some questions require investigation.</h1>
+      </div>
+      <div class="hero-copy">
+        <div class="hero-lines">
+          <p class="hero-tension">Some organizational challenges cannot be fully understood through theory alone.</p>
+          <p class="lead">The explorations exist to investigate how understanding behaves as organizations change.</p>
+          <p class="lead">They follow what survives, what fragments, and what becomes visible through change.</p>
+        </div>
+        <p class="hero-note">
+          These are not products. They are investigations in progress.
+          <span>Each exploration studies a different aspect of the same underlying challenge.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="quiet-band" aria-labelledby="exist-title">
+      <div class="section split">
+        <div>
+          <span class="kicker">Why explorations exist</span>
+          <h2 id="exist-title">Understanding becomes harder to preserve as organizations change.</h2>
+        </div>
+        <div>
+          <div class="existence-lines">
+            <p class="plain-emphasis">Artifacts may remain while context fragments.</p>
+            <p class="plain-emphasis">The investigations ask what helps understanding stay connected.</p>
+            <p>Decisions evolve.</p>
+            <p>Teams change.</p>
+            <p>Systems change.</p>
+            <p>AI participates.</p>
+            <p>Context moves.</p>
+            <p>Accountability shifts.</p>
+            <p class="existence-conclusion">The investigations explore what helps understanding survive those changes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section relevance-bridge split" aria-labelledby="matters-title">
+      <div>
+        <span class="kicker">Why this matters</span>
+        <h2 id="matters-title">The investigations make the challenge visible.</h2>
+      </div>
+      <div class="bridge-copy">
+        <p class="lead">When execution changes, the question is not only what happened.</p>
+        <p>Leaders, architects, auditors, and operators need to understand what remained connected, what fragmented, and what became harder to explain.</p>
+        <p>The investigations help examine how organizations can preserve confidence when decisions, meaning, and discovery move across people, systems, automation, AI, and time.</p>
+        <ul class="bridge-signals" aria-label="Investigation relevance signals">
+          <li>
+            <span>Leaders</span>
+            <strong>Can confidence survive change?</strong>
+          </li>
+          <li>
+            <span>Architects</span>
+            <strong>Can relationships remain understandable?</strong>
+          </li>
+          <li>
+            <span>Assurance</span>
+            <strong>Can evidence and accountability still be explained?</strong>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section investigation-overview" aria-labelledby="three-title">
+      <div class="overview-head">
+        <div>
+          <span class="kicker">Three investigations</span>
+          <h2 id="three-title">Three investigations.<br>Three dimensions of understanding.</h2>
+        </div>
+        <p class="lead">Each studies a different way understanding survives change: execution, meaning, and discovery.</p>
+      </div>
+      <div class="distinction" aria-label="Exploration distinctions">
+        <a href="explorations/unifyplane/">
+          <span>
+            <small>UnifyPlane</small>
+            <span class="concept">Execution</span>
+            <span class="dimension-line">Understanding execution, decision traceability, enterprise AI accountability, and AI governance visibility</span>
+          </span>
+          <span class="distinction-detail">
+            <span class="distinction-copy">Organizations often know what happened. Understanding why it happened becomes harder as execution evolves.</span>
+            <span class="distinction-question">
+              <span>Open question</span>
+              <em>Can decisions, evidence, dependencies, and accountability remain connected as execution becomes distributed?</em>
+            </span>
+            <span class="distinction-explore">Continue the investigation &rarr;</span>
+          </span>
+        </a>
+        <a href="explorations/canonlens/">
+          <span>
+            <small>CanonLens</small>
+            <span class="concept">Meaning</span>
+            <span class="dimension-line">Understanding meaning, organizational memory, knowledge management, and enterprise knowledge graph concepts</span>
+          </span>
+          <span class="distinction-detail">
+            <span class="distinction-copy">Artifacts often remain available. The meaning they carried can fragment.</span>
+            <span class="distinction-question">
+              <span>Open question</span>
+              <em>Can meaning remain shared as knowledge and context move away from their origin?</em>
+            </span>
+            <span class="distinction-explore">Continue the investigation &rarr;</span>
+          </span>
+        </a>
+        <a href="explorations/inspiral/">
+          <span>
+            <small>Inspiral</small>
+            <span class="concept">Discovery</span>
+            <span class="dimension-line">Understanding discovery, organizational learning, research workflows, and AI-assisted knowledge formation</span>
+          </span>
+          <span class="distinction-detail">
+            <span class="distinction-copy">Knowledge often remains visible. The pathway that produced it can disappear.</span>
+            <span class="distinction-question">
+              <span>Open question</span>
+              <em>Can discovery remain reproducible as knowledge is reused and extended?</em>
+            </span>
+            <span class="distinction-explore">Continue the investigation &rarr;</span>
+          </span>
+        </a>
+      </div>
+      <div class="investigation-synthesis" aria-labelledby="learning-title">
+        <div>
+          <span class="kicker">What we are learning</span>
+          <h3 id="learning-title">Across all three investigations, the same pattern continues to emerge.</h3>
+        </div>
+        <div class="synthesis-copy">
+          <p class="lead">Artifacts may remain. Context may fragment. Confidence weakens when understanding is no longer connected.</p>
+          <div class="synthesis-lines" aria-label="Learning synthesis">
+            <p>Execution, meaning, and discovery change in different ways.</p>
+            <p>Each reveals the same underlying challenge: understanding must survive movement across people, systems, automation, AI, and time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiet-band" aria-labelledby="conversation-title">
+      <div class="section conversation">
+        <div>
+          <span class="kicker">Continue the conversation</span>
+          <h2 id="conversation-title">Share observations. Discuss the challenge. Explore the questions.</h2>
+          <div class="conversation-copy">
+            <p>The explorations are open-ended because the questions are still evolving.</p>
+            <p>If these patterns appear inside your organization, the useful next step may be a conversation rather than a conclusion.</p>
+          </div>
+          <div class="conversation-actions" aria-label="Conversation links">
+            <a class="button primary" href="contact.html">Continue the conversation</a>
+            <a class="button secondary" href="thinking.html">Return to perspective</a>
+          </div>
+        </div>
+        <div class="conversation-note">
+          <p>The useful question is what needs to remain understood.</p>
+          <span>The investigations continue from there.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="index.html">ShiftBy</a>
+        <p>Understanding should survive change.</p>
+      </div>
+      <div class="footer-links" aria-label="Footer navigation">
+        <a href="capabilities.html">Capabilities</a>
+        <a href="where-shiftby-helps.html">Where ShiftBy Helps</a>
+        <a href="thinking.html">Perspective</a>
+        <a href="explorations.html">Explorations</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelector('#navLinks');
+
+    menuButton?.addEventListener('click', () => {
+      const isOpen = navLinks.getAttribute('data-open') === 'true';
+      navLinks.setAttribute('data-open', String(!isOpen));
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      document.body.classList.toggle('no-scroll', !isOpen);
+    });
+
+    navLinks?.addEventListener('click', (event) => {
+      if (event.target instanceof HTMLAnchorElement) {
+        navLinks.removeAttribute('data-open');
+        menuButton?.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "phase_id": "phase0",
+  "phase_name": "Repository Assessment",
+  "purpose": "Assess implementation starting point.",
+  "expected_outcome": "Validated implementation baseline.",
+  "mode": "review-only / discovery",
+  "depends_on": [],
+  "allowed_writes": [
+    "plan/impl/phase0/**"
+  ],
+  "forbidden_writes": [
+    "plan/impl/design/**",
+    "application source files",
+    "package files",
+    "deployment files",
+    "generated website assets",
+    "content outside plan/impl/**"
+  ],
+  "read_only_authority": [
+    "plan/impl/design/**"
+  ],
+  "validation_required": true,
+  "evidence_required": true,
+  "completion_criteria": [
+    "Repository structure assessed.",
+    "Existing runtime and frontend state inventoried.",
+    "Design authority inventory reviewed.",
+    "Implementation boundary confirmed.",
+    "Missing prerequisites recorded."
+  ],
+  "failure_classifications": [
+    "design_authority_not_found",
+    "implementation_boundary_failure",
+    "control_plane_failure"
+  ],
+  "next_phase_on_success": "phase1",
+  "no_auto_progression": true,
+  "future_run_evidence_requirements": [
+    "workpacket_root",
+    "phase_id",
+    "run_id",
+    "tested_condition",
+    "expected_outcome",
+    "actual_outcome",
+    "passes",
+    "blockers",
+    "created_at or generated_at where available"
+  ]
+}

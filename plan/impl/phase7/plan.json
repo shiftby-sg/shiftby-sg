@@ -1,0 +1,56 @@
+{
+  "phase_id": "phase7",
+  "phase_name": "Release Readiness Review",
+  "purpose": "Final acceptance review.",
+  "expected_outcome": "Production-ready website.",
+  "mode": "bounded execution",
+  "depends_on": [
+    "phase6"
+  ],
+  "allowed_writes": [
+    "plan/impl/phase7/**"
+  ],
+  "forbidden_writes": [
+    "plan/impl/design/**",
+    "self-release without human review",
+    "generated website assets",
+    "content outside plan/impl/** during control-plane scaffolding"
+  ],
+  "read_only_authority": [
+    "plan/impl/design/**",
+    "plan/impl/validation_model.json",
+    "plan/impl/failure_classification.json",
+    "plan/impl/status.json"
+  ],
+  "validation_required": true,
+  "evidence_required": true,
+  "completion_criteria": [
+    "Implementation evidence complete.",
+    "Validation evidence complete.",
+    "Doctrine and narrative preserved.",
+    "Design fidelity acceptable.",
+    "SEO and LLM discoverability ready.",
+    "Production readiness established with human review requirement preserved."
+  ],
+  "failure_classifications": [
+    "doctrine_deviation",
+    "narrative_deviation",
+    "design_fidelity_failure",
+    "seo_failure",
+    "llm_discoverability_failure",
+    "deployment_readiness_failure"
+  ],
+  "next_phase_on_success": null,
+  "no_auto_progression": true,
+  "future_run_evidence_requirements": [
+    "workpacket_root",
+    "phase_id",
+    "run_id",
+    "tested_condition",
+    "expected_outcome",
+    "actual_outcome",
+    "passes",
+    "blockers",
+    "created_at or generated_at where available"
+  ]
+}

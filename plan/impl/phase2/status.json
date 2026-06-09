@@ -1,0 +1,15 @@
+{
+  "phase_id": "phase2",
+  "phase_name": "Design System Materialization",
+  "status": "ready",
+  "execution_ready": true,
+  "current_run_folder": null,
+  "last_run_folder": "/home/manandakrishna/myprojects/shiftby-sg/plan/impl/phase2/runs/run_001",
+  "blocked_reason": null,
+  "depends_on": [
+    "phase1"
+  ],
+  "allowed_writes_summary": "Writes limited to plan/impl/phase2/** until future authorized execution.",
+  "forbidden_writes_summary": "No writes to plan/impl/design/** or any artifact that reinterprets approved design authority during scaffolding.",
+  "evidence_required": true
+}

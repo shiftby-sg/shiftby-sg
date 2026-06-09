@@ -1,0 +1,51 @@
+{
+  "authority_header": {
+    "artifact_type": "implementation_workpacket_authority",
+    "artifact_id": "shiftby_website_implementation_authority",
+    "schema_version": "local.v1",
+    "schema_gap": true
+  },
+  "authority_version": "1.8",
+  "doctrine_authority": {
+    "implementation_intent": "SHIFTBY_WEBSITE_IMPLEMENTATION_INTENT_V1",
+    "core_doctrine": "Execution changes. Understanding preserves confidence.",
+    "founder_observation": [
+      "Organizations preserve artifacts.",
+      "Organizations struggle to preserve understanding."
+    ]
+  },
+  "narrative_authority": {
+    "approved_sequence": [
+      "Home",
+      "Capabilities",
+      "Where ShiftBy Helps",
+      "Perspective",
+      "Explorations",
+      "Services",
+      "About",
+      "Contact"
+    ]
+  },
+  "page_design_authority_root": "plan/impl/design",
+  "page_sequence": [
+    "Home",
+    "Capabilities",
+    "Where ShiftBy Helps",
+    "Perspective",
+    "Explorations",
+    "Services",
+    "About",
+    "Contact"
+  ],
+  "authority_precedence": [
+    "SHIFTBY_WEBSITE_IMPLEMENTATION_INTENT_V1",
+    "core_doctrine",
+    "founder_observation",
+    "approved_narrative_sequence",
+    "page_design_authority_root",
+    "workpacket_control_plane"
+  ],
+  "source_design_root_exists": true,
+  "generated_assets_are_derived": true,
+  "validation_evidence_is_proof": true
+}

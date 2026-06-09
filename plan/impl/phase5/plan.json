@@ -1,0 +1,48 @@
+{
+  "phase_id": "phase5",
+  "phase_name": "Performance Optimization",
+  "purpose": "Optimize Core Web Vitals.",
+  "expected_outcome": "Low LCP and fast rendering.",
+  "mode": "bounded execution",
+  "depends_on": [
+    "phase4"
+  ],
+  "allowed_writes": [
+    "plan/impl/phase5/**"
+  ],
+  "forbidden_writes": [
+    "plan/impl/design/**",
+    "generated website assets",
+    "content outside plan/impl/** during control-plane scaffolding"
+  ],
+  "read_only_authority": [
+    "plan/impl/design/**",
+    "plan/impl/validation_model.json"
+  ],
+  "validation_required": true,
+  "evidence_required": true,
+  "completion_criteria": [
+    "LCP, CLS, and INP measured or documented where measurable.",
+    "Static rendering and asset optimization reviewed.",
+    "Bundle hygiene evaluated.",
+    "Mobile performance validated."
+  ],
+  "failure_classifications": [
+    "performance_failure",
+    "mobile_responsiveness_failure",
+    "implementation_boundary_failure"
+  ],
+  "next_phase_on_success": "phase6",
+  "no_auto_progression": true,
+  "future_run_evidence_requirements": [
+    "workpacket_root",
+    "phase_id",
+    "run_id",
+    "tested_condition",
+    "expected_outcome",
+    "actual_outcome",
+    "passes",
+    "blockers",
+    "created_at or generated_at where available"
+  ]
+}

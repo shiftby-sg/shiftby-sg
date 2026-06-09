@@ -1,0 +1,51 @@
+{
+  "phase_id": "phase1",
+  "phase_name": "Architecture Setup",
+  "purpose": "Establish Next.js application architecture.",
+  "expected_outcome": "Production-ready project structure.",
+  "mode": "bounded execution",
+  "depends_on": [
+    "phase0"
+  ],
+  "allowed_writes": [
+    "plan/impl/phase1/**"
+  ],
+  "forbidden_writes": [
+    "plan/impl/design/**",
+    "unapproved application source changes before phase execution authorization",
+    "package files outside approved phase execution",
+    "deployment files",
+    "generated website assets",
+    "content outside plan/impl/** during control-plane scaffolding"
+  ],
+  "read_only_authority": [
+    "plan/impl/design/**",
+    "plan/impl/authority.json",
+    "plan/impl/implementation_intent.json"
+  ],
+  "validation_required": true,
+  "evidence_required": true,
+  "completion_criteria": [
+    "Approved routing architecture defined.",
+    "Metadata architecture prepared.",
+    "Static-generation strategy defined where appropriate.",
+    "Source boundary validation established."
+  ],
+  "failure_classifications": [
+    "implementation_boundary_failure",
+    "control_plane_failure"
+  ],
+  "next_phase_on_success": "phase2",
+  "no_auto_progression": true,
+  "future_run_evidence_requirements": [
+    "workpacket_root",
+    "phase_id",
+    "run_id",
+    "tested_condition",
+    "expected_outcome",
+    "actual_outcome",
+    "passes",
+    "blockers",
+    "created_at or generated_at where available"
+  ]
+}

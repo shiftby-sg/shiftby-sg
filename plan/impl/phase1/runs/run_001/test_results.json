@@ -1,0 +1,14 @@
+{
+  "all_required_evidence_files_exist": true,
+  "all_required_evidence_files_parse_as_json": true,
+  "allowed_writes_only": true,
+  "design_root_unchanged": true,
+  "phase0_evidence_unchanged": true,
+  "no_page_design_materialization": true,
+  "no_release_readiness_claim": true,
+  "architecture_ready_for_phase2": true,
+  "phase2_readiness_reconciled": true,
+  "phase2_prepared_if_ready": true,
+  "reconciliation_evidence": "plan/impl/phase1/runs/run_001/phase2_readiness_reconciliation.json",
+  "passes": true
+}
