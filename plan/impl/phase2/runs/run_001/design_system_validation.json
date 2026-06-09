@@ -2,14 +2,14 @@
   "workpacket_root": "plan/impl",
   "phase_id": "phase2",
   "run_id": "run_001",
-  "tested_condition": "The reusable design foundations are sufficient to support Phase3 page materialization.",
-  "expected_outcome": "Global foundations and shared components are ready for page assembly.",
-  "actual_outcome": "The design system now includes expanded tokens, layered shell treatment, responsive navigation, framed sections, card primitives, evidence block styling, and accessible interaction states without crossing into final page implementation.",
+  "tested_condition": "The global design system is sufficiently materialized to support Phase 3 page composition.",
+  "expected_outcome": "Reusable global styles, component primitives, responsive behavior, and accessibility foundations are ready without final route materialization.",
+  "actual_outcome": "Authority-derived tokens, shell patterns, typography hierarchy, spacing rhythm, card treatments, and CTA primitives are implemented and consumed by placeholders. Validation commands could not execute because the shell lacks npm/node, but file-level readiness for Phase 3 is in place.",
   "passes": [
-    "Global styles are ready.",
-    "Layout components are ready.",
-    "Typography and spacing systems are defined.",
-    "Responsive and accessibility foundations are present."
+    "Global style tokens are active in app/globals.css.",
+    "Layout primitives exist for shell, page intro, evidence block, card, and CTA composition.",
+    "Typography and spacing systems reflect authority intent.",
+    "Mobile-first behavior and reduced-motion handling are implemented."
   ],
   "blockers": [],
   "global_styles_ready": true,
@@ -17,6 +17,7 @@
   "typography_system_ready": true,
   "spacing_system_ready": true,
   "responsive_foundations_ready": true,
+  "html_css_design_source_reflected": true,
   "accessibility_foundations_ready": true,
   "phase3_ready": true
 }

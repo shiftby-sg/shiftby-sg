@@ -2,26 +2,33 @@
   "workpacket_root": "plan/impl",
   "phase_id": "phase2",
   "run_id": "run_001",
-  "tested_condition": "Approved design authority can be analyzed to derive reusable system patterns without modifying page route implementations.",
-  "expected_outcome": "Reusable design language is extracted into implementable global and component foundations.",
-  "actual_outcome": "The design authority root was inspected at the artifact level and reconciled with the approved narrative page set. The environment does not provide PDF text or metadata tooling, so design-system decisions were derived conservatively from the authoritative design set, page taxonomy, and the need for a strong editorial, rhythm-based system that avoids premature page materialization.",
+  "tested_condition": "Approved design authority under plan/impl/design is inspected without mutation to derive reusable design-system foundations.",
+  "expected_outcome": "Authority files reveal reusable layout, typography, spacing, navigation, footer, card, CTA, and responsive patterns suitable for Phase 2 materialization.",
+  "actual_outcome": "Seven approved page designs were inspected from embedded-CSS HTML authorities and paired PDF exports. Repeated system tokens, section rhythms, header/footer structures, card treatments, and mobile breakpoints were identified and mapped into reusable Next.js foundations without altering authority files.",
   "passes": [
-    "Design authority root exists and was not modified.",
-    "Approved design files for Home, Capabilities, Where ShiftBy Helps, Perspective, Explorations, Services, and About were identified.",
-    "Contact remains intentionally absent from design authority and does not block reusable system work.",
-    "Derived design-system work was kept at the foundation and component level only."
+    "Design authority root exists and remained read-only during execution.",
+    "Approved page designs were identified for Home, Capabilities, Where ShiftBy Helps, Perspective, Explorations, Services, and About.",
+    "Embedded CSS inside HTML authorities provided consistent tokens, typography intent, spacing rhythm, and responsive behavior for system extraction.",
+    "Contact design absence was preserved as future scope rather than treated as a parity failure."
   ],
   "blockers": [],
-  "generated_at": "2026-06-09T21:56:31+08:00",
+  "generated_at": "2026-06-10T03:23:08+08:00",
   "design_root": "plan/impl/design",
   "inspected_design_files": [
-    "plan/impl/design/about.pdf",
-    "plan/impl/design/capabilities.pdf",
-    "plan/impl/design/explorations.pdf",
+    "plan/impl/design/index.html",
     "plan/impl/design/index.pdf",
-    "plan/impl/design/services.pdf",
+    "plan/impl/design/capabilities.html",
+    "plan/impl/design/capabilities.pdf",
+    "plan/impl/design/where-shiftby-helps.html",
+    "plan/impl/design/where-shiftby-helps.pdf",
+    "plan/impl/design/thinking.html",
     "plan/impl/design/thinking.pdf",
-    "plan/impl/design/where-shiftby-helps.pdf"
+    "plan/impl/design/explorations.html",
+    "plan/impl/design/explorations.pdf",
+    "plan/impl/design/services.html",
+    "plan/impl/design/services.pdf",
+    "plan/impl/design/about.html",
+    "plan/impl/design/about.pdf"
   ],
   "available_page_designs": [
     "Home",
@@ -32,36 +39,73 @@
     "Services",
     "About"
   ],
-  "contact_design_status": "intentionally_absent_from_design_source",
+  "available_html_design_files": [
+    "plan/impl/design/index.html",
+    "plan/impl/design/capabilities.html",
+    "plan/impl/design/where-shiftby-helps.html",
+    "plan/impl/design/thinking.html",
+    "plan/impl/design/explorations.html",
+    "plan/impl/design/services.html",
+    "plan/impl/design/about.html"
+  ],
+  "available_css_design_files": [],
+  "html_files_used_as_design_authority": [
+    "plan/impl/design/index.html",
+    "plan/impl/design/capabilities.html",
+    "plan/impl/design/where-shiftby-helps.html",
+    "plan/impl/design/thinking.html",
+    "plan/impl/design/explorations.html",
+    "plan/impl/design/services.html",
+    "plan/impl/design/about.html"
+  ],
+  "css_sources_used_as_design_authority": [
+    "Embedded <style> blocks inside each approved HTML authority file"
+  ],
+  "embedded_css_detected": true,
+  "contact_design_status": "No contact design authority is present. Contact remains future scope and was excluded from parity requirements as instructed.",
   "extracted_design_patterns": [
-    "Editorial-first layout with strong headline hierarchy",
-    "Layered section bands and framed content regions",
-    "High-contrast navigation and CTA-capable modules",
-    "Card and evidence-style secondary content treatment",
-    "Mobile-first stacked composition that expands into split desktop layouts"
+    "Sticky translucent header with brand, muted link set, and action/button treatment",
+    "Kicker labels rendered in mono uppercase accent styling",
+    "Large editorial hero typography with balanced line lengths and constrained measures",
+    "Quiet surface bands with border-block separators for sectional rhythm",
+    "Card and panel treatments using light surfaces, subtle borders, rounded corners, and soft shadows",
+    "Split-layout sections that collapse to single-column mobile stacks",
+    "Footer bands with restrained muted copy and link groupings",
+    "Full-width button behavior on narrow mobile widths"
   ],
   "typography_observations": [
-    "Large display treatment is appropriate for page intros and hero layers.",
-    "Uppercase label styling supports navigation and sectional metadata.",
-    "Readable long-form body scale is required for doctrine-heavy content."
+    "Display and heading styles consistently use SF Pro Display or Inter-like system sans stacks.",
+    "Body copy uses SF Pro Text or system sans stacks with 17px-19px responsive body size ranges.",
+    "Hero scales span roughly 42px-92px depending on page intent, with section headings commonly 30px-58px and labels at 12px-15px.",
+    "Monospace labels are used for kickers, status labels, and structural annotation."
   ],
   "spacing_observations": [
-    "Generous vertical rhythm is required between hero, section, and card layers.",
-    "Tokenized spacing scale should support dense mobile and expansive desktop variants.",
-    "Rounded framed regions benefit from consistent internal padding."
+    "Global gutter is consistently clamp(18px, 4vw, 32px).",
+    "Section spacing clusters around clamp(48px, 7vw, 88px) to clamp(64px, 8.5vw, 118px).",
+    "Split-gap rhythm commonly uses clamp(44px, 7vw, 104px).",
+    "Containers repeatedly cap at 1200px with reading measures between 760px and 980px."
   ],
   "layout_observations": [
-    "A constrained content container with a wider hero/page container is useful.",
-    "Split layouts are needed for summary-plus-evidence compositions.",
-    "Reusable framed sections allow Phase3 page assembly without route rewrites."
+    "Pages combine containerized sections with editorial measure constraints rather than dense card dashboards.",
+    "Home and capabilities introduce two-column hero or doctrine panel patterns; inner pages lean on split narrative bands and bordered sections.",
+    "Cards and panels are used selectively for emphasis, not as the default page grammar."
+  ],
+  "responsive_observations": [
+    "Authority files repeatedly adapt around 1180px, 1080px, 1024px, 980px, 768px, 720px, 560px, 430px, and 390px thresholds.",
+    "Navigation collapses from always-visible links to menu-triggered or hidden link groups on smaller screens.",
+    "Buttons, hero actions, and CTA controls frequently expand to full width near 430px."
+  ],
+  "navigation_footer_observations": [
+    "Navigation consistently pairs a left brand mark with muted links and optional primary or secondary actions.",
+    "Footer treatments are quiet, bordered, and low-density, prioritizing muted copy over heavy calls to action."
   ],
   "component_opportunities": [
-    "Navigation primitive",
-    "Footer band",
-    "Section frame",
-    "Signal card grid",
-    "Evidence block",
-    "Hero composition shell"
+    "Site shell with branded header and footer",
+    "Page intro primitive with hero copy and optional evidence aside",
+    "Section wrapper for kicker, heading, and description rhythm",
+    "Reusable card treatment",
+    "Reusable CTA band with primary and secondary action variants",
+    "Evidence or status block for sidecar messaging"
   ],
   "design_authority_unchanged": true
 }

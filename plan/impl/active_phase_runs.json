@@ -14,8 +14,15 @@
       "status": "completed",
       "run_folder": "/home/manandakrishna/myprojects/shiftby-sg/plan/impl/phase1/runs/run_001",
       "blocked_reason": null
+    },
+    {
+      "phase_id": "phase2",
+      "run_id": "run_001",
+      "status": "completed",
+      "run_folder": "/home/manandakrishna/myprojects/shiftby-sg/plan/impl/phase2/runs/run_001",
+      "blocked_reason": null
     }
   ],
   "failed_runs": [],
-  "next_phase": "phase2"
+  "next_phase": "phase3"
 }

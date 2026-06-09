@@ -2,75 +2,86 @@
   "workpacket_root": "plan/impl",
   "phase_id": "phase2",
   "run_id": "run_001",
-  "tested_condition": "Global design tokens can be materialized through allowed layout and style files without implementing final pages.",
-  "expected_outcome": "Reusable color, type, spacing, radius, and responsive tokens are available for Phase3 composition.",
-  "actual_outcome": "Global CSS tokens were expanded in app/globals.css, and token intent was mirrored in lib/design-tokens.ts for structured reuse in later phases.",
+  "tested_condition": "Authority-derived tokens are adapted into reusable global design foundations for the Next.js application shell.",
+  "expected_outcome": "Shared color, typography, spacing, radius, shadow, container, and breakpoint tokens exist in implementation-accessible locations.",
+  "actual_outcome": "Authority-derived tokens were materialized into app/globals.css and lib/design-tokens.ts, preserving the approved light editorial system while adapting it to reusable application primitives.",
   "passes": [
-    "Color and surface tokens are centralized.",
-    "Typography and spacing scales are defined.",
-    "Radius, shadow, and border tokens support framed content treatments.",
-    "Responsive and mobile-first container strategies are present.",
-    "Focus visibility and contrast intent are explicitly supported."
+    "Global CSS variables now reflect the authority's light neutral background, muted ink, violet accent, mono kicker, and surface hierarchy.",
+    "Type, spacing, container, radius, and shadow tokens were centralized for later page materialization.",
+    "Token usage supports mobile-first layout collapse and accessible focus visibility."
   ],
   "blockers": [],
   "token_locations": [
     "app/globals.css",
     "lib/design-tokens.ts"
   ],
-  "color_tokens": [
-    "canvas",
-    "canvas-strong",
-    "surface",
-    "surface-strong",
-    "ink",
-    "ink-muted",
-    "accent",
-    "accent-soft",
-    "line"
+  "token_source_authority": [
+    "plan/impl/design/index.html",
+    "plan/impl/design/capabilities.html",
+    "plan/impl/design/where-shiftby-helps.html",
+    "plan/impl/design/thinking.html",
+    "plan/impl/design/explorations.html",
+    "plan/impl/design/services.html",
+    "plan/impl/design/about.html"
   ],
-  "typography_tokens": [
-    "display",
-    "heading-1",
-    "heading-2",
-    "body",
-    "body-large",
-    "label",
-    "line-tight",
-    "line-copy"
-  ],
-  "spacing_tokens": [
-    "space-1",
-    "space-2",
-    "space-3",
-    "space-4",
-    "space-5",
-    "space-6",
-    "space-7",
-    "space-8",
-    "space-9",
-    "container",
-    "container-wide"
-  ],
-  "radius_tokens": [
-    "radius-soft",
-    "radius-large",
-    "radius-pill"
-  ],
-  "shadow_or_border_tokens": [
-    "shadow-soft",
-    "shadow-card",
-    "color-line"
-  ],
-  "breakpoint_strategy": [
-    "Base mobile-first stack",
-    "768px for navigation, hero split, and card grid expansion",
-    "1080px for wide page container and denser framed section padding"
-  ],
-  "mobile_first_strategy": "All core layout primitives default to stacked single-column flow and expand progressively at larger breakpoints.",
+  "color_tokens": {
+    "background": "oklch(98% 0.004 250)",
+    "surface": "oklch(100% 0 0 / 0.86)",
+    "surface_strong": "oklch(100% 0 0)",
+    "surface_muted": "color-mix(in oklch, surface, background 42%)",
+    "ink": "oklch(17% 0.012 250)",
+    "ink_muted": "oklch(47% 0.014 250)",
+    "ink_soft": "oklch(62% 0.018 250)",
+    "border": "oklch(88% 0.008 250)",
+    "accent": "oklch(48% 0.15 280)",
+    "accent_soft": "oklch(94% 0.028 280)"
+  },
+  "typography_tokens": {
+    "display": "clamp(2.875rem, 6vw, 4.75rem)",
+    "heading_1": "clamp(2.125rem, 4.6vw, 3.625rem)",
+    "heading_2": "clamp(1.875rem, 3.7vw, 3rem)",
+    "heading_3": "clamp(1.4375rem, 2.4vw, 2.125rem)",
+    "body_large": "clamp(1.1875rem, 1.8vw, 1.375rem)",
+    "body": "clamp(1.0625rem, 1.35vw, 1.1875rem)",
+    "body_small": "clamp(0.9375rem, 1.15vw, 1.0625rem)",
+    "label": "0.75rem",
+    "font_display": "-apple-system, BlinkMacSystemFont, SF Pro Display, Inter, system-ui, sans-serif",
+    "font_body": "-apple-system, BlinkMacSystemFont, SF Pro Text, Inter, system-ui, sans-serif",
+    "font_mono": "ui-monospace, JetBrains Mono, Menlo, Consolas, monospace"
+  },
+  "spacing_tokens": {
+    "gutter": "clamp(1.125rem, 4vw, 2rem)",
+    "container": "min(100% - (gutter * 2), 75rem)",
+    "container_wide": "min(100% - (gutter * 2), 84rem)",
+    "measure": "47.5rem",
+    "measure_wide": "61.25rem",
+    "section": "clamp(3.75rem, 8.5vw, 7rem)",
+    "section_tight": "clamp(2.875rem, 6.5vw, 5rem)"
+  },
+  "radius_tokens": {
+    "sm": "0.5rem",
+    "md": "0.75rem",
+    "lg": "1rem",
+    "xl": "1.5rem",
+    "pill": "999px"
+  },
+  "shadow_or_border_tokens": {
+    "soft": "0 8px 22px color-mix(in oklch, ink, transparent 96%)",
+    "card": "0 18px 48px color-mix(in oklch, ink, transparent 93%)",
+    "standard_border": "1px solid oklch(88% 0.008 250)"
+  },
+  "breakpoint_strategy": {
+    "xs": "430px",
+    "sm": "768px",
+    "md": "1024px",
+    "lg": "1180px",
+    "implementation_note": "Phase 2 implementation keeps core breakpoints at 430px and 768px while preserving room for additional page-specific thresholds in Phase 3."
+  },
+  "mobile_first_strategy": "Base styles assume narrow viewports; header, nav, card-grid, and CTA action wrapping progressively expand at larger breakpoints.",
   "accessibility_considerations": [
-    "Visible focus ring via :focus-visible",
-    "Tap-safe navigation targets",
-    "Readable body line length and line height",
-    "High-contrast ink and accent against light surfaces"
+    "Visible 3px focus ring preserved from design authority intent.",
+    "Tap targets and action controls are kept at or above 44px minimum height.",
+    "Muted text remains separated from body text by hierarchy and spacing rather than reduced size alone.",
+    "Reduced-motion handling disables long transitions and smooth scrolling."
   ]
 }

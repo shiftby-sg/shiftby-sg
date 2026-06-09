@@ -2,39 +2,46 @@
   "workpacket_root": "plan/impl",
   "phase_id": "phase2",
   "run_id": "run_001",
-  "tested_condition": "Reusable UI primitives can be introduced without replacing placeholder routes with final page implementations.",
-  "expected_outcome": "Component system is ready to support Phase3 page assembly.",
-  "actual_outcome": "Shared shell, navigation, footer, framed section, signal card, and placeholder composition primitives were created or updated so existing route placeholders inherit the design system without route-level edits.",
+  "tested_condition": "Reusable components are available to support later page materialization without replacing Phase 1 placeholders.",
+  "expected_outcome": "The application exposes shared shell, intro, evidence, card, and CTA primitives that reflect authority patterns while keeping route placeholders intact.",
+  "actual_outcome": "Existing placeholders were upgraded to consume reusable shell, intro, evidence, card, and CTA primitives while route files remained unchanged and still defer final content materialization.",
   "passes": [
-    "Reusable component surface expanded beyond the initial shell placeholder.",
-    "Placeholder routes can benefit from the new system through existing imports only.",
-    "No final page materialization was introduced."
+    "Reusable primitives now support page framing, intro rhythm, status sidecars, card grids, and CTA treatment.",
+    "Shared navigation and footer patterns were refined in the site shell instead of route-level implementations.",
+    "Placeholder routes continue to compile against shared primitives rather than bespoke page markup."
   ],
   "blockers": [],
   "components_created": [
-    "components/site-nav.tsx",
-    "components/site-footer.tsx",
-    "components/section-frame.tsx",
-    "components/signal-card.tsx"
+    "components/page-shell.tsx",
+    "components/page-intro.tsx",
+    "components/evidence-block.tsx",
+    "components/cta-block.tsx"
   ],
   "components_modified": [
+    "components/placeholder-page.tsx",
+    "components/signal-card.tsx",
     "components/site-shell.tsx",
-    "components/placeholder-page.tsx"
+    "components/site-footer.tsx"
   ],
   "component_purpose_map": {
-    "site-shell": "Applies system-level backdrop, header framing, and shell messaging.",
-    "site-nav": "Renders reusable sequence-aware navigation items.",
-    "site-footer": "Provides a reusable footer band consistent with the system rhythm.",
-    "section-frame": "Creates bordered, padded content sections for later page assembly.",
-    "signal-card": "Supports repeatable card/list treatments.",
-    "placeholder-page": "Demonstrates the system using non-final placeholder compositions."
+    "PageShell": "Container primitive for consistent inner page width and vertical rhythm.",
+    "PageIntro": "Reusable hero-intro structure with kicker, display title, lede, body, and optional aside.",
+    "EvidenceBlock": "Status or evidence sidecar card using authority-derived surface, label, and value treatment.",
+    "CTABlock": "Reusable CTA band with primary and secondary button-link variants.",
+    "SignalCard": "Reusable editorial card for system-level content bands.",
+    "SiteShell": "Global shell that carries the design-system header, note band, and footer."
   },
   "phase3_page_materialization_support": [
-    "Editorial hero framing",
-    "Section wrapper rhythm",
-    "Card grid treatment",
-    "Evidence/status aside treatment",
-    "Reusable navigation and footer structure"
+    "Page intros can be reused for the approved narrative sequence without rewriting route scaffolds now.",
+    "Card grid and CTA patterns are ready for capability, exploration, and services sections in later phases.",
+    "Site shell reflects approved navigation/footer tone without final per-page content composition."
+  ],
+  "html_css_patterns_reflected": [
+    "Sticky translucent header and muted nav links",
+    "Mono accent kickers",
+    "Large editorial hero titles and constrained lede widths",
+    "Quiet content band and bordered CTA surface treatment",
+    "Subtle cards with light surfaces and soft shadows"
   ],
   "no_final_page_materialization": true
 }

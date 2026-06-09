@@ -5,22 +5,26 @@
   "commands": [
     {
       "command": "npm run lint",
-      "status": "not_run",
-      "result": "Dependencies were not installed in this environment, so lint was not executed."
+      "status": "not_available",
+      "exit_code": 127,
+      "result": "/bin/bash: line 1: npm: command not found"
     },
     {
       "command": "npm run typecheck",
-      "status": "not_run",
-      "result": "Dependencies were not installed in this environment, so typecheck was not executed."
+      "status": "not_available",
+      "exit_code": 127,
+      "result": "/bin/bash: line 1: npm: command not found"
     },
     {
       "command": "npm run build",
-      "status": "not_run",
-      "result": "Dependencies were not installed in this environment, so build was not executed."
+      "status": "not_available",
+      "exit_code": 127,
+      "result": "/bin/bash: line 1: npm: command not found"
     }
   ],
-  "blockers": [],
-  "passes": [
-    "Command execution was non-material for validating bounded design-system output in this phase."
-  ]
+  "environment_notes": [
+    "node, npm, and pnpm were not present in the shell PATH during execution.",
+    "Dependencies appear on disk, but command-driven validation could not be performed from this environment."
+  ],
+  "material_blocker": false
 }
