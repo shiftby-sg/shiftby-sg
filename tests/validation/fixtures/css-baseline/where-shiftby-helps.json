@@ -1,0 +1,13 @@
+{
+  "page": "Where ShiftBy Helps",
+  "route": "/where-shiftby-helps",
+  "css_file": "styles/where-shiftby-helps.css",
+  "sha256": "bd3e69ce0a96f8f9463a73ab204502046f32daac00083c0640390184f309f92e",
+  "byte_size": 24020,
+  "line_count": 924,
+  "selector_count_estimate": 153,
+  "import_required": true,
+  "imported_in_globals": true,
+  "generated_from_current_release_candidate": true,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+}

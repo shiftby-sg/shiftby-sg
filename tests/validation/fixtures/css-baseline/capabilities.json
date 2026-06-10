@@ -1,0 +1,13 @@
+{
+  "page": "Capabilities",
+  "route": "/capabilities",
+  "css_file": "styles/capabilities.css",
+  "sha256": "3a371e81bcae6763fbc04b897157f6abd5821d22919fd5ec05c23bb59ad7ac4d",
+  "byte_size": 28766,
+  "line_count": 1009,
+  "selector_count_estimate": 188,
+  "import_required": true,
+  "imported_in_globals": true,
+  "generated_from_current_release_candidate": true,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+}

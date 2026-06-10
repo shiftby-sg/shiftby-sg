@@ -4,8 +4,11 @@ out
 dist
 coverage
 *.log
+!tests/**
+!tests/validation/run-validation-suite.mjs
+tests/validation/runs/
+tests/validation/reports/
 *.tsbuildinfo
 playwright-report
 test-results
 plan/
-tests

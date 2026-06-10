@@ -1,0 +1,13 @@
+{
+  "page": "Perspective",
+  "route": "/perspective",
+  "css_file": "styles/perspective.css",
+  "sha256": "2e5bff8613b2f37f131e4ecb0a5032dbd844e8000d357079bdf7a065bd212ad6",
+  "byte_size": 35746,
+  "line_count": 1283,
+  "selector_count_estimate": 225,
+  "import_required": true,
+  "imported_in_globals": true,
+  "generated_from_current_release_candidate": true,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+}

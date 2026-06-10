@@ -1,0 +1,13 @@
+{
+  "page": "About",
+  "route": "/about",
+  "css_file": "styles/about.css",
+  "sha256": "604d9f62949709e65b244f6ee44bb110b17158dadb1a952e4bbc5690f2332403",
+  "byte_size": 26845,
+  "line_count": 943,
+  "selector_count_estimate": 172,
+  "import_required": true,
+  "imported_in_globals": true,
+  "generated_from_current_release_candidate": true,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+}

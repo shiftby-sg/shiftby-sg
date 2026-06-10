@@ -1,0 +1,13 @@
+{
+  "page": "Explorations",
+  "route": "/explorations",
+  "css_file": "styles/explorations.css",
+  "sha256": "3459ab06a6b2ffd8187082ef349427680ab95850c7a75513a59654620c172e38",
+  "byte_size": 61675,
+  "line_count": 2064,
+  "selector_count_estimate": 340,
+  "import_required": true,
+  "imported_in_globals": true,
+  "generated_from_current_release_candidate": true,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+}

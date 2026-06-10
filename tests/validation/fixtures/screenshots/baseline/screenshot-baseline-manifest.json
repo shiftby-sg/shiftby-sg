@@ -1,0 +1,135 @@
+{
+  "generated_from_current_release_candidate": true,
+  "baseline_mode": false,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase.",
+  "screenshots": [
+    {
+      "page": "Home",
+      "route": "/",
+      "viewport": "desktop",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/home.desktop.png",
+      "sha256": "a6edb8a9ab4b10cd7d6480a67dd2b0b2049db427ac2ef88cafb4e8a94200997b",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Home",
+      "route": "/",
+      "viewport": "mobile",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/home.mobile.png",
+      "sha256": "751e372623aa913225c409b1d53552c808305fa622caf37205b68e8ae5950d4e",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Capabilities",
+      "route": "/capabilities",
+      "viewport": "desktop",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/capabilities.desktop.png",
+      "sha256": "39cc40e2d95dae398e13b969575ff6e0c97ff88a213ca64d801944e35789a61f",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Capabilities",
+      "route": "/capabilities",
+      "viewport": "mobile",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/capabilities.mobile.png",
+      "sha256": "307e2edc737ac1d7428b0c7fedd4673af616fb6f045acf64f6942fbfaf4ba1d1",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Where ShiftBy Helps",
+      "route": "/where-shiftby-helps",
+      "viewport": "desktop",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/where-shiftby-helps.desktop.png",
+      "sha256": "15579300fe25dbdc820f1e852f6af5b0952d03d1dd4058b29aa0ba9e916f380b",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Where ShiftBy Helps",
+      "route": "/where-shiftby-helps",
+      "viewport": "mobile",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/where-shiftby-helps.mobile.png",
+      "sha256": "fe21d3804eff5622ad3e9d8f7e024ada8adb37771ed5d35753561b65f81371e3",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Perspective",
+      "route": "/perspective",
+      "viewport": "desktop",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/perspective.desktop.png",
+      "sha256": "bb38751908177c8c14746f7555e569b51de99a886ba51cf5969352403611ed87",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Perspective",
+      "route": "/perspective",
+      "viewport": "mobile",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/perspective.mobile.png",
+      "sha256": "79a6389ee2f7499dc8b05759afb125caeab9d6cfe60081255d1a42878591d862",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Explorations",
+      "route": "/explorations",
+      "viewport": "desktop",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/explorations.desktop.png",
+      "sha256": "2b4ad320cc1845a28e8ee08a99eef6ba4e20e9a51e978b38dd2d558c08570909",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Explorations",
+      "route": "/explorations",
+      "viewport": "mobile",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/explorations.mobile.png",
+      "sha256": "a778d6df4a6ffe76fafcb94b15ea4f1fa84d51f90862fb6bd97bbd0343b00449",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Services",
+      "route": "/services",
+      "viewport": "desktop",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/services.desktop.png",
+      "sha256": "6ba7609f7d0bace3e4f96dcf0cd5644eea337ea554454a7f64491c8ba8e21271",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Services",
+      "route": "/services",
+      "viewport": "mobile",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/services.mobile.png",
+      "sha256": "0ab1b92fffdfc13c9c04c74b1aec63caef5f0a3c2fe30cee13e565ab955546e7",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "About",
+      "route": "/about",
+      "viewport": "desktop",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/about.desktop.png",
+      "sha256": "3018d2117ed119e30b9de3b6a45b4b1a3bc1fa4fca569355debcc4feebd25b66",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "About",
+      "route": "/about",
+      "viewport": "mobile",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/about.mobile.png",
+      "sha256": "a2fad5f1882abf01465f7138576b95d9725ed7f435f239ceca36159447069012",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Contact",
+      "route": "/contact",
+      "viewport": "desktop",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/contact.desktop.png",
+      "sha256": "f394286027840fa12da8c7922096ca1df4a46743e965d7e46ffffe780a9bb03f",
+      "generated_in_baseline_mode": false
+    },
+    {
+      "page": "Contact",
+      "route": "/contact",
+      "viewport": "mobile",
+      "baseline_screenshot_path": "tests/validation/fixtures/screenshots/baseline/contact.mobile.png",
+      "sha256": "064e7b7088ac034272772064336da38f8804d213c18ffef6c286ca25abd55397",
+      "generated_in_baseline_mode": false
+    }
+  ]
+}

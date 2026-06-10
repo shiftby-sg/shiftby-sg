@@ -1,0 +1,14 @@
+{
+  "imports": [
+    "styles/homepage.css",
+    "styles/capabilities.css",
+    "styles/where-shiftby-helps.css",
+    "styles/perspective.css",
+    "styles/explorations.css",
+    "styles/services.css",
+    "styles/about.css"
+  ],
+  "globals_file": "app/globals.css",
+  "all_required_imports_present": true,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+}
