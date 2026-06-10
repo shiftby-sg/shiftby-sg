@@ -1,3 +1,6 @@
+@import "../styles/homepage.css";
+
+@layer app-globals {
 :root {
   color-scheme: light;
   --color-bg: oklch(98% 0.004 250);
@@ -53,6 +56,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -104,17 +108,6 @@ code {
   min-height: 100vh;
 }
 
-.site-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 15% 0%, color-mix(in oklch, var(--color-accent-soft), transparent 52%) 0, transparent 26rem),
-    radial-gradient(circle at 100% 70%, color-mix(in oklch, var(--color-line), transparent 35%) 0, transparent 24rem);
-  opacity: 0.9;
-}
-
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -135,6 +128,19 @@ code {
   position: relative;
   min-height: 100vh;
   overflow: clip;
+  isolation: isolate;
+}
+
+.shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 0%, color-mix(in oklch, var(--color-accent-soft), transparent 52%) 0, transparent 26rem),
+    radial-gradient(circle at 100% 70%, color-mix(in oklch, var(--color-line), transparent 35%) 0, transparent 24rem);
+  opacity: 0.9;
 }
 
 .shell__backdrop {
@@ -143,6 +149,8 @@ code {
   border-radius: 999px;
   filter: blur(16px);
   opacity: 0.9;
+  contain: paint;
+  will-change: transform;
 }
 
 .shell__backdrop--north {
@@ -579,4 +587,5 @@ code {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
 }

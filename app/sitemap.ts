@@ -1,8 +1,7 @@
 import type { MetadataRoute } from "next";
 
+import { fallbackSiteUrl } from "@/content/discoverability";
 import { routeDefinitions } from "@/lib/site-data";
-
-const fallbackSiteUrl = "https://example.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? fallbackSiteUrl;

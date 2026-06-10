@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
-import { designSystemContent } from "@/content/design-system";
 import { routeDefinitions, siteTitle } from "@/lib/site-data";
 
 type SiteShellProps = {
@@ -19,27 +18,27 @@ export function SiteShell({ children }: SiteShellProps) {
         <div className="site-header__inner">
           <div className="site-header__bar">
             <div className="site-header__intro">
-              <p className="site-header__eyebrow">{designSystemContent.shellEyebrow}</p>
+              <p className="site-header__eyebrow">
+                Execution changes. Understanding preserves confidence.
+              </p>
               <Link className="site-mark" href="/">
                 {siteTitle}
               </Link>
             </div>
-            <p className="site-header__status">
-              Phase 2 foundations only.
-              <br />
-              Narrative materialization remains deferred.
-            </p>
+            <div className="site-header__actions">
+              <Link className="shell-button" href="/thinking">
+                Explore the perspective
+              </Link>
+              <Link className="shell-button shell-button--primary" href="/contact">
+                Start a conversation
+              </Link>
+            </div>
           </div>
           <SiteNav routes={routeDefinitions} />
         </div>
       </header>
       <main id="main-content">
-        <div className="site-band">
-          <div className="site-band__inner">
-            <p className="site-band__note">{designSystemContent.shellNote}</p>
-          </div>
-        </div>
-        {children}
+        <div className="site-page">{children}</div>
       </main>
       <SiteFooter />
     </div>

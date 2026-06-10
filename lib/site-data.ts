@@ -1,25 +1,25 @@
 export type RouteDefinition = {
   href: string;
   label: string;
-  status: "placeholder" | "future-scope";
+  status: "live";
 };
 
 export const siteTitle = "ShiftBy";
 
 export const siteDescription =
-  "Implementation architecture placeholder for the ShiftBy website.";
+  "Execution changes. Understanding preserves confidence as organizations work across people, systems, suppliers, automation, and AI.";
 
 export const routeDefinitions: RouteDefinition[] = [
-  { href: "/", label: "Home", status: "placeholder" },
-  { href: "/capabilities", label: "Capabilities", status: "placeholder" },
+  { href: "/", label: "Home", status: "live" },
+  { href: "/capabilities", label: "Capabilities", status: "live" },
   {
     href: "/where-shiftby-helps",
     label: "Where ShiftBy Helps",
-    status: "placeholder"
+    status: "live"
   },
-  { href: "/thinking", label: "Perspective", status: "placeholder" },
-  { href: "/explorations", label: "Explorations", status: "placeholder" },
-  { href: "/services", label: "Services", status: "placeholder" },
-  { href: "/about", label: "About", status: "placeholder" },
-  { href: "/contact", label: "Contact", status: "future-scope" }
+  { href: "/thinking", label: "Perspective", status: "live" },
+  { href: "/explorations", label: "Explorations", status: "live" },
+  { href: "/services", label: "Services", status: "live" },
+  { href: "/about", label: "About", status: "live" },
+  { href: "/contact", label: "Contact", status: "live" }
 ];
