@@ -1,9 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-import { pageMetadataEntries } from "@/content/discoverability";
-import { getPageMetadata } from "@/lib/metadata";
-
-export const metadata = getPageMetadata(pageMetadataEntries.services);
+export const metadata: Metadata = {
+  title: "Services | ShiftBy",
+  description:
+    "How ShiftBy helps organizations apply an understanding-preservation perspective to decisions, readiness, work changes, trust, and AI-enabled execution.",
+  alternates: {
+    canonical: "/services"
+  }
+};
 
 export default function ServicesPage() {
   return (
@@ -18,7 +23,7 @@ export default function ServicesPage() {
             <p className="lead">
               The practical challenge is knowing how to move forward when
               decisions, knowledge, accountability, and execution must remain
-              connected through change.
+              connected as change and drift appear.
             </p>
             <p className="lead">
               AI is one current setting where that challenge becomes visible,
@@ -116,7 +121,8 @@ export default function ServicesPage() {
             <h3>How should work improve?</h3>
             <p>
               Execution can improve only when context, traceability,
-              accountability, and organizational memory remain connected.
+              accountability, organizational memory, and drift visibility remain
+              connected.
             </p>
           </article>
           <article className="question-card">
@@ -141,6 +147,12 @@ export default function ServicesPage() {
               The questions come first. The support follows the organizational
               reality.
             </p>
+            <p className="lead">
+              Support may take the form of advisory engagements, executive
+              workshops, leadership coaching, readiness assessments, operating
+              model design, governance initiatives, or facilitated
+              decision-making engagements.
+            </p>
           </div>
           <div aria-label="How ShiftBy helps in practice" className="engagement-list">
             <article className="engagement-block">
@@ -162,6 +174,10 @@ export default function ServicesPage() {
                 <p>
                   Action becomes easier when investment, effort, and
                   organizational change are guided by clear rationale.
+                </p>
+                <p>
+                  Decision clarity also helps identify where assumptions, value
+                  expectations, or accountability may drift over time.
                 </p>
               </div>
               <div className="engagement-signals">
@@ -186,15 +202,26 @@ export default function ServicesPage() {
                 <h3>Readiness before adoption</h3>
                 <p>Readiness rarely begins with tools.</p>
                 <p>
-                  Leaders need clarity. Teams need shared context.
-                  Organizational memory, privacy, suppliers, decision
-                  ownership, and ways of working need to support change before
-                  adoption can move forward with confidence.
+                  Leaders need clarity before decisions move. Teams need shared
+                  context and AI literacy before work changes. Data readiness,
+                  knowledge readiness, organizational readiness, and change
+                  readiness need to support adoption without losing context,
+                  accountability, or confidence.
                 </p>
                 <p>
                   AI readiness assessment, AI capability readiness, and AI
                   workforce readiness matter most when they clarify what needs
                   to remain understood.
+                </p>
+                <p>
+                  Readiness helps people, data, and knowledge remain aligned as
+                  change begins and drift appears.
+                </p>
+                <p>
+                  Executive workshops, leadership coaching, and executive AI
+                  briefings can help clarify whether an AI readiness assessment,
+                  AI capability readiness, or AI workforce readiness effort is
+                  ready to move forward.
                 </p>
               </div>
               <div className="engagement-signals">
@@ -203,14 +230,17 @@ export default function ServicesPage() {
                   aria-label="Preparing the organization support"
                   className="signal-list"
                 >
+                  <li className="is-primary">Executive workshops</li>
+                  <li className="is-primary">Leadership coaching</li>
                   <li className="is-primary">Shared understanding baseline</li>
-                  <li className="is-primary">AI readiness</li>
+                  <li className="is-primary">AI literacy</li>
+                  <li className="is-primary">Workforce readiness</li>
+                  <li className="is-primary">Change readiness</li>
+                  <li className="is-primary">Data readiness</li>
+                  <li className="is-primary">Knowledge readiness</li>
                   <li className="is-primary">Supplier readiness</li>
                   <li className="is-primary">Leadership alignment</li>
                   <li className="is-primary">Decision ownership mapping</li>
-                  <li className="is-primary">Organizational clarity</li>
-                  <li className="is-primary">Capability development</li>
-                  <li className="is-primary">Knowledge readiness</li>
                 </ul>
               </div>
             </article>
@@ -231,6 +261,10 @@ export default function ServicesPage() {
                   AI agents, agentic AI, knowledge-connected AI systems, and
                   enterprise AI workflows need that context to remain
                   explainable.
+                </p>
+                <p>
+                  Knowledge-connected AI systems also help make context drift
+                  easier to see.
                 </p>
               </div>
               <div className="engagement-signals">
@@ -267,8 +301,13 @@ export default function ServicesPage() {
                   execution changes.
                 </p>
                 <p>
-                  Responsible AI, AI risk management, AI assurance, and
-                  third-party AI risk depend on the same connected evidence.
+                  Responsible AI, AI governance, AI risk management, AI
+                  assurance, and third-party AI risk depend on the same
+                  connected evidence.
+                </p>
+                <p>
+                  Trust weakens when risk, accountability, evidence, or
+                  assurance drift away from how work is actually performed.
                 </p>
                 <p>Trust is the outcome; governance is one mechanism that supports it.</p>
               </div>
@@ -284,7 +323,7 @@ export default function ServicesPage() {
                   <li className="is-primary">Data protection</li>
                   <li className="is-primary">Operational resilience</li>
                   <li className="is-primary">Audit readiness</li>
-                  <li className="is-primary">Assurance support</li>
+                  <li className="is-primary">AI assurance</li>
                 </ul>
               </div>
             </article>
@@ -371,7 +410,7 @@ export default function ServicesPage() {
               <span className="doctrine-line">Technology changes.</span>
               <span className="doctrine-line">Execution changes.</span>
               <span className="doctrine-line doctrine-final">
-                Understanding remains essential.
+                Understanding preserves confidence.
               </span>
             </h2>
             <div className="doctrine-copy">

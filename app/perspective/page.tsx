@@ -4,7 +4,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Perspective | ShiftBy",
   description:
-    "The ShiftBy perspective on preserving understanding as execution changes across people, systems, suppliers, automation, and AI."
+    "The ShiftBy perspective on why preserving context matters as execution changes across people, systems, suppliers, automation, and AI.",
+  alternates: {
+    canonical: "/perspective"
+  }
 };
 
 export default function PerspectivePage() {

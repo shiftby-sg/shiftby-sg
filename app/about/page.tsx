@@ -1,7 +1,13 @@
-import { pageMetadataEntries } from "@/content/discoverability";
-import { getPageMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 
-export const metadata = getPageMetadata(pageMetadataEntries.about);
+export const metadata: Metadata = {
+  title: "About | ShiftBy",
+  description:
+    "Why ShiftBy exists: organizations preserve artifacts, but organizations struggle to preserve understanding.",
+  alternates: {
+    canonical: "/about"
+  }
+};
 
 export default function AboutPage() {
   return (
@@ -28,6 +34,7 @@ export default function AboutPage() {
             <div className="intro-copy">
               <p>The records remained.</p>
               <p>The explanation became harder to recover.</p>
+              <p>The drift was often visible only later.</p>
               <p>The pattern appeared repeatedly.</p>
               <p>The observation became clear.</p>
             </div>
@@ -65,13 +72,13 @@ export default function AboutPage() {
                   It appeared across business functions responsible for
                   operations, manufacturing, supply chain, research and
                   development, quality, compliance, risk management,
-                  cybersecurity, privacy, technology strategy, data and analytics,
-                  and AI governance.
+                  cybersecurity, operational resilience, privacy, technology
+                  strategy, data and analytics, and AI governance.
                 </p>
                 <p>
                   It appeared across enterprise architecture, cloud platforms,
                   data platforms, analytics environments, knowledge systems,
-                  cybersecurity programs, FinOps initiatives, governance platforms,
+                  cybersecurity programs, governance platforms, AI initiatives,
                   and AI-enabled operating models.
                 </p>
                 <p>Different industries.</p>
@@ -87,10 +94,17 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p>
-                    Across those environments, the same underlying questions
-                    continued to emerge: what had been decided, what evidence
-                    supported it, what assumptions shaped it, and how accountability
-                    carried forward as conditions changed.
+                    ShiftBy grew from a pattern observed across technology,
+                    operations, data, governance, and AI environments, not from
+                    a single discipline.
+                  </p>
+                  <p>
+                    Across those environments, the technologies changed, the
+                    operating models changed, and the conditions changed, yet
+                    the same underlying questions continued to emerge: what had
+                    been decided, what evidence supported it, what assumptions
+                    shaped it, who understood the context, how accountability
+                    carried forward, and what drifted.
                   </p>
                   <p className="credential-line">
                     The consistency of the pattern became difficult to ignore.
@@ -199,6 +213,7 @@ export default function AboutPage() {
               <p>Operating models change.</p>
               <p>AI participates.</p>
               <p>The artifacts may remain.</p>
+              <p>Drift may appear.</p>
               <p>Understanding should remain with them.</p>
               <p>That is the purpose of ShiftBy.</p>
               <p>To help understanding survive change.</p>

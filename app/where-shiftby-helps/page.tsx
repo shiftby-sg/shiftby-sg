@@ -1,9 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-import { pageMetadataEntries } from "@/content/discoverability";
-import { getPageMetadata } from "@/lib/metadata";
-
-export const metadata = getPageMetadata(pageMetadataEntries.whereShiftByHelps);
+export const metadata: Metadata = {
+  title: "Where ShiftBy Helps | ShiftBy",
+  description:
+    "Where preserving understanding becomes difficult inside real organizations, across decisions, knowledge, accountability, execution, AI, and organizational change.",
+  alternates: {
+    canonical: "/where-shiftby-helps"
+  }
+};
 
 export default function WhereShiftByHelpsPage() {
   return (
@@ -56,6 +61,7 @@ export default function WhereShiftByHelpsPage() {
             <div className="manifest-copy">
               <p>These may appear unrelated.</p>
               <p>Often they are not.</p>
+              <p>Often, the manifestation is drift.</p>
               <p className="emphasis">
                 Despite their differences, each depends on preserving
                 understanding across change.
@@ -93,6 +99,10 @@ export default function WhereShiftByHelpsPage() {
               <span>The decision remains.</span>
               <span>Decision lineage becomes harder to preserve.</span>
             </p>
+            <p>
+              Decision drift begins when the decision remains but rationale,
+              evidence, assumptions, and approval context move away from it.
+            </p>
           </div>
         </article>
 
@@ -120,6 +130,10 @@ export default function WhereShiftByHelpsPage() {
               <span>Artifacts may survive.</span>
               <span>Understanding often does not.</span>
             </p>
+            <p>
+              Knowledge drift appears when artifacts remain available but
+              meaning, context, and interpretation move away from their origin.
+            </p>
           </div>
         </article>
 
@@ -145,6 +159,10 @@ export default function WhereShiftByHelpsPage() {
               <span>Responsibility may spread.</span>
               <span>Understanding preserves accountability.</span>
             </p>
+            <p>
+              Accountability drift appears when responsibility, evidence,
+              rationale, and approval paths become harder to trace.
+            </p>
           </div>
         </article>
 
@@ -169,6 +187,10 @@ export default function WhereShiftByHelpsPage() {
             <p className="brief-takeaway">
               <span>Execution can scale.</span>
               <span>Understanding must scale with it.</span>
+            </p>
+            <p>
+              Execution drift appears when work changes faster than shared
+              understanding can adapt.
             </p>
           </div>
         </article>

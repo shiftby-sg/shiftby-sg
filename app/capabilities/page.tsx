@@ -1,9 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-import { pageMetadataEntries } from "@/content/discoverability";
-import { getPageMetadata } from "@/lib/metadata";
-
-export const metadata = getPageMetadata(pageMetadataEntries.capabilities);
+export const metadata: Metadata = {
+  title: "Capabilities | ShiftBy",
+  description:
+    "ShiftBy capabilities for preserving understanding as execution changes: decision traceability, organizational memory, human-AI accountability, and adaptive execution.",
+  alternates: {
+    canonical: "/capabilities"
+  }
+};
 
 export default function CapabilitiesPage() {
   return (
@@ -104,6 +109,11 @@ export default function CapabilitiesPage() {
               Each capability addresses a specific way understanding can be lost
               as execution becomes more distributed.
             </p>
+            <p className="bridge-intro">
+              Many of those failure modes appear as drift: decisions drift from
+              rationale, knowledge drifts from context, accountability drifts
+              from responsibility, and execution drifts from intent.
+            </p>
           </div>
           <div className="bridge-points">
             <span className="bridge-list-label">Failure modes</span>
@@ -147,6 +157,11 @@ export default function CapabilitiesPage() {
                 <p className="why">
                   Decision Traceability keeps reasoning, assumptions, evidence,
                   approval, and decision lineage recoverable over time.
+                </p>
+                <p className="why">
+                  Decision Traceability helps make decision drift visible before
+                  rationale, evidence, and approval context become difficult to
+                  recover.
                 </p>
                 <p className="why">
                   This challenge increasingly appears within enterprise AI operating
@@ -198,6 +213,10 @@ export default function CapabilitiesPage() {
                   Organizational Memory keeps critical context, knowledge
                   relationships, and evidence available as people, teams, and
                   operating models evolve.
+                </p>
+                <p className="why">
+                  Organizational Memory helps reduce knowledge drift as people,
+                  systems, artifacts, and operating models change.
                 </p>
                 <p className="why">
                   Organizations often address this through knowledge management
@@ -252,6 +271,11 @@ export default function CapabilitiesPage() {
                   evidence, judgment, and decision lineage visible.
                 </p>
                 <p className="why">
+                  Human–AI Accountability helps identify accountability drift as
+                  responsibility, review, reliance, and evidence spread across
+                  people, AI, and artifacts.
+                </p>
+                <p className="why">
                   Responsible AI programs and AI governance initiatives frequently
                   depend on maintaining visible accountability, review, and evidence.
                 </p>
@@ -301,6 +325,11 @@ export default function CapabilitiesPage() {
                 <p className="why">
                   Adaptive Execution explores how organizations can evolve while
                   remaining aware of those changes and their impact.
+                </p>
+                <p className="why">
+                  Adaptive Execution helps organizations detect execution drift
+                  before operating intent becomes disconnected from how work is
+                  actually performed.
                 </p>
                 <p className="why">
                   Organizations pursuing AI transformation and large-scale

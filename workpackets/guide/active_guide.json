@@ -1,0 +1,22 @@
+{
+  "active_version": "1.8",
+  "active_guide_path": "workpackets/guide/v1.8-guide/v1.8-guide-candidate.md",
+  "active_since_workpacket": "workpackets/guide/v1.8-guide-promotion",
+  "active_since_phase": "phase5_promotion_execution",
+  "active_since_run": "run_001",
+  "promotion_approval_source": "current_user_prompt_approve_promotion",
+  "superseded_versions": [
+    {
+      "version": "1.7",
+      "guide_path": "workpackets/guide/E2EGuidev2.md",
+      "superseded_for": "new_work_only",
+      "historical_validity": "remains_authority_for_work_executed_under_v1.7"
+    }
+  ],
+  "rollback": {
+    "rollback_target_version": "1.7",
+    "rollback_target_path": "workpackets/guide/E2EGuidev2.md",
+    "rollback_action": "update workpackets/guide/active_guide.json to point back to v1.7",
+    "requires_human_rollback_approval": true
+  }
+}

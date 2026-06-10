@@ -1,9 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-import { pageMetadataEntries } from "@/content/discoverability";
-import { getPageMetadata } from "@/lib/metadata";
-
-export const metadata = getPageMetadata(pageMetadataEntries.explorations);
+export const metadata: Metadata = {
+  title: "Explorations | ShiftBy",
+  description:
+    "ShiftBy explorations into how organizations preserve understanding of execution, meaning, and discovery as they change.",
+  alternates: {
+    canonical: "/explorations"
+  }
+};
 
 export default function ExplorationsPage() {
   return (
@@ -24,8 +29,8 @@ export default function ExplorationsPage() {
               organizations change.
             </p>
             <p className="lead">
-              They follow what survives, what fragments, and what becomes
-              visible through change.
+              They follow what survives, what fragments, what drifts, and what
+              becomes visible through change.
             </p>
           </div>
           <p className="hero-note">
@@ -59,6 +64,8 @@ export default function ExplorationsPage() {
               <p>AI participates.</p>
               <p>Context moves.</p>
               <p>Accountability shifts.</p>
+              <p>Meaning drifts.</p>
+              <p>Execution drifts.</p>
               <p className="existence-conclusion">
                 The investigations explore what helps understanding survive those changes.
               </p>
@@ -135,8 +142,8 @@ export default function ExplorationsPage() {
               <span className="distinction-question">
                 <span>Open question</span>
                 <em>
-                  Can decisions, evidence, dependencies, and accountability
-                  remain connected as execution becomes distributed?
+                  Can decisions, evidence, dependencies, accountability, and
+                  drift remain visible as execution becomes distributed?
                 </em>
               </span>
               <span className="distinction-explore">Continue the investigation →</span>
@@ -159,8 +166,8 @@ export default function ExplorationsPage() {
               <span className="distinction-question">
                 <span>Open question</span>
                 <em>
-                  Can meaning remain shared as knowledge and context move away
-                  from their origin?
+                  Can meaning drift be detected before shared understanding
+                  fragments?
                 </em>
               </span>
               <span className="distinction-explore">Continue the investigation →</span>
@@ -183,8 +190,8 @@ export default function ExplorationsPage() {
               <span className="distinction-question">
                 <span>Open question</span>
                 <em>
-                  Can discovery remain reproducible as knowledge is reused and
-                  extended?
+                  Can discovery drift be understood as observations become
+                  knowledge and knowledge is reused?
                 </em>
               </span>
               <span className="distinction-explore">Continue the investigation →</span>

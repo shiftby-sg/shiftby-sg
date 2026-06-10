@@ -1,9 +1,16 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-import { pageMetadataEntries } from "@/content/discoverability";
-import { getPageMetadata } from "@/lib/metadata";
-
-export const metadata = getPageMetadata(pageMetadataEntries.home);
+export const metadata: Metadata = {
+  title: {
+    absolute: "ShiftBy | Execution Changes. Understanding Preserves Confidence."
+  },
+  description:
+    "ShiftBy is an executive advisory practice focused on preserving understanding, accountability, and confidence as execution becomes distributed across people, systems, suppliers, automation, and AI.",
+  alternates: {
+    canonical: "/"
+  }
+};
 
 export default function HomePage() {
   return (
@@ -70,16 +77,18 @@ export default function HomePage() {
 
       <section aria-labelledby="what-changed" className="quiet-band">
         <div className="section change-editorial">
-          <p className="kicker">WHAT CHANGED?</p>
-          <h2 id="what-changed">Execution no longer happens through people alone.</h2>
-          <p className="change-body">
-            Organizations increasingly execute across people, systems,
-            suppliers, automation, and AI.
-          </p>
-          <p className="change-takeaway">
-            As execution becomes more distributed, confidence becomes harder to
-            maintain.
-          </p>
+          <div>
+            <p className="kicker">WHAT CHANGED?</p>
+            <h2 id="what-changed">Execution no longer happens through people alone.</h2>
+            <p className="change-body">
+              Organizations increasingly execute across people, systems,
+              suppliers, automation, and AI.
+            </p>
+            <p className="change-takeaway">
+              As execution becomes more distributed, drift becomes harder to see
+              and confidence becomes harder to maintain.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -95,7 +104,8 @@ export default function HomePage() {
         <p className="challenge-definition">
           <strong>Organizations struggle to preserve understanding.</strong> At
           ShiftBy, understanding is the context that connects decisions,
-          assumptions, evidence, accountability, dependencies, and outcomes.
+          assumptions, evidence, accountability, dependencies, outcomes, and the
+          drift that can occur between them.
         </p>
         <p className="challenge-definition">
           This challenge becomes increasingly visible during AI adoption,

@@ -909,6 +909,17 @@
   line-height: 1.55;
 }
 
+.where-shiftby-helps-design-port .stagger-list li {
+  color: var(--fg);
+  font-size: clamp(19px, 1.6vw, 25px);
+  line-height: 1.18;
+  font-weight: 400;
+}
+
+.where-shiftby-helps-design-port .manifest-copy .emphasis {
+  font-weight: 400;
+}
+
 @media (max-width: 1024px) {
   .where-shiftby-helps-design-port .exploration-section {
     grid-template-columns: 1fr;
