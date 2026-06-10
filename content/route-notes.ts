@@ -4,8 +4,8 @@ export const routeNotes = {
     "Capability-specific messaging is intentionally deferred until page materialization.",
   whereShiftByHelps:
     "Page structure exists; the approved visual system is not yet materialized.",
-  thinking:
-    "Perspective route placeholder preserves route identity without introducing final copy.",
+  perspective:
+    "Perspective route preserves the observation and doctrine behind ShiftBy.",
   explorations:
     "Explorations remain a placeholder investigation route until later phases.",
   services:

@@ -7,10 +7,13 @@ export const metadata = getPageMetadata(pageMetadataEntries.capabilities);
 
 export default function CapabilitiesPage() {
   return (
-    <>
+    <div className="capabilities-design-port">
       <section aria-labelledby="hero-title" className="section hero">
         <div>
-          <h1 id="hero-title">
+          <h1
+            aria-label="Four capabilities help organizations preserve understanding."
+            id="hero-title"
+          >
             <span className="hero-title-line">Four capabilities help</span>
             <span className="hero-title-line">organizations preserve</span>
             <span className="hero-title-line">understanding.</span>
@@ -45,7 +48,7 @@ export default function CapabilitiesPage() {
       <section aria-labelledby="why-capabilities-matter" className="quiet-band">
         <div className="section split">
           <div>
-            <p className="kicker">Why capabilities matter</p>
+            <span className="kicker">Why capabilities matter</span>
             <h2 id="why-capabilities-matter">
               Artifacts alone do not preserve understanding.
             </h2>
@@ -83,7 +86,7 @@ export default function CapabilitiesPage() {
       <section aria-labelledby="multiple-capabilities" className="section">
         <div className="bridge-panel">
           <div>
-            <p className="kicker">Why four capabilities</p>
+            <span className="kicker">Why four capabilities</span>
             <h2 id="multiple-capabilities">
               No single capability preserves understanding.
             </h2>
@@ -103,7 +106,7 @@ export default function CapabilitiesPage() {
             </p>
           </div>
           <div className="bridge-points">
-            <span className="signal-context">Failure modes</span>
+            <span className="bridge-list-label">Failure modes</span>
             <article className="bridge-point">
               <i>01</i>
               <p>Decisions lose rationale, evidence, and approval context over time.</p>
@@ -127,7 +130,7 @@ export default function CapabilitiesPage() {
       <section aria-label="Foundational capabilities" className="quiet-band" id="capabilities">
         <div className="section">
           <div className="capability-sections">
-            <article className="capability-detail">
+            <article className="capability-detail" id="decision-traceability">
               <div>
                 <h3>Decision Traceability</h3>
                 <p className="executive-takeaway">
@@ -177,7 +180,7 @@ export default function CapabilitiesPage() {
               </div>
             </article>
 
-            <article className="capability-detail">
+            <article className="capability-detail" id="organizational-memory">
               <div>
                 <h3>Organizational Memory</h3>
                 <p className="executive-takeaway">
@@ -229,7 +232,7 @@ export default function CapabilitiesPage() {
               </div>
             </article>
 
-            <article className="capability-detail">
+            <article className="capability-detail" id="human-ai-accountability">
               <div>
                 <h3>Human-AI Accountability</h3>
                 <p className="executive-takeaway">
@@ -281,7 +284,7 @@ export default function CapabilitiesPage() {
               </div>
             </article>
 
-            <article className="capability-detail">
+            <article className="capability-detail" id="adaptive-execution">
               <div>
                 <h3>Adaptive Execution</h3>
                 <p className="executive-takeaway">
@@ -337,7 +340,7 @@ export default function CapabilitiesPage() {
       <section aria-labelledby="what-this-enables" className="section synthesis-section">
         <div className="synthesis">
           <div>
-            <p className="kicker">What this enables</p>
+            <span className="kicker">What this enables</span>
             <h2 id="what-this-enables">What these capabilities make possible.</h2>
           </div>
           <div>
@@ -364,7 +367,7 @@ export default function CapabilitiesPage() {
 
       <section aria-labelledby="from-capability-to-practice" className="section practice-bridge">
         <div className="section-head">
-          <p className="kicker">From capability to practice</p>
+          <span className="kicker">From capability to practice</span>
           <h2 id="from-capability-to-practice">
             Capabilities are explored through ongoing investigations.
           </h2>
@@ -394,9 +397,12 @@ export default function CapabilitiesPage() {
         </Link>
       </section>
 
-      <section aria-labelledby="understanding-confidence" className="section page-closing">
+      <section
+        aria-labelledby="understanding-confidence"
+        className="section closing doctrine-close"
+      >
         <div>
-          <p className="kicker">Understanding and confidence</p>
+          <span className="kicker">Understanding and confidence</span>
           <h2 id="understanding-confidence">
             Organizations preserve confidence when they preserve understanding.
           </h2>
@@ -417,6 +423,6 @@ export default function CapabilitiesPage() {
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }

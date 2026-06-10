@@ -41,9 +41,9 @@ export const pageMetadataEntries = {
     description:
       "Where preserving understanding becomes difficult across decisions, knowledge, accountability, execution, AI adoption, and organizational change."
   },
-  thinking: {
+  perspective: {
     title: "Perspective",
-    path: "/thinking",
+    path: "/perspective",
     description:
       "The ShiftBy perspective on preserving understanding as execution changes across people, systems, suppliers, automation, and AI."
   },
@@ -91,7 +91,7 @@ export const llmsTextLines = [
   "- /",
   "- /capabilities",
   "- /where-shiftby-helps",
-  "- /thinking",
+  "- /perspective",
   "- /explorations",
   "- /services",
   "- /about",

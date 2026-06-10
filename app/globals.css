@@ -1,4 +1,7 @@
 @import "../styles/homepage.css";
+@import "../styles/capabilities.css";
+@import "../styles/where-shiftby-helps.css";
+@import "../styles/perspective.css";
 
 @layer app-globals {
 :root {
@@ -193,7 +196,7 @@ code {
 
 .site-header__bar {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: var(--space-4);
 }

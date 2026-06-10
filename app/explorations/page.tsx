@@ -229,7 +229,7 @@ export default function ExplorationsPage() {
               <Link className="button primary" href="/contact">
                 Continue the conversation
               </Link>
-              <Link className="button secondary" href="/thinking">
+              <Link className="button secondary" href="/perspective">
                 Return to perspective
               </Link>
             </div>

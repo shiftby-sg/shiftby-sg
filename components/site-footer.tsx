@@ -14,7 +14,7 @@ export function SiteFooter() {
           <Link href="/">Home</Link>
           <Link href="/capabilities">Capabilities</Link>
           <Link href="/where-shiftby-helps">Where ShiftBy Helps</Link>
-          <Link href="/thinking">Perspective</Link>
+          <Link href="/perspective">Perspective</Link>
           <Link href="/explorations">Explorations</Link>
           <Link href="/services">Services</Link>
           <Link href="/about">About</Link>

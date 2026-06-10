@@ -26,7 +26,7 @@ export function SiteShell({ children }: SiteShellProps) {
               </Link>
             </div>
             <div className="site-header__actions">
-              <Link className="shell-button" href="/thinking">
+              <Link className="shell-button" href="/perspective">
                 Explore the perspective
               </Link>
               <Link className="shell-button shell-button--primary" href="/contact">

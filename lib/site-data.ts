@@ -17,7 +17,7 @@ export const routeDefinitions: RouteDefinition[] = [
     label: "Where ShiftBy Helps",
     status: "live"
   },
-  { href: "/thinking", label: "Perspective", status: "live" },
+  { href: "/perspective", label: "Perspective", status: "live" },
   { href: "/explorations", label: "Explorations", status: "live" },
   { href: "/services", label: "Services", status: "live" },
   { href: "/about", label: "About", status: "live" },

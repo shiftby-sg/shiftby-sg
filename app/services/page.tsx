@@ -34,7 +34,7 @@ export default function ServicesPage() {
               <Link className="button primary" href="/contact">
                 Start a conversation
               </Link>
-              <Link className="button secondary" href="/thinking">
+              <Link className="button secondary" href="/perspective">
                 Explore the perspective
               </Link>
             </div>
