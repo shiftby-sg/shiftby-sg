@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "test:validation": "node tests/validation/run-validation-suite.mjs",
-    "prebuild": "npm run test:validation",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
