@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "test:validation": "node tests/validation/run-validation-suite.mjs",
+    "prebuild": "npm run test:validation",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
@@ -23,6 +25,7 @@
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.17.0",
     "eslint-config-next": "^15.0.0",
+    "lighthouse": "^13.4.0",
     "typescript": "^5.7.0"
   }
 }
