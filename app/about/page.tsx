@@ -5,21 +5,20 @@ export const metadata = getPageMetadata(pageMetadataEntries.about);
 
 export default function AboutPage() {
   return (
-    <>
-      <section aria-labelledby="observation-title" className="movement">
+    <div className="about-design-port">
+      <section className="movement" aria-labelledby="observation-title">
         <div className="movement-inner">
           <article className="essay wide">
-            <p className="kicker">About ShiftBy</p>
+            <span className="kicker">About ShiftBy</span>
             <h1 id="observation-title">The perspective begins with an observation.</h1>
             <div className="intro-copy">
               <p className="lead">
-                Across industries, technologies, governance programs,
-                cybersecurity investigations, manufacturing environments,
-                supply chains, data initiatives, and AI adoption efforts, the
-                same questions kept returning.
+                Across industries, technologies, governance programs, cybersecurity
+                investigations, manufacturing environments, supply chains, data
+                initiatives, and AI adoption efforts, the same questions kept returning.
               </p>
             </div>
-            <ul aria-label="Questions that kept returning" className="question-run">
+            <ul className="question-run" aria-label="Questions that kept returning">
               <li>Why was this decision made?</li>
               <li>What evidence existed?</li>
               <li>What assumptions shaped it?</li>
@@ -32,7 +31,7 @@ export default function AboutPage() {
               <p>The pattern appeared repeatedly.</p>
               <p>The observation became clear.</p>
             </div>
-            <div className="observation-destination">
+            <div className="observation-destination" aria-label="Core observation">
               <p>Organizations preserve artifacts.</p>
               <p>Organizations struggle to preserve understanding.</p>
             </div>
@@ -48,7 +47,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section aria-label="The evidence" className="movement">
+      <section className="movement" aria-label="The evidence">
         <div className="movement-inner">
           <article className="essay wide">
             <div className="evidence-flow">
@@ -59,21 +58,21 @@ export default function AboutPage() {
                 <p>The observation did not emerge from a single domain.</p>
                 <p>
                   It appeared across industries that included consumer health,
-                  pharmaceuticals, MedTech, manufacturing, supply chain,
-                  research and development, and digital operations.
+                  pharmaceuticals, MedTech, manufacturing, supply chain, research
+                  and development, and digital operations.
                 </p>
                 <p>
                   It appeared across business functions responsible for
                   operations, manufacturing, supply chain, research and
                   development, quality, compliance, risk management,
-                  cybersecurity, privacy, technology strategy, data and
-                  analytics, and AI governance.
+                  cybersecurity, privacy, technology strategy, data and analytics,
+                  and AI governance.
                 </p>
                 <p>
                   It appeared across enterprise architecture, cloud platforms,
                   data platforms, analytics environments, knowledge systems,
-                  cybersecurity programs, FinOps initiatives, governance
-                  platforms, and AI-enabled operating models.
+                  cybersecurity programs, FinOps initiatives, governance platforms,
+                  and AI-enabled operating models.
                 </p>
                 <p>Different industries.</p>
                 <p>Different business functions.</p>
@@ -86,27 +85,27 @@ export default function AboutPage() {
                   <span>Founder, ShiftBy</span>
                   <span>IAPP Certified AI Governance Professional (AIGP)</span>
                 </div>
-                <div className="intro-copy">
+                <div>
                   <p>
                     Across those environments, the same underlying questions
                     continued to emerge: what had been decided, what evidence
-                    supported it, what assumptions shaped it, and how
-                    accountability carried forward as conditions changed.
+                    supported it, what assumptions shaped it, and how accountability
+                    carried forward as conditions changed.
                   </p>
                   <p className="credential-line">
                     The consistency of the pattern became difficult to ignore.
                   </p>
                 </div>
               </div>
-              <div aria-label="Meaning pattern" className="meaning-lines">
+              <div className="meaning-lines" aria-label="Meaning pattern">
                 <p>DATA REMAINED AVAILABLE.</p>
                 <p>KNOWLEDGE REMAINED VISIBLE.</p>
                 <p>MEANING BECAME HARDER TO PRESERVE.</p>
               </div>
               <div className="origin-thread">
                 <p>
-                  Over time, the observations began to reveal different
-                  dimensions of the same challenge.
+                  Over time, the observations began to reveal different dimensions
+                  of the same challenge.
                 </p>
                 <p>
                   Some questions were about execution: how decisions, actions,
@@ -115,8 +114,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Some were about meaning: how information, knowledge, context,
-                  and interpretation remained connected as organizations
-                  evolved.
+                  and interpretation remained connected as organizations evolved.
                 </p>
                 <p>
                   Some were about discovery: how observations became knowledge
@@ -125,26 +123,25 @@ export default function AboutPage() {
               </div>
               <div className="intro-copy">
                 <p>
-                  Across data platforms, analytics environments, knowledge
-                  systems, research environments, and AI-enabled ecosystems, the
+                  Across data platforms, analytics environments, knowledge systems,
+                  research environments, and AI-enabled ecosystems, the
                   relationships that explain why something matters often became
                   harder to recover than the information itself.
                 </p>
               </div>
-              <div aria-label="AI visibility" className="meaning-lines">
+              <div className="ai-lines" aria-label="AI visibility">
                 <p>AI did not create the challenge.</p>
                 <p>AI makes the challenge more visible.</p>
                 <p>
-                  Organizations pursuing enterprise AI, AI adoption strategies,
-                  and responsible AI programs often discover the challenge more
-                  quickly.
+                  Organizations pursuing enterprise AI, AI adoption strategies, and
+                  responsible AI programs often discover the challenge more quickly.
                 </p>
               </div>
               <div className="intro-copy">
                 <p>
-                  As execution expands across people, systems, automation, and
-                  AI, organizations face the same underlying need with greater
-                  scale, speed, participation, automation, and complexity.
+                  As execution expands across people, systems, automation, and AI,
+                  organizations face the same underlying need with greater scale,
+                  speed, participation, automation, and complexity.
                 </p>
               </div>
             </div>
@@ -152,7 +149,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section aria-labelledby="response-title" className="movement">
+      <section className="movement" aria-labelledby="response-title">
         <div className="movement-inner">
           <article className="essay">
             <h2 id="response-title">How ShiftBy Explores The Challenge</h2>
@@ -161,7 +158,7 @@ export default function AboutPage() {
                 ShiftBy explores the challenge through advisory work, coaching,
                 thought leadership, and ongoing investigations.
               </p>
-              <ul aria-label="Four complementary lenses" className="inline-series">
+              <ul className="inline-series" aria-label="Four complementary lenses">
                 <li>Decision Traceability</li>
                 <li>Organizational Memory</li>
                 <li>Human-AI Accountability</li>
@@ -171,7 +168,7 @@ export default function AboutPage() {
                 Over time, the recurring questions began to separate into three
                 related dimensions: execution, meaning, and discovery.
               </p>
-              <ul aria-label="ShiftBy investigations" className="plain-list">
+              <ul className="plain-list" aria-label="ShiftBy investigations">
                 <li>
                   UnifyPlane <span>explores how execution remains understandable over time.</span>
                 </li>
@@ -191,7 +188,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section aria-labelledby="doctrine-title" className="movement">
+      <section className="movement doctrine" aria-labelledby="doctrine-title">
         <div className="movement-inner">
           <article className="essay wide">
             <h2 id="doctrine-title">Understanding Should Survive Change</h2>
@@ -206,13 +203,13 @@ export default function AboutPage() {
               <p>That is the purpose of ShiftBy.</p>
               <p>To help understanding survive change.</p>
             </div>
-            <div className="final-doctrine">
+            <div className="final-doctrine" aria-label="ShiftBy doctrine">
               <span>The observation became the source.</span>
               <span>The work is preserving understanding through change.</span>
             </div>
           </article>
         </div>
       </section>
-    </>
+    </div>
   );
 }
