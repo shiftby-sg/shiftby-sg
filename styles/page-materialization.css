@@ -4861,3 +4861,721 @@
   .perspective-design-port .ai-lines { gap: 22px; }
   .perspective-design-port .ai-line-group { gap: 6px; }
 }
+
+/* Explorations design HTML authority: final route-scoped hero neutralization using exact extracted values so later shared hero/page-materialization rules cannot collapse the hero copy grid. */
+.explorations-design-port .hero {
+  min-height: clamp(420px, 52vh, 610px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  gap: clamp(30px, 4.5vw, 58px);
+  padding-top: clamp(48px, 6vw, 82px);
+  padding-bottom: clamp(42px, 6vw, 74px);
+}
+
+.explorations-design-port .hero > * {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.explorations-design-port .hero .kicker {
+  display: inline-flex;
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.explorations-design-port .hero h1 {
+  max-width: 970px;
+  margin: 0;
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-size: var(--type-hero);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  font-weight: 690;
+  text-wrap: balance;
+}
+
+.explorations-design-port .hero-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 0.64fr) minmax(340px, 0.52fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+  max-width: 1080px;
+  width: 100%;
+}
+
+.explorations-design-port .hero-lines {
+  display: grid;
+  gap: 10px;
+  max-width: 650px;
+  min-width: 0;
+  border-top: 1px solid var(--border);
+  padding-top: clamp(18px, 2.6vw, 30px);
+}
+
+.explorations-design-port .hero-tension {
+  margin: 0;
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: clamp(18px, 1.45vw, 21px);
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.explorations-design-port .hero-lines .lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--type-lead);
+  line-height: 1.42;
+}
+
+.explorations-design-port .hero-note {
+  display: grid;
+  gap: 12px;
+  max-width: 540px;
+  min-width: 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+  padding-top: clamp(20px, 2.8vw, 34px);
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-size: clamp(25px, 2.45vw, 37px);
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  font-weight: 690;
+}
+
+.explorations-design-port .hero-note span {
+  display: block;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: var(--type-small);
+  line-height: 1.48;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* Explorations card alignment: keep Open question and Continue the investigation on consistent rows inside each design card. */
+.explorations-design-port .distinction a {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.explorations-design-port .distinction-detail {
+  display: grid;
+  grid-template-rows: minmax(84px, auto) 1fr auto;
+  height: 100%;
+}
+
+.explorations-design-port .distinction-question {
+  align-self: start;
+}
+
+.explorations-design-port .distinction-explore {
+  align-self: end;
+}
+
+@media (max-width: 980px) {
+  .explorations-design-port .hero-copy {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .explorations-design-port .hero {
+    min-height: auto;
+    padding-top: 42px;
+  }
+}
+
+
+/* Phase 7F Services cascade neutralization: values copied from styles/services.css, which was extracted from plan/impl/design/services.html. Visual impact: lets /services keep the design CSS after page-materialization imports later in app/layout.tsx. */
+/* Compatibility: let /services use the standalone design container instead of the narrower app shell content width. Visual impact: removes the extra horizontal inset before Services sections only. */
+.shell:has(.services-design-port) #main-content,
+.site-page:has(> .services-design-port) {
+  width: 100%;
+}
+
+/* Compatibility: route-prefixed selectors reuse extracted services.html values so later page-materialization generic .section, heading, paragraph, list, grid, button, and engagement rules cannot override the Services route. Visual impact: preserves Services design rhythm inside .services-design-port only. */
+.services-design-port .section {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  padding: var(--section) var(--gutter);
+}
+.services-design-port .quiet-band {
+  background: color-mix(in oklch, var(--surface), var(--bg) 45%);
+  border-block: 1px solid var(--border);
+}
+.services-design-port .kicker {
+  display: inline-flex;
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.services-design-port h1,
+.services-design-port h2,
+.services-design-port h3,
+.services-design-port h4 {
+  margin: 0;
+  color: var(--fg);
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.services-design-port h1 {
+  max-width: 1010px;
+  font-size: var(--type-hero);
+  line-height: 1.02;
+  font-weight: 690;
+}
+.services-design-port h2 {
+  max-width: 900px;
+  font-size: var(--type-section);
+  line-height: 1.08;
+  font-weight: 670;
+}
+.services-design-port #intro-title {
+  font-size: clamp(29px, 3.75vw, 50px);
+}
+.services-design-port h3 {
+  font-size: var(--type-title);
+  line-height: 1.13;
+  font-weight: 650;
+}
+.services-design-port p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--type-body);
+  line-height: 1.54;
+  text-wrap: pretty;
+}
+.services-design-port ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.services-design-port .lead {
+  color: var(--muted);
+  font-size: var(--type-lead);
+  line-height: 1.42;
+}
+.services-design-port .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  background: transparent;
+  color: var(--fg);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+.services-design-port .button:hover { transform: translateY(-1px); }
+.services-design-port .button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+.services-design-port .button.secondary {
+  color: var(--muted);
+  background: transparent;
+  border-color: transparent;
+  padding-inline: 4px;
+}
+.services-design-port .split {
+  display: grid;
+  grid-template-columns: var(--split-grid);
+  gap: var(--split-gap);
+  align-items: start;
+}
+.services-design-port .section-copy {
+  display: grid;
+  gap: 16px;
+  max-width: var(--measure);
+}
+.services-design-port .hero {
+  min-height: clamp(452px, 53vh, 632px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-flow: row;
+  align-content: center;
+  gap: clamp(38px, 5.4vw, 72px);
+  padding-top: clamp(58px, 7.4vw, 94px);
+  padding-bottom: clamp(54px, 7vw, 90px);
+}
+.services-design-port .hero > * {
+  grid-column: 1;
+  min-width: 0;
+}
+.services-design-port .hero-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 0.64fr) minmax(330px, 0.52fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+  max-width: 1080px;
+  width: 100%;
+}
+.services-design-port .hero-lines,
+.services-design-port .stacked-lines,
+.services-design-port .doctrine-copy,
+.services-design-port .cta-note {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: clamp(18px, 2.6vw, 30px);
+}
+.services-design-port .hero-note {
+  display: grid;
+  gap: 12px;
+  max-width: 500px;
+  border-top: 1px solid var(--border);
+  padding-top: clamp(18px, 2.4vw, 28px);
+  color: var(--muted);
+  font-size: clamp(18px, 1.55vw, 22px);
+  line-height: 1.42;
+  font-weight: 430;
+}
+.services-design-port .hero-actions,
+.services-design-port .cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  margin-top: clamp(24px, 3.2vw, 38px);
+  align-items: center;
+}
+.services-design-port .progression-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+.services-design-port .progression-list li {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.32fr) minmax(0, 0.68fr);
+  gap: clamp(22px, 3.4vw, 48px);
+  padding: clamp(15px, 2vw, 22px) 0;
+  border-bottom: 1px solid color-mix(in oklch, var(--border), transparent 18%);
+  align-items: baseline;
+}
+.services-design-port .progression-term {
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.65vw, 24px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 640;
+  text-transform: none;
+}
+.services-design-port .progression-line {
+  color: var(--muted);
+  font-size: var(--type-small);
+  line-height: 1.42;
+}
+.services-design-port .compact-bridge {
+  padding-top: clamp(42px, 5.4vw, 68px);
+  padding-bottom: clamp(42px, 5.4vw, 68px);
+}
+.services-design-port .compact-bridge .stacked-lines { gap: 14px; }
+.services-design-port .compact-bridge .progression-list { margin-top: 4px; }
+.services-design-port .compact-bridge .progression-list li { padding: 11px 0; }
+.services-design-port .question-head {
+  display: grid;
+  grid-template-columns: minmax(0, 0.46fr) minmax(320px, 0.54fr);
+  gap: clamp(20px, 4vw, 68px);
+  align-items: end;
+  margin-bottom: clamp(30px, 4.2vw, 48px);
+}
+.services-design-port .question-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  align-items: stretch;
+}
+.services-design-port .question-card {
+  min-height: 232px;
+  padding: clamp(22px, 2.45vw, 30px);
+  border-right: 1px solid var(--border);
+  border-top: 0;
+  display: grid;
+  grid-template-rows: 18px minmax(72px, auto) 1fr;
+  gap: 13px;
+  align-content: start;
+}
+.services-design-port .question-card:last-child { border-right: 0; }
+.services-design-port .question-card small {
+  color: color-mix(in oklch, var(--muted), transparent 14%);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.services-design-port .question-card h3 {
+  display: flex;
+  align-items: start;
+  font-size: clamp(20px, 1.56vw, 25px);
+  line-height: 1.14;
+  min-height: 56px;
+}
+.services-design-port .question-card p {
+  font-size: var(--type-small);
+  line-height: 1.5;
+  max-width: 25ch;
+}
+.services-design-port .engagement-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr);
+  gap: clamp(34px, 5.4vw, 82px);
+  align-items: end;
+  margin-bottom: clamp(22px, 3.2vw, 38px);
+}
+.services-design-port #themes-title {
+  max-width: 520px;
+  font-size: clamp(22px, 2.34vw, 32px);
+  line-height: 1.18;
+  font-weight: 585;
+}
+.services-design-port .engagement-list { border-top: 1px solid var(--border); }
+.services-design-port .engagement-block {
+  display: grid;
+  grid-template-columns: minmax(0, 0.62fr) minmax(310px, 0.38fr);
+  gap: clamp(36px, 4vw, 62px);
+  padding: clamp(30px, 4.4vw, 54px) 0;
+  border-top: 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.services-design-port .engagement-block:nth-child(2) { padding-top: clamp(34px, 4.8vw, 58px); }
+.services-design-port .engagement-block:nth-child(3) { padding-bottom: clamp(34px, 4.8vw, 58px); }
+.services-design-port .engagement-copy {
+  display: grid;
+  gap: 13px;
+  max-width: 650px;
+}
+.services-design-port .engagement-challenge {
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-size: clamp(23px, 2.12vw, 33px);
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  font-weight: 705;
+  max-width: 530px;
+}
+.services-design-port .engagement-copy h3 {
+  margin: -2px 0 1px;
+  color: color-mix(in oklch, var(--muted), transparent 2%);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 1.25;
+  font-weight: 680;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  max-width: 520px;
+}
+.services-design-port .engagement-copy > p:not(.engagement-challenge) {
+  max-width: 600px;
+  color: color-mix(in oklch, var(--fg), var(--muted) 28%);
+  font-size: clamp(17px, 1.18vw, 19px);
+  line-height: 1.56;
+}
+.services-design-port .engagement-signals {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  margin-top: 6px;
+  padding-left: clamp(24px, 2.7vw, 38px);
+}
+.services-design-port .engagement-signals::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: clamp(28px, 3.4vw, 44px);
+  width: 1px;
+  background: color-mix(in oklch, var(--border), transparent 78%);
+}
+.services-design-port .signal-context {
+  color: color-mix(in oklch, var(--muted), transparent 8%);
+  font-family: var(--font-display);
+  font-size: clamp(11px, 0.82vw, 13px);
+  line-height: 1.25;
+  font-weight: 520;
+  letter-spacing: 0;
+  margin: 0 0 1px;
+  text-transform: none;
+}
+.services-design-port .signal-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px clamp(16px, 2vw, 24px);
+  padding-top: 2px;
+}
+.services-design-port .signal-list li {
+  min-height: 24px;
+  padding-top: 6px;
+  border-top: 1px solid color-mix(in oklch, var(--border), transparent 24%);
+  color: color-mix(in oklch, var(--muted), transparent 5%);
+  font-size: clamp(11px, 0.84vw, 13px);
+  line-height: 1.28;
+  font-weight: 440;
+}
+.services-design-port .signal-list li.is-primary {
+  color: color-mix(in oklch, var(--muted), var(--fg) 6%);
+  border-top-color: color-mix(in oklch, var(--border), transparent 18%);
+  font-weight: 470;
+}
+.services-design-port .engagement-signals > .signal-list > li:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: none;
+}
+.services-design-port .help-examples {
+  display: grid;
+  grid-template-columns: minmax(0, 0.36fr) minmax(0, 0.64fr);
+  gap: clamp(32px, 5vw, 76px);
+  align-items: start;
+  border-top: 1px solid var(--border);
+  padding-top: clamp(28px, 4.2vw, 50px);
+  margin-top: clamp(6px, 1vw, 16px);
+}
+.services-design-port .help-examples h3 {
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.16;
+  font-weight: 620;
+  letter-spacing: -0.01em;
+}
+.services-design-port .help-examples p {
+  margin-top: 12px;
+  max-width: 440px;
+}
+.services-design-port .example-list {
+  display: block;
+  columns: 2;
+  column-gap: clamp(24px, 4vw, 52px);
+}
+.services-design-port .example-list li {
+  break-inside: avoid;
+  padding: 9px 0;
+  color: var(--fg);
+  font-size: var(--type-small);
+  line-height: 1.38;
+  border-bottom: 1px solid color-mix(in oklch, var(--border), transparent 26%);
+}
+.services-design-port .support-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 0.34fr) minmax(0, 0.66fr);
+  gap: clamp(36px, 5.2vw, 74px);
+  align-items: start;
+}
+.services-design-port .support-copy {
+  display: grid;
+  gap: 16px;
+  max-width: 520px;
+}
+.services-design-port .support-copy h2 {
+  font-size: clamp(25px, 2.66vw, 36px);
+  line-height: 1.12;
+}
+.services-design-port .support-copy p {
+  color: color-mix(in oklch, var(--fg), var(--muted) 32%);
+  font-size: clamp(17px, 1.18vw, 19px);
+  line-height: 1.56;
+}
+.services-design-port .recognition {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(34px, 4.2vw, 56px);
+  border-top: 1px solid color-mix(in oklch, var(--border), transparent 12%);
+  padding-top: clamp(20px, 2.8vw, 32px);
+}
+.services-design-port .recognition h3 {
+  margin-bottom: 22px;
+  color: color-mix(in oklch, var(--fg), var(--muted) 18%);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 760;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.services-design-port .recognition li {
+  padding: 7px 0;
+  border-top: 1px solid color-mix(in oklch, var(--border), transparent 32%);
+  color: color-mix(in oklch, var(--fg), var(--muted) 18%);
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.35;
+}
+.services-design-port .doctrine-section {
+  min-height: clamp(460px, 58vh, 650px);
+  display: grid;
+  place-items: center start;
+  padding-top: clamp(78px, 9.5vw, 128px);
+  padding-bottom: clamp(80px, 10vw, 132px);
+}
+.services-design-port .doctrine-inner { max-width: 1120px; }
+.services-design-port .doctrine-line {
+  display: block;
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-size: clamp(46px, 6.3vw, 86px);
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  text-wrap: balance;
+}
+.services-design-port .doctrine-line + .doctrine-line {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: clamp(40px, 5.4vw, 72px);
+  font-weight: 620;
+}
+.services-design-port .doctrine-line.doctrine-final {
+  color: var(--fg);
+  font-size: clamp(44px, 6vw, 80px);
+  font-weight: 720;
+}
+.services-design-port .doctrine-copy {
+  max-width: 760px;
+  margin-top: clamp(30px, 4vw, 52px);
+}
+.services-design-port .doctrine-copy p {
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.48;
+}
+.services-design-port .doctrine-takeaway {
+  max-width: 940px;
+  margin-top: clamp(56px, 7vw, 96px);
+  padding-top: clamp(36px, 4.6vw, 58px);
+  border-top: 1px solid var(--border);
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.9vw, 56px);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  text-wrap: balance;
+}
+.services-design-port .conversation {
+  min-height: clamp(470px, 56vh, 660px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.66fr) minmax(300px, 0.34fr);
+  gap: clamp(44px, 6.4vw, 92px);
+  align-items: center;
+  padding-top: clamp(88px, 10vw, 134px);
+  padding-bottom: clamp(102px, 12vw, 162px);
+}
+.services-design-port .conversation h2 {
+  max-width: 940px;
+  font-size: clamp(42px, 5vw, 76px);
+  line-height: 1.06;
+}
+.services-design-port .conversation-copy {
+  display: grid;
+  gap: 16px;
+  max-width: 720px;
+  margin-top: clamp(20px, 3vw, 34px);
+}
+.services-design-port .conversation .button.primary {
+  min-width: 230px;
+  min-height: 48px;
+}
+.services-design-port .cta-note {
+  gap: clamp(12px, 1.4vw, 18px);
+  padding-top: clamp(24px, 3vw, 36px);
+}
+.services-design-port .cta-note p {
+  color: color-mix(in oklch, var(--fg), var(--muted) 38%);
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.38vw, 22px);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-weight: 590;
+}
+.services-design-port .action-sequence {
+  display: grid;
+  gap: 6px;
+  margin-top: 0;
+  padding-top: clamp(12px, 1.4vw, 17px);
+  border-top: 1px solid color-mix(in oklch, var(--border), transparent 12%);
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.36vw, 22px);
+  line-height: 1.2;
+  font-weight: 650;
+}
+.services-design-port .action-sequence span {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.services-design-port .action-sequence .arrow {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+}
+@media (max-width: 1080px) {
+  .services-design-port .hero-copy,
+  .services-design-port .split,
+  .services-design-port .question-head,
+  .services-design-port .engagement-intro,
+  .services-design-port .engagement-block,
+  .services-design-port .support-columns,
+  .services-design-port .conversation { grid-template-columns: 1fr; }
+  .services-design-port .question-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-design-port .question-card { min-height: 196px; }
+  .services-design-port .question-card:nth-child(2) { border-right: 0; }
+  .services-design-port .question-card:nth-child(-n + 2) { border-bottom: 1px solid var(--border); }
+  .services-design-port .signal-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .services-design-port .engagement-signals > .signal-list > li:last-child:nth-child(odd) { grid-column: auto; max-width: none; }
+  .services-design-port .engagement-signals { padding-left: 0; margin-top: 8px; }
+  .services-design-port .engagement-signals::before { display: none; }
+  .services-design-port .help-examples { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .services-design-port { --section: clamp(42px, 12vw, 66px); --section-tight: clamp(34px, 10vw, 54px); }
+  .services-design-port .hero { min-height: auto; padding-top: 42px; }
+  .services-design-port .hero-actions .button,
+  .services-design-port .cta-actions .button { width: 100%; }
+  .services-design-port .hero-actions .button.secondary,
+  .services-design-port .cta-actions .button.secondary { width: auto; }
+  .services-design-port .question-grid,
+  .services-design-port .recognition,
+  .services-design-port .signal-list { grid-template-columns: 1fr; }
+  .services-design-port .example-list { columns: 1; }
+  .services-design-port .question-card,
+  .services-design-port .question-card:nth-child(2) {
+    min-height: auto;
+    grid-template-rows: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .services-design-port .question-card h3 { min-height: auto; }
+  .services-design-port .question-card:last-child { border-bottom: 0; }
+  .services-design-port .signal-list li { min-height: 0; }
+}
+@media (max-width: 430px) {
+  .services-design-port h1 { font-size: clamp(40px, 11vw, 48px); }
+  .services-design-port .button { width: 100%; min-height: 46px; }
+  .services-design-port .hero-note,
+  .services-design-port .intro-close { font-size: clamp(20px, 6vw, 25px); }
+  .services-design-port .conversation h2 { font-size: clamp(38px, 10vw, 50px); }
+  .services-design-port .doctrine-line { font-size: clamp(38px, 10vw, 52px); }
+  .services-design-port .doctrine-line + .doctrine-line { font-size: clamp(32px, 9vw, 44px); }
+}

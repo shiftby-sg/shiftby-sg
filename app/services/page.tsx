@@ -7,10 +7,10 @@ export const metadata = getPageMetadata(pageMetadataEntries.services);
 
 export default function ServicesPage() {
   return (
-    <>
+    <div className="services-design-port">
       <section aria-labelledby="hero-title" className="section hero">
         <div>
-          <p className="kicker">Services</p>
+          <span className="kicker">Services</span>
           <h1 id="hero-title">From understanding to action.</h1>
         </div>
         <div className="hero-copy">
@@ -30,7 +30,7 @@ export default function ServicesPage() {
               ShiftBy helps organizations move from uncertainty to
               understanding, assurance, and action.
             </p>
-            <div className="hero-actions">
+            <div aria-label="Services page links" className="hero-actions">
               <Link className="button primary" href="/contact">
                 Start a conversation
               </Link>
@@ -45,10 +45,10 @@ export default function ServicesPage() {
       <section aria-labelledby="intro-title" className="quiet-band">
         <div className="section split compact-bridge">
           <div>
-            <p className="kicker">From understanding to action</p>
+            <span className="kicker">From understanding to action</span>
             <h2 id="intro-title">Uncertainty remains when context is unclear.</h2>
           </div>
-          <div className="stacked-lines">
+          <div aria-label="Practical introduction" className="stacked-lines">
             <p className="lead">
               Opportunities may exist. Technology may be available. The harder
               question is whether the organization understands where to act,
@@ -61,7 +61,7 @@ export default function ServicesPage() {
               knowledge, accountability, and execution need to remain
               connected.
             </p>
-            <ul className="progression-list">
+            <ul aria-label="What must be worked through" className="progression-list">
               <li>
                 <span className="progression-term">Priorities</span>
                 <span className="progression-line">need to be understood.</span>
@@ -86,7 +86,7 @@ export default function ServicesPage() {
       <section aria-labelledby="questions-title" className="section">
         <div className="question-head">
           <div>
-            <p className="kicker">Common questions</p>
+            <span className="kicker">Common questions</span>
             <h2 id="questions-title">The questions are often familiar.</h2>
           </div>
           <p className="lead">
@@ -94,7 +94,7 @@ export default function ServicesPage() {
             questions often sound similar.
           </p>
         </div>
-        <div className="question-grid">
+        <div aria-label="Common organizational questions" className="question-grid">
           <article className="question-card">
             <small>01</small>
             <h3>Where should we start?</h3>
@@ -134,7 +134,7 @@ export default function ServicesPage() {
         <div className="section">
           <div className="engagement-intro">
             <div>
-              <p className="kicker">How ShiftBy helps</p>
+              <span className="kicker">How ShiftBy helps</span>
               <h2 id="themes-title">How ShiftBy helps in practice</h2>
             </div>
             <p className="lead">
@@ -142,8 +142,7 @@ export default function ServicesPage() {
               reality.
             </p>
           </div>
-
-          <div className="engagement-list">
+          <div aria-label="How ShiftBy helps in practice" className="engagement-list">
             <article className="engagement-block">
               <div className="engagement-copy">
                 <p className="engagement-challenge">Choosing where to act</p>
@@ -167,21 +166,23 @@ export default function ServicesPage() {
               </div>
               <div className="engagement-signals">
                 <p className="signal-context">Examples may include</p>
-                <ul className="signal-list">
-                  <li>Opportunity understanding</li>
-                  <li>AI use-case prioritization</li>
-                  <li>Investment rationale mapping</li>
-                  <li>Decision traceability</li>
-                  <li>Cross-functional alignment</li>
-                  <li>Responsible AI application</li>
-                  <li>POC-to-scale decision support</li>
+                <ul aria-label="Choosing where to act support" className="signal-list">
+                  <li className="is-primary">Opportunity understanding</li>
+                  <li className="is-primary">AI use-case prioritization</li>
+                  <li className="is-primary">Investment rationale mapping</li>
+                  <li className="is-primary">Decision traceability</li>
+                  <li className="is-primary">Cross-functional alignment</li>
+                  <li className="is-primary">Responsible AI application</li>
+                  <li className="is-primary">POC-to-scale decision support</li>
                 </ul>
               </div>
             </article>
 
             <article className="engagement-block">
               <div className="engagement-copy">
-                <p className="engagement-challenge">Preparing the organization to act</p>
+                <p className="engagement-challenge">
+                  Preparing the organization to act
+                </p>
                 <h3>Readiness before adoption</h3>
                 <p>Readiness rarely begins with tools.</p>
                 <p>
@@ -198,22 +199,27 @@ export default function ServicesPage() {
               </div>
               <div className="engagement-signals">
                 <p className="signal-context">Examples may include</p>
-                <ul className="signal-list">
-                  <li>Shared understanding baseline</li>
-                  <li>AI readiness</li>
-                  <li>Supplier readiness</li>
-                  <li>Leadership alignment</li>
-                  <li>Decision ownership mapping</li>
-                  <li>Organizational clarity</li>
-                  <li>Capability development</li>
-                  <li>Knowledge readiness</li>
+                <ul
+                  aria-label="Preparing the organization support"
+                  className="signal-list"
+                >
+                  <li className="is-primary">Shared understanding baseline</li>
+                  <li className="is-primary">AI readiness</li>
+                  <li className="is-primary">Supplier readiness</li>
+                  <li className="is-primary">Leadership alignment</li>
+                  <li className="is-primary">Decision ownership mapping</li>
+                  <li className="is-primary">Organizational clarity</li>
+                  <li className="is-primary">Capability development</li>
+                  <li className="is-primary">Knowledge readiness</li>
                 </ul>
               </div>
             </article>
 
             <article className="engagement-block">
               <div className="engagement-copy">
-                <p className="engagement-challenge">Improving work without losing context</p>
+                <p className="engagement-challenge">
+                  Improving work without losing context
+                </p>
                 <h3>Human-AI work that remains explainable</h3>
                 <p>Deploying AI is not the same as improving work.</p>
                 <p>
@@ -229,24 +235,31 @@ export default function ServicesPage() {
               </div>
               <div className="engagement-signals">
                 <p className="signal-context">Examples may include</p>
-                <ul className="signal-list">
-                  <li>Knowledge-connected workflows</li>
-                  <li>Enterprise knowledge graph patterns</li>
-                  <li>Governed artifact generation</li>
-                  <li>Requirements generation</li>
-                  <li>Traceability matrices</li>
-                  <li>Quality documentation</li>
-                  <li>Organizational memory preservation</li>
-                  <li>Human-AI collaboration</li>
+                <ul aria-label="Improving work support" className="signal-list">
+                  <li className="is-primary">Knowledge-connected workflows</li>
+                  <li className="is-primary">Enterprise knowledge graph patterns</li>
+                  <li className="is-primary">Governed artifact generation</li>
+                  <li className="is-primary">Requirements generation</li>
+                  <li className="is-primary">Traceability matrices</li>
+                  <li className="is-primary">Quality documentation</li>
+                  <li className="is-primary">
+                    Organizational memory preservation
+                  </li>
+                  <li className="is-primary">Human-AI collaboration</li>
                 </ul>
               </div>
             </article>
 
             <article className="engagement-block">
               <div className="engagement-copy">
-                <p className="engagement-challenge">Preserving trust as execution changes</p>
+                <p className="engagement-challenge">
+                  Preserving trust as execution changes
+                </p>
                 <h3>Trust, accountability, and assurance</h3>
-                <p>Trust becomes more important as execution becomes more distributed.</p>
+                <p>
+                  Trust becomes more important as execution becomes more
+                  distributed.
+                </p>
                 <p>
                   Governance can provide structure, but trust is the outcome.
                   Trust also depends on accountability, oversight, evidence,
@@ -261,23 +274,23 @@ export default function ServicesPage() {
               </div>
               <div className="engagement-signals">
                 <p className="signal-context">Examples may include</p>
-                <ul className="signal-list">
-                  <li>Responsible AI</li>
-                  <li>AI governance</li>
-                  <li>AI risk management</li>
-                  <li>AI safety</li>
-                  <li>AI security</li>
-                  <li>Data privacy</li>
-                  <li>Data protection</li>
-                  <li>Operational resilience</li>
-                  <li>Audit readiness</li>
-                  <li>Assurance support</li>
+                <ul aria-label="Preserving trust support" className="signal-list">
+                  <li className="is-primary">Responsible AI</li>
+                  <li className="is-primary">AI governance</li>
+                  <li className="is-primary">AI risk management</li>
+                  <li className="is-primary">AI safety</li>
+                  <li className="is-primary">AI security</li>
+                  <li className="is-primary">Data privacy</li>
+                  <li className="is-primary">Data protection</li>
+                  <li className="is-primary">Operational resilience</li>
+                  <li className="is-primary">Audit readiness</li>
+                  <li className="is-primary">Assurance support</li>
                 </ul>
               </div>
             </article>
           </div>
 
-          <div aria-labelledby="help-examples-title" className="engagement-block">
+          <div aria-labelledby="help-examples-title" className="help-examples">
             <div>
               <h3 id="help-examples-title">Where uncertainty often appears</h3>
               <p>
@@ -286,11 +299,26 @@ export default function ServicesPage() {
               </p>
             </div>
             <ul className="example-list">
-              <li>Choosing where effort should focus when value, risk, and accountability are uncertain</li>
-              <li>Preparing an organization when readiness, ownership, and capability are uneven</li>
-              <li>Scaling execution across R&amp;D, manufacturing, supply chain, and knowledge work without losing context</li>
-              <li>Introducing AI participation without losing accountability or decision lineage</li>
-              <li>Maintaining trust, traceability, assurance, and audit readiness in regulated environments</li>
+              <li>
+                Choosing where effort should focus when value, risk, and
+                accountability are uncertain
+              </li>
+              <li>
+                Preparing an organization when readiness, ownership, and
+                capability are uneven
+              </li>
+              <li>
+                Scaling execution across R&amp;D, manufacturing, supply chain,
+                and knowledge work without losing context
+              </li>
+              <li>
+                Introducing AI participation without losing accountability or
+                decision lineage
+              </li>
+              <li>
+                Maintaining trust, traceability, assurance, and audit readiness
+                in regulated environments
+              </li>
             </ul>
           </div>
         </div>
@@ -298,7 +326,7 @@ export default function ServicesPage() {
 
       <section aria-labelledby="support-title" className="section support-columns">
         <div className="support-copy">
-          <p className="kicker">Where these challenges appear</p>
+          <span className="kicker">Where these challenges appear</span>
           <h2 id="support-title">Where these challenges often appear</h2>
           <p>
             These challenges become most visible where decisions, knowledge,
@@ -306,7 +334,7 @@ export default function ServicesPage() {
             organizational complexity and change.
           </p>
         </div>
-        <div className="recognition">
+        <div aria-label="Organizations and functions" className="recognition">
           <div>
             <h3>Industries</h3>
             <ul>
@@ -336,25 +364,27 @@ export default function ServicesPage() {
       </section>
 
       <section aria-labelledby="why-title" className="quiet-band">
-        <div className="section doctrine-callout">
+        <div className="section doctrine-section">
           <div className="doctrine-inner">
-            <p className="kicker">Why it matters</p>
-            <div className="doctrine-lines" id="why-title">
-              <span>Technology changes.</span>
-              <span>Execution changes.</span>
-              <span>Understanding remains essential.</span>
+            <span className="kicker">Why it matters</span>
+            <h2 id="why-title">
+              <span className="doctrine-line">Technology changes.</span>
+              <span className="doctrine-line">Execution changes.</span>
+              <span className="doctrine-line doctrine-final">
+                Understanding remains essential.
+              </span>
+            </h2>
+            <div className="doctrine-copy">
+              <p>Organizations are rarely solving technology challenges alone.</p>
+              <p>
+                They are navigating decisions, change, accountability,
+                organizational memory, risk, and execution.
+              </p>
+              <p>
+                Strengthening understanding helps organizations move forward
+                with greater trust, clarity, assurance, and alignment.
+              </p>
             </div>
-          </div>
-          <div className="doctrine-copy">
-            <p>Organizations are rarely solving technology challenges alone.</p>
-            <p>
-              They are navigating decisions, change, accountability,
-              organizational memory, risk, and execution.
-            </p>
-            <p>
-              Strengthening understanding helps organizations move forward with
-              greater trust, clarity, assurance, and alignment.
-            </p>
             <p className="doctrine-takeaway">
               Understanding must remain connected enough for action. When
               decisions, knowledge, accountability, and execution remain
@@ -364,9 +394,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section aria-labelledby="conversation-title" className="section conversation">
+      <section
+        aria-labelledby="conversation-title"
+        className="section conversation"
+      >
         <div>
-          <p className="kicker">Start a conversation</p>
+          <span className="kicker">Start a conversation</span>
           <h2 id="conversation-title">
             Start with the challenge. Continue with the conversation.
           </h2>
@@ -377,7 +410,7 @@ export default function ServicesPage() {
               first step is understanding the challenge clearly.
             </p>
           </div>
-          <div className="conversation-actions">
+          <div aria-label="Final Services page links" className="cta-actions">
             <Link className="button primary" href="/contact">
               Start a conversation
             </Link>
@@ -390,15 +423,19 @@ export default function ServicesPage() {
           <p>Understand the challenge.</p>
           <p>Build confidence.</p>
           <p>Move forward.</p>
-          <div className="action-sequence">
+          <div aria-label="Understanding confidence action" className="action-sequence">
             <span>Understanding</span>
-            <span className="arrow">→</span>
+            <span aria-hidden="true" className="arrow">
+              →
+            </span>
             <span>Confidence</span>
-            <span className="arrow">→</span>
+            <span aria-hidden="true" className="arrow">
+              →
+            </span>
             <span>Action</span>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

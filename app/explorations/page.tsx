@@ -7,10 +7,10 @@ export const metadata = getPageMetadata(pageMetadataEntries.explorations);
 
 export default function ExplorationsPage() {
   return (
-    <>
-      <section aria-labelledby="hero-title" className="section hero">
+    <div className="explorations-design-port">
+      <section className="section hero" aria-labelledby="hero-title">
         <div>
-          <p className="kicker">Explorations</p>
+          <span className="kicker">Explorations</span>
           <h1 id="hero-title">Some questions require investigation.</h1>
         </div>
         <div className="hero-copy">
@@ -20,8 +20,8 @@ export default function ExplorationsPage() {
               theory alone.
             </p>
             <p className="lead">
-              The explorations exist to investigate how understanding behaves
-              as organizations change.
+              The explorations exist to investigate how understanding behaves as
+              organizations change.
             </p>
             <p className="lead">
               They follow what survives, what fragments, and what becomes
@@ -30,61 +30,68 @@ export default function ExplorationsPage() {
           </div>
           <p className="hero-note">
             These are not products. They are investigations in progress.
-            <span>The work remains open because the questions are still evolving.</span>
+            <span>
+              Each exploration studies a different aspect of the same underlying challenge.
+            </span>
           </p>
         </div>
       </section>
 
-      <section aria-labelledby="understanding-title" className="section split">
-        <div>
-          <p className="kicker">Understanding through change</p>
-          <h2 id="understanding-title">
-            Understanding becomes harder to preserve as organizations change.
-          </h2>
-        </div>
-        <div className="existence-lines">
-          <p className="plain-emphasis">Artifacts may remain while context fragments.</p>
-          <p className="plain-emphasis">
-            The investigations ask what helps understanding stay connected.
-          </p>
-          <p>Decisions evolve.</p>
-          <p>Teams change.</p>
-          <p>Systems change.</p>
-          <p>AI participates.</p>
-          <p>Context moves.</p>
-          <p>Accountability shifts.</p>
-          <p className="existence-conclusion">
-            The investigations explore what helps understanding survive those changes.
-          </p>
-        </div>
-      </section>
-
-      <section aria-labelledby="relevance-title" className="quiet-band">
-        <div className="section relevance-bridge">
-          <div className="bridge-copy">
-            <p className="kicker">Why the investigations matter</p>
-            <h2 id="relevance-title">The investigations make the challenge visible.</h2>
-            <p className="lead">
-              When execution changes, the question is not only what happened.
-            </p>
-            <p>
-              Leaders, architects, auditors, and operators need to understand
-              what remained connected, what fragmented, and what became harder
-              to explain.
-            </p>
-            <p>
-              The investigations help examine how organizations can preserve
-              confidence when decisions, meaning, and discovery move across
-              people, systems, automation, AI, and time.
-            </p>
+      <section className="quiet-band" aria-labelledby="exist-title">
+        <div className="section split">
+          <div>
+            <span className="kicker">Why explorations exist</span>
+            <h2 id="exist-title">
+              Understanding becomes harder to preserve as organizations change.
+            </h2>
           </div>
-          <ul className="bridge-signals">
+          <div>
+            <div className="existence-lines">
+              <p className="plain-emphasis">
+                Artifacts may remain while context fragments.
+              </p>
+              <p className="plain-emphasis">
+                The investigations ask what helps understanding stay connected.
+              </p>
+              <p>Decisions evolve.</p>
+              <p>Teams change.</p>
+              <p>Systems change.</p>
+              <p>AI participates.</p>
+              <p>Context moves.</p>
+              <p>Accountability shifts.</p>
+              <p className="existence-conclusion">
+                The investigations explore what helps understanding survive those changes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section relevance-bridge split" aria-labelledby="matters-title">
+        <div>
+          <span className="kicker">Why this matters</span>
+          <h2 id="matters-title">The investigations make the challenge visible.</h2>
+        </div>
+        <div className="bridge-copy">
+          <p className="lead">
+            When execution changes, the question is not only what happened.
+          </p>
+          <p>
+            Leaders, architects, auditors, and operators need to understand what
+            remained connected, what fragmented, and what became harder to explain.
+          </p>
+          <p>
+            The investigations help examine how organizations can preserve
+            confidence when decisions, meaning, and discovery move across people,
+            systems, automation, AI, and time.
+          </p>
+          <ul className="bridge-signals" aria-label="Investigation relevance signals">
             <li>
-              <span>Execution</span>
-              <strong>Can decisions remain connected across change?</strong>
+              <span>Leaders</span>
+              <strong>Can confidence survive change?</strong>
             </li>
             <li>
-              <span>Meaning</span>
+              <span>Architects</span>
               <strong>Can relationships remain understandable?</strong>
             </li>
             <li>
@@ -95,10 +102,10 @@ export default function ExplorationsPage() {
         </div>
       </section>
 
-      <section aria-labelledby="three-title" className="section investigation-overview">
+      <section className="section investigation-overview" aria-labelledby="three-title">
         <div className="overview-head">
           <div>
-            <p className="kicker">Three investigations</p>
+            <span className="kicker">Three investigations</span>
             <h2 id="three-title">
               Three investigations.
               <br />
@@ -184,9 +191,9 @@ export default function ExplorationsPage() {
             </span>
           </Link>
         </div>
-        <div aria-labelledby="learning-title" className="investigation-synthesis">
+        <div className="investigation-synthesis" aria-labelledby="learning-title">
           <div>
-            <p className="kicker">What we are learning</p>
+            <span className="kicker">What we are learning</span>
             <h3 id="learning-title">
               Across all three investigations, the same pattern continues to emerge.
             </h3>
@@ -196,22 +203,21 @@ export default function ExplorationsPage() {
               Artifacts may remain. Context may fragment. Confidence weakens
               when understanding is no longer connected.
             </p>
-            <div className="synthesis-lines">
+            <div className="synthesis-lines" aria-label="Learning synthesis">
               <p>Execution, meaning, and discovery change in different ways.</p>
               <p>
                 Each reveals the same underlying challenge: understanding must
-                survive movement across people, systems, automation, AI, and
-                time.
+                survive movement across people, systems, automation, AI, and time.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section aria-labelledby="conversation-title" className="quiet-band">
+      <section className="quiet-band" aria-labelledby="conversation-title">
         <div className="section conversation">
           <div>
-            <p className="kicker">Continue the conversation</p>
+            <span className="kicker">Continue the conversation</span>
             <h2 id="conversation-title">
               Share observations. Discuss the challenge. Explore the questions.
             </h2>
@@ -225,7 +231,7 @@ export default function ExplorationsPage() {
                 next step may be a conversation rather than a conclusion.
               </p>
             </div>
-            <div className="conversation-actions">
+            <div className="conversation-actions" aria-label="Conversation links">
               <Link className="button primary" href="/contact">
                 Continue the conversation
               </Link>
@@ -240,6 +246,6 @@ export default function ExplorationsPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

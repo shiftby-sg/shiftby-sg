@@ -2,6 +2,8 @@
 @import "../styles/capabilities.css";
 @import "../styles/where-shiftby-helps.css";
 @import "../styles/perspective.css";
+@import "../styles/explorations.css";
+@import "../styles/services.css";
 
 @layer app-globals {
 :root {
