@@ -5,6 +5,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
 import { routeDefinitions, siteTitle } from "@/lib/site-data";
 
+const journeyRoutes = routeDefinitions.filter((route) => route.href !== "/about");
+
 type SiteShellProps = {
   children: ReactNode;
 };
@@ -34,7 +36,7 @@ export function SiteShell({ children }: SiteShellProps) {
               </Link>
             </div>
           </div>
-          <SiteNav routes={routeDefinitions} />
+          <SiteNav routes={journeyRoutes} />
         </div>
       </header>
       <main id="main-content">

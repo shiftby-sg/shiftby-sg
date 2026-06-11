@@ -99,9 +99,9 @@
 
 .site-footer__inner {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1.5rem;
-  align-items: center;
+  grid-template-columns: minmax(0, 0.72fr) minmax(22rem, 1fr);
+  gap: 1.5rem 2rem;
+  align-items: start;
   padding: 1.75rem 0;
   border-top: 0;
 }
@@ -120,12 +120,31 @@
   max-width: none;
 }
 
-.site-footer__nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.125rem;
+.site-footer__groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
   color: var(--color-ink-muted);
   font-size: 0.875rem;
+}
+
+.site-footer__group,
+.site-footer__links {
+  display: grid;
+  gap: 0.625rem;
+}
+
+.site-footer__group h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 0.875rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.site-footer__links a {
+  color: var(--color-ink-muted);
+  line-height: 1.35;
 }
 
 .site-page {
@@ -626,7 +645,8 @@
 .focus-grid,
 .recognition,
 .initiative-list,
-.site-footer__nav {
+.site-footer__groups,
+.site-footer__links {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1360,8 +1380,12 @@
   }
 
   .site-nav-shell,
-  .site-footer__nav {
+  .site-footer__groups {
     width: 100%;
+  }
+
+  .site-footer__groups {
+    grid-template-columns: 1fr;
   }
 
   .site-nav-shell {

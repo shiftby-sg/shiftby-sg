@@ -8,17 +8,38 @@ export function SiteFooter() {
           <Link className="site-mark" href="/">
             ShiftBy
           </Link>
-          <p className="site-footer__body">Understanding should survive change.</p>
+          <p className="site-footer__body">
+            Understanding should survive change. When the next step is unclear,
+            begin with a conversation.
+          </p>
         </div>
-        <nav aria-label="Footer" className="site-footer__nav">
-          <Link href="/">Home</Link>
-          <Link href="/capabilities">Capabilities</Link>
-          <Link href="/where-shiftby-helps">Where ShiftBy Helps</Link>
-          <Link href="/perspective">Perspective</Link>
-          <Link href="/explorations">Explorations</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+        <nav aria-label="Footer" className="site-footer__groups">
+          <section className="site-footer__group" aria-labelledby="footer-explore">
+            <h2 id="footer-explore">Explore</h2>
+            <div className="site-footer__links">
+              <Link href="/capabilities">Capabilities</Link>
+              <Link href="/where-shiftby-helps">Where ShiftBy Helps</Link>
+              <Link href="/perspective">Perspective</Link>
+              <Link href="/explorations">Explorations</Link>
+              <Link href="/services">Services</Link>
+            </div>
+          </section>
+          <section className="site-footer__group" aria-labelledby="footer-shiftby">
+            <h2 id="footer-shiftby">ShiftBy</h2>
+            <div className="site-footer__links">
+              <Link href="/about">About</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
+          </section>
+          <section className="site-footer__group" aria-labelledby="footer-connect">
+            <h2 id="footer-connect">Connect</h2>
+            <div className="site-footer__links">
+              <a href="mailto:anandakrishnam@shiftby.sg">Email</a>
+              <a href="https://www.linkedin.com/in/anandakrishnam">LinkedIn</a>
+              <a href="https://wa.me/6597517794">WhatsApp</a>
+              <a href="https://t.me/anandakrishnam">Telegram</a>
+            </div>
+          </section>
         </nav>
       </div>
     </footer>

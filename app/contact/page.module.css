@@ -217,6 +217,24 @@
   font-size: 11px;
 }
 
+.contactDetail {
+  color: var(--contact-fg);
+  font-size: var(--contact-small);
+  font-weight: 650;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.contactDetail a {
+  color: var(--contact-accent);
+  text-decoration: none;
+}
+
+.contactDetail a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .closing {
   border-top: 1px solid var(--contact-border);
   background:
