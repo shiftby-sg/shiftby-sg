@@ -2,9 +2,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | ShiftBy",
+  title: {
+    absolute:
+      "AI Advisory Services | AI Adoption, Governance & Intelligent Operations | ShiftBy"
+  },
   description:
-    "How ShiftBy helps organizations apply an understanding-preservation perspective to decisions, readiness, work changes, trust, and AI-enabled execution.",
+    "ShiftBy helps organizations adopt AI with confidence through AI readiness, governance, intelligent operations, decision traceability, and responsible transformation.",
   alternates: {
     canonical: "/services"
   }
@@ -13,6 +16,17 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className="services-design-port">
+      <style>{`
+        .services-design-port .service-example-item {
+          font-size: clamp(14px, 0.95rem, 16px);
+          font-weight: 400;
+          line-height: 1.34;
+        }
+
+        .services-design-port .doctrine-takeaway-polished {
+          max-width: 860px;
+        }
+      `}</style>
       <section aria-labelledby="hero-title" className="section hero">
         <div>
           <span className="kicker">Services</span>
@@ -39,8 +53,8 @@ export default function ServicesPage() {
               <Link className="button primary" href="/contact">
                 Start a conversation
               </Link>
-              <Link className="button secondary" href="/perspective">
-                Explore the perspective
+              <Link className="button secondary" href="/capabilities">
+                Explore capabilities
               </Link>
             </div>
           </div>
@@ -63,8 +77,7 @@ export default function ServicesPage() {
             <p className="lead">
               The explorations investigate how understanding survives change.
               Services help organizations apply those lessons where decisions,
-              knowledge, accountability, and execution need to remain
-              connected.
+              knowledge, ownership, and execution need durable lineage.
             </p>
             <ul aria-label="What must be worked through" className="progression-list">
               <li>
@@ -112,17 +125,17 @@ export default function ServicesPage() {
             <small>02</small>
             <h3>Are we ready?</h3>
             <p>
-              People, organizational memory, privacy, suppliers, ownership, and
-              ways of working may not be equally prepared.
+              People, knowledge, data, suppliers, ownership, and ways of
+              working may not be equally prepared.
             </p>
           </article>
           <article className="question-card">
             <small>03</small>
             <h3>How should work improve?</h3>
             <p>
-              Execution can improve only when context, traceability,
-              accountability, organizational memory, and drift visibility remain
-              connected.
+              Execution can improve only when rationale, traceability,
+              ownership, organizational memory, and drift visibility remain
+              available.
             </p>
           </article>
           <article className="question-card">
@@ -143,53 +156,49 @@ export default function ServicesPage() {
               <span className="kicker">How ShiftBy helps</span>
               <h2 id="themes-title">How ShiftBy helps in practice</h2>
             </div>
-            <p className="lead">
-              The questions come first. The support follows the organizational
-              reality.
-            </p>
-            <p className="lead">
-              Support may take the form of advisory engagements, executive
-              workshops, leadership coaching, readiness assessments, operating
-              model design, governance initiatives, or facilitated
-              decision-making engagements.
-            </p>
+            <div className="stacked-lines">
+              <p className="lead">
+                The questions come first. The support follows the organizational
+                reality.
+              </p>
+              <p className="lead">
+                Support may take the form of advisory engagements, executive
+                workshops, leadership coaching, readiness assessments, operating
+                model design, governance work, or facilitated decision-making.
+              </p>
+            </div>
           </div>
           <div aria-label="How ShiftBy helps in practice" className="engagement-list">
             <article className="engagement-block">
               <div className="engagement-copy">
-                <p className="engagement-challenge">Choosing where to act</p>
+                <p className="engagement-challenge">Choosing Where To Act</p>
+                <p className="signal-context">
+                  <strong>AI Adoption &amp; Transformation</strong>
+                </p>
                 <h3>AI direction and decision clarity</h3>
                 <p>The challenge is rarely finding opportunities.</p>
                 <p>
-                  More often, organizations need to understand which
-                  opportunities deserve action, what assumptions are being made,
-                  what trade-offs affect decision quality, where value may
-                  emerge, and where accountability must remain visible.
+                  The harder question is where AI should focus, where value may
+                  emerge, and where ownership must remain visible.
                 </p>
                 <p>
-                  This can include AI adoption strategy, AI transformation
-                  strategy, enterprise AI roadmap questions, and the AI
-                  operating model needed to keep decisions explainable.
-                </p>
-                <p>
-                  Action becomes easier when investment, effort, and
-                  organizational change are guided by clear rationale.
-                </p>
-                <p>
-                  Decision clarity also helps identify where assumptions, value
-                  expectations, or accountability may drift over time.
+                  ShiftBy helps clarify{" "}
+                  <strong>AI adoption strategy</strong>,{" "}
+                  <strong>AI transformation strategy</strong>, roadmap choices,
+                  and the <strong>AI operating model</strong> needed to keep
+                  decisions explainable. The outcome is clearer rationale for
+                  where to invest and what to change.
                 </p>
               </div>
               <div className="engagement-signals">
                 <p className="signal-context">Examples may include</p>
                 <ul aria-label="Choosing where to act support" className="signal-list">
-                  <li className="is-primary">Opportunity understanding</li>
-                  <li className="is-primary">AI use-case prioritization</li>
-                  <li className="is-primary">Investment rationale mapping</li>
-                  <li className="is-primary">Decision traceability</li>
-                  <li className="is-primary">Cross-functional alignment</li>
-                  <li className="is-primary">Responsible AI application</li>
-                  <li className="is-primary">POC-to-scale decision support</li>
+                  <li className="is-primary service-example-item">Business value assessment</li>
+                  <li className="is-primary service-example-item">AI opportunity prioritization</li>
+                  <li className="is-primary service-example-item">AI roadmap development</li>
+                  <li className="is-primary service-example-item">Business process analysis</li>
+                  <li className="is-primary service-example-item">Business process redesign</li>
+                  <li className="is-primary service-example-item">POC-to-scale decision support</li>
                 </ul>
               </div>
             </article>
@@ -197,31 +206,25 @@ export default function ServicesPage() {
             <article className="engagement-block">
               <div className="engagement-copy">
                 <p className="engagement-challenge">
-                  Preparing the organization to act
+                  Preparing The Organization To Act
+                </p>
+                <p className="signal-context">
+                  <strong>AI Readiness &amp; Enablement</strong>
                 </p>
                 <h3>Readiness before adoption</h3>
                 <p>Readiness rarely begins with tools.</p>
                 <p>
-                  Leaders need clarity before decisions move. Teams need shared
-                  context and AI literacy before work changes. Data readiness,
-                  knowledge readiness, organizational readiness, and change
-                  readiness need to support adoption without losing context,
-                  accountability, or confidence.
+                  Leaders need clarity, teams need confidence, and
+                  organizations need shared understanding before{" "}
+                  <strong>AI adoption</strong> can succeed.
                 </p>
                 <p>
-                  AI readiness assessment, AI capability readiness, and AI
-                  workforce readiness matter most when they clarify what needs
-                  to remain understood.
-                </p>
-                <p>
-                  Readiness helps people, data, and knowledge remain aligned as
-                  change begins and drift appears.
-                </p>
-                <p>
-                  Executive workshops, leadership coaching, and executive AI
-                  briefings can help clarify whether an AI readiness assessment,
-                  AI capability readiness, or AI workforce readiness effort is
-                  ready to move forward.
+                  ShiftBy helps assess <strong>people</strong>, ways of
+                  working, <strong>knowledge</strong>, <strong>data</strong>,{" "}
+                  <strong>suppliers</strong>, and{" "}
+                  <strong>governance</strong> so readiness is grounded in
+                  organizational reality. The outcome is a clearer baseline for
+                  adoption, ownership, and enablement.
                 </p>
               </div>
               <div className="engagement-signals">
@@ -230,17 +233,16 @@ export default function ServicesPage() {
                   aria-label="Preparing the organization support"
                   className="signal-list"
                 >
-                  <li className="is-primary">Executive workshops</li>
-                  <li className="is-primary">Leadership coaching</li>
-                  <li className="is-primary">Shared understanding baseline</li>
-                  <li className="is-primary">AI literacy</li>
-                  <li className="is-primary">Workforce readiness</li>
-                  <li className="is-primary">Change readiness</li>
-                  <li className="is-primary">Data readiness</li>
-                  <li className="is-primary">Knowledge readiness</li>
-                  <li className="is-primary">Supplier readiness</li>
-                  <li className="is-primary">Leadership alignment</li>
-                  <li className="is-primary">Decision ownership mapping</li>
+                  <li className="is-primary service-example-item">Executive workshops</li>
+                  <li className="is-primary service-example-item">Leadership coaching</li>
+                  <li className="is-primary service-example-item">AI literacy</li>
+                  <li className="is-primary service-example-item">Workforce readiness</li>
+                  <li className="is-primary service-example-item">Shared understanding baseline</li>
+                  <li className="is-primary service-example-item">Decision ownership mapping</li>
+                  <li className="is-primary service-example-item">Data readiness</li>
+                  <li className="is-primary service-example-item">Knowledge readiness</li>
+                  <li className="is-primary service-example-item">Supplier readiness</li>
+                  <li className="is-primary service-example-item">Governance readiness</li>
                 </ul>
               </div>
             </article>
@@ -248,38 +250,43 @@ export default function ServicesPage() {
             <article className="engagement-block">
               <div className="engagement-copy">
                 <p className="engagement-challenge">
-                  Improving work without losing context
+                  Improving Work Without Losing Context
+                </p>
+                <p className="signal-context">
+                  <strong>AI Agents &amp; Intelligent Operations</strong>
                 </p>
                 <h3>Human-AI work that remains explainable</h3>
                 <p>Deploying AI is not the same as improving work.</p>
                 <p>
-                  AI and automation are useful when they improve execution while
-                  preserving context, rationale, traceability, accountability,
-                  and the organizational memory that understanding depends on.
+                  <strong>AI agents</strong>,{" "}
+                  intelligent operations,{" "}
+                  <strong>knowledge-connected AI systems</strong>, and{" "}
+                  <strong>enterprise AI workflows</strong> need intent,
+                  rationale, traceability, ownership, and organizational memory
+                  to remain explainable.
                 </p>
                 <p>
-                  AI agents, agentic AI, knowledge-connected AI systems, and
-                  enterprise AI workflows need that context to remain
-                  explainable.
-                </p>
-                <p>
-                  Knowledge-connected AI systems also help make context drift
-                  easier to see.
+                  ShiftBy helps shape <strong>human-AI collaboration</strong>,{" "}
+                  governed artifact generation, requirements generation,{" "}
+                  <strong>traceability matrices</strong>, and{" "}
+                  quality documentation without losing the meaning behind the
+                  work.
                 </p>
               </div>
               <div className="engagement-signals">
                 <p className="signal-context">Examples may include</p>
                 <ul aria-label="Improving work support" className="signal-list">
-                  <li className="is-primary">Knowledge-connected workflows</li>
-                  <li className="is-primary">Enterprise knowledge graph patterns</li>
-                  <li className="is-primary">Governed artifact generation</li>
-                  <li className="is-primary">Requirements generation</li>
-                  <li className="is-primary">Traceability matrices</li>
-                  <li className="is-primary">Quality documentation</li>
-                  <li className="is-primary">
+                  <li className="is-primary service-example-item">AI agent governance</li>
+                  <li className="is-primary service-example-item">Knowledge-connected workflows</li>
+                  <li className="is-primary service-example-item">Enterprise knowledge graph patterns</li>
+                  <li className="is-primary service-example-item">Governed artifact generation</li>
+                  <li className="is-primary service-example-item">Requirements generation</li>
+                  <li className="is-primary service-example-item">Traceability matrices</li>
+                  <li className="is-primary service-example-item">Quality documentation</li>
+                  <li className="is-primary service-example-item">Human-AI collaboration</li>
+                  <li className="is-primary service-example-item">
                     Organizational memory preservation
                   </li>
-                  <li className="is-primary">Human-AI collaboration</li>
                 </ul>
               </div>
             </article>
@@ -287,68 +294,76 @@ export default function ServicesPage() {
             <article className="engagement-block">
               <div className="engagement-copy">
                 <p className="engagement-challenge">
-                  Preserving trust as execution changes
+                  Preserving Trust As Execution Changes
+                </p>
+                <p className="signal-context">
+                  <strong>AI Governance, Safety &amp; Resilience</strong>
                 </p>
                 <h3>Trust, accountability, and assurance</h3>
+                <p>Governance is not the outcome. Trust is.</p>
                 <p>
-                  Trust becomes more important as execution becomes more
-                  distributed.
+                  <strong>Responsible AI</strong>,{" "}
+                  <strong>AI governance</strong>,{" "}
+                  <strong>AI risk management</strong>,{" "}
+                  AI assurance, and third-party AI risk depend on clear
+                  evidence, ownership, safety, security, privacy, and
+                  resilience.
                 </p>
                 <p>
-                  Governance can provide structure, but trust is the outcome.
-                  Trust also depends on accountability, oversight, evidence,
-                  assurance, safety, security, resilience, and understanding as
-                  execution changes.
+                  ShiftBy helps map oversight, assurance evidence,{" "}
+                  <strong>audit readiness</strong>, and{" "}
+                  <strong>operational resilience</strong> to how execution
+                  actually changes. The outcome is confidence that can be
+                  explained, reviewed, and defended.
                 </p>
-                <p>
-                  Responsible AI, AI governance, AI risk management, AI
-                  assurance, and third-party AI risk depend on the same
-                  connected evidence.
-                </p>
-                <p>
-                  Trust weakens when risk, accountability, evidence, or
-                  assurance drift away from how work is actually performed.
-                </p>
-                <p>Trust is the outcome; governance is one mechanism that supports it.</p>
               </div>
               <div className="engagement-signals">
                 <p className="signal-context">Examples may include</p>
                 <ul aria-label="Preserving trust support" className="signal-list">
-                  <li className="is-primary">Responsible AI</li>
-                  <li className="is-primary">AI governance</li>
-                  <li className="is-primary">AI risk management</li>
-                  <li className="is-primary">AI safety</li>
-                  <li className="is-primary">AI security</li>
-                  <li className="is-primary">Data privacy</li>
-                  <li className="is-primary">Data protection</li>
-                  <li className="is-primary">Operational resilience</li>
-                  <li className="is-primary">Audit readiness</li>
-                  <li className="is-primary">AI assurance</li>
+                  <li className="is-primary service-example-item">Responsible AI</li>
+                  <li className="is-primary service-example-item">AI governance</li>
+                  <li className="is-primary service-example-item">AI risk management</li>
+                  <li className="is-primary service-example-item">AI safety</li>
+                  <li className="is-primary service-example-item">AI security</li>
+                  <li className="is-primary service-example-item">Data privacy</li>
+                  <li className="is-primary service-example-item">Data protection</li>
+                  <li className="is-primary service-example-item">Third-party AI risk</li>
+                  <li className="is-primary service-example-item">Operational resilience</li>
+                  <li className="is-primary service-example-item">Audit readiness</li>
+                  <li className="is-primary service-example-item">AI assurance</li>
+                  <li className="is-primary service-example-item">Assurance evidence mapping</li>
                 </ul>
               </div>
             </article>
           </div>
 
-          <div aria-labelledby="help-examples-title" className="help-examples">
+          <div
+            aria-labelledby="help-examples-title"
+            className="help-examples"
+            style={{
+              gap: "clamp(24px, 3.4vw, 48px)",
+              marginTop: 0,
+              paddingTop: "clamp(22px, 3vw, 34px)"
+            }}
+          >
             <div>
-              <h3 id="help-examples-title">Where uncertainty often appears</h3>
+              <h3 id="help-examples-title">Where conversations often begin</h3>
               <p>
-                These are common situations where organizations need decisions,
-                knowledge, accountability, and execution to remain connected.
+                These are common situations where decisions, knowledge,
+                ownership, and execution need to remain explainable before
+                action can move forward.
               </p>
             </div>
-            <ul className="example-list">
+            <ul className="example-list" style={{ marginTop: 0 }}>
               <li>
-                Choosing where effort should focus when value, risk, and
-                accountability are uncertain
+                Choosing where AI effort and investment should focus
               </li>
               <li>
-                Preparing an organization when readiness, ownership, and
-                capability are uneven
+                Preparing people, knowledge, data, and suppliers for AI adoption
               </li>
               <li>
                 Scaling execution across R&amp;D, manufacturing, supply chain,
-                and knowledge work without losing context
+                and knowledge work
               </li>
               <li>
                 Introducing AI participation without losing accountability or
@@ -365,7 +380,7 @@ export default function ServicesPage() {
 
       <section aria-labelledby="support-title" className="section support-columns">
         <div className="support-copy">
-          <span className="kicker">Where these challenges appear</span>
+          <span className="kicker">Where this work applies</span>
           <h2 id="support-title">Where these challenges often appear</h2>
           <p>
             These challenges become most visible where decisions, knowledge,
@@ -389,7 +404,7 @@ export default function ServicesPage() {
             <h3>Functions</h3>
             <ul>
               <li>Executive Leadership</li>
-              <li>Enterprise Functions</li>
+              <li>Transformation</li>
               <li>Research &amp; Development</li>
               <li>Manufacturing Operations</li>
               <li>Supply Chain</li>
@@ -416,7 +431,7 @@ export default function ServicesPage() {
             <div className="doctrine-copy">
               <p>Organizations are rarely solving technology challenges alone.</p>
               <p>
-                They are navigating decisions, change, accountability,
+                They are navigating decisions, change, ownership,
                 organizational memory, risk, and execution.
               </p>
               <p>
@@ -424,10 +439,10 @@ export default function ServicesPage() {
                 with greater trust, clarity, assurance, and alignment.
               </p>
             </div>
-            <p className="doctrine-takeaway">
+            <p className="doctrine-takeaway doctrine-takeaway-polished">
               Understanding must remain connected enough for action. When
-              decisions, knowledge, accountability, and execution remain
-              connected, organizations can move with greater confidence.
+              decisions, knowledge, ownership, and execution retain enough
+              lineage, organizations can move with greater confidence.
             </p>
           </div>
         </div>
@@ -445,7 +460,7 @@ export default function ServicesPage() {
           <div className="conversation-copy">
             <p>
               Whether your organization is making decisions, preparing for AI,
-              changing how work is done, or strengthening accountability, the
+              changing how work is done, or strengthening ownership, the
               first step is understanding the challenge clearly.
             </p>
           </div>
@@ -453,8 +468,8 @@ export default function ServicesPage() {
             <Link className="button primary" href="/contact">
               Start a conversation
             </Link>
-            <Link className="button secondary" href="/explorations">
-              Return to explorations
+            <Link className="button secondary" href="/capabilities">
+              Explore capabilities
             </Link>
           </div>
         </div>

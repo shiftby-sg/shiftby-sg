@@ -15,6 +15,22 @@ const conversationTopics = [
   "Other organizational challenges"
 ] as const;
 
+const contactCardStyle = {
+  gridTemplateRows: "auto auto 1fr auto"
+};
+
+const formalCorrespondenceSectionStyle = {
+  paddingBlock: "clamp(32px, 5vw, 56px)"
+};
+
+const formalCorrespondenceInnerStyle = {
+  borderTop: "1px solid var(--contact-border)",
+  display: "grid",
+  gap: "12px",
+  maxWidth: "760px",
+  paddingTop: "clamp(22px, 3vw, 30px)"
+};
+
 export default function ContactPage() {
   return (
     <div className={styles.page}>
@@ -36,7 +52,7 @@ export default function ContactPage() {
         </div>
         <aside className={styles.founderPanel} aria-label="Founder contact framing">
           <span className={styles.panelLabel}>Conversation with</span>
-          <p className={styles.founderName}>Anand Krishna</p>
+          <p className={styles.founderName}>Ananda Krishna</p>
           <p className={styles.founderRole}>Founder, ShiftBy</p>
           <p>
             The conversation does not need to begin with a finished requirement.
@@ -81,84 +97,73 @@ export default function ContactPage() {
           </p>
         </div>
         <div className={styles.contactGrid} aria-label="Contact mechanisms">
-          <article className={styles.contactCard}>
+          <article className={styles.contactCard} style={contactCardStyle}>
             <span className={styles.contactIndex}>01</span>
-            <h3>Email</h3>
-            <p>
-              Use email when the context is easier to describe in writing or
-              when a short note is enough to begin.
-            </p>
-            <p className={styles.contactDetail}>
-              <a href="mailto:anandakrishnam@shiftby.sg">anandakrishnam@shiftby.sg</a>
-            </p>
-          </article>
-          <article className={styles.contactCard}>
-            <span className={styles.contactIndex}>02</span>
-            <h3>LinkedIn</h3>
-            <p>
-              Use LinkedIn when the conversation should begin through Anand
-              Krishna directly.
-            </p>
-            <p className={styles.contactDetail}>
-              <a href="https://www.linkedin.com/in/anandakrishnam">
-                linkedin.com/in/anandakrishnam
-              </a>
-            </p>
-          </article>
-          <article className={styles.contactCard}>
-            <span className={styles.contactIndex}>03</span>
-            <h3>Phone</h3>
-            <p>
-              Use phone when a direct conversation is the clearest way to
-              establish context.
-            </p>
-            <p className={styles.contactDetail}>
-              <a href="tel:+6597517794">+65 97517794</a>
-            </p>
-          </article>
-          <article className={styles.contactCard}>
-            <span className={styles.contactIndex}>04</span>
-            <h3>WhatsApp</h3>
-            <p>
-              Use WhatsApp when a short message is enough to begin the
-              conversation.
-            </p>
-            <p className={styles.contactDetail}>
-              <a href="https://wa.me/6597517794">wa.me/6597517794</a>
-            </p>
-          </article>
-          <article className={styles.contactCard}>
-            <span className={styles.contactIndex}>05</span>
-            <h3>Telegram</h3>
-            <p>
-              Use Telegram when that is the easier channel for an initial note.
-            </p>
-            <p className={styles.contactDetail}>
-              <a href="https://t.me/anandakrishnam">t.me/anandakrishnam</a>
-            </p>
-          </article>
-          <article className={styles.contactCard}>
-            <span className={styles.contactIndex}>06</span>
-            <h3>Address</h3>
-            <p>
-              Use the office address when the conversation requires formal
-              correspondence.
-            </p>
-            <p className={styles.contactDetail}>
-              2 Venture Drive, #19-18, Vision Exchange, Singapore 608526
-            </p>
-          </article>
-          <article className={styles.contactCard}>
-            <span className={styles.contactIndex}>07</span>
             <h3>Scheduling</h3>
             <p>
               Scheduling can follow once the question and context are clear
               enough for a focused discussion.
             </p>
-            <p className={styles.contactDetail}>
+            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
               <a href="https://outlook.office.com/book/ShiftbySGBookingPage@shiftby.sg/?ismsaljsauthenabled">
                 Schedule a conversation
               </a>
+            </p>
+          </article>
+          <article className={styles.contactCard} style={contactCardStyle}>
+            <span className={styles.contactIndex}>02</span>
+            <h3>Email</h3>
+            <p>
+              Use email when the context is easier to describe in writing or
+              when a short note is enough to begin.
+            </p>
+            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+              <a href="mailto:anandakrishnam@shiftby.sg">anandakrishnam@shiftby.sg</a>
+            </p>
+          </article>
+          <article className={styles.contactCard} style={contactCardStyle}>
+            <span className={styles.contactIndex}>03</span>
+            <h3>LinkedIn</h3>
+            <p>
+              Use LinkedIn when the conversation should begin through Ananda
+              Krishna directly.
+            </p>
+            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+              <a href="https://www.linkedin.com/in/anandakrishnam">
+                linkedin.com/in/anandakrishnam
+              </a>
+            </p>
+          </article>
+          <article className={styles.contactCard} style={contactCardStyle}>
+            <span className={styles.contactIndex}>04</span>
+            <h3>Phone</h3>
+            <p>
+              Use phone when a direct conversation is the clearest way to
+              establish context.
+            </p>
+            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+              <a href="tel:+6597517794">+65 97517794</a>
+            </p>
+          </article>
+          <article className={styles.contactCard} style={contactCardStyle}>
+            <span className={styles.contactIndex}>05</span>
+            <h3>WhatsApp</h3>
+            <p>
+              Use WhatsApp when a short message is enough to begin the
+              conversation.
+            </p>
+            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+              <a href="https://wa.me/6597517794">wa.me/6597517794</a>
+            </p>
+          </article>
+          <article className={styles.contactCard} style={contactCardStyle}>
+            <span className={styles.contactIndex}>06</span>
+            <h3>Telegram</h3>
+            <p>
+              Use Telegram when that is the easier channel for an initial note.
+            </p>
+            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+              <a href="https://t.me/anandakrishnam">t.me/anandakrishnam</a>
             </p>
           </article>
         </div>
@@ -173,6 +178,27 @@ export default function ContactPage() {
             needs to remain connected, explainable, and understood as execution
             changes.
           </p>
+        </div>
+      </section>
+
+      <section
+        aria-label="Formal Correspondence"
+        className={styles.section}
+        style={formalCorrespondenceSectionStyle}
+      >
+        <div style={formalCorrespondenceInnerStyle}>
+          <span className={styles.kicker}>Formal Correspondence</span>
+          <address style={{ display: "grid", fontStyle: "normal", gap: "6px" }}>
+            <p className={styles.contactDetail}>ShiftBy Pte. Ltd.</p>
+            <p>
+              2 Venture Drive, #19-18
+              <br />
+              Vision Exchange
+              <br />
+              Singapore 608526
+            </p>
+            <p className={styles.contactDetail}>UEN: 202426424E</p>
+          </address>
         </div>
       </section>
     </div>
