@@ -43,6 +43,11 @@ export default function ContactPage() {
             It can begin with a pattern, a concern, or a question that needs
             clearer understanding.
           </p>
+          <p className={styles.contactDetail}>
+            <a href="https://outlook.office.com/book/ShiftbySGBookingPage@shiftby.sg/?ismsaljsauthenabled">
+              Schedule a Conversation
+            </a>
+          </p>
         </aside>
       </section>
 

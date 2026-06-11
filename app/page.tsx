@@ -277,6 +277,9 @@ export default function HomePage() {
           <Link className="text-cta primary" href="/contact">
             Start a conversation →
           </Link>
+          <Link className="text-cta" href="/services">
+            Explore Services →
+          </Link>
           <Link className="text-cta" href="/perspective">
             Explore the perspective →
           </Link>

@@ -6,8 +6,6 @@ import { useState } from "react";
 
 import { routeDefinitions, siteTitle } from "@/lib/site-data";
 
-const headerRoutes = routeDefinitions.filter((route) => route.href !== "/about");
-
 export function GlobalHeader() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +44,7 @@ export function GlobalHeader() {
             className="site-nav"
             id="primary-navigation"
           >
-            {headerRoutes.map((route) => (
+            {routeDefinitions.map((route) => (
               <Link
                 aria-current={pathname === route.href ? "page" : undefined}
                 className="site-nav__link"

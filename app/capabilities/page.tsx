@@ -157,7 +157,9 @@ export default function CapabilitiesPage() {
                 </p>
                 <p className="why">
                   Decision Traceability keeps reasoning, assumptions, evidence,
-                  approval, and decision lineage recoverable over time.
+                  approval, and decision lineage recoverable over time. Examples
+                  include AI use-case approvals, investment decisions, supplier
+                  selection, and security exceptions.
                 </p>
                 <p className="why">
                   Decision Traceability helps make decision drift visible before
@@ -213,7 +215,9 @@ export default function CapabilitiesPage() {
                 <p className="why">
                   Organizational Memory keeps critical context, knowledge
                   relationships, and evidence available as people, teams, and
-                  operating models evolve.
+                  operating models evolve. Examples include operational
+                  handovers, quality investigations, manufacturing knowledge, and
+                  supplier transitions.
                 </p>
                 <p className="why">
                   Organizational Memory helps reduce knowledge drift as people,
@@ -269,7 +273,9 @@ export default function CapabilitiesPage() {
                 </p>
                 <p className="why">
                   Human–AI Accountability keeps review, approval, escalation,
-                  evidence, judgment, and decision lineage visible.
+                  evidence, judgment, and decision lineage visible. Examples
+                  include AI-assisted decisions, AI-generated artifacts, human
+                  review and approval, and escalation pathways.
                 </p>
                 <p className="why">
                   Human–AI Accountability helps identify accountability drift as
@@ -325,7 +331,9 @@ export default function CapabilitiesPage() {
                 </p>
                 <p className="why">
                   Adaptive Execution explores how organizations can evolve while
-                  remaining aware of those changes and their impact.
+                  remaining aware of those changes and their impact. Examples
+                  include transformation programs, operating model changes,
+                  automation adoption, and AI-enabled workflows.
                 </p>
                 <p className="why">
                   Adaptive Execution helps organizations detect execution drift
