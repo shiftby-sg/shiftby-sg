@@ -36,7 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           type="application/ld+json"
         />
       </head>
-      <body className={`${ubuntu.variable} site-body`}>
+      <body className={`${ubuntu.variable} ${ubuntu.className} site-body`}>
         <a className="skip-link" href="#main-content">
           Skip to content
         </a>

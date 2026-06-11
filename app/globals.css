@@ -50,6 +50,8 @@
   --body: clamp(1.0625rem, 1.35vw, 1.1875rem);
   --body-sm: clamp(0.9375rem, 1.15vw, 1.0625rem);
   --label: 0.75rem;
+  --font-display: var(--font-ubuntu), "Ubuntu", sans-serif;
+  --font-body: var(--font-ubuntu), "Ubuntu", sans-serif;
   --line-tight: 1.02;
   --line-heading: 1.08;
   --line-copy: 1.56;
@@ -72,7 +74,7 @@ body {
     radial-gradient(circle at top right, color-mix(in oklch, var(--color-accent-soft), transparent 24%) 0, transparent 32rem),
     linear-gradient(180deg, color-mix(in oklch, var(--color-surface-strong), var(--color-bg) 32%) 0%, var(--color-bg) 100%);
   color: var(--color-ink);
-  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
+  font-family: var(--font-body);
   line-height: var(--line-copy);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -225,7 +227,7 @@ code {
   position: relative;
   display: inline-block;
   padding-inline-start: 2.125rem;
-  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 650;
   letter-spacing: -0.01em;
@@ -355,7 +357,7 @@ code {
 .page-intro__title {
   margin: 0;
   max-width: var(--measure-wide);
-  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
+  font-family: var(--font-display);
   font-size: var(--display);
   font-weight: 690;
   letter-spacing: -0.01em;
@@ -415,7 +417,7 @@ code {
 
 .evidence-block__value {
   margin: 0;
-  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.875rem, 3vw, 2.75rem);
   font-weight: 680;
   letter-spacing: -0.01em;
@@ -436,7 +438,7 @@ code {
 .section-frame__title,
 .cta-block__title {
   margin: 0;
-  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
+  font-family: var(--font-display);
   font-size: var(--heading-2);
   font-weight: 670;
   letter-spacing: -0.01em;
@@ -466,7 +468,7 @@ code {
 
 .card__title {
   margin: 0;
-  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
+  font-family: var(--font-display);
   font-size: var(--heading-3);
   font-weight: 650;
   letter-spacing: -0.01em;
