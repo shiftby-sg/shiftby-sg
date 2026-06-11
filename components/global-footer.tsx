@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function SiteFooter() {
+export function GlobalFooter() {
   return (
     <footer className="site-footer">
       <div className="site-footer__inner">
@@ -17,9 +17,10 @@ export function SiteFooter() {
           <section className="site-footer__group" aria-labelledby="footer-explore">
             <h2 id="footer-explore">Explore</h2>
             <div className="site-footer__links">
+              <Link href="/">Home</Link>
               <Link href="/capabilities">Capabilities</Link>
               <Link href="/where-shiftby-helps">Where ShiftBy Helps</Link>
-              <Link href="/perspective">Perspective</Link>
+              <Link href="/thinking">Perspective</Link>
               <Link href="/explorations">Explorations</Link>
               <Link href="/services">Services</Link>
             </div>
@@ -29,6 +30,7 @@ export function SiteFooter() {
             <div className="site-footer__links">
               <Link href="/about">About</Link>
               <Link href="/contact">Contact</Link>
+              <Link href="/ai-policy">AI Policy</Link>
             </div>
           </section>
           <section className="site-footer__group" aria-labelledby="footer-connect">
@@ -41,6 +43,9 @@ export function SiteFooter() {
             </div>
           </section>
         </nav>
+      </div>
+      <div className="site-footer__legal">
+        <p>© 2026 ShiftBy. All rights reserved. UEN: 202426424E</p>
       </div>
     </footer>
   );

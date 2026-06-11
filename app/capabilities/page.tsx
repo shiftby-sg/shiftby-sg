@@ -15,6 +15,7 @@ export default function CapabilitiesPage() {
     <div className="capabilities-design-port">
       <section aria-labelledby="hero-title" className="section hero">
         <div>
+          <span className="kicker">Capabilities</span>
           <h1
             aria-label="Four capabilities help organizations preserve understanding."
             id="hero-title"

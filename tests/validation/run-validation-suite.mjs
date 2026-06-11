@@ -86,37 +86,6 @@ async function commandAvailable(command, args = ["--version"]) {
   });
 }
 
-async function runCommand(command, args, options = {}) {
-  const startedAt = new Date().toISOString();
-  return new Promise((resolve) => {
-    const child = spawn(command, args, {
-      cwd: ROOT,
-      env: { ...process.env, ...options.env },
-      stdio: ["ignore", "pipe", "pipe"]
-    });
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (chunk) => { stdout += chunk.toString(); });
-    child.stderr.on("data", (chunk) => { stderr += chunk.toString(); });
-    child.on("error", (error) => {
-      const record = { command: [command, ...args].join(" "), started_at: startedAt, exit_code: null, passes: false, output_summary: error.message };
-      commandLog.push(record);
-      resolve({ ...record, stdout, stderr: error.message });
-    });
-    child.on("close", (code) => {
-      const record = {
-        command: [command, ...args].join(" "),
-        started_at: startedAt,
-        exit_code: code,
-        passes: code === 0,
-        output_summary: `${stdout}\n${stderr}`.trim().slice(0, 4000)
-      };
-      commandLog.push(record);
-      resolve({ ...record, stdout, stderr });
-    });
-  });
-}
-
 async function waitForUrl(url, timeoutMs = 90000) {
   const deadline = Date.now() + timeoutMs;
   while (Date.now() < deadline) {
