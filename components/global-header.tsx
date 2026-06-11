@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -15,6 +16,15 @@ export function GlobalHeader() {
       <div className="site-header__inner">
         <div className="site-header__bar">
           <Link className="site-mark" href="/">
+            <Image
+              alt=""
+              aria-hidden="true"
+              className="site-mark__logo"
+              height={4000}
+              priority
+              src="/logo/ShiftBy-Logo-4000px.png"
+              width={4000}
+            />
             {siteTitle}
           </Link>
         </div>

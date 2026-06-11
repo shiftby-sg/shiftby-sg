@@ -45,7 +45,7 @@ export function GlobalFooter() {
         </nav>
       </div>
       <div className="site-footer__legal">
-        <p>© 2026 ShiftBy. All rights reserved. UEN: 202426424E</p>
+        <p>© 2026 ShiftBy Pte. Ltd., Singapore. All rights reserved. UEN: 202426424E</p>
       </div>
     </footer>
   );
