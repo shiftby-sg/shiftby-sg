@@ -228,6 +228,9 @@ code {
 }
 
 .site-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -239,6 +242,12 @@ code {
   font-weight: 650;
   letter-spacing: -0.01em;
   white-space: nowrap;
+}
+
+.site-mark__logo {
+  width: auto;
+  height: 1.625rem;
+  flex: 0 0 auto;
 }
 
 .site-header__status {
@@ -610,6 +619,10 @@ code {
 
   .site-header__status {
     text-align: left;
+  }
+
+  .site-mark__logo {
+    height: 1.5rem;
   }
 
   .site-nav-shell {
