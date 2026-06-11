@@ -25,9 +25,13 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="lead">
-            As execution becomes distributed across people, systems, suppliers,
-            automation, and AI, preserving understanding becomes essential to
-            maintaining confidence.
+            Organizations rarely lose confidence because execution changes.
+            <br />
+            <br />
+            They lose confidence when understanding is lost.
+            <br />
+            <br />
+            Preserve understanding. Move forward with confidence.
           </p>
           <div className="hero-actions">
             <Link className="button primary" href="/contact">
