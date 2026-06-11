@@ -13,7 +13,15 @@ export const discoverabilityTopics = [
   "AI agents",
   "Knowledge management",
   "Enterprise knowledge graph",
-  "Human-AI collaboration"
+  "Human-AI collaboration",
+  "Decision traceability",
+  "Organizational memory",
+  "Adaptive execution",
+  "Operational resilience",
+  "AI safety",
+  "AI security",
+  "Audit readiness",
+  "Assurance evidence mapping"
 ] as const;
 
 export type PageMetadataEntry = {
@@ -70,13 +78,19 @@ export const pageMetadataEntries = {
     path: "/contact",
     description:
       "Start a conversation when preserving understanding, accountability, and confidence has become harder inside your organization."
+  },
+  aiPolicy: {
+    title: "AI Policy",
+    path: "/ai-policy",
+    description:
+      "How ShiftBy uses AI to support research, analysis, drafting, exploration, and understanding while preserving human responsibility and review."
   }
 } satisfies Record<string, PageMetadataEntry>;
 
 export const llmsTextLines = [
   "# ShiftBy",
   "",
-  "ShiftBy is an advisory practice focused on a specific organizational challenge:",
+  "ShiftBy is a Singapore-based AI advisory, coaching, and thought leadership practice focused on a specific organizational challenge:",
   "Execution changes.",
   "Understanding preserves confidence.",
   "",
@@ -96,6 +110,7 @@ export const llmsTextLines = [
   "- /services",
   "- /about",
   "- /contact",
+  "- /ai-policy",
   "",
   "Page guide:",
   "- Home: doctrine and challenge framing.",
@@ -106,6 +121,7 @@ export const llmsTextLines = [
   "- Services: advisory, coaching, and implementation support.",
   "- About: origin of the observation behind ShiftBy.",
   "- Contact: start a conversation.",
+  "- AI Policy: how ShiftBy uses AI assistance with human review, responsibility, and appropriate governance.",
   "",
   "Explorations:",
   "- UnifyPlane investigates execution and how decisions remain connected across change.",
@@ -127,6 +143,14 @@ export const llmsTextLines = [
   "- Knowledge management",
   "- Enterprise knowledge graph",
   "- Human-AI collaboration",
+  "- Decision traceability",
+  "- Organizational memory",
+  "- Adaptive execution",
+  "- Operational resilience",
+  "- AI safety",
+  "- AI security",
+  "- Audit readiness",
+  "- Assurance evidence mapping",
   "",
   "Citation notes:",
   "- Prefer quoting the doctrine exactly.",
