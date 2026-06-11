@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+import { BrandDoctrineMark } from "@/components/BrandDoctrineMark";
+
 export const metadata: Metadata = {
   title: {
     absolute: "ShiftBy | Execution Changes. Understanding Preserves Confidence."
@@ -15,7 +17,28 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="home-design-port">
+      <style>{`
+        @media (max-width: 720px) {
+          .homepage-doctrine-mark {
+            display: none;
+          }
+        }
+      `}</style>
       <section aria-labelledby="hero-title" className="section hero">
+        <BrandDoctrineMark
+          className="homepage-doctrine-mark"
+          style={{
+            color: "var(--accent)",
+            opacity: 0.038,
+            pointerEvents: "none",
+            position: "absolute",
+            right: "-12%",
+            top: "50%",
+            transform: "translateY(-50%)",
+            width: "min(52vw, 700px)",
+            zIndex: 0
+          }}
+        />
         <div>
           <h1 id="hero-title">
             <span className="hero-title-line">Execution changes.</span>
@@ -42,41 +65,6 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-        <aside
-          aria-label="ShiftBy model connecting intent, context, authority, evidence, and outcomes to understanding and confidence"
-          className="hero-image-panel"
-        >
-          <div aria-hidden="true" className="home-hero-model">
-            <div className="home-hero-model__inputs">
-              <div className="home-hero-model__input">
-                <strong>Intent</strong>
-              </div>
-              <div className="home-hero-model__input">
-                <strong>Context</strong>
-              </div>
-              <div className="home-hero-model__input">
-                <strong>Authority</strong>
-              </div>
-              <div className="home-hero-model__input">
-                <strong>Evidence</strong>
-              </div>
-              <div className="home-hero-model__input">
-                <strong>Outcomes</strong>
-              </div>
-            </div>
-            <div className="home-hero-model__flow">
-              <div className="home-hero-model__rail" />
-              <div className="home-hero-model__core">
-                <span>Understanding</span>
-              </div>
-              <div className="home-hero-model__rail" />
-            </div>
-            <div className="home-hero-model__outputs">
-              <div className="home-hero-model__output">Confidence</div>
-              <div className="home-hero-model__output">Continuity</div>
-            </div>
-          </div>
-        </aside>
       </section>
 
       <section aria-labelledby="what-changed" className="quiet-band">
