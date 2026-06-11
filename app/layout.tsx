@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Ubuntu } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { GlobalFooter } from "@/components/global-footer";
@@ -10,6 +11,13 @@ import "./globals.css";
 import "../styles/page-materialization.css";
 
 export const metadata: Metadata = rootMetadata;
+
+const ubuntu = Ubuntu({
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-ubuntu",
+  weight: ["400", "500", "700"]
+});
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -28,7 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           type="application/ld+json"
         />
       </head>
-      <body className="site-body">
+      <body className={`${ubuntu.variable} site-body`}>
         <a className="skip-link" href="#main-content">
           Skip to content
         </a>

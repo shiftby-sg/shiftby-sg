@@ -72,13 +72,7 @@ body {
     radial-gradient(circle at top right, color-mix(in oklch, var(--color-accent-soft), transparent 24%) 0, transparent 32rem),
     linear-gradient(180deg, color-mix(in oklch, var(--color-surface-strong), var(--color-bg) 32%) 0%, var(--color-bg) 100%);
   color: var(--color-ink);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Text",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   line-height: var(--line-copy);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -228,16 +222,10 @@ code {
 }
 
 .site-mark {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  position: relative;
+  display: inline-block;
+  padding-inline-start: 2.125rem;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: 1.25rem;
   font-weight: 650;
   letter-spacing: -0.01em;
@@ -245,9 +233,12 @@ code {
 }
 
 .site-mark__logo {
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: auto;
   height: 1.625rem;
-  flex: 0 0 auto;
+  transform: translateY(-50%);
 }
 
 .site-header__status {
@@ -364,13 +355,7 @@ code {
 .page-intro__title {
   margin: 0;
   max-width: var(--measure-wide);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: var(--display);
   font-weight: 690;
   letter-spacing: -0.01em;
@@ -430,13 +415,7 @@ code {
 
 .evidence-block__value {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: clamp(1.875rem, 3vw, 2.75rem);
   font-weight: 680;
   letter-spacing: -0.01em;
@@ -457,13 +436,7 @@ code {
 .section-frame__title,
 .cta-block__title {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: var(--heading-2);
   font-weight: 670;
   letter-spacing: -0.01em;
@@ -493,13 +466,7 @@ code {
 
 .card__title {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: var(--heading-3);
   font-weight: 650;
   letter-spacing: -0.01em;

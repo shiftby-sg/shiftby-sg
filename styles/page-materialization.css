@@ -336,13 +336,7 @@
 .movement h3 {
   margin: 0;
   color: var(--color-ink);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   letter-spacing: -0.01em;
   text-wrap: balance;
 }
@@ -792,13 +786,7 @@
 .brief-takeaway,
 .moment-list li,
 .question-card h3 {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   letter-spacing: -0.01em;
 }
 
@@ -1031,13 +1019,7 @@
 .meaning-lines p,
 .doctrine-takeaway {
   color: var(--color-ink);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   letter-spacing: -0.01em;
 }
 
@@ -1069,13 +1051,7 @@
 .challenge-prompt {
   margin-top: 1rem;
   color: var(--color-accent);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: clamp(1.125rem, 1.6vw, 1.5rem);
   line-height: 1.2;
   font-weight: 650;
@@ -1265,13 +1241,7 @@
 .investigation-synthesis .lead,
 .synthesis-copy .lead {
   color: var(--color-ink);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
 }
 
 .progression-list {
@@ -1297,13 +1267,7 @@
 
 .progression-line {
   color: var(--color-ink);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: clamp(1.125rem, 1.6vw, 1.5rem);
   line-height: 1.2;
 }
@@ -1325,13 +1289,7 @@
 .cta-note p,
 .action-sequence span {
   color: var(--color-ink);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: clamp(1.375rem, 2vw, 2rem);
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -1399,13 +1357,7 @@
   padding-top: 0.875rem;
   border-top: 1px solid var(--color-line);
   color: var(--color-ink);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: clamp(1.25rem, 1.7vw, 1.5rem);
   line-height: 1.26;
   font-weight: 620;
@@ -1420,13 +1372,7 @@
 
 .ai-emphasis p {
   color: var(--color-ink);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: clamp(1.375rem, 2vw, 2rem);
   line-height: 1.18;
   font-weight: 640;
@@ -1823,13 +1769,7 @@
 
 .home-hero-model__core span {
   color: var(--color-accent);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: 1.125rem;
   line-height: 1.05;
   letter-spacing: -0.01em;
@@ -1849,13 +1789,7 @@
   border-radius: 0.875rem;
   padding: 0.75rem;
   color: var(--color-ink);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "Inter",
-    system-ui,
-    sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: 0.95rem;
   font-weight: 620;
   line-height: 1.12;
@@ -2826,8 +2760,8 @@
   --accent: oklch(48% 0.15 280);
   --accent-soft: oklch(94% 0.028 280);
   --slate: oklch(62% 0.018 250);
-  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif;
+  --font-display: var(--font-ubuntu), "Ubuntu", sans-serif;
+  --font-body: var(--font-ubuntu), "Ubuntu", sans-serif;
   --font-mono: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
   --max: 1200px;
   --gutter: clamp(18px, 4vw, 32px);
@@ -3605,7 +3539,7 @@
 }
 
 .shell:has(.home-design-port) .site-mark {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+  font-family: var(--font-ubuntu), "Ubuntu", sans-serif;
   font-size: 20px;
   font-weight: 650;
   letter-spacing: -0.01em;
@@ -3651,8 +3585,8 @@
   --success: #17A34A;
   --warn: #EAB308;
   --danger: #DC2626;
-  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif;
+  --font-display: var(--font-ubuntu), "Ubuntu", sans-serif;
+  --font-body: var(--font-ubuntu), "Ubuntu", sans-serif;
   --font-mono: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
   --max: 1200px;
   --gutter: clamp(24px, 7vw, 88px);
@@ -5942,8 +5876,8 @@
       --accent: oklch(48% 0.15 280);
       --accent-soft: oklch(94% 0.028 280);
       --slate: oklch(62% 0.018 250);
-      --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
-      --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif;
+      --font-display: var(--font-ubuntu), "Ubuntu", sans-serif;
+      --font-body: var(--font-ubuntu), "Ubuntu", sans-serif;
       --font-mono: ui-monospace, 'JetBrains Mono', Menlo, Consolas, monospace;
       --max: 1200px;
       --gutter: clamp(18px, 4vw, 32px);
