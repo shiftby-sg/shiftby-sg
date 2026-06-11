@@ -12,3 +12,4 @@ tests/validation/reports/
 playwright-report
 test-results
 plan/
+workpackets/

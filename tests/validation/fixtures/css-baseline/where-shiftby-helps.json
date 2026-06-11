@@ -2,12 +2,17 @@
   "page": "Where ShiftBy Helps",
   "route": "/where-shiftby-helps",
   "css_file": "styles/where-shiftby-helps.css",
-  "sha256": "bd3e69ce0a96f8f9463a73ab204502046f32daac00083c0640390184f309f92e",
-  "byte_size": 24020,
-  "line_count": 924,
-  "selector_count_estimate": 153,
+  "sha256": "8d6e2f3c5b03924c6be077adc8fab5a1ab1082060f1fe1176c74b631043edcfa",
+  "byte_size": 24258,
+  "line_count": 935,
+  "selector_count_estimate": 155,
   "import_required": true,
   "imported_in_globals": true,
   "generated_from_current_release_candidate": true,
-  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+  "fixture_update_policy": "Governed v2.5 baseline refresh after human visual acceptance.",
+  "baseline_mode": true,
+  "baseline_fixture_path": "tests/validation/fixtures/css-baseline/where-shiftby-helps.json",
+  "baseline_fixture_exists": true,
+  "baseline_sha256": "bd3e69ce0a96f8f9463a73ab204502046f32daac00083c0640390184f309f92e",
+  "matches_baseline": true
 }

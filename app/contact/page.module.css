@@ -1,0 +1,256 @@
+.page {
+  --contact-bg: oklch(98% 0.004 250);
+  --contact-surface: oklch(100% 0 0);
+  --contact-fg: oklch(17% 0.012 250);
+  --contact-muted: oklch(47% 0.014 250);
+  --contact-border: oklch(88% 0.008 250);
+  --contact-accent: oklch(48% 0.15 280);
+  --contact-accent-soft: oklch(94% 0.028 280);
+  --contact-slate: oklch(62% 0.018 250);
+  --contact-max: 1200px;
+  --contact-gutter: clamp(18px, 4vw, 32px);
+  --contact-section: clamp(58px, 8.5vw, 112px);
+  --contact-tight: clamp(44px, 6.5vw, 78px);
+  --contact-display: clamp(44px, 5.8vw, 74px);
+  --contact-heading: clamp(30px, 3.8vw, 50px);
+  --contact-title: clamp(23px, 2.3vw, 34px);
+  --contact-lead: clamp(19px, 1.8vw, 22px);
+  --contact-body: clamp(17px, 1.35vw, 19px);
+  --contact-small: clamp(15px, 1.15vw, 17px);
+  display: grid;
+  color: var(--contact-fg);
+}
+
+.page h1,
+.page h2,
+.page h3,
+.page p {
+  margin: 0;
+}
+
+.page h1,
+.page h2,
+.page h3 {
+  color: var(--contact-fg);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.page h1 {
+  max-width: 980px;
+  font-size: var(--contact-display);
+  font-weight: 690;
+  line-height: 1.02;
+}
+
+.page h2 {
+  max-width: 860px;
+  font-size: var(--contact-heading);
+  font-weight: 670;
+  line-height: 1.08;
+}
+
+.page h3 {
+  font-size: var(--contact-title);
+  font-weight: 650;
+  line-height: 1.13;
+}
+
+.page p {
+  color: var(--contact-muted);
+  font-size: var(--contact-body);
+  line-height: 1.54;
+  text-wrap: pretty;
+}
+
+.kicker {
+  display: inline-flex;
+  margin: 0 0 14px;
+  color: var(--contact-accent);
+  font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lead {
+  color: var(--contact-muted);
+  font-size: var(--contact-lead);
+  line-height: 1.42;
+}
+
+.hero,
+.section,
+.sectionGrid,
+.closingInner {
+  width: min(100%, var(--contact-max));
+  margin: 0 auto;
+  padding-inline: var(--contact-gutter);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.62fr) minmax(18rem, 0.38fr);
+  gap: clamp(42px, 7vw, 96px);
+  align-items: start;
+  padding-block: var(--contact-section);
+}
+
+.heroCopy,
+.ledeStack,
+.sectionHeader,
+.topicArea,
+.closingInner {
+  display: grid;
+  gap: 18px;
+}
+
+.ledeStack {
+  max-width: 760px;
+}
+
+.founderPanel {
+  display: grid;
+  gap: 12px;
+  border: 1px solid var(--contact-border);
+  border-radius: 16px;
+  padding: clamp(24px, 3vw, 34px);
+  background:
+    linear-gradient(180deg, color-mix(in oklch, var(--contact-accent-soft), white 38%) 0%, var(--contact-surface) 100%);
+  box-shadow: 0 18px 48px color-mix(in oklch, var(--contact-fg), transparent 93%);
+}
+
+.panelLabel,
+.contactIndex,
+.pendingDetail {
+  color: var(--contact-slate);
+  font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.founderName {
+  color: var(--contact-fg);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 670;
+  line-height: 1.08;
+}
+
+.founderRole {
+  color: var(--contact-accent);
+  font-weight: 650;
+}
+
+.band {
+  border-block: 1px solid var(--contact-border);
+  background: color-mix(in oklch, var(--contact-surface), var(--contact-bg) 45%);
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.6fr);
+  gap: clamp(42px, 7vw, 96px);
+  align-items: start;
+  padding-block: var(--contact-tight);
+}
+
+.topicGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topicGrid li {
+  min-height: 54px;
+  border: 1px solid var(--contact-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: color-mix(in oklch, var(--contact-surface), transparent 8%);
+  color: var(--contact-fg);
+  font-size: var(--contact-small);
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.section {
+  display: grid;
+  gap: clamp(28px, 4vw, 42px);
+  padding-block: var(--contact-section);
+}
+
+.sectionHeader {
+  max-width: 820px;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.contactCard {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 100%;
+  border: 1px solid var(--contact-border);
+  border-radius: 12px;
+  padding: clamp(22px, 2.8vw, 30px);
+  background: color-mix(in oklch, var(--contact-surface), transparent 8%);
+  box-shadow: 0 8px 22px color-mix(in oklch, var(--contact-fg), transparent 96%);
+}
+
+.contactIndex {
+  color: var(--contact-accent);
+}
+
+.pendingDetail {
+  color: var(--contact-muted);
+  font-size: 11px;
+}
+
+.closing {
+  border-top: 1px solid var(--contact-border);
+  background:
+    linear-gradient(180deg, color-mix(in oklch, var(--contact-accent-soft), white 62%) 0%, var(--contact-bg) 100%);
+}
+
+.closingInner {
+  max-width: 980px;
+  padding-block: var(--contact-tight);
+}
+
+.closingInner p {
+  max-width: 760px;
+}
+
+@media (max-width: 56rem) {
+  .hero,
+  .sectionGrid,
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-block: clamp(48px, 9vw, 74px);
+  }
+}
+
+@media (max-width: 40rem) {
+  .topicGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .founderPanel,
+  .contactCard {
+    border-radius: 10px;
+  }
+}
