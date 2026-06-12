@@ -801,9 +801,6 @@ export default function ServicesPage() {
             <Link className="button primary" href="/contact">
               Start a conversation
             </Link>
-            <Link className="button secondary" href="/capabilities">
-              Explore capabilities
-            </Link>
           </div>
         </div>
         <div className="cta-note">
