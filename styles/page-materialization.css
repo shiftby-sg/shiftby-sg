@@ -1472,8 +1472,8 @@
     }
 
     .site-footer__groups {
-      grid-template-columns: 1fr;
-      gap: 1rem;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1rem 1.25rem;
     }
 
     .site-footer__group,
@@ -1495,13 +1495,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.25rem 0.875rem;
-    }
-
-    @media (min-width: 30rem) {
-      .site-footer__groups {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 1rem 1.25rem;
-      }
     }
 
     .site-footer__legal {
