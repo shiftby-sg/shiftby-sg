@@ -23,10 +23,12 @@ export default function HomePage() {
           font-size: var(--type-kicker);
           font-weight: 700;
           letter-spacing: var(--tracking-kicker);
-          line-height: 1.2;
-          margin: 0 0 var(--space-kicker-head);
+          line-height: 18px;
+          margin: 0 0 8px;
           max-width: 620px;
+          position: relative;
           text-transform: uppercase;
+          top: -7px;
           white-space: nowrap;
         }
 
@@ -132,8 +134,10 @@ export default function HomePage() {
         </ul>
         <p className="challenge-takeaway">
           As organizations execute across broader networks, preserving
-          understanding becomes{" "}
-          <strong>a capability organizations must build.</strong>
+          understanding becomes
+          <strong className="challenge-takeaway-emphasis">
+            a capability organizations must build.
+          </strong>
         </p>
       </section>
 

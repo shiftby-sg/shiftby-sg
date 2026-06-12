@@ -444,6 +444,10 @@ main { overflow: hidden; }
   color: var(--accent);
   font-weight: 600;
 }
+.challenge-takeaway-emphasis {
+  display: block;
+  margin-top: clamp(6px, 0.9vw, 12px);
+}
 
 .needs-section {
   max-width: 1280px;
