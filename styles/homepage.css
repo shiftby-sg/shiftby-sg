@@ -200,14 +200,6 @@ main { overflow: hidden; }
   width: 100%;
 }
 .home-design-port .section {
-  padding-left: 0;
-  padding-right: 0;
-}
-.home-design-port .quiet-band > .change-editorial {
-  padding-left: clamp(18px, 4vw, 32px);
-  padding-right: clamp(18px, 4vw, 32px);
-}
-.home-design-port .focus-section > .section {
   padding-left: clamp(18px, 4vw, 32px);
   padding-right: clamp(18px, 4vw, 32px);
 }

@@ -3746,7 +3746,7 @@
 .home-design-port .section {
   width: min(100%, var(--max));
   margin: 0 auto;
-  padding: var(--section) var(--gutter);
+  padding: var(--section) clamp(18px, 4vw, 32px);
 }
 
 .home-design-port .hero {

@@ -250,16 +250,16 @@ export default function HomePage() {
         </div>
         <ul aria-label="ShiftBy explorations" className="exploration-list">
           <li>
+            <h3>UnifyPlane</h3>
+            <p>Exploring how decisions, dependencies, and execution remain connected over time.</p>
+          </li>
+          <li>
             <h3>CanonLens</h3>
             <p>Exploring how artifacts are interpreted differently across people, systems, and AI.</p>
           </li>
           <li>
             <h3>Inspiral</h3>
             <p>Exploring how organizational knowledge develops, adapts, and survives change.</p>
-          </li>
-          <li>
-            <h3>UnifyPlane</h3>
-            <p>Exploring how decisions, dependencies, and execution remain connected over time.</p>
           </li>
         </ul>
         <p className="exploration-support">
