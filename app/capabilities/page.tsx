@@ -98,22 +98,16 @@ export default function CapabilitiesPage() {
             </h2>
             <p className="bridge-intro">
               Most organizations recognize these challenges immediately. They
-              experience them every day, even when they describe them
-              differently. Different failure modes require different
-              capabilities.
+              appear as decision drift, knowledge drift, accountability drift,
+              and execution drift.
             </p>
             <p className="bridge-intro">
-              Together, these four capabilities form a complete
-              understanding-preservation model.
+              No single capability preserves understanding on its own.
             </p>
             <p className="bridge-intro">
-              Each capability addresses a specific way understanding can be lost
-              as execution becomes more distributed.
-            </p>
-            <p className="bridge-intro">
-              Many of those failure modes appear as drift: decisions drift from
-              rationale, knowledge drifts from context, accountability drifts
-              from responsibility, and execution drifts from intent.
+              Together, Decision Traceability, Organizational Memory, Human-AI
+              Accountability, and Adaptive Execution help keep rationale,
+              context, responsibility, and intent connected as execution changes.
             </p>
           </div>
           <div className="bridge-points">
@@ -152,23 +146,10 @@ export default function CapabilitiesPage() {
                   Decisions lose rationale, evidence, and approval context over time.
                 </p>
                 <p className="why">
-                  Important decisions rarely exist in isolation; their impact extends
-                  across dependencies, processes, systems, and future change.
-                </p>
-                <p className="why">
                   Decision Traceability keeps reasoning, assumptions, evidence,
-                  approval, and decision lineage recoverable over time. Examples
-                  include AI use-case approvals, investment decisions, supplier
-                  selection, and security exceptions.
-                </p>
-                <p className="why">
-                  Decision Traceability helps make decision drift visible before
-                  rationale, evidence, and approval context become difficult to
-                  recover.
-                </p>
-                <p className="why">
-                  This challenge increasingly appears within enterprise AI operating
-                  models and AI-assisted decision environments.
+                  approval, and decision lineage recoverable as execution
+                  changes. It helps make decision drift visible before context
+                  becomes difficult to reconstruct.
                 </p>
               </div>
               <div className="detail-grid">
@@ -206,27 +187,14 @@ export default function CapabilitiesPage() {
                 </p>
                 <p className="failure-mode">
                   <b>Addresses failure mode</b>
-                  Organizational memory fragments across people, artifacts, and change.
-                </p>
-                <p className="why">
-                  Artifacts may survive organizational change while the context that
-                  made them meaningful disappears.
+                  Knowledge fragments across people, artifacts, systems, and
+                  change.
                 </p>
                 <p className="why">
                   Organizational Memory keeps critical context, knowledge
-                  relationships, and evidence available as people, teams, and
-                  operating models evolve. Examples include operational
-                  handovers, quality investigations, manufacturing knowledge, and
-                  supplier transitions.
-                </p>
-                <p className="why">
-                  Organizational Memory helps reduce knowledge drift as people,
-                  systems, artifacts, and operating models change.
-                </p>
-                <p className="why">
-                  Organizations often address this through knowledge management
-                  approaches, enterprise knowledge graphs, and governed knowledge
-                  systems.
+                  relationships, and evidence usable as people, teams, systems,
+                  and operating models evolve. It helps reduce knowledge drift
+                  when artifacts survive but meaning disappears.
                 </p>
               </div>
               <div className="detail-grid">
@@ -264,27 +232,19 @@ export default function CapabilitiesPage() {
                 </p>
                 <p className="failure-mode">
                   <b>Addresses failure mode</b>
-                  Review, approval, and accountability become harder to locate.
+                  Review, approval, and responsibility become harder to locate
+                  as AI participates in work.
                 </p>
                 <p className="why">
-                  As AI participates in analysis and execution, accountability can
-                  become harder to trace across people, artifacts, systems, and
-                  decisions.
+                  Human-AI Accountability keeps ownership, review, escalation,
+                  evidence, judgment, and decision lineage visible across
+                  people, AI, systems, and artifacts. It helps reduce
+                  accountability drift before responsibility becomes difficult
+                  to trace.
                 </p>
                 <p className="why">
-                  Human–AI Accountability keeps review, approval, escalation,
-                  evidence, judgment, and decision lineage visible. Examples
-                  include AI-assisted decisions, AI-generated artifacts, human
-                  review and approval, and escalation pathways.
-                </p>
-                <p className="why">
-                  Human–AI Accountability helps identify accountability drift as
-                  responsibility, review, reliance, and evidence spread across
-                  people, AI, and artifacts.
-                </p>
-                <p className="why">
-                  Responsible AI programs and AI governance initiatives frequently
-                  depend on maintaining visible accountability, review, and evidence.
+                  This matters for Responsible AI, AI governance, enterprise AI,
+                  AI-assisted decisions, and AI-generated artifacts.
                 </p>
               </div>
               <div className="detail-grid">
@@ -326,24 +286,10 @@ export default function CapabilitiesPage() {
                   Transformation can outpace shared understanding.
                 </p>
                 <p className="why">
-                  As organizations change, dependencies, assumptions, and operating
-                  models change as well.
-                </p>
-                <p className="why">
-                  Adaptive Execution explores how organizations can evolve while
-                  remaining aware of those changes and their impact. Examples
-                  include transformation programs, operating model changes,
-                  automation adoption, and AI-enabled workflows.
-                </p>
-                <p className="why">
-                  Adaptive Execution helps organizations detect execution drift
-                  before operating intent becomes disconnected from how work is
-                  actually performed.
-                </p>
-                <p className="why">
-                  Organizations pursuing AI transformation and large-scale
-                  automation often encounter this challenge as operating models
-                  evolve.
+                  Adaptive Execution helps organizations adapt while preserving
+                  operating intent, dependencies, assumptions, and context. It
+                  helps detect execution drift before work changes faster than
+                  understanding can follow.
                 </p>
               </div>
               <div className="detail-grid">
@@ -388,13 +334,10 @@ export default function CapabilitiesPage() {
               change, leaders have enough context to act with confidence.
             </p>
             <p>
-              These capabilities keep decisions, knowledge, accountability, and
-              execution connected as work moves across people, systems,
-              suppliers, automation, and AI.
-            </p>
-            <p>
-              The context changes. The underlying challenge remains:
-              understanding must stay usable as execution continues.
+              Together, these capabilities keep decisions, knowledge,
+              accountability, and execution connected as work moves across
+              people, systems, suppliers, automation, and AI, so understanding
+              stays usable as execution continues to change.
             </p>
             <Link className="text-link" href="/where-shiftby-helps">
               See how these capabilities apply →

@@ -270,58 +270,6 @@ export default function WhereShiftByHelpsPage() {
         </div>
       </section>
 
-      <section
-        aria-labelledby="why-explorations"
-        className="section exploration-bridge"
-      >
-        <span className="kicker">Investigation</span>
-        <h2 id="why-explorations">
-          Some questions cannot be answered through theory alone.
-        </h2>
-        <div className="bridge-lines">
-          <p>Questions about preserving understanding require more than assertion.</p>
-          <p>They require observation.</p>
-          <p>They require investigation.</p>
-          <p>They require experimentation.</p>
-          <p>This is why ShiftBy maintains a small number of ongoing explorations.</p>
-        </div>
-      </section>
-
-      <section
-        aria-labelledby="where-explores"
-        className="section exploration-section"
-      >
-        <div className="exploration-copy">
-          <span className="kicker">Explorations</span>
-          <h2 id="where-explores">Where ShiftBy explores these questions.</h2>
-          <p>
-            ShiftBy uses demonstrable investigations to examine how
-            understanding can be preserved.
-          </p>
-          <p>Each exploration examines a different aspect of preserving understanding.</p>
-          <Link className="text-link" href="/explorations">
-            Continue to explorations
-          </Link>
-        </div>
-        <ul aria-label="ShiftBy explorations" className="exploration-list">
-          <li>
-            <b>UnifyPlane</b>
-            <p>Understanding execution, traceability, accountability, and decision lineage.</p>
-          </li>
-          <li>
-            <b>CanonLens</b>
-            <p>
-              Understanding meaning, context, organizational memory, and knowledge
-              management.
-            </p>
-          </li>
-          <li>
-            <b>Inspiral</b>
-            <p>Understanding observation, discovery, knowledge formation, and learning.</p>
-          </li>
-        </ul>
-      </section>
-
       <section aria-labelledby="closing-title" className="section closing">
         <div>
           <span className="kicker">Closing question</span>
@@ -330,8 +278,9 @@ export default function WhereShiftByHelpsPage() {
           </h2>
           <div className="closing-copy">
             <p>
-              Across knowledge, accountability, change, and organizational
-              complexity, the challenge often returns to the same question:
+              Across decisions, knowledge, accountability, execution, and
+              organizational complexity, the challenge often returns to the
+              same question:
             </p>
             <p>
               As execution continues to change,
@@ -341,8 +290,8 @@ export default function WhereShiftByHelpsPage() {
             <p>The context changes. The challenge remains.</p>
           </div>
           <div aria-label="Final calls to action" className="closing-actions">
-            <Link className="button primary" href="/explorations">
-              Explore the investigations
+            <Link className="button primary" href="/services">
+              Explore services
             </Link>
             <Link className="button secondary" href="/contact">
               Start a conversation
@@ -350,11 +299,11 @@ export default function WhereShiftByHelpsPage() {
           </div>
         </div>
         <div aria-label="Closing sequence" className="closing-flow">
-          <span>Understanding</span>
+          <span>Recognize the challenge</span>
           <i>↓</i>
-          <span>Confidence</span>
+          <span>Explore services</span>
           <i>↓</i>
-          <span>Conversation</span>
+          <span>Start the conversation</span>
         </div>
       </section>
     </div>

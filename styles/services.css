@@ -415,6 +415,9 @@
       line-height: 1.18;
       font-weight: 585;
     }
+    .service-zone {
+      margin-top: clamp(22px, 3.2vw, 38px);
+    }
     .engagement-list {
       border-top: 1px solid var(--border);
     }
@@ -425,6 +428,25 @@
       padding: clamp(30px, 4.4vw, 54px) 0;
       border-bottom: 1px solid var(--border);
       align-items: start;
+    }
+    .engagement-block.service-section-ai-adoption,
+    .engagement-block.service-section-ai-readiness,
+    .engagement-block.service-section-ai-agents,
+    .engagement-block.service-section-ai-governance {
+      padding-left: clamp(18px, 2.8vw, 34px);
+      padding-right: clamp(18px, 2.8vw, 34px);
+    }
+    .engagement-block.service-section-ai-adoption {
+      background: oklch(98.2% 0.006 285);
+    }
+    .engagement-block.service-section-ai-readiness {
+      background: oklch(98.1% 0.005 240);
+    }
+    .engagement-block.service-section-ai-agents {
+      background: oklch(98% 0.007 160);
+    }
+    .engagement-block.service-section-ai-governance {
+      background: oklch(98.1% 0.007 70);
     }
     .engagement-block:nth-child(2) {
       padding-top: clamp(34px, 4.8vw, 58px);
@@ -1125,6 +1147,9 @@
   line-height: 1.18;
   font-weight: 585;
 }
+.services-design-port .service-zone {
+  margin-top: clamp(22px, 3.2vw, 38px);
+}
 .services-design-port .engagement-list { border-top: 1px solid var(--border); }
 .services-design-port .engagement-block {
   display: grid;
@@ -1134,6 +1159,25 @@
   border-top: 0;
   border-bottom: 1px solid var(--border);
   align-items: start;
+}
+.services-design-port .engagement-block.service-section-ai-adoption,
+.services-design-port .engagement-block.service-section-ai-readiness,
+.services-design-port .engagement-block.service-section-ai-agents,
+.services-design-port .engagement-block.service-section-ai-governance {
+  padding-left: clamp(18px, 2.8vw, 34px);
+  padding-right: clamp(18px, 2.8vw, 34px);
+}
+.services-design-port .engagement-block.service-section-ai-adoption {
+  background: oklch(98.2% 0.006 285);
+}
+.services-design-port .engagement-block.service-section-ai-readiness {
+  background: oklch(98.1% 0.005 240);
+}
+.services-design-port .engagement-block.service-section-ai-agents {
+  background: oklch(98% 0.007 160);
+}
+.services-design-port .engagement-block.service-section-ai-governance {
+  background: oklch(98.1% 0.007 70);
 }
 .services-design-port .engagement-block:nth-child(2) { padding-top: clamp(34px, 4.8vw, 58px); }
 .services-design-port .engagement-block:nth-child(3) { padding-bottom: clamp(34px, 4.8vw, 58px); }

@@ -230,23 +230,16 @@ export default function ExplorationsPage() {
             </h2>
             <div className="conversation-copy">
               <p>
-                The explorations are open-ended because the questions are still
+                The explorations remain open because the questions are still
                 evolving.
               </p>
               <p>
                 If these patterns appear inside your organization, the useful
-                next step may be a conversation rather than a conclusion.
+                next step may be a conversation: what needs to stay traceable,
+                explainable, accountable, or usable as work changes?
               </p>
               <p>
-                When these patterns appear inside an organization, the next
-                useful step is often to connect the observation to a practical
-                capability: what needs to stay traceable, explainable,
-                accountable, or usable as work changes.
-              </p>
-              <p>
-                That is where investigation can become advisory support:
-                clarifying the question, identifying the capability involved,
-                and shaping a practical next step.
+                That is where observation can become advisory support.
               </p>
             </div>
             <div className="conversation-actions" aria-label="Conversation links">

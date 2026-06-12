@@ -226,7 +226,7 @@ export default function PerspectivePage() {
             The next question cannot be answered through theory alone.
           </h2>
           <div className="bridge-lines">
-            <p>The observation alone is not enough.</p>
+            <p>The pattern cannot be understood through assertion alone.</p>
             <div className="bridge-support">
               <p>It requires observation.</p>
               <p>It requires investigation.</p>

@@ -307,11 +307,6 @@ export default function ServicesPage() {
               what assumptions are being made, who remains accountable, and
               what must remain connected as execution changes.
             </p>
-            <p className="lead">
-              The explorations investigate how understanding survives change.
-              Services help organizations apply those lessons where decisions,
-              knowledge, ownership, and execution need durable lineage.
-            </p>
             <ul aria-label="What must be worked through" className="progression-list">
               <li>
                 <span className="progression-term">Priorities</span>
@@ -404,8 +399,9 @@ export default function ServicesPage() {
               </p>
             </div>
           </div>
-          <div aria-label="How ShiftBy helps in practice" className="engagement-list">
-            <article className="engagement-block">
+          <div className="service-zone">
+            <div aria-label="How ShiftBy helps in practice" className="engagement-list">
+              <article className="engagement-block service-section-ai-adoption">
               <div className="engagement-copy">
                 <p className="engagement-challenge">Choosing Where To Act</p>
                 <p className="signal-context service-category">
@@ -428,9 +424,8 @@ export default function ServicesPage() {
                 </p>
                 <span className="service-story-label">Outcome</span>
                 <p>
-                  The outcome is greater clarity on investment priorities,
-                  roadmap direction, ownership, operating model choices, and
-                  transformation decisions.
+                  Greater confidence in where to invest, what to prioritize,
+                  who remains accountable, and how adoption should proceed.
                 </p>
               </div>
                 <div className="engagement-signals">
@@ -464,9 +459,9 @@ export default function ServicesPage() {
                   </dl>
                 </section>
               </div>
-            </article>
+              </article>
 
-            <article className="engagement-block">
+              <article className="engagement-block service-section-ai-readiness">
               <div className="engagement-copy">
                 <p className="engagement-challenge">
                   Preparing The Organization To Act
@@ -492,9 +487,8 @@ export default function ServicesPage() {
                 </p>
                 <span className="service-story-label">Outcome</span>
                 <p>
-                  The outcome is greater confidence in organizational
-                  readiness, leadership alignment, ownership, enablement
-                  priorities, and adoption sequencing.
+                  Greater confidence that people, knowledge, governance, and
+                  ways of working are ready to support adoption.
                 </p>
               </div>
                 <div className="engagement-signals">
@@ -535,9 +529,9 @@ export default function ServicesPage() {
                   </dl>
                 </section>
               </div>
-            </article>
+              </article>
 
-            <article className="engagement-block">
+              <article className="engagement-block service-section-ai-agents">
               <div className="engagement-copy">
                 <p className="engagement-challenge">
                   Improving Work Without Losing Context
@@ -565,9 +559,8 @@ export default function ServicesPage() {
                 </p>
                 <span className="service-story-label">Outcome</span>
                 <p>
-                  The outcome is greater confidence in accountable workflows,
-                  traceability, oversight choices, and the meaning behind the
-                  work.
+                  Improved execution without losing the context needed to
+                  explain, govern, and trust the work.
                 </p>
               </div>
                 <div className="engagement-signals">
@@ -606,9 +599,9 @@ export default function ServicesPage() {
                   </dl>
                 </section>
               </div>
-            </article>
+              </article>
 
-            <article className="engagement-block">
+              <article className="engagement-block service-section-ai-governance">
               <div className="engagement-copy">
                 <p className="engagement-challenge">
                   Preserving Trust As Execution Changes
@@ -636,9 +629,8 @@ export default function ServicesPage() {
                 </p>
                 <span className="service-story-label">Outcome</span>
                 <p>
-                  The outcome is greater confidence in ownership, oversight,
-                  assurance evidence, audit readiness, risk decisions, and
-                  operational resilience.
+                  Greater confidence that trust can be demonstrated through
+                  clear ownership, evidence, oversight, and accountability.
                 </p>
               </div>
                 <div className="engagement-signals">
@@ -678,7 +670,8 @@ export default function ServicesPage() {
                   </dl>
                 </section>
               </div>
-            </article>
+              </article>
+            </div>
           </div>
 
           <div
