@@ -237,6 +237,17 @@ export default function ExplorationsPage() {
                 If these patterns appear inside your organization, the useful
                 next step may be a conversation rather than a conclusion.
               </p>
+              <p>
+                When these patterns appear inside an organization, the next
+                useful step is often to connect the observation to a practical
+                capability: what needs to stay traceable, explainable,
+                accountable, or usable as work changes.
+              </p>
+              <p>
+                That is where investigation can become advisory support:
+                clarifying the question, identifying the capability involved,
+                and shaping a practical next step.
+              </p>
             </div>
             <div className="conversation-actions" aria-label="Conversation links">
               <Link className="button primary" href="/contact">

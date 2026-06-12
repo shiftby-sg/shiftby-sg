@@ -5527,7 +5527,7 @@
   display: grid;
   grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr);
   gap: clamp(34px, 5.4vw, 82px);
-  align-items: end;
+  align-items: start;
   margin-bottom: clamp(22px, 3.2vw, 38px);
 }
 .services-design-port #themes-title {

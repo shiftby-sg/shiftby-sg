@@ -67,6 +67,39 @@ export default function ContactPage() {
         </aside>
       </section>
 
+      <section className={styles.nextSteps} aria-labelledby="next-steps-title">
+        <div className={styles.nextStepsInner}>
+          <div>
+            <span className={styles.kicker}>What happens next</span>
+            <h2 id="next-steps-title">The next step is shaped around the question.</h2>
+          </div>
+          <div className={styles.nextStepList} aria-label="What happens after starting a conversation">
+            <article>
+              <span className={styles.contactIndex}>01</span>
+              <p>We start with the challenge, concern, or question that made the conversation useful.</p>
+            </article>
+            <article>
+              <span className={styles.contactIndex}>02</span>
+              <p>
+                We explore where understanding may be fragmented across decisions,
+                knowledge, accountability, execution, or AI.
+              </p>
+            </article>
+            <article>
+              <span className={styles.contactIndex}>03</span>
+              <p>
+                We identify whether an assessment, advisory engagement, workshop,
+                or investigation may be useful.
+              </p>
+            </article>
+            <article>
+              <span className={styles.contactIndex}>04</span>
+              <p>If there is a fit, we define a practical next step.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.band} aria-labelledby="useful-title">
         <div className={styles.sectionGrid}>
           <div>

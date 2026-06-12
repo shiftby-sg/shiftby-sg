@@ -18,6 +18,16 @@ export default function HomePage() {
   return (
     <div className="home-design-port">
       <style>{`
+        .home-design-port .hero-descriptor {
+          color: var(--muted);
+          font-size: clamp(14px, 1vw, 16px);
+          font-weight: 600;
+          letter-spacing: 0;
+          line-height: 1.35;
+          margin: 0 0 clamp(14px, 1.8vw, 22px);
+          max-width: 620px;
+        }
+
         @media (max-width: 720px) {
           .homepage-doctrine-mark {
             display: none;
@@ -40,6 +50,10 @@ export default function HomePage() {
           }}
         />
         <div>
+          <p className="hero-descriptor">
+            Executive advisory practice for AI, governance, and organizational
+            understanding.
+          </p>
           <h1 id="hero-title">
             <span className="hero-title-line">Execution changes.</span>
             <span className="hero-title-line">
@@ -48,13 +62,13 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="lead">
-            Organizations rarely lose confidence because execution changes.
+            Organizations preserve artifacts.
             <br />
             <br />
-            They lose confidence when understanding is lost.
+            Preserving understanding is harder.
             <br />
             <br />
-            Preserve understanding. Move forward with confidence.
+            Make understanding durable.
           </p>
           <div className="hero-actions">
             <Link className="button primary" href="/contact">

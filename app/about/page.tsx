@@ -81,6 +81,14 @@ export default function AboutPage() {
                   cybersecurity programs, governance platforms, AI initiatives,
                   and AI-enabled operating models.
                 </p>
+                <p>
+                  The perspective was shaped by more than two decades of
+                  enterprise work across SAP, Johnson &amp; Johnson, and Kenvue,
+                  including APAC leadership contexts where technology,
+                  architecture, cybersecurity, operational resilience,
+                  manufacturing, supply chain, data, governance, and AI all made
+                  the same pattern visible from different directions.
+                </p>
                 <p>Different industries.</p>
                 <p>Different business functions.</p>
                 <p>Different technologies.</p>

@@ -151,6 +151,35 @@
   background: color-mix(in oklch, var(--contact-surface), var(--contact-bg) 45%);
 }
 
+.nextSteps {
+  border-block: 1px solid var(--contact-border);
+  background: color-mix(in oklch, var(--contact-surface), var(--contact-bg) 32%);
+}
+
+.nextStepsInner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.34fr) minmax(0, 0.66fr);
+  gap: clamp(36px, 6vw, 80px);
+  width: min(100%, var(--contact-max));
+  margin: 0 auto;
+  padding: var(--contact-tight) var(--contact-gutter);
+}
+
+.nextStepList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.nextStepList article {
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--contact-border);
+  border-radius: 10px;
+  padding: clamp(18px, 2.4vw, 24px);
+  background: color-mix(in oklch, var(--contact-surface), transparent 6%);
+}
+
 .sectionGrid {
   display: grid;
   grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.6fr);
@@ -252,6 +281,7 @@
 
 @media (max-width: 56rem) {
   .hero,
+  .nextStepsInner,
   .sectionGrid,
   .contactGrid {
     grid-template-columns: 1fr;
@@ -263,6 +293,7 @@
 }
 
 @media (max-width: 40rem) {
+  .nextStepList,
   .topicGrid {
     grid-template-columns: 1fr;
   }
