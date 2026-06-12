@@ -429,7 +429,7 @@ export default function ServicesPage() {
                 </p>
               </div>
                 <div className="engagement-signals">
-                <p className="signal-context topics-label">Topics this service may cover</p>
+                <p className="signal-context topics-label">Topics may include</p>
                 <ul aria-label="AI direction and decision clarity topics" className="signal-list">
                   <li className="is-primary service-example-item">Business value assessment</li>
                   <li className="is-primary service-example-item">AI opportunity prioritization</li>
@@ -492,7 +492,7 @@ export default function ServicesPage() {
                 </p>
               </div>
                 <div className="engagement-signals">
-                <p className="signal-context topics-label">Topics this service may cover</p>
+                <p className="signal-context topics-label">Topics may include</p>
                 <ul
                   aria-label="Readiness before adoption topics"
                   className="signal-list"
@@ -564,7 +564,7 @@ export default function ServicesPage() {
                 </p>
               </div>
                 <div className="engagement-signals">
-                <p className="signal-context topics-label">Topics this service may cover</p>
+                <p className="signal-context topics-label">Topics may include</p>
                 <ul aria-label="Human-AI work topics" className="signal-list">
                   <li className="is-primary service-example-item">AI agent governance</li>
                   <li className="is-primary service-example-item">Knowledge-connected workflows</li>
@@ -634,7 +634,7 @@ export default function ServicesPage() {
                 </p>
               </div>
                 <div className="engagement-signals">
-                <p className="signal-context topics-label">Topics this service may cover</p>
+                <p className="signal-context topics-label">Topics may include</p>
                 <ul aria-label="Trust accountability and assurance topics" className="signal-list">
                   <li className="is-primary service-example-item">Responsible AI</li>
                   <li className="is-primary service-example-item">AI governance</li>

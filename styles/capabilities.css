@@ -1009,3 +1009,13 @@
       .map-relation.safer-change { bottom: 23%; }
     }
 }
+
+.capabilities-design-port .hero {
+  padding-top: 56px;
+}
+
+@media (max-width: 720px) {
+  .capabilities-design-port .hero {
+    padding-top: 42px;
+  }
+}

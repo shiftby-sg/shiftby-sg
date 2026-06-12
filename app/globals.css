@@ -637,12 +637,14 @@ code {
     content: "";
   }
 
+  .site-nav-shell[data-open="true"] .site-nav-toggle,
   .site-nav-shell[open] .site-nav-toggle {
     border-color: color-mix(in oklch, var(--color-accent), var(--color-line) 38%);
     background: var(--color-ink);
     color: var(--color-surface-strong);
   }
 
+  .site-nav-shell[data-open="true"] .site-nav-backdrop,
   .site-nav-shell[open] .site-nav-backdrop {
     position: fixed;
     inset: 4.75rem 0 0;
@@ -654,14 +656,17 @@ code {
     backdrop-filter: blur(3px);
   }
 
+  .site-nav-shell[data-open="true"] .site-nav-toggle__icon span:nth-child(1),
   .site-nav-shell[open] .site-nav-toggle__icon span:nth-child(1) {
     transform: translateY(5px) rotate(45deg);
   }
 
+  .site-nav-shell[data-open="true"] .site-nav-toggle__icon span:nth-child(2),
   .site-nav-shell[open] .site-nav-toggle__icon span:nth-child(2) {
     opacity: 0;
   }
 
+  .site-nav-shell[data-open="true"] .site-nav-toggle__icon span:nth-child(3),
   .site-nav-shell[open] .site-nav-toggle__icon span:nth-child(3) {
     transform: translateY(-5px) rotate(-45deg);
   }
@@ -685,10 +690,12 @@ code {
     box-shadow: var(--shadow-card);
   }
 
+  .site-nav-shell[data-open="false"] .site-nav,
   .site-nav-shell:not([open]) .site-nav {
     display: none;
   }
 
+  .site-nav-shell[data-open="true"] .site-nav,
   .site-nav-shell[open] .site-nav {
     display: grid;
   }

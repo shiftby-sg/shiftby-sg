@@ -129,76 +129,98 @@ export default function ContactPage() {
             sales process.
           </p>
         </div>
-        <div className={styles.contactGrid} aria-label="Contact mechanisms">
-          <article className={styles.contactCard} style={contactCardStyle}>
-            <span className={styles.contactIndex}>01</span>
-            <h3>Scheduling</h3>
-            <p>
-              Scheduling can follow once the question and context are clear
-              enough for a focused discussion.
-            </p>
-            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
-              <a href="https://outlook.office.com/book/ShiftbySGBookingPage@shiftby.sg/?ismsaljsauthenabled">
-                Schedule a conversation
-              </a>
-            </p>
-          </article>
-          <article className={styles.contactCard} style={contactCardStyle}>
-            <span className={styles.contactIndex}>02</span>
-            <h3>Email</h3>
-            <p>
-              Use email when the context is easier to describe in writing or
-              when a short note is enough to begin.
-            </p>
-            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
-              <a href="mailto:anandakrishnam@shiftby.sg">anandakrishnam@shiftby.sg</a>
-            </p>
-          </article>
-          <article className={styles.contactCard} style={contactCardStyle}>
-            <span className={styles.contactIndex}>03</span>
-            <h3>LinkedIn</h3>
-            <p>
-              Use LinkedIn when the conversation should begin through Ananda
-              Krishna directly.
-            </p>
-            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
-              <a href="https://www.linkedin.com/in/anandakrishnam">
-                linkedin.com/in/anandakrishnam
-              </a>
-            </p>
-          </article>
-          <article className={styles.contactCard} style={contactCardStyle}>
-            <span className={styles.contactIndex}>04</span>
-            <h3>Phone</h3>
-            <p>
-              Use phone when a direct conversation is the clearest way to
-              establish context.
-            </p>
-            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
-              <a href="tel:+6597517794">+65 97517794</a>
-            </p>
-          </article>
-          <article className={styles.contactCard} style={contactCardStyle}>
-            <span className={styles.contactIndex}>05</span>
-            <h3>WhatsApp</h3>
-            <p>
-              Use WhatsApp when a short message is enough to begin the
-              conversation.
-            </p>
-            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
-              <a href="https://wa.me/6597517794">wa.me/6597517794</a>
-            </p>
-          </article>
-          <article className={styles.contactCard} style={contactCardStyle}>
-            <span className={styles.contactIndex}>06</span>
-            <h3>Telegram</h3>
-            <p>
-              Use Telegram when that is the easier channel for an initial note.
-            </p>
-            <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
-              <a href="https://t.me/anandakrishnam">t.me/anandakrishnam</a>
-            </p>
-          </article>
+        <div className={styles.contactChannels} aria-label="Contact mechanisms">
+          <div className={styles.primaryContactGrid} aria-label="Primary contact channels">
+            <article
+              className={`${styles.contactCard} ${styles.primaryContactCard}`}
+              style={contactCardStyle}
+            >
+              <span className={styles.contactIndex}>01</span>
+              <h3>Schedule a Conversation</h3>
+              <p>
+                Scheduling can follow once the question and context are clear
+                enough for a focused discussion.
+              </p>
+              <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+                <a href="https://outlook.office.com/book/ShiftbySGBookingPage@shiftby.sg/?ismsaljsauthenabled">
+                  Schedule a conversation
+                </a>
+              </p>
+            </article>
+            <article
+              className={`${styles.contactCard} ${styles.primaryContactCard}`}
+              style={contactCardStyle}
+            >
+              <span className={styles.contactIndex}>02</span>
+              <h3>Email</h3>
+              <p>
+                Use email when the context is easier to describe in writing or
+                when a short note is enough to begin.
+              </p>
+              <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+                <a href="mailto:anandakrishnam@shiftby.sg">anandakrishnam@shiftby.sg</a>
+              </p>
+            </article>
+            <article
+              className={`${styles.contactCard} ${styles.primaryContactCard}`}
+              style={contactCardStyle}
+            >
+              <span className={styles.contactIndex}>03</span>
+              <h3>LinkedIn</h3>
+              <p>
+                Use LinkedIn when the conversation should begin through Ananda
+                Krishna directly.
+              </p>
+              <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+                <a href="https://www.linkedin.com/in/anandakrishnam">
+                  linkedin.com/in/anandakrishnam
+                </a>
+              </p>
+            </article>
+          </div>
+          <div className={styles.secondaryContactGrid} aria-label="Secondary contact channels">
+            <article
+              className={`${styles.contactCard} ${styles.secondaryContactCard}`}
+              style={contactCardStyle}
+            >
+              <span className={styles.contactIndex}>04</span>
+              <h3>Phone</h3>
+              <p>
+                Use phone when a direct conversation is the clearest way to
+                establish context.
+              </p>
+              <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+                <a href="tel:+6597517794">+65 97517794</a>
+              </p>
+            </article>
+            <article
+              className={`${styles.contactCard} ${styles.secondaryContactCard}`}
+              style={contactCardStyle}
+            >
+              <span className={styles.contactIndex}>05</span>
+              <h3>WhatsApp</h3>
+              <p>
+                Use WhatsApp when a short message is enough to begin the
+                conversation.
+              </p>
+              <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+                <a href="https://wa.me/6597517794">wa.me/6597517794</a>
+              </p>
+            </article>
+            <article
+              className={`${styles.contactCard} ${styles.secondaryContactCard}`}
+              style={contactCardStyle}
+            >
+              <span className={styles.contactIndex}>06</span>
+              <h3>Telegram</h3>
+              <p>
+                Use Telegram when that is the easier channel for an initial note.
+              </p>
+              <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
+                <a href="https://t.me/anandakrishnam">t.me/anandakrishnam</a>
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 

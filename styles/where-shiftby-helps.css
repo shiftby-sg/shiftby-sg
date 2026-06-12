@@ -937,3 +937,13 @@
     gap: 10px;
   }
 }
+
+.where-shiftby-helps-design-port .hero {
+  padding-top: 56px;
+}
+
+@media (max-width: 720px) {
+  .where-shiftby-helps-design-port .hero {
+    padding-top: 42px;
+  }
+}

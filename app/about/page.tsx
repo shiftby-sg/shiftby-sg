@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -229,6 +230,25 @@ export default function AboutPage() {
             <div className="final-doctrine" aria-label="ShiftBy doctrine">
               <span>The observation became the source.</span>
               <span>The work is preserving understanding through change.</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="movement about-contact-cta" aria-labelledby="about-contact-title">
+        <div className="movement-inner">
+          <article className="essay wide about-contact-cta-inner">
+            <span className="kicker">Start a conversation</span>
+            <h2 id="about-contact-title">Start with the question.</h2>
+            <p>
+              If the pattern feels familiar, the next step can begin with a
+              conversation about what needs to remain understood as decisions,
+              knowledge, accountability, or execution changes.
+            </p>
+            <div className="about-cta-actions" aria-label="About page next step">
+              <Link className="button primary" href="/contact">
+                Start a conversation
+              </Link>
             </div>
           </article>
         </div>

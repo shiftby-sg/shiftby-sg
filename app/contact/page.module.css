@@ -95,7 +95,7 @@
   grid-template-columns: minmax(0, 0.62fr) minmax(18rem, 0.38fr);
   gap: clamp(42px, 7vw, 96px);
   align-items: start;
-  padding-block: var(--contact-section);
+  padding-block: 61px var(--contact-section);
 }
 
 .heroCopy,
@@ -219,7 +219,13 @@
   max-width: 820px;
 }
 
-.contactGrid {
+.contactChannels {
+  display: grid;
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.primaryContactGrid,
+.secondaryContactGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
@@ -235,6 +241,32 @@
   padding: clamp(22px, 2.8vw, 30px);
   background: color-mix(in oklch, var(--contact-surface), transparent 8%);
   box-shadow: 0 8px 22px color-mix(in oklch, var(--contact-fg), transparent 96%);
+}
+
+.primaryContactCard {
+  background: var(--contact-surface);
+  box-shadow: 0 12px 28px color-mix(in oklch, var(--contact-fg), transparent 95%);
+}
+
+.secondaryContactGrid {
+  gap: 12px;
+}
+
+.secondaryContactCard {
+  gap: 10px;
+  border-color: color-mix(in oklch, var(--contact-border), transparent 24%);
+  padding: clamp(16px, 2vw, 22px);
+  background: color-mix(in oklch, var(--contact-surface), transparent 14%);
+  box-shadow: none;
+}
+
+.secondaryContactCard h3 {
+  font-size: clamp(18px, 1.6vw, 24px);
+}
+
+.secondaryContactCard p {
+  font-size: var(--contact-small);
+  line-height: 1.45;
 }
 
 .contactIndex {
@@ -283,12 +315,13 @@
   .hero,
   .nextStepsInner,
   .sectionGrid,
-  .contactGrid {
+  .primaryContactGrid,
+  .secondaryContactGrid {
     grid-template-columns: 1fr;
   }
 
   .hero {
-    padding-block: clamp(48px, 9vw, 74px);
+    padding-block: 47px clamp(48px, 9vw, 74px);
   }
 }
 

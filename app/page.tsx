@@ -19,16 +19,22 @@ export default function HomePage() {
     <div className="home-design-port">
       <style>{`
         .home-design-port .hero-descriptor {
-          color: var(--muted);
-          font-size: clamp(14px, 1vw, 16px);
-          font-weight: 600;
-          letter-spacing: 0;
-          line-height: 1.35;
-          margin: 0 0 clamp(14px, 1.8vw, 22px);
+          color: var(--accent);
+          font-size: var(--type-kicker);
+          font-weight: 700;
+          letter-spacing: var(--tracking-kicker);
+          line-height: 1.2;
+          margin: 0 0 var(--space-kicker-head);
           max-width: 620px;
+          text-transform: uppercase;
+          white-space: nowrap;
         }
 
         @media (max-width: 720px) {
+          .home-design-port .hero-descriptor {
+            white-space: normal;
+          }
+
           .homepage-doctrine-mark {
             display: none;
           }
@@ -51,8 +57,7 @@ export default function HomePage() {
         />
         <div>
           <p className="hero-descriptor">
-            Executive advisory practice for AI, governance, and organizational
-            understanding.
+            Executive advisory practice for AI, governance, and organizational understanding.
           </p>
           <h1 id="hero-title">
             <span className="hero-title-line">Execution changes.</span>

@@ -1280,3 +1280,13 @@
   .perspective-design-port .ai-lines { gap: 22px; }
   .perspective-design-port .ai-line-group { gap: 6px; }
 }
+
+.perspective-design-port .hero {
+  padding-top: 56px;
+}
+
+@media (max-width: 720px) {
+  .perspective-design-port .hero {
+    padding-top: 42px;
+  }
+}
