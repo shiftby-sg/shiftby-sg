@@ -907,6 +907,8 @@
 .services-design-port .quiet-band {
   background: color-mix(in oklch, var(--surface), var(--bg) 45%);
   border-block: 1px solid var(--border);
+  width: min(100%, var(--max));
+  margin-inline: auto;
 }
 .services-design-port .kicker {
   display: inline-flex;

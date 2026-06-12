@@ -25,12 +25,6 @@ export default function WhereShiftByHelpsPage() {
             <p className="lead">The same pattern appears in different forms.</p>
             <p className="lead">The context changes.</p>
             <p className="lead">The underlying challenge remains.</p>
-            <p className="hero-cta-note">Explore where the challenge appears.</p>
-            <div aria-label="Opening call to action" className="hero-actions">
-              <a className="button primary" href="#challenge">
-                Explore the challenges
-              </a>
-            </div>
           </div>
         </div>
       </section>

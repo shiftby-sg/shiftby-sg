@@ -952,6 +952,8 @@
 }
 
 .about-design-port .about-contact-cta {
+  background: oklch(0.991 0.0018 310.5);
+  border-block: 1px solid var(--border);
   padding-top: clamp(56px, 8vw, 96px);
 }
 

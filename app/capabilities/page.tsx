@@ -33,11 +33,11 @@ export default function CapabilitiesPage() {
             to preserve and confidence becomes harder to maintain.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="#capabilities">
-              Explore the capabilities
-            </a>
-            <Link className="button" href="/where-shiftby-helps">
+            <Link className="button primary" href="/where-shiftby-helps">
               See where they apply
+            </Link>
+            <Link className="button secondary" href="/contact">
+              Start a conversation
             </Link>
           </div>
         </div>
