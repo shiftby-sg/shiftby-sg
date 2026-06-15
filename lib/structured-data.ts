@@ -1,4 +1,9 @@
-import { fallbackSiteUrl } from "@/content/discoverability";
+import {
+  corporateEntity,
+  discoverabilityTopics,
+  fallbackSiteUrl,
+  getAbsoluteUrl
+} from "@/content/discoverability";
 import { siteDescription, siteTitle } from "@/lib/site-data";
 
 function getSiteUrl() {
@@ -7,36 +12,49 @@ function getSiteUrl() {
 
 export function getStructuredData() {
   const siteUrl = getSiteUrl();
+  const siteRoot = getAbsoluteUrl("/");
 
   return {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
-        "@id": `${siteUrl}/#organization`,
+        "@id": `${siteRoot}#organization`,
         name: siteTitle,
         url: siteUrl,
         description: siteDescription,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: corporateEntity.address.street,
+          postalCode: corporateEntity.address.postalCode,
+          addressLocality: corporateEntity.address.country,
+          addressCountry: corporateEntity.address.country
+        },
+        knowsAbout: [...discoverabilityTopics],
         founder: {
           "@type": "Person",
-          name: "Ananda Krishna Marri"
+          name: corporateEntity.founder.name,
+          jobTitle: "Founder",
+          sameAs: corporateEntity.founder.linkedIn
         }
       },
       {
         "@type": "ProfessionalService",
-        "@id": `${siteUrl}/#service`,
+        "@id": `${siteRoot}#service`,
         name: siteTitle,
         url: siteUrl,
         description:
-          "Advisory, coaching, and implementation support focused on preserving understanding as execution changes.",
+          "Advisory, coaching, and consulting focused on preserving understanding as execution changes.",
         provider: {
           "@id": `${siteUrl}/#organization`
         },
-        areaServed: "Global"
+        areaServed: "Global",
+        serviceType: "Executive Advisory",
+        knowsAbout: [...discoverabilityTopics]
       },
       {
         "@type": "WebSite",
-        "@id": `${siteUrl}/#website`,
+        "@id": `${siteRoot}#website`,
         name: siteTitle,
         url: siteUrl,
         description: siteDescription,

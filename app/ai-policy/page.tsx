@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Policy | ShiftBy",
+  title: {
+    absolute: "AI Policy | ShiftBy"
+  },
   description:
     "How ShiftBy uses artificial intelligence to support research, drafting, analysis, exploration, and understanding while preserving human responsibility.",
   alternates: {

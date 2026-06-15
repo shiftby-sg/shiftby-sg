@@ -2,9 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | ShiftBy",
+  title: {
+    absolute: "About | ShiftBy"
+  },
   description:
-    "Why ShiftBy exists: organizations preserve artifacts, but organizations struggle to preserve understanding.",
+    "Why ShiftBy exists: organizations preserve artifacts, but understanding is harder to preserve.",
   alternates: {
     canonical: "/about"
   }
@@ -20,35 +22,33 @@ export default function AboutPage() {
             <h1 id="observation-title">The perspective begins with an observation.</h1>
             <div className="intro-copy">
               <p className="lead">
-                Across industries, technologies, governance programs, cybersecurity
-                investigations, manufacturing environments, supply chains, data
-                initiatives, and AI adoption efforts, the same questions kept returning.
+                Organizations constantly change. Strategies evolve. Teams reorganize.
+                Systems are replaced. Processes adapt. Technologies advance. AI
+                accelerates decision-making and execution.
               </p>
             </div>
-            <ul className="question-run" aria-label="Questions that kept returning">
-              <li>Why was this decision made?</li>
-              <li>What evidence existed?</li>
-              <li>What assumptions shaped it?</li>
-              <li>Who remained accountable?</li>
-              <li>What changed?</li>
-            </ul>
             <div className="intro-copy">
-              <p>The records remained.</p>
-              <p>The explanation became harder to recover.</p>
-              <p>The drift was often visible only later.</p>
-              <p>The pattern appeared repeatedly.</p>
-              <p>The observation became clear.</p>
+              <p>Yet confidence does not come from preserving execution.</p>
+              <p>Confidence comes from preserving understanding.</p>
+              <p>ShiftBy exists to help organizations preserve understanding through change.</p>
             </div>
             <div className="observation-destination" aria-label="Core observation">
               <p>Organizations preserve artifacts.</p>
-              <p>Organizations struggle to preserve understanding.</p>
+              <p>Understanding is harder to preserve.</p>
             </div>
             <div className="observation-bridge">
-              <p>That observation eventually became the foundation for ShiftBy.</p>
               <p>
-                The question was no longer whether the pattern existed. The
-                question became how understanding could survive as execution
-                continued to change.
+                Understanding is not information. Organizations already possess
+                information. They have documents, systems, dashboards, controls,
+                reports, records, and data.
+              </p>
+              <p>
+                Understanding is the context that connects decisions, assumptions,
+                evidence, accountability, dependencies, and outcomes.
+              </p>
+              <p>
+                Information records what happened. Understanding explains why it
+                mattered.
               </p>
             </div>
           </article>
@@ -60,39 +60,18 @@ export default function AboutPage() {
           <article className="essay wide">
             <div className="evidence-flow">
               <div className="intro-copy evidence-opening">
-                <p className="lead">Different environments. Similar questions.</p>
+                <p className="lead">The problem shows up across different environments.</p>
               </div>
               <div className="intro-copy">
-                <p>The observation did not emerge from a single domain.</p>
                 <p>
-                  It appeared across industries that included consumer health,
-                  pharmaceuticals, MedTech, manufacturing, supply chain, research
-                  and development, and digital operations.
+                  The observation did not emerge from a single domain. It appeared
+                  across enterprise work in SAP, Johnson &amp; Johnson, and Kenvue,
+                  including APAC leadership contexts where technology, architecture,
+                  cybersecurity, operational resilience, manufacturing, supply chain,
+                  data, governance, and AI all made the same pattern visible from
+                  different directions.
                 </p>
-                <p>
-                  It appeared across business functions responsible for
-                  operations, manufacturing, supply chain, research and
-                  development, quality, compliance, risk management,
-                  cybersecurity, operational resilience, privacy, technology
-                  strategy, data and analytics, and AI governance.
-                </p>
-                <p>
-                  It appeared across enterprise architecture, cloud platforms,
-                  data platforms, analytics environments, knowledge systems,
-                  cybersecurity programs, governance platforms, AI initiatives,
-                  and AI-enabled operating models.
-                </p>
-                <p>
-                  The perspective was shaped by more than two decades of
-                  enterprise work across SAP, Johnson &amp; Johnson, and Kenvue,
-                  including APAC leadership contexts where technology,
-                  architecture, cybersecurity, operational resilience,
-                  manufacturing, supply chain, data, governance, and AI all made
-                  the same pattern visible from different directions.
-                </p>
-                <p>Different industries.</p>
-                <p>Different business functions.</p>
-                <p>Different technologies.</p>
+                <p>Different environments. Similar questions.</p>
                 <p>The same questions continued to appear.</p>
               </div>
               <div className="observer-note">
@@ -104,16 +83,16 @@ export default function AboutPage() {
                 <div>
                   <p>
                     ShiftBy grew from a pattern observed across technology,
-                    operations, data, governance, and AI environments, not from
-                    a single discipline.
+                    operations, data, governance, and AI environments, not from a
+                    single discipline.
                   </p>
                   <p>
-                    Across those environments, the technologies changed, the
-                    operating models changed, and the conditions changed, yet
-                    the same underlying questions continued to emerge: what had
-                    been decided, what evidence supported it, what assumptions
-                    shaped it, who understood the context, how accountability
-                    carried forward, and what drifted.
+                    Across those environments, the technologies changed, the operating
+                    models changed, and the conditions changed, yet the same
+                    underlying questions continued to emerge: what had been decided,
+                    what evidence supported it, what assumptions shaped it, who
+                    understood the context, how accountability carried forward, and
+                    what drifted.
                   </p>
                   <p className="credential-line">
                     The consistency of the pattern became difficult to ignore.
@@ -121,9 +100,9 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="meaning-lines" aria-label="Meaning pattern">
-                <p>DATA REMAINED AVAILABLE.</p>
-                <p>KNOWLEDGE REMAINED VISIBLE.</p>
-                <p>MEANING BECAME HARDER TO PRESERVE.</p>
+                <p>Data remained available.</p>
+                <p>Knowledge remained visible.</p>
+                <p>Meaning became harder to preserve.</p>
               </div>
               <div className="origin-thread">
                 <p>
@@ -140,16 +119,16 @@ export default function AboutPage() {
                   and interpretation remained connected as organizations evolved.
                 </p>
                 <p>
-                  Some were about discovery: how observations became knowledge
-                  and how knowledge informed decisions.
+                  Some were about discovery: how observations became knowledge and
+                  how knowledge informed decisions.
                 </p>
               </div>
               <div className="intro-copy">
                 <p>
                   Across data platforms, analytics environments, knowledge systems,
-                  research environments, and AI-enabled ecosystems, the
-                  relationships that explain why something matters often became
-                  harder to recover than the information itself.
+                  research environments, and AI-enabled ecosystems, the relationships
+                  that explain why something matters often became harder to recover
+                  than the information itself.
                 </p>
               </div>
               <div className="ai-lines" aria-label="AI visibility">
@@ -179,7 +158,7 @@ export default function AboutPage() {
             <div className="response-text">
               <p className="lead">
                 ShiftBy explores the challenge through advisory work, coaching,
-                thought leadership, and ongoing investigations.
+                consulting, thought leadership, and ongoing investigations.
               </p>
               <ul className="inline-series" aria-label="Four complementary lenses">
                 <li>Decision Traceability</li>

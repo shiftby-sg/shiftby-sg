@@ -2,7 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Capabilities | ShiftBy",
+  title: {
+    absolute: "Capabilities | ShiftBy"
+  },
   description:
     "ShiftBy capabilities for preserving understanding as execution changes: decision traceability, organizational memory, human-AI accountability, and adaptive execution.",
   alternates: {

@@ -267,7 +267,7 @@
     .hero {
       min-height: clamp(452px, 53vh, 632px);
       display: grid;
-      align-content: center;
+      align-content: start;
       gap: clamp(38px, 5.4vw, 72px);
       padding-top: clamp(58px, 7.4vw, 94px);
       padding-bottom: clamp(54px, 7vw, 90px);
@@ -447,12 +447,6 @@
     }
     .engagement-block.service-section-ai-governance {
       background: oklch(98.1% 0.007 70);
-    }
-    .engagement-block:nth-child(2) {
-      padding-top: clamp(34px, 4.8vw, 58px);
-    }
-    .engagement-block:nth-child(3) {
-      padding-bottom: clamp(34px, 4.8vw, 58px);
     }
     .engagement-copy {
       display: grid;
@@ -1181,8 +1175,6 @@
 .services-design-port .engagement-block.service-section-ai-governance {
   background: oklch(98.1% 0.007 70);
 }
-.services-design-port .engagement-block:nth-child(2) { padding-top: clamp(34px, 4.8vw, 58px); }
-.services-design-port .engagement-block:nth-child(3) { padding-bottom: clamp(34px, 4.8vw, 58px); }
 .services-design-port .engagement-copy {
   display: grid;
   gap: 13px;
@@ -1196,6 +1188,7 @@
   letter-spacing: -0.01em;
   font-weight: 705;
   max-width: 530px;
+  min-height: calc(1.16em * 2.35);
 }
 .services-design-port .engagement-copy h3 {
   margin: -2px 0 1px;
@@ -1470,6 +1463,7 @@
 @media (max-width: 720px) {
   .services-design-port { --section: clamp(42px, 12vw, 66px); --section-tight: clamp(34px, 10vw, 54px); }
   .services-design-port .hero { min-height: auto; padding-top: 42px; }
+  .services-design-port .engagement-challenge { min-height: 0; }
   .services-design-port .hero-actions .button,
   .services-design-port .cta-actions .button { width: 100%; }
   .services-design-port .hero-actions .button.secondary,

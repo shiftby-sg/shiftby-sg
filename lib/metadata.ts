@@ -18,9 +18,13 @@ function getMetadataBase() {
 export function getPageMetadata(
   entry: (typeof pageMetadataEntries)[keyof typeof pageMetadataEntries]
 ): Metadata {
+  const pageTitle = entry.seoTitle ?? `${entry.title} | ${siteTitle}`;
+
   return {
     metadataBase: getMetadataBase(),
-    title: entry.title,
+    title: {
+      absolute: pageTitle
+    },
     description: entry.description,
     keywords: [...discoverabilityTopics],
     alternates: {
@@ -29,13 +33,13 @@ export function getPageMetadata(
     openGraph: {
       type: "website",
       url: entry.path,
-      title: `${entry.title} | ${siteTitle}`,
+      title: pageTitle,
       description: entry.description,
       siteName: siteTitle
     },
     twitter: {
       card: "summary",
-      title: `${entry.title} | ${siteTitle}`,
+      title: pageTitle,
       description: entry.description
     },
     robots: {
@@ -50,7 +54,12 @@ export function getMetadata(
   description = siteDescription,
   path = "/"
 ): Metadata {
-  return getPageMetadata({ title, description, path });
+  return getPageMetadata({
+    title,
+    seoTitle: `${title} | ${siteTitle}`,
+    description,
+    path
+  });
 }
 
 export const rootMetadata: Metadata = {

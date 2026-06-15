@@ -58,9 +58,6 @@ export default function HomePage() {
           }}
         />
         <div>
-          <p className="hero-descriptor">
-            Executive advisory practice for AI, governance, and organizational understanding.
-          </p>
           <h1 id="hero-title">
             <span className="hero-title-line">Execution changes.</span>
             <span className="hero-title-line">
@@ -69,13 +66,14 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="lead">
-            Organizations preserve artifacts.
+            Organizations rarely face a technology shortage.
             <br />
             <br />
-            Preserving understanding is harder.
+            They lose clarity when decisions, knowledge, ownership, and
+            accountability become harder to preserve.
             <br />
             <br />
-            Make understanding durable.
+            ShiftBy helps leaders preserve understanding as execution changes.
           </p>
           <div className="hero-actions">
             <Link className="button primary" href="/contact">
@@ -115,7 +113,7 @@ export default function HomePage() {
         </h2>
         <p className="challenge-intro">Organizations preserve artifacts.</p>
         <p className="challenge-definition">
-          <strong>Organizations struggle to preserve understanding.</strong> At
+          <strong>Organizations find it harder to preserve understanding.</strong> At
           ShiftBy, understanding is the context that connects decisions,
           assumptions, evidence, accountability, dependencies, outcomes, and the
           drift that can occur between them.
@@ -217,8 +215,7 @@ export default function HomePage() {
       >
         <span className="kicker">A DIFFERENT PERSPECTIVE</span>
         <h2 id="different-perspective-title">
-          Organizations preserve artifacts. Organizations struggle to preserve
-          understanding.
+          Organizations preserve artifacts. Understanding is harder to preserve.
         </h2>
         <p className="perspective-primary">
           Artifacts often remain after the decision, change, or execution path

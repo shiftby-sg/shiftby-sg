@@ -1,0 +1,132 @@
+{
+  "source": "editable rebuild",
+  "slideCount": 18,
+  "slides": [
+    {
+      "slide": 1,
+      "textBoxes": 9,
+      "shapes": 11,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 2,
+      "textBoxes": 15,
+      "shapes": 13,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 3,
+      "textBoxes": 27,
+      "shapes": 13,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 4,
+      "textBoxes": 16,
+      "shapes": 17,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 5,
+      "textBoxes": 21,
+      "shapes": 22,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 6,
+      "textBoxes": 18,
+      "shapes": 14,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 7,
+      "textBoxes": 16,
+      "shapes": 19,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 8,
+      "textBoxes": 15,
+      "shapes": 17,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 9,
+      "textBoxes": 19,
+      "shapes": 22,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 10,
+      "textBoxes": 15,
+      "shapes": 18,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 11,
+      "textBoxes": 17,
+      "shapes": 14,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 12,
+      "textBoxes": 16,
+      "shapes": 13,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 13,
+      "textBoxes": 19,
+      "shapes": 17,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 14,
+      "textBoxes": 15,
+      "shapes": 14,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 15,
+      "textBoxes": 0,
+      "shapes": 7,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 16,
+      "textBoxes": 0,
+      "shapes": 7,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 17,
+      "textBoxes": 0,
+      "shapes": 7,
+      "images": 0,
+      "passesEditability": true
+    },
+    {
+      "slide": 18,
+      "textBoxes": 0,
+      "shapes": 7,
+      "images": 0,
+      "passesEditability": true
+    }
+  ]
+}

@@ -2,7 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Perspective | ShiftBy",
+  title: {
+    absolute: "Perspective | ShiftBy"
+  },
   description:
     "The ShiftBy perspective on why preserving context matters as execution changes across people, systems, suppliers, automation, and AI.",
   alternates: {
@@ -86,7 +88,7 @@ export default function PerspectivePage() {
             <p>
               Organizations preserve artifacts.
               <br />
-              Organizations struggle to preserve understanding.
+              Understanding is harder to preserve.
             </p>
           </div>
         </div>
@@ -211,7 +213,7 @@ export default function PerspectivePage() {
           <p className="doctrine-note">
             The observation became simple only after the pattern appeared across
             enough different contexts: organizations preserve artifacts, and
-            organizations struggle to preserve understanding.
+            understanding is harder to preserve.
           </p>
         </div>
       </section>

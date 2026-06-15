@@ -2,7 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Where ShiftBy Helps | ShiftBy",
+  title: {
+    absolute: "Where ShiftBy Helps | ShiftBy"
+  },
   description:
     "Where preserving understanding becomes difficult inside real organizations, across decisions, knowledge, accountability, execution, AI, and organizational change.",
   alternates: {
