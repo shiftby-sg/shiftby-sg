@@ -1,0 +1,527 @@
+{"kind":"deck","id":"pr/e6mc0o","name":"Deck"}
+{"kind":"layout","layoutId":"037ada3d-6f38-480f-aef5-4faf93b9beca","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"a7b85ab2-2c49-472a-a99d-229e9a7c3436","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/usr9vh","slide":1,"title":"SHIFTBY","textShapes":9}
+{"kind":"shape","id":"sh/vu9knih4","slide":1,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":1,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/d0z61032","slide":1,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/2lszqtcj","slide":1,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/v6psfil0","slide":1,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/knih4byh","slide":1,"text":"PARTNER BRIEFING","textPreview":"PARTNER BRIEFING","textChars":16,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/d8bat47y","slide":1,"bbox":[130,102,1650,1]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":1,"text":"INTRODUCTION","textPreview":"INTRODUCTION","textChars":12,"textLines":1,"bbox":[130,150,420,24]}
+{"kind":"textbox","id":"sh/val87ed8","slide":1,"text":"Execution changes.\nUnderstanding preserves confidence.","textPreview":"Execution changes. | Understanding preserves confidence.","textChars":54,"textLines":2,"bbox":[130,175,980,260]}
+{"kind":"textbox","id":"sh/judg7ads","slide":1,"text":"AI advisory, coaching, and thought leadership for organizations navigating AI, governance, knowledge, and transformation.","textPreview":"AI advisory, coaching, and thought leadership for organizations navigating AI, governance, knowledge, and transformation.","textChars":121,"textLines":1,"bbox":[130,495,720,160]}
+{"kind":"shape","id":"sh/u9knih4b","slide":1,"bbox":[1420,240,560,560]}
+{"kind":"shape","id":"sh/1032lszq","slide":1,"bbox":[1580,400,240,240]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":1,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":1,"text":"A trusted partner's guide to when ShiftBy can help.","textPreview":"A trusted partner's guide to when ShiftBy can help.","textChars":51,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":1,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/1orytsvu","slide":1,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/c7u54zid","slide":1,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":1,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":1,"text":"01 / 14","textPreview":"01 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":1,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/usr9vh","slide":1,"text":""}
+{"kind":"slide","id":"sl/8ex8vx","slide":2,"title":"SHIFTBY","textShapes":15}
+{"kind":"shape","id":"sh/hoza1gvy","slide":2,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":2,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/zidonyd0","slide":2,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/svu9knih","slide":2,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":2,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":2,"text":"WHY SHIFTBY EXISTS","textPreview":"WHY SHIFTBY EXISTS","textChars":18,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/za1gvy90","slide":2,"bbox":[130,102,1650,1]}
+{"kind":"textbox","id":"sh/sji5snel","slide":2,"text":"CORE OBSERVATION","textPreview":"CORE OBSERVATION","textChars":16,"textLines":1,"bbox":[130,386,320,24]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":2,"text":"Organizations preserve\nrecords.\nThey lose operating context.","textPreview":"Organizations preserve | records. | They lose operating context.","textChars":60,"textLines":3,"bbox":[130,432,560,235]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":2,"text":"ShiftBy exists to help leaders preserve the rationale behind execution.","textPreview":"ShiftBy exists to help leaders preserve the rationale behind execution.","textChars":71,"textLines":1,"bbox":[130,812,760,54]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":2,"bbox":[850,388,980,1]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":2,"text":"The decision\nsurvives.","textPreview":"The decision | survives.","textChars":22,"textLines":2,"bbox":[850,412,250,70]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":2,"text":"The rationale\noften does not.","textPreview":"The rationale | often does not.","textChars":29,"textLines":2,"bbox":[1220,412,320,70]}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":2,"bbox":[850,533,980,1]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":2,"text":"The process\nsurvives.","textPreview":"The process | survives.","textChars":21,"textLines":2,"bbox":[850,557,250,70]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":2,"text":"The context\noften does not.","textPreview":"The context | often does not.","textChars":27,"textLines":2,"bbox":[1220,557,320,70]}
+{"kind":"shape","id":"sh/i5sneloj","slide":2,"bbox":[850,678,980,1]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":2,"text":"The system survives.","textPreview":"The system survives.","textChars":20,"textLines":1,"bbox":[850,702,250,70]}
+{"kind":"textbox","id":"sh/0z61032l","slide":2,"text":"The knowledge\noften does not.","textPreview":"The knowledge | often does not.","textChars":29,"textLines":2,"bbox":[1220,702,320,70]}
+{"kind":"shape","id":"sh/w7mp0bi9","slide":2,"bbox":[850,823,980,1]}
+{"kind":"shape","id":"sh/psfil0rq","slide":2,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":2,"text":"ShiftBy exists to help understanding remain available when execution changes.","textPreview":"ShiftBy exists to help understanding remain available when execution changes.","textChars":77,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":2,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/wval87ed","slide":2,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/pg3ex0nu","slide":2,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":2,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":2,"text":"02 / 14","textPreview":"02 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":2,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/8ex8vx","slide":2,"text":""}
+{"kind":"slide","id":"sl/q57ws2","slide":3,"title":"SHIFTBY","textShapes":27}
+{"kind":"shape","id":"sh/58z25kb6","slide":3,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":3,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":3,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":3,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":3,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":3,"text":"PARTNER VALUE FRAME","textPreview":"PARTNER VALUE FRAME","textChars":19,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":3,"bbox":[130,102,1650,1]}
+{"kind":"textbox","id":"sh/cbulwval","slide":3,"text":"WHY ORGANIZATIONS ENGAGE SHIFTBY","textPreview":"WHY ORGANIZATIONS ENGAGE SHIFTBY","textChars":32,"textLines":1,"bbox":[130,150,380,24]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":3,"text":"Value, risk, and trust are\nincreasingly connected.","textPreview":"Value, risk, and trust are | increasingly connected.","textChars":50,"textLines":2,"bbox":[130,172,1120,170]}
+{"kind":"shape","id":"sh/tcj6tova","slide":3,"bbox":[130,360,560,430]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":3,"text":"CREATE VALUE","textPreview":"CREATE VALUE","textChars":12,"textLines":1,"bbox":[158,386,504,40]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":3,"text":"Clarify where AI can create meaningful value","textPreview":"Clarify where AI can create meaningful value","textChars":44,"textLines":1,"bbox":[158,455,504,30]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":3,"text":"Prioritize AI opportunities and investments","textPreview":"Prioritize AI opportunities and investments","textChars":43,"textLines":1,"bbox":[158,510,504,30]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":3,"text":"Improve decision quality and visibility","textPreview":"Improve decision quality and visibility","textChars":39,"textLines":1,"bbox":[158,565,504,30]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":3,"text":"Accelerate responsible AI adoption","textPreview":"Accelerate responsible AI adoption","textChars":34,"textLines":1,"bbox":[158,620,504,30]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":3,"text":"Improve organizational effectiveness","textPreview":"Improve organizational effectiveness","textChars":36,"textLines":1,"bbox":[158,675,504,30]}
+{"kind":"shape","id":"sh/idonyd0z","slide":3,"bbox":[690,360,560,430]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":3,"text":"REDUCE RISK","textPreview":"REDUCE RISK","textChars":11,"textLines":1,"bbox":[718,386,504,40]}
+{"kind":"textbox","id":"sh/0fepkzup","slide":3,"text":"Strengthen governance and oversight","textPreview":"Strengthen governance and oversight","textChars":35,"textLines":1,"bbox":[718,455,504,30]}
+{"kind":"textbox","id":"sh/cbulwval","slide":3,"text":"Improve audit readiness and assurance","textPreview":"Improve audit readiness and assurance","textChars":37,"textLines":1,"bbox":[718,510,504,30]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":3,"text":"Address AI security and privacy concerns","textPreview":"Address AI security and privacy concerns","textChars":40,"textLines":1,"bbox":[718,565,504,30]}
+{"kind":"textbox","id":"sh/u54zidon","slide":3,"text":"Improve accountability and traceability","textPreview":"Improve accountability and traceability","textChars":39,"textLines":1,"bbox":[718,620,504,30]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":3,"text":"Improve visibility of AI-related risks","textPreview":"Improve visibility of AI-related risks","textChars":38,"textLines":1,"bbox":[718,675,504,30]}
+{"kind":"shape","id":"sh/czed8v6p","slide":3,"bbox":[1250,360,560,430]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":3,"text":"PRESERVE TRUST","textPreview":"PRESERVE TRUST","textChars":14,"textLines":1,"bbox":[1278,386,504,40]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":3,"text":"Preserve organizational knowledge","textPreview":"Preserve organizational knowledge","textChars":33,"textLines":1,"bbox":[1278,455,504,30]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":3,"text":"Maintain explainability of important decisions","textPreview":"Maintain explainability of important decisions","textChars":46,"textLines":1,"bbox":[1278,510,504,30]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":3,"text":"Retain rationale as systems evolve","textPreview":"Retain rationale as systems evolve","textChars":34,"textLines":1,"bbox":[1278,565,504,30]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":3,"text":"Maintain accountability as execution changes","textPreview":"Maintain accountability as execution changes","textChars":44,"textLines":1,"bbox":[1278,620,504,30]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":3,"text":"Increase confidence in AI-enabled operations","textPreview":"Increase confidence in AI-enabled operations","textChars":44,"textLines":1,"bbox":[1278,675,504,30]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":3,"bbox":[130,840,1080,1]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":3,"text":"Understanding helps organizations navigate all\nthree.","textPreview":"Understanding helps organizations navigate all | three.","textChars":53,"textLines":2,"bbox":[130,875,1120,88]}
+{"kind":"shape","id":"sh/onyd0z61","slide":3,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":3,"text":"A partner should be able to connect ShiftBy to value creation, risk reduction, and trust preservation.","textPreview":"A partner should be able to connect ShiftBy to value creation, risk reduction, and trust preservation.","textChars":102,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/6tovahoz","slide":3,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/dg7adsji","slide":3,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/ovahoza1","slide":3,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":3,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/61032lsz","slide":3,"text":"03 / 14","textPreview":"03 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":3,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/q57ws2","slide":3,"text":""}
+{"kind":"slide","id":"sl/lupk98","slide":4,"title":"SHIFTBY","textShapes":16}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":4,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":4,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":4,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":4,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":4,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":4,"text":"INDUSTRY RECOGNITION","textPreview":"INDUSTRY RECOGNITION","textChars":20,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/58z25kb6","slide":4,"bbox":[130,102,1650,1]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":4,"text":"INDUSTRIES WHERE SIMILAR CONVERSATIONS FREQUENTLY ARISE","textPreview":"INDUSTRIES WHERE SIMILAR CONVERSATIONS FREQUENTLY ARISE","textChars":55,"textLines":1,"bbox":[130,148,650,24]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":4,"text":"Different industries. Similar\nchallenges around confidence.","textPreview":"Different industries. Similar | challenges around confidence.","textChars":59,"textLines":2,"bbox":[130,172,1100,180]}
+{"kind":"shape","id":"sh/nap4r65w","slide":4,"bbox":[130,360,415,150]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":4,"text":"Pharmaceuticals","textPreview":"Pharmaceuticals","textChars":15,"textLines":1,"bbox":[158,445,359,34]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":4,"bbox":[545,360,415,150]}
+{"kind":"textbox","id":"sh/cvixczed","slide":4,"text":"Consumer Health","textPreview":"Consumer Health","textChars":15,"textLines":1,"bbox":[573,445,359,34]}
+{"kind":"shape","id":"sh/nyd0z610","slide":4,"bbox":[960,360,415,150]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":4,"text":"Medical Technology","textPreview":"Medical Technology","textChars":18,"textLines":1,"bbox":[988,445,359,34]}
+{"kind":"shape","id":"sh/54zidony","slide":4,"bbox":[1375,360,415,150]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":4,"text":"Manufacturing","textPreview":"Manufacturing","textChars":13,"textLines":1,"bbox":[1403,445,359,34]}
+{"kind":"shape","id":"sh/judg7ads","slide":4,"bbox":[130,510,415,150]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":4,"text":"Supply Chain & Logistics","textPreview":"Supply Chain & Logistics","textChars":24,"textLines":1,"bbox":[158,595,359,34]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":4,"bbox":[545,510,415,150]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":4,"text":"Technology & Digital","textPreview":"Technology & Digital","textChars":20,"textLines":1,"bbox":[573,595,359,34]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":4,"bbox":[960,510,415,150]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":4,"text":"Professional Services","textPreview":"Professional Services","textChars":21,"textLines":1,"bbox":[988,595,359,34]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":4,"bbox":[130,716,1100,1]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":4,"text":"Different industries.\nSimilar challenges around change, knowledge,\naccountability, and confidence.","textPreview":"Different industries. | Similar challenges around change, knowledge, | accountability, and confidence.","textChars":98,"textLines":3,"bbox":[130,750,1120,98]}
+{"kind":"shape","id":"sh/gvy90je9","slide":4,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":4,"text":"Use this slide to help partners recognize familiar industry contexts.","textPreview":"Use this slide to help partners recognize familiar industry contexts.","textChars":69,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/2t83itgf","slide":4,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/re1w7mp0","slide":4,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":4,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":4,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":4,"text":"04 / 14","textPreview":"04 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":4,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/lupk98","slide":4,"text":""}
+{"kind":"slide","id":"sl/gysm4f","slide":5,"title":"SHIFTBY","textShapes":21}
+{"kind":"shape","id":"sh/czed8v6p","slide":5,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":5,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":5,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/5sneloj2","slide":5,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/cbulwval","slide":5,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":5,"text":"ORGANIZATIONAL RECOGNITION","textPreview":"ORGANIZATIONAL RECOGNITION","textChars":26,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/u54zidon","slide":5,"bbox":[130,102,1650,1]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":5,"text":"BUSINESS FUNCTIONS","textPreview":"BUSINESS FUNCTIONS","textChars":18,"textLines":1,"bbox":[130,148,440,24]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":5,"text":"ShiftBy conversations often\nstart where responsibility,\nchange, and control meet.","textPreview":"ShiftBy conversations often | start where responsibility, | change, and control meet.","textChars":81,"textLines":3,"bbox":[130,172,1120,220]}
+{"kind":"shape","id":"sh/qxs72x4n","slide":5,"bbox":[130,431,415,150]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":5,"text":"Executive Leadership","textPreview":"Executive Leadership","textChars":20,"textLines":1,"bbox":[158,519,359,34]}
+{"kind":"shape","id":"sh/83itgfml","slide":5,"bbox":[545,431,415,150]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":5,"text":"Research & Development","textPreview":"Research & Development","textChars":22,"textLines":1,"bbox":[573,519,359,34]}
+{"kind":"shape","id":"sh/m94fu18j","slide":5,"bbox":[960,431,415,150]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":5,"text":"Manufacturing","textPreview":"Manufacturing","textChars":13,"textLines":1,"bbox":[988,519,359,34]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":5,"bbox":[1375,431,415,150]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":5,"text":"Supply Chain","textPreview":"Supply Chain","textChars":12,"textLines":1,"bbox":[1403,519,359,34]}
+{"kind":"shape","id":"sh/mlkjm1cf","slide":5,"bbox":[130,581,415,150]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":5,"text":"Quality & Compliance","textPreview":"Quality & Compliance","textChars":20,"textLines":1,"bbox":[158,669,359,34]}
+{"kind":"shape","id":"sh/36hcrmhk","slide":5,"bbox":[545,581,415,150]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":5,"text":"Procurement","textPreview":"Procurement","textChars":11,"textLines":1,"bbox":[573,669,359,34]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":5,"bbox":[960,581,415,150]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":5,"text":"Technology & Digital","textPreview":"Technology & Digital","textChars":20,"textLines":1,"bbox":[988,669,359,34]}
+{"kind":"shape","id":"sh/7u54zido","slide":5,"bbox":[1375,581,415,150]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":5,"text":"Data & AI","textPreview":"Data & AI","textChars":9,"textLines":1,"bbox":[1403,669,359,34]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":5,"bbox":[130,731,415,150]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":5,"text":"Enterprise Architecture","textPreview":"Enterprise Architecture","textChars":23,"textLines":1,"bbox":[158,819,359,34]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":5,"bbox":[545,731,415,150]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":5,"text":"Risk & Governance","textPreview":"Risk & Governance","textChars":17,"textLines":1,"bbox":[573,819,359,34]}
+{"kind":"shape","id":"sh/oza1gvy9","slide":5,"bbox":[960,731,415,150]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":5,"text":"Internal Audit","textPreview":"Internal Audit","textChars":14,"textLines":1,"bbox":[988,819,359,34]}
+{"kind":"shape","id":"sh/6xkf6dcb","slide":5,"bbox":[1375,731,415,150]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":5,"text":"Transformation Offices","textPreview":"Transformation Offices","textChars":22,"textLines":1,"bbox":[1403,819,359,34]}
+{"kind":"shape","id":"sh/obm58z25","slide":5,"bbox":[130,900,1120,1]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":5,"text":"Many functions inherit AI-enabled change\nbefore they own it.","textPreview":"Many functions inherit AI-enabled change | before they own it.","textChars":60,"textLines":2,"bbox":[130,918,1120,42]}
+{"kind":"shape","id":"sh/65wjudg7","slide":5,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":5,"text":"Many functions inherit AI-enabled change before they own it.","textPreview":"Many functions inherit AI-enabled change before they own it.","textChars":60,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":5,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":5,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/d8bat47y","slide":5,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/knih4byh","slide":5,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":5,"text":"05 / 14","textPreview":"05 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":5,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/gysm4f","slide":5,"text":""}
+{"kind":"slide","id":"sl/uwukmf","slide":6,"title":"SHIFTBY","textShapes":18}
+{"kind":"shape","id":"sh/z25kb6xk","slide":6,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":6,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":6,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/6tovahoz","slide":6,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/vahoza1g","slide":6,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":6,"text":"REFERRAL TRIGGERS","textPreview":"REFERRAL TRIGGERS","textChars":17,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/dg7adsji","slide":6,"bbox":[130,102,1650,1]}
+{"kind":"textbox","id":"sh/61032lsz","slide":6,"text":"TYPICAL SITUATIONS","textPreview":"TYPICAL SITUATIONS","textChars":18,"textLines":1,"bbox":[130,148,350,24]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":6,"text":"When you hear this,\nthere may be a ShiftBy conversation.","textPreview":"When you hear this, | there may be a ShiftBy conversation.","textChars":56,"textLines":2,"bbox":[130,172,930,260]}
+{"kind":"shape","id":"sh/b2hwfyxo","slide":6,"bbox":[130,430,335,320]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":6,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[158,458,40,20]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":6,"text":"We are exploring AI but do not know where to start.","textPreview":"We are exploring AI but do not know where to start.","textChars":51,"textLines":1,"bbox":[158,618,279,100]}
+{"kind":"shape","id":"sh/4nap4r65","slide":6,"bbox":[465,430,335,320]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":6,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[493,458,40,20]}
+{"kind":"textbox","id":"sh/m58z25kb","slide":6,"text":"We have many AI ideas but cannot prioritize.","textPreview":"We have many AI ideas but cannot prioritize.","textChars":44,"textLines":1,"bbox":[493,618,279,100]}
+{"kind":"shape","id":"sh/twra5gbq","slide":6,"bbox":[800,430,335,320]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":6,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[828,458,40,20]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":6,"text":"We need governance, audit readiness, and oversight.","textPreview":"We need governance, audit readiness, and oversight.","textChars":51,"textLines":1,"bbox":[828,618,279,100]}
+{"kind":"shape","id":"sh/m1cfa9w3","slide":6,"bbox":[1135,430,335,320]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":6,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1163,458,40,20]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":6,"text":"We are introducing AI agents into operational workflows.","textPreview":"We are introducing AI agents into operational workflows.","textChars":56,"textLines":1,"bbox":[1163,618,279,100]}
+{"kind":"shape","id":"sh/8bat47y1","slide":6,"bbox":[1470,430,335,320]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":6,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1498,458,40,20]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":6,"text":"We are concerned about losing critical knowledge.","textPreview":"We are concerned about losing critical knowledge.","textChars":49,"textLines":1,"bbox":[1498,618,279,100]}
+{"kind":"shape","id":"sh/j2t83itg","slide":6,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":6,"text":"This is the partner's recognition slide: listen for uncertainty, prioritization, trust, operations, and knowledge loss.","textPreview":"This is the partner's recognition slide: listen for uncertainty, prioritization, trust, operations, and knowledge loss.","textChars":119,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/18jqh0fe","slide":6,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/ulwval87","slide":6,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/j6tovaho","slide":6,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":6,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":6,"text":"06 / 14","textPreview":"06 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":6,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/uwukmf","slide":6,"text":""}
+{"kind":"slide","id":"sl/ewbnnq","slide":7,"title":"SHIFTBY","textShapes":16}
+{"kind":"shape","id":"sh/t83itgfm","slide":7,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":7,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/b2hwfyxo","slide":7,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/4byhgn29","slide":7,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/twra5gbq","slide":7,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/m58z25kb","slide":7,"text":"CONVERSATION DOMAIN","textPreview":"CONVERSATION DOMAIN","textChars":19,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/bq1oryts","slide":7,"bbox":[130,102,1650,1]}
+{"kind":"shape","id":"sh/47y1kre1","slide":7,"bbox":[0,110,880,530]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":7,"text":"PREPARING FOR AI","textPreview":"PREPARING FOR AI","textChars":16,"textLines":1,"bbox":[130,241,300,24]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":7,"text":"AI Readiness\n& Enablement","textPreview":"AI Readiness | & Enablement","textChars":25,"textLines":2,"bbox":[130,314,540,185]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":7,"text":"REDUCE UNCERTAINTY BEFORE\nMAJOR AI DECISIONS.","textPreview":"REDUCE UNCERTAINTY BEFORE | MAJOR AI DECISIONS.","textChars":45,"textLines":2,"bbox":[130,548,540,98]}
+{"kind":"shape","id":"sh/rytsvu9k","slide":7,"bbox":[1400,170,620,620]}
+{"kind":"shape","id":"sh/yd0z6103","slide":7,"bbox":[1590,360,240,240]}
+{"kind":"shape","id":"sh/9s36hcrm","slide":7,"bbox":[965,281,405,128.33]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":7,"text":"Executive workshops","textPreview":"Executive workshops","textChars":19,"textLines":1,"bbox":[991,366,353,120]}
+{"kind":"shape","id":"sh/rmhk3q5o","slide":7,"bbox":[1370,281,405,128.33]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":7,"text":"AI literacy","textPreview":"AI literacy","textChars":11,"textLines":1,"bbox":[1396,366,353,120]}
+{"kind":"shape","id":"sh/5o7qpg3e","slide":7,"bbox":[965,409.33,405,128.33]}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":7,"text":"Data readiness","textPreview":"Data readiness","textChars":14,"textLines":1,"bbox":[991,494.33,353,120]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":7,"bbox":[1370,409.33,405,128.33]}
+{"kind":"textbox","id":"sh/1032lszq","slide":7,"text":"Knowledge readiness","textPreview":"Knowledge readiness","textChars":19,"textLines":1,"bbox":[1396,494.33,353,120]}
+{"kind":"shape","id":"sh/u9knih4b","slide":7,"bbox":[965,537.67,405,128.33]}
+{"kind":"textbox","id":"sh/judg7ads","slide":7,"text":"Governance readiness","textPreview":"Governance readiness","textChars":20,"textLines":1,"bbox":[991,622.67,353,120]}
+{"kind":"shape","id":"sh/c7u54zid","slide":7,"bbox":[1370,537.67,405,128.33]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":7,"text":"Workforce readiness","textPreview":"Workforce readiness","textChars":19,"textLines":1,"bbox":[1396,622.67,353,120]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":7,"bbox":[965,678,810,1]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":7,"text":"Organizations often know AI matters.\nThe harder question is whether their data, knowledge,\npeople, governance, and operating model are ready.","textPreview":"Organizations often know AI matters. | The harder question is whether their data, knowledge, | people, governance, and operating model ar...","textChars":141,"textLines":3,"bbox":[965,712,760,96]}
+{"kind":"shape","id":"sh/cvixczed","slide":7,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":7,"text":"Purpose: Map situations to conversation domain.","textPreview":"Purpose: Map situations to conversation domain.","textChars":47,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/val87ed8","slide":7,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/6psfil0r","slide":7,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/dcbulwva","slide":7,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":7,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/vixczed8","slide":7,"text":"07 / 14","textPreview":"07 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":7,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/ewbnnq","slide":7,"text":""}
+{"kind":"slide","id":"sl/y84y5r","slide":8,"title":"SHIFTBY","textShapes":15}
+{"kind":"shape","id":"sh/94fu18jq","slide":8,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":8,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":8,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/gvy90je9","slide":8,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/9gr2p8nq","slide":8,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":8,"text":"BUSINESS VALUE CONVERSATION","textPreview":"BUSINESS VALUE CONVERSATION","textChars":27,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":8,"bbox":[130,102,1650,1]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":8,"bbox":[0,110,880,530]}
+{"kind":"textbox","id":"sh/9knih4by","slide":8,"text":"CHOOSING WHERE TO ACT","textPreview":"CHOOSING WHERE TO ACT","textChars":21,"textLines":1,"bbox":[130,241,350,24]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":8,"text":"AI Adoption &\nTransformation","textPreview":"AI Adoption & | Transformation","textChars":28,"textLines":2,"bbox":[130,314,700,140]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":8,"text":"TURN AI INTEREST INTO\nFOCUSED BUSINESS VALUE.","textPreview":"TURN AI INTEREST INTO | FOCUSED BUSINESS VALUE.","textChars":45,"textLines":2,"bbox":[130,500,620,86]}
+{"kind":"shape","id":"sh/72x4nap4","slide":8,"bbox":[1410,160,620,620]}
+{"kind":"shape","id":"sh/ih4byhgn","slide":8,"bbox":[1600,350,240,240]}
+{"kind":"shape","id":"sh/pkzupwb2","slide":8,"bbox":[975,280,820,135]}
+{"kind":"shape","id":"sh/0z61032l","slide":8,"bbox":[975,415,820,135]}
+{"kind":"shape","id":"sh/7ed8bat4","slide":8,"bbox":[975,550,405,135]}
+{"kind":"shape","id":"sh/itgfmlkj","slide":8,"bbox":[1390,550,405,135]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":8,"text":"Opportunity assessment","textPreview":"Opportunity assessment","textChars":22,"textLines":1,"bbox":[1005,330,330,30]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":8,"text":"Use-case prioritization","textPreview":"Use-case prioritization","textChars":23,"textLines":1,"bbox":[1420,330,330,30]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":8,"text":"Business process analysis","textPreview":"Business process analysis","textChars":25,"textLines":1,"bbox":[1005,464,330,30]}
+{"kind":"textbox","id":"sh/l87ed8ba","slide":8,"text":"AI roadmaps","textPreview":"AI roadmaps","textChars":11,"textLines":1,"bbox":[1420,464,250,30]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":8,"text":"Operating model\nconsiderations","textPreview":"Operating model | considerations","textChars":30,"textLines":2,"bbox":[1005,586,340,70]}
+{"kind":"shape","id":"sh/32lszqtc","slide":8,"bbox":[975,704,820,1]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":8,"text":"Organizations often have more AI ideas\nthan they can realistically pursue.\nThe challenge is determining where value\nmay emerge, what should be prioritized,\nand where ownership should remain visible.","textPreview":"Organizations often have more AI ideas | than they can realistically pursue. | The challenge is determining where value | may emerge, wha...","textChars":198,"textLines":5,"bbox":[975,734,780,92]}
+{"kind":"shape","id":"sh/lkjm1cfa","slide":8,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/at47y1kr","slide":8,"text":"Organizations often have more AI ideas than they can realistically pursue.","textPreview":"Organizations often have more AI ideas than they can realistically pursue.","textChars":74,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/3ex0nuxc","slide":8,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":8,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/loj2t83i","slide":8,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/bulwval8","slide":8,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":8,"text":"08 / 14","textPreview":"08 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":8,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/y84y5r","slide":8,"text":""}
+{"kind":"slide","id":"sl/dg0jwx","slide":9,"title":"SHIFTBY","textShapes":19}
+{"kind":"shape","id":"sh/i9s36hcr","slide":9,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":9,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/0fepkzup","slide":9,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/bi9s36hc","slide":9,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/ixczed8v","slide":9,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/tovahoza","slide":9,"text":"TRUST AND OVERSIGHT CONVERSATION","textPreview":"TRUST AND OVERSIGHT CONVERSATION","textChars":32,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/032lszqt","slide":9,"bbox":[130,102,1650,1]}
+{"kind":"shape","id":"sh/b6xkf6dc","slide":9,"bbox":[0,110,880,530]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":9,"text":"PRESERVING TRUST AS EXECUTION CHANGES","textPreview":"PRESERVING TRUST AS EXECUTION CHANGES","textChars":37,"textLines":1,"bbox":[130,241,460,24]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":9,"text":"AI Governance,\nSafety & Resilience","textPreview":"AI Governance, | Safety & Resilience","textChars":34,"textLines":2,"bbox":[130,314,560,190]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":9,"text":"PRESERVE TRUST WHILE REDUCING\nOPERATIONAL AND GOVERNANCE RISK.","textPreview":"PRESERVE TRUST WHILE REDUCING | OPERATIONAL AND GOVERNANCE RISK.","textChars":62,"textLines":2,"bbox":[130,548,530,92]}
+{"kind":"shape","id":"sh/6tovahoz","slide":9,"bbox":[1410,160,620,620]}
+{"kind":"shape","id":"sh/vahoza1g","slide":9,"bbox":[1600,350,240,240]}
+{"kind":"shape","id":"sh/onyd0z61","slide":9,"bbox":[965,150,405,130]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":9,"text":"Responsible AI","textPreview":"Responsible AI","textChars":14,"textLines":1,"bbox":[991,195,353,28]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":9,"bbox":[1370,150,405,130]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":9,"text":"AI governance","textPreview":"AI governance","textChars":13,"textLines":1,"bbox":[1396,195,353,28]}
+{"kind":"shape","id":"sh/oj2t83it","slide":9,"bbox":[965,280,405,130]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":9,"text":"AI risk management","textPreview":"AI risk management","textChars":18,"textLines":1,"bbox":[991,325,353,28]}
+{"kind":"shape","id":"sh/hwfyxobm","slide":9,"bbox":[1370,280,405,130]}
+{"kind":"textbox","id":"sh/obm58z25","slide":9,"text":"AI security","textPreview":"AI security","textChars":11,"textLines":1,"bbox":[1396,325,353,28]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":9,"bbox":[965,410,405,130]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":9,"text":"AI safety","textPreview":"AI safety","textChars":9,"textLines":1,"bbox":[991,455,353,28]}
+{"kind":"shape","id":"sh/hk3q5o7q","slide":9,"bbox":[1370,410,405,130]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":9,"text":"Data privacy","textPreview":"Data privacy","textChars":12,"textLines":1,"bbox":[1396,455,353,28]}
+{"kind":"shape","id":"sh/zed8v6ps","slide":9,"bbox":[965,540,405,130]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":9,"text":"AI assurance","textPreview":"AI assurance","textChars":12,"textLines":1,"bbox":[991,585,353,28]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":9,"bbox":[1370,540,405,130]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":9,"text":"Audit readiness","textPreview":"Audit readiness","textChars":15,"textLines":1,"bbox":[1396,585,353,28]}
+{"kind":"shape","id":"sh/i9s36hcr","slide":9,"bbox":[965,670,405,120]}
+{"kind":"textbox","id":"sh/bulwval8","slide":9,"text":"Third-party AI risk","textPreview":"Third-party AI risk","textChars":19,"textLines":1,"bbox":[1000,706,320,24]}
+{"kind":"shape","id":"sh/0fepkzup","slide":9,"bbox":[965,823,820,1]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":9,"text":"As AI adoption grows, organizations\nincreasingly need decisions that can be\nexplained, reviewed, governed, and defended.","textPreview":"As AI adoption grows, organizations | increasingly need decisions that can be | explained, reviewed, governed, and defended.","textChars":120,"textLines":3,"bbox":[965,836,820,132]}
+{"kind":"shape","id":"sh/ixczed8v","slide":9,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":9,"text":"Purpose: Trust and oversight conversation.","textPreview":"Purpose: Trust and oversight conversation.","textChars":42,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/032lszqt","slide":9,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/tovahoza","slide":9,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/il0rqd4v","slide":9,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":9,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":9,"text":"09 / 14","textPreview":"09 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":9,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/dg0jwx","slide":9,"text":""}
+{"kind":"slide","id":"sl/wpr5xg","slide":10,"title":"SHIFTBY","textShapes":15}
+{"kind":"shape","id":"sh/byhgn29g","slide":10,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":10,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/t47y1kre","slide":10,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/il0rqd4v","slide":10,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/b6xkf6dc","slide":10,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":10,"text":"FUTURE-STATE OPERATIONS","textPreview":"FUTURE-STATE OPERATIONS","textChars":23,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/tcj6tova","slide":10,"bbox":[130,102,1650,1]}
+{"kind":"shape","id":"sh/ixczed8v","slide":10,"bbox":[0,110,880,530]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":10,"text":"IMPROVING WORK WITHOUT LOSING CONTEXT","textPreview":"IMPROVING WORK WITHOUT LOSING CONTEXT","textChars":37,"textLines":1,"bbox":[130,241,470,24]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":10,"text":"AI Agents &\nIntelligent\nOperations","textPreview":"AI Agents & | Intelligent | Operations","textChars":34,"textLines":3,"bbox":[130,314,540,250]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":10,"text":"IMPROVE WORK WITHOUT LOSING\nACCOUNTABILITY OR CONTEXT.","textPreview":"IMPROVE WORK WITHOUT LOSING | ACCOUNTABILITY OR CONTEXT.","textChars":54,"textLines":2,"bbox":[130,595,520,96]}
+{"kind":"shape","id":"sh/90je9cvi","slide":10,"bbox":[1410,160,620,620]}
+{"kind":"shape","id":"sh/gfmlkjm1","slide":10,"bbox":[1600,350,240,240]}
+{"kind":"shape","id":"sh/rmhk3q5o","slide":10,"bbox":[965,280,405,130]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":10,"text":"AI agents","textPreview":"AI agents","textChars":9,"textLines":1,"bbox":[991,325,353,65]}
+{"kind":"shape","id":"sh/9s36hcrm","slide":10,"bbox":[1370,280,405,130]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":10,"text":"Human-AI collaboration","textPreview":"Human-AI collaboration","textChars":22,"textLines":1,"bbox":[1396,325,353,65]}
+{"kind":"shape","id":"sh/nih4byhg","slide":10,"bbox":[965,410,405,130]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":10,"text":"Knowledge-\nconnected workflows","textPreview":"Knowledge- | connected workflows","textChars":30,"textLines":2,"bbox":[991,455,353,65]}
+{"kind":"shape","id":"sh/61032lsz","slide":10,"bbox":[1370,410,405,130]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":10,"text":"Traceability","textPreview":"Traceability","textChars":12,"textLines":1,"bbox":[1396,455,353,65]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":10,"bbox":[965,540,405,130]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":10,"text":"Governed artifact generation","textPreview":"Governed artifact generation","textChars":28,"textLines":1,"bbox":[991,585,353,65]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":10,"bbox":[965,694,820,1]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":10,"text":"As AI becomes part of operational\nexecution, understanding, traceability,\nand ownership must remain visible.","textPreview":"As AI becomes part of operational | execution, understanding, traceability, | and ownership must remain visible.","textChars":108,"textLines":3,"bbox":[965,726,790,120]}
+{"kind":"shape","id":"sh/oj2t83it","slide":10,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":10,"text":"Purpose: Future-state operational conversation.","textPreview":"Purpose: Future-state operational conversation.","textChars":47,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":10,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":10,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/l87ed8ba","slide":10,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":10,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/32lszqtc","slide":10,"text":"10 / 14","textPreview":"10 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":10,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/wpr5xg","slide":10,"text":""}
+{"kind":"slide","id":"sl/3poos0","slide":11,"title":"SHIFTBY","textShapes":16}
+{"kind":"shape","id":"sh/4fu18jqh","slide":11,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":11,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/m94fu18j","slide":11,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/xobm58z2","slide":11,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/83itgfml","slide":11,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":11,"text":"DIFFERENTIATION","textPreview":"DIFFERENTIATION","textChars":15,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/qxs72x4n","slide":11,"bbox":[130,102,1650,1]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":11,"bbox":[0,0,1920,1080]}
+{"kind":"shape","id":"sh/4zidonyd","slide":11,"bbox":[0,0,1120,1080]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":11,"text":"WHY SHIFTBY","textPreview":"WHY SHIFTBY","textChars":11,"textLines":1,"bbox":[130,231,360,24]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":11,"text":"Organizations rarely need\nmore technology.","textPreview":"Organizations rarely need | more technology.","textChars":42,"textLines":2,"bbox":[130,286,820,260]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":11,"text":"They lose clarity when decisions, knowledge, ownership, and\naccountability become harder to preserve.","textPreview":"They lose clarity when decisions, knowledge, ownership, and | accountability become harder to preserve.","textChars":101,"textLines":2,"bbox":[130,590,980,134]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":11,"text":"ShiftBy helps leaders preserve understanding as execution changes.","textPreview":"ShiftBy helps leaders preserve understanding as execution changes.","textChars":66,"textLines":1,"bbox":[130,760,1100,88]}
+{"kind":"shape","id":"sh/m58z25kb","slide":11,"bbox":[1340,260,580,580]}
+{"kind":"shape","id":"sh/bq1oryts","slide":11,"bbox":[1485,405,300,300]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":11,"text":"Ananda Krishna Marri","textPreview":"Ananda Krishna Marri","textChars":20,"textLines":1,"bbox":[1125,585,540,44]}
+{"kind":"shape","id":"sh/twra5gbq","slide":11,"bbox":[1125,555,650,1]}
+{"kind":"textbox","id":"sh/m1cfa9w3","slide":11,"text":"Founder, ShiftBy | IAPP Certified AI Governance Professional (AIGP)","textPreview":"Founder, ShiftBy | IAPP Certified AI Governance Professional (AIGP)","textChars":67,"textLines":1,"bbox":[1125,645,640,34]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":11,"text":"ShiftBy Pte. Ltd.","textPreview":"ShiftBy Pte. Ltd.","textChars":17,"textLines":1,"bbox":[1125,704,420,30]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":11,"text":"https://www.shiftby.sg","textPreview":"https://www.shiftby.sg","textChars":22,"textLines":1,"bbox":[1125,760,500,30]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":11,"text":"linkedin.com/in/anandakrishnam","textPreview":"linkedin.com/in/anandakrishnam","textChars":30,"textLines":1,"bbox":[1125,818,620,30]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":11,"text":"anandakrishnam@shiftby.sg","textPreview":"anandakrishnam@shiftby.sg","textChars":25,"textLines":1,"bbox":[1125,876,420,30]}
+{"kind":"shape","id":"sh/wval87ed","slide":11,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":11,"text":"Purpose: Differentiation.","textPreview":"Purpose: Differentiation.","textChars":25,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/e1w7mp0b","slide":11,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/psfil0rq","slide":11,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/w7mp0bi9","slide":11,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/7u54zido","slide":11,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/ed8bat47","slide":11,"text":"11 / 14","textPreview":"11 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":11,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/3poos0","slide":11,"text":""}
+{"kind":"slide","id":"sl/48cxk5","slide":12,"title":"SHIFTBY","textShapes":16}
+{"kind":"shape","id":"sh/n29gr2p8","slide":12,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":12,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/58z25kb6","slide":12,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/y90je9cv","slide":12,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":12,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":12,"text":"CAPABILITY ARCHITECTURE","textPreview":"CAPABILITY ARCHITECTURE","textChars":23,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":12,"bbox":[130,102,1650,1]}
+{"kind":"textbox","id":"sh/u54zidon","slide":12,"text":"THE SHIFTBY CAPABILITY SYSTEM","textPreview":"THE SHIFTBY CAPABILITY SYSTEM","textChars":29,"textLines":1,"bbox":[130,150,390,24]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":12,"text":"Four capabilities support\nconfidence when\nexecution changes.","textPreview":"Four capabilities support | confidence when | execution changes.","textChars":60,"textLines":3,"bbox":[130,176,860,170]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":12,"bbox":[130,520,415,280]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":12,"text":"Decision Traceability","textPreview":"Decision Traceability","textChars":21,"textLines":1,"bbox":[156,605,363,120]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":12,"text":"Rationale remains visible.","textPreview":"Rationale remains visible.","textChars":26,"textLines":1,"bbox":[156,724,363,40]}
+{"kind":"shape","id":"sh/onyd0z61","slide":12,"bbox":[545,520,415,280]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":12,"text":"Organizational\nMemory","textPreview":"Organizational | Memory","textChars":21,"textLines":2,"bbox":[571,605,363,120]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":12,"text":"Meaning survives change.","textPreview":"Meaning survives change.","textChars":24,"textLines":1,"bbox":[571,724,363,40]}
+{"kind":"shape","id":"sh/dg7adsji","slide":12,"bbox":[960,520,415,280]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":12,"text":"Human-AI\nAccountability","textPreview":"Human-AI | Accountability","textChars":23,"textLines":2,"bbox":[986,605,363,120]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":12,"text":"Responsibility stays legible.","textPreview":"Responsibility stays legible.","textChars":29,"textLines":1,"bbox":[986,724,363,40]}
+{"kind":"shape","id":"sh/61032lsz","slide":12,"bbox":[1375,520,415,280]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":12,"text":"Adaptive Execution","textPreview":"Adaptive Execution","textChars":18,"textLines":1,"bbox":[1401,605,363,120]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":12,"text":"Change remains coherent.","textPreview":"Change remains coherent.","textChars":24,"textLines":1,"bbox":[1401,724,363,40]}
+{"kind":"shape","id":"sh/wb2hwfyx","slide":12,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/lwval87e","slide":12,"text":"Purpose: Reveal underlying capability architecture. No deep dive.","textPreview":"Purpose: Reveal underlying capability architecture. No deep dive.","textChars":65,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":12,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/3itgfmlk","slide":12,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":12,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":12,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/at47y1kr","slide":12,"text":"12 / 14","textPreview":"12 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/3ex0nuxc","slide":12,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/48cxk5","slide":12,"text":""}
+{"kind":"slide","id":"sl/54aoqn","slide":13,"title":"SHIFTBY","textShapes":19}
+{"kind":"shape","id":"sh/0je9cvix","slide":13,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":13,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/idonyd0z","slide":13,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/tcj6tova","slide":13,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/0rqd4vmt","slide":13,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":13,"text":"REFERRAL MOMENT","textPreview":"REFERRAL MOMENT","textChars":15,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/il0rqd4v","slide":13,"bbox":[130,102,1650,1]}
+{"kind":"shape","id":"sh/tovahoza","slide":13,"bbox":[0,0,700,1080]}
+{"kind":"textbox","id":"sh/032lszqt","slide":13,"text":"INTRODUCE SHIFTBY WHEN...","textPreview":"INTRODUCE SHIFTBY WHEN...","textChars":25,"textLines":1,"bbox":[130,231,400,24]}
+{"kind":"textbox","id":"sh/61032lsz","slide":13,"text":"Confidence\nneeds to\nsurvive\nchange.","textPreview":"Confidence | needs to | survive | change.","textChars":35,"textLines":4,"bbox":[130,290,470,340]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":13,"text":"A partner does not need to\ndiagnose the work. They only\nneed to recognize the moment.","textPreview":"A partner does not need to | diagnose the work. They only | need to recognize the moment.","textChars":85,"textLines":3,"bbox":[130,724,450,145]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":13,"bbox":[735,260,1110,1]}
+{"kind":"shape","id":"sh/dsji5sne","slide":13,"bbox":[735,349,1110,1]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":13,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[733,304,40,20]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":13,"text":"A new AI initiative needs a clear starting point.","textPreview":"A new AI initiative needs a clear starting point.","textChars":49,"textLines":1,"bbox":[865,300,920,72]}
+{"kind":"shape","id":"sh/oj2t83it","slide":13,"bbox":[735,470,1110,1]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":13,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[733,425,40,20]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":13,"text":"AI ideas exist, but prioritization is unclear.","textPreview":"AI ideas exist, but prioritization is unclear.","textChars":46,"textLines":1,"bbox":[865,421,920,72]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":13,"bbox":[735,591,1110,1]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":13,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[733,546,40,20]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":13,"text":"Governance, auditability, or ownership is missing.","textPreview":"Governance, auditability, or ownership is missing.","textChars":50,"textLines":1,"bbox":[865,542,920,72]}
+{"kind":"shape","id":"sh/90je9cvi","slide":13,"bbox":[735,712,1110,1]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":13,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[733,667,40,20]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":13,"text":"AI agents are moving into live workflows.","textPreview":"AI agents are moving into live workflows.","textChars":41,"textLines":1,"bbox":[865,663,920,72]}
+{"kind":"shape","id":"sh/y1kre1w7","slide":13,"bbox":[735,833,1110,1]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":13,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[733,788,40,20]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":13,"text":"Critical knowledge is at risk of being lost.","textPreview":"Critical knowledge is at risk of being lost.","textChars":44,"textLines":1,"bbox":[865,784,920,72]}
+{"kind":"shape","id":"sh/nih4byhg","slide":13,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":13,"text":"Most important referral slide.","textPreview":"Most important referral slide.","textChars":30,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/s72x4nap","slide":13,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":13,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/a5gbq1or","slide":13,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":13,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/sji5snel","slide":13,"text":"13 / 14","textPreview":"13 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":13,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/54aoqn","slide":13,"text":""}
+{"kind":"slide","id":"sl/tjedur","slide":14,"title":"SHIFTBY","textShapes":15}
+{"kind":"shape","id":"sh/mp0bi9s3","slide":14,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":14,"text":"SHIFTBY","textPreview":"SHIFTBY","textChars":7,"textLines":1,"bbox":[130,47,170,42]}
+{"kind":"shape","id":"sh/4vmtwra5","slide":14,"bbox":[93,47,34,34]}
+{"kind":"shape","id":"sh/bm58z25k","slide":14,"bbox":[93,47,34,1]}
+{"kind":"shape","id":"sh/m1cfa9w3","slide":14,"bbox":[93,80,34,1]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":14,"text":"CONTACT","textPreview":"CONTACT","textChars":7,"textLines":1,"bbox":[1630,54,220,28]}
+{"kind":"shape","id":"sh/47y1kre1","slide":14,"bbox":[130,102,1650,1]}
+{"kind":"shape","id":"sh/bq1oryts","slide":14,"bbox":[0,0,1920,1080]}
+{"kind":"shape","id":"sh/m58z25kb","slide":14,"bbox":[0,0,1920,1080]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":14,"text":"MAKE AN INTRODUCTION","textPreview":"MAKE AN INTRODUCTION","textChars":20,"textLines":1,"bbox":[130,231,370,24]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":14,"text":"Execution\nchanges.\nUnderstanding\npreserves\nconfidence.","textPreview":"Execution | changes. | Understanding | preserves | confidence.","textChars":54,"textLines":5,"bbox":[130,286,650,340]}
+{"kind":"textbox","id":"sh/61032lsz","slide":14,"text":"Introduce ShiftBy when understanding\nneeds to survive change.","textPreview":"Introduce ShiftBy when understanding | needs to survive change.","textChars":61,"textLines":2,"bbox":[130,815,500,100]}
+{"kind":"shape","id":"sh/vmtwra5g","slide":14,"bbox":[1380,260,580,580]}
+{"kind":"shape","id":"sh/oj2t83it","slide":14,"bbox":[1525,405,300,300]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":14,"bbox":[1120,550,680,1]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":14,"text":"Ananda Krishna","textPreview":"Ananda Krishna","textChars":14,"textLines":1,"bbox":[1120,585,430,44]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":14,"text":"Founder","textPreview":"Founder","textChars":7,"textLines":1,"bbox":[1120,664,250,30]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":14,"text":"ShiftBy Pte. Ltd.","textPreview":"ShiftBy Pte. Ltd.","textChars":17,"textLines":1,"bbox":[1120,706,300,30]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":14,"text":"https://www.shiftby.sg","textPreview":"https://www.shiftby.sg","textChars":22,"textLines":1,"bbox":[1120,765,500,30]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":14,"text":"linkedin.com/in/anandakrishnam","textPreview":"linkedin.com/in/anandakrishnam","textChars":30,"textLines":1,"bbox":[1120,823,560,30]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":14,"text":"anandakrishnam@shiftby.sg","textPreview":"anandakrishnam@shiftby.sg","textChars":25,"textLines":1,"bbox":[1120,881,500,30]}
+{"kind":"shape","id":"sh/j6tovaho","slide":14,"bbox":[130,993,1625,1]}
+{"kind":"textbox","id":"sh/ulwval87","slide":14,"text":"SHIFTBY_PARTNER_BRIEF_V1A_OPENDESIGN_IMPLEMENTATION_PASS","textPreview":"SHIFTBY_PARTNER_BRIEF_V1A_OPENDESIGN_IMPLEMENTATION_PASS","textChars":56,"textLines":1,"bbox":[130,1007,1180,36]}
+{"kind":"shape","id":"sh/1kre1w7m","slide":14,"name":"pager-pill","bbox":[1778,1000,146,58]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":14,"bbox":[1792,1009,38,38]}
+{"kind":"shape","id":"sh/ji5snelo","slide":14,"bbox":[1870,1009,38,38]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":14,"text":"‹","textPreview":"‹","textChars":1,"textLines":1,"bbox":[1795,1013,30,20]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":14,"text":"14 / 14","textPreview":"14 / 14","textChars":7,"textLines":1,"bbox":[1831,1014,40,18]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":14,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1878,1013,24,20]}
+{"kind":"notes","id":"nt/tjedur","slide":14,"text":""}
+{"kind":"slide","id":"sl/13ktde","slide":15,"title":"Slide 15","textShapes":0}
+{"kind":"shape","id":"sh/adsji5sn","slide":15,"bbox":[110,90,1700,1700]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":15,"bbox":[910,80,95,130]}
+{"kind":"shape","id":"sh/sji5snel","slide":15,"bbox":[80,845,120,100]}
+{"kind":"shape","id":"sh/3m94fu18","slide":15,"bbox":[1700,845,120,100]}
+{"kind":"shape","id":"sh/a5gbq1or","slide":15,"bbox":[920,940,95,140]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":15,"bbox":[620,520,680,680]}
+{"kind":"shape","id":"sh/s72x4nap","slide":15,"bbox":[650,548,620,620]}
+{"kind":"notes","id":"nt/13ktde","slide":15,"text":""}
+{"kind":"slide","id":"sl/eclsnn","slide":16,"title":"Slide 16","textShapes":0}
+{"kind":"shape","id":"sh/18jqh0fe","slide":16,"bbox":[110,90,1700,1700]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":16,"bbox":[910,80,95,130]}
+{"kind":"shape","id":"sh/j2t83itg","slide":16,"bbox":[80,845,120,100]}
+{"kind":"shape","id":"sh/8bat47y1","slide":16,"bbox":[1700,845,120,100]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":16,"bbox":[920,940,95,140]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":16,"bbox":[620,520,680,680]}
+{"kind":"shape","id":"sh/jqh0fepk","slide":16,"bbox":[650,548,620,620]}
+{"kind":"notes","id":"nt/eclsnn","slide":16,"text":""}
+{"kind":"slide","id":"sl/tt8c0w","slide":17,"title":"Slide 17","textShapes":0}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":17,"bbox":[110,90,1700,1700]}
+{"kind":"shape","id":"sh/9gr2p8nq","slide":17,"bbox":[910,80,95,130]}
+{"kind":"shape","id":"sh/gvy90je9","slide":17,"bbox":[80,845,120,100]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":17,"bbox":[1700,845,120,100]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":17,"bbox":[920,940,95,140]}
+{"kind":"shape","id":"sh/94fu18jq","slide":17,"bbox":[620,520,680,680]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":17,"bbox":[650,548,620,620]}
+{"kind":"notes","id":"nt/tt8c0w","slide":17,"text":""}
+{"kind":"slide","id":"sl/0j2kk2","slide":18,"title":"Slide 18","textShapes":0}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":18,"bbox":[110,90,1700,1700]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":18,"bbox":[910,80,95,130]}
+{"kind":"shape","id":"sh/czed8v6p","slide":18,"bbox":[80,845,120,100]}
+{"kind":"shape","id":"sh/nqxs72x4","slide":18,"bbox":[1700,845,120,100]}
+{"kind":"shape","id":"sh/u54zidon","slide":18,"bbox":[920,940,95,140]}
+{"kind":"shape","id":"sh/5sneloj2","slide":18,"bbox":[620,520,680,680]}
+{"kind":"shape","id":"sh/cbulwval","slide":18,"bbox":[650,548,620,620]}
+{"kind":"notes","id":"nt/0j2kk2","slide":18,"text":""}

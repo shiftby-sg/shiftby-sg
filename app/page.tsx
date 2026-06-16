@@ -105,37 +105,55 @@ export default function HomePage() {
 
       <section
         aria-labelledby="why-shiftby-exists"
-        className="section challenge-section"
+        className="section challenge-section challenge-v2"
       >
         <span className="kicker">THE CHALLENGE</span>
-        <h2 id="why-shiftby-exists">
-          The challenge isn&apos;t <span className="keep-together">more information</span>
-        </h2>
-        <p className="challenge-intro">Organizations preserve artifacts.</p>
-        <p className="challenge-definition">
-          <strong>Organizations find it harder to preserve understanding.</strong> At
-          ShiftBy, understanding is the context that connects decisions,
-          assumptions, evidence, accountability, dependencies, outcomes, and the
-          drift that can occur between them.
+        <div className="challenge-v2__grid">
+          <div className="challenge-v2__intro">
+            <h2 id="why-shiftby-exists">
+              The challenge isn&apos;t <span className="keep-together">more information</span>
+            </h2>
+            <p className="challenge-v2__lead">Organizations preserve artifacts.</p>
+            <p className="challenge-v2__support">
+              <strong>Understanding is harder to preserve.</strong>
+            </p>
+            <p className="challenge-v2__support">
+              It connects decisions, evidence, accountability, and outcomes.
+            </p>
+          </div>
+
+          <div className="challenge-v2__proof" aria-label="Evidence signals">
+            <article className="challenge-v2__stat">
+              <b>42%</b>
+              <span>of institutional knowledge is unique to the individual.</span>
+            </article>
+            <article className="challenge-v2__stat">
+              <b>5.3 hours</b>
+              <span>per week are lost waiting for or recreating knowledge.</span>
+            </article>
+            <article className="challenge-v2__stat">
+              <b>45%</b>
+              <span>of product launches are delayed by at least one month.</span>
+            </article>
+            <article className="challenge-v2__stat challenge-v2__stat--compact">
+              <b>EU AI Act</b>
+              <span>requires human oversight for high-risk systems.</span>
+            </article>
+          </div>
+        </div>
+
+        <p className="challenge-v2__message">
+          As execution expands across people, systems, suppliers, automation,
+          and AI, preserving understanding becomes a capability organizations
+          must build.
         </p>
-        <p className="challenge-definition">
-          This challenge becomes increasingly visible during AI adoption,
-          enterprise AI transformation, AI governance initiatives, and
-          organizational change.
-        </p>
-        <p className="challenge-prompt">Yet leaders still ask:</p>
-        <ul aria-label="Questions leaders still ask" className="challenge-questions">
-          <li>Why was this decision made?</li>
-          <li>What changed?</li>
-          <li>What evidence exists?</li>
-          <li>Who approved it?</li>
-        </ul>
-        <p className="challenge-takeaway">
-          As organizations execute across broader networks, preserving
-          understanding becomes
-          <strong className="challenge-takeaway-emphasis">
-            a capability organizations must build.
-          </strong>
+        <p className="challenge-v2__sources" aria-label="Challenge section sources">
+          (Sources: Organizational Memory - Panopto 2018, McKinsey Global
+          Institute 2012; Decision Traceability - SEI ATAM 2000, Panopto 2019,
+          traceability mapping study 2021; Human-AI Accountability - EU AI Act
+          Articles 14 and 99, NIST AI RMF 1.0 2023, NIST GenAI Profile 2024,
+          OECD AI Principles, ISO/IEC 42001; Adaptive Execution - PMI 2017,
+          Gartner 2019, Asana Anatomy of Work 2022)
         </p>
       </section>
 

@@ -3,9 +3,13 @@ import path from "node:path";
 import { Presentation, PresentationFile } from "file:///C:/Users/ShiftBy/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs";
 
 const OUT_DIR = "C:/Ananda/shiftby.sg/WebAppV2/shiftby-sg/outputs/20260615-partner-brief/output";
-const PPTX_OUT = path.join(OUT_DIR, "editable_rebuilt_deck_v17.pptx");
+const PPTX_OUT = path.join(OUT_DIR, "editable_rebuilt_deck_v84.pptx");
 const REPORT_OUT = path.join(OUT_DIR, "editability_report.json");
 const PREVIEW_DIR = "C:/Ananda/shiftby.sg/WebAppV2/shiftby-sg/outputs/20260615-partner-brief/editable-preview";
+const LOGO_PATH = "C:/Ananda/shiftby.sg/WebAppV2/shiftby-sg/outputs/20260615-partner-brief/ShiftbyLogoTransparentTrimmed.png";
+const LOGO_DATA_URL = `data:image/png;base64,${(await fs.readFile(LOGO_PATH)).toString("base64")}`;
+const WATERMARK_PATH = "C:/Ananda/shiftby.sg/WebAppV2/shiftby-sg/outputs/20260615-partner-brief/ShiftbyLogoWatermark.png";
+const WATERMARK_DATA_URL = `data:image/png;base64,${(await fs.readFile(WATERMARK_PATH)).toString("base64")}`;
 
 const W = 1920;
 const H = 1080;
@@ -21,6 +25,7 @@ const WATERMARK = "#E8EAF6";
 const DARK_RING = "#5D7595";
 const DARK_RING_2 = "#2A3762";
 const DARK_CENTER = "#0C1A43";
+const FOOTER_TEXT = "ShiftBy | A guide to when ShiftBy can help";
 
 function blankTextbox(slide, left, top, width, height) {
   return slide.shapes.add({
@@ -85,15 +90,25 @@ function addCircle(slide, left, top, size, fill = "none", lineFill = WATERMARK, 
   });
 }
 
+function addLogoImage(slide, left, top, size, opts = {}) {
+  return slide.images.add({
+    dataUrl: LOGO_DATA_URL,
+    alt: "ShiftBy logo",
+    position: { left, top, width: size, height: size },
+    fit: opts.fit ?? "contain",
+  });
+}
+
 function addWatermark(slide, opts = {}) {
   const left = opts.left ?? 1350;
   const top = opts.top ?? 190;
   const size = opts.size ?? 590;
-  const lineFill = opts.lineFill ?? WATERMARK;
-  const lineWidth = opts.lineWidth ?? 18;
-  const fill = opts.fill ?? "none";
-  addCircle(slide, left, top, size, fill, lineFill, lineWidth);
-  addCircle(slide, left + size / 2 - 120, top + size / 2 - 120, 240, opts.centerFill ?? lineFill, "none", 0);
+  slide.images.add({
+    dataUrl: WATERMARK_DATA_URL,
+    alt: "ShiftBy watermark",
+    position: { left, top, width: size, height: size },
+    fit: "contain",
+  });
 }
 
 function addHeader(slide, sectionRight, opts = {}) {
@@ -106,26 +121,24 @@ function addHeader(slide, sectionRight, opts = {}) {
     addRect(slide, 0, 0, W, H, BG, BG, 0);
   }
   addText(slide, {
-    left: 130,
-    top: 47,
-    width: 170,
-    height: 42,
+    left: 160,
+    top: 44,
+    width: 190,
+    height: 46,
     text: "SHIFTBY",
-    size: 22,
+    size: 21,
     bold: true,
     color: INK,
     valign: "middle",
   });
-  addRect(slide, 93, 47, 34, 34, "none", BORDER, 1);
-  addLine(slide, 93, 47, 34, 1, BORDER);
-  addLine(slide, 93, 80, 34, 1, BORDER);
+  addLogoImage(slide, 90, 34, 64, { fit: "contain" });
   addText(slide, {
-    left: 1630,
+    left: 1420,
     top: 54,
-    width: 220,
-    height: 28,
+    width: 370,
+    height: 24,
     text: sectionRight,
-    size: 14,
+    size: 12,
     bold: false,
     color: "#2D3F68",
     align: "right",
@@ -133,15 +146,15 @@ function addHeader(slide, sectionRight, opts = {}) {
   addLine(slide, 130, 102, 1650, 1, LINE);
 }
 
-function addFooter(slide, text, page, total = 14) {
+function addFooter(slide, _text, page, total = 14) {
   addLine(slide, 130, 993, 1625, 1, LINE);
   addText(slide, {
     left: 130,
     top: 1007,
-    width: 1180,
-    height: 36,
-    text,
-    size: 18,
+    width: 1260,
+    height: 28,
+    text: FOOTER_TEXT,
+    size: 15,
     color: "#3D5878",
   });
   const pill = addRect(slide, 1778, 1000, 146, 58, "white", BORDER, 1, "roundRect");
@@ -380,6 +393,7 @@ async function main() {
 
   const presentation = Presentation.create({ slideSize: { width: W, height: H } });
   const report = [];
+  const originalSlides = [];
 
   function addSlide(slideBuilder, index) {
     const slide = presentation.slides.add();
@@ -404,26 +418,27 @@ async function main() {
     return slide;
   }
 
-  addSlide((slide, api) => {
-    addHeader(slide, "PARTNER BRIEFING");
+  originalSlides.push(addSlide((slide, api) => {
+    addHeader(slide, "BRIEFING");
     addTitleBlock(
       slide,
       "INTRODUCTION",
       "Execution changes.\nUnderstanding preserves confidence.",
-      "AI advisory, coaching, and thought leadership for organizations navigating AI, governance, knowledge, and transformation.",
-      { bodyTop: 495, bodyHeight: 160, bodySize: 36, titleWidth: 980, titleHeight: 260 }
+      "AI advisory, coaching, and thought leadership for organizations navigating AI,\ngovernance, knowledge, and transformation.",
+      { kickerTop: 275, titleTop: 300, bodyTop: 625, bodyHeight: 120, bodySize: 36, titleWidth: 980, titleHeight: 260 }
     );
     addWatermark(slide, { left: 1420, top: 240, size: 560, lineFill: FAINT, centerFill: FAINT, lineWidth: 16 });
-    addFooter(slide, "A trusted partner's guide to when ShiftBy can help.", 1);
-  }, 1);
+    addFooter(slide, "ShiftBy guidance footer.", 1);
+  }, 1));
 
-  addSlide((slide) => {
+  originalSlides.push(addSlide((slide) => {
     addHeader(slide, "WHY SHIFTBY EXISTS");
-    addText(slide, { left: 130, top: 386, width: 320, height: 24, text: "CORE OBSERVATION", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 432, width: 560, height: 235, text: "Organizations preserve\nrecords.\nThey lose operating context.", size: 64, color: INK, bold: true });
-    addText(slide, { left: 130, top: 812, width: 760, height: 54, text: "ShiftBy exists to help leaders preserve the rationale behind execution.", size: 26, color: BODY });
+    addText(slide, { left: 130, top: 275, width: 320, height: 24, text: "CORE OBSERVATION", size: 12, color: ACCENT, bold: true });
+    addText(slide, { left: 130, top: 321, width: 560, height: 235, text: "Organizations preserve\nrecords.\nThey lose operating context.", size: 64, color: INK, bold: true });
+    addLine(slide, 130, 804, 760, 1);
+    addText(slide, { left: 130, top: 836, width: 760, height: 64, text: "Understanding stays visible as execution changes.", size: 34, color: BODY, bold: true });
     const x = 850;
-    const y = 388;
+    const y = 310;
     const rowH = 145;
     addLine(slide, x, y, 980, 1);
     addText(slide, { left: x, top: y + 24, width: 250, height: 70, text: "The decision\nsurvives.", size: 30, bold: true });
@@ -436,43 +451,43 @@ async function main() {
     addText(slide, { left: x + 370, top: y + rowH * 2 + 24, width: 320, height: 70, text: "The knowledge\noften does not.", size: 30, color: BODY });
     addLine(slide, x, y + rowH * 3, 980, 1);
     addFooter(slide, "ShiftBy exists to help understanding remain available when execution changes.", 2);
-  }, 2);
+  }, 2));
 
-  addSlide((slide) => {
-    addHeader(slide, "PARTNER VALUE FRAME");
+  originalSlides.push(addSlide((slide) => {
+    addHeader(slide, "VALUE FRAME");
     addText(slide, { left: 130, top: 150, width: 380, height: 24, text: "WHY ORGANIZATIONS ENGAGE SHIFTBY", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 172, width: 1120, height: 170, text: "Value, risk, and trust are\nincreasingly connected.", size: 68, color: INK, bold: true });
+    addText(slide, { left: 130, top: 172, width: 1120, height: 150, text: "AI creates value when\nvisibility, evidence, and trust align.", size: 60, color: INK, bold: true });
     const cards = [
-      { title: "CREATE VALUE", lines: ["Clarify where AI can create meaningful value", "Prioritize AI opportunities and investments", "Improve decision quality and visibility", "Accelerate responsible AI adoption", "Improve organizational effectiveness"] },
-      { title: "REDUCE RISK", lines: ["Strengthen governance and oversight", "Improve audit readiness and assurance", "Address AI security and privacy concerns", "Improve accountability and traceability", "Improve visibility of AI-related risks"] },
-      { title: "PRESERVE TRUST", lines: ["Preserve organizational knowledge", "Maintain explainability of important decisions", "Retain rationale as systems evolve", "Maintain accountability as execution changes", "Increase confidence in AI-enabled operations"] },
+      { title: "CREATE VALUE", lines: ["Focus on what matters", "Prioritize high-value use cases", "Keep decision visibility", "Support responsible adoption"] },
+      { title: "REDUCE RISK", lines: ["Strengthen control evidence", "Improve audit readiness", "Keep accountability visible", "Address security and privacy"] },
+      { title: "PRESERVE TRUST", lines: ["Preserve organizational memory", "Retain explainability", "Keep rationale visible", "Maintain confidence through change"] },
     ];
     const startX = 130, startY = 360, cw = 560, ch = 430;
     for (let i = 0; i < cards.length; i++) {
       const c = cards[i];
       addRect(slide, startX + i * cw, startY, cw, ch, "white", BORDER, 1);
-      addText(slide, { left: startX + i * cw + 28, top: startY + 26, width: cw - 56, height: 40, text: c.title, size: 42, bold: true });
-      let ty = startY + 95;
+      addText(slide, { left: startX + i * cw + 28, top: startY + 30, width: cw - 56, height: 40, text: c.title, size: 38, bold: true });
+      let ty = startY + 108;
       for (const line of c.lines) {
-        addText(slide, { left: startX + i * cw + 28, top: ty, width: cw - 56, height: 30, text: line, size: 24, color: BODY });
-        ty += 55;
+        addText(slide, { left: startX + i * cw + 28, top: ty, width: cw - 56, height: 28, text: line, size: 22, color: BODY });
+        ty += 58;
       }
     }
-    addLine(slide, 130, 840, 1080, 1);
-    addText(slide, { left: 130, top: 875, width: 1120, height: 88, text: "Understanding helps organizations navigate all\nthree.", size: 42, bold: true });
-    addFooter(slide, "A partner should be able to connect ShiftBy to value creation, risk reduction, and trust preservation.", 3);
-  }, 3);
+    addLine(slide, 130, 804, 1080, 1);
+    addText(slide, { left: 130, top: 836, width: 1120, height: 64, text: "Understanding keeps value, risk, and trust connected.", size: 34, bold: true, color: BODY });
+    addFooter(slide, "Value, risk, and trust.", 3);
+  }, 3));
 
-  addSlide((slide) => {
-    addHeader(slide, "INDUSTRY RECOGNITION");
+  originalSlides.push(addSlide((slide) => {
+    addHeader(slide, "INDUSTRY CONTEXT");
     addText(slide, { left: 130, top: 148, width: 650, height: 24, text: "INDUSTRIES WHERE SIMILAR CONVERSATIONS FREQUENTLY ARISE", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 172, width: 1100, height: 180, text: "Different industries. Similar\nchallenges around confidence.", size: 72, bold: true });
+    addText(slide, { left: 130, top: 172, width: 1100, height: 180, text: "Different sectors.\nSame confidence failure.", size: 72, bold: true });
     const cells = [
       { title: "Pharmaceuticals", titleTop: 90 },
       { title: "Consumer Health", titleTop: 90 },
       { title: "Medical Technology", titleTop: 90 },
       { title: "Manufacturing", titleTop: 90 },
-      { title: "Supply Chain & Logistics", titleTop: 90 },
+      { title: "Supply Chain", titleTop: 90 },
       { title: "Technology & Digital", titleTop: 90 },
       { title: "Professional Services", titleTop: 90 },
     ];
@@ -484,109 +499,126 @@ async function main() {
       addRect(slide, ...p, "white", BORDER, 1);
       addText(slide, { left: p[0] + 28, top: p[1] + 85, width: p[2] - 56, height: 34, text: cells[i].title, size: 32, bold: true });
     });
-    addLine(slide, 130, 716, 1100, 1);
-    addText(slide, { left: 130, top: 750, width: 1120, height: 98, text: "Different industries.\nSimilar challenges around change, knowledge,\naccountability, and confidence.", size: 50, bold: true, color: INK });
-    addFooter(slide, "Use this slide to help partners recognize familiar industry contexts.", 4);
-  }, 4);
+    addLine(slide, 130, 804, 1100, 1);
+    addText(slide, { left: 130, top: 836, width: 1260, height: 64, text: "Understanding keeps evidence, ownership, and confidence connected across sectors.", size: 34, bold: true, color: BODY });
+    addFooter(slide, "Recurring enterprise patterns.", 4);
+  }, 4));
 
-  addSlide((slide) => {
-    addHeader(slide, "ORGANIZATIONAL RECOGNITION");
+  originalSlides.push(addSlide((slide) => {
+    addHeader(slide, "FUNCTIONAL CONTEXT");
     addText(slide, { left: 130, top: 148, width: 440, height: 24, text: "BUSINESS FUNCTIONS", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 172, width: 1120, height: 220, text: "ShiftBy conversations often\nstart where responsibility,\nchange, and control meet.", size: 70, bold: true });
-    const items = [
-      "Executive Leadership","Research & Development","Manufacturing","Supply Chain",
-      "Quality & Compliance","Procurement","Technology & Digital","Data & AI",
-      "Enterprise Architecture","Risk & Governance","Internal Audit","Transformation Offices"
+    addText(slide, { left: 130, top: 172, width: 1120, height: 180, text: "ShiftBy conversations begin where\ndecision intent, operating context,\nand assurance meet.", size: 66, bold: true });
+    const clusterCards = [
+      {
+        title: "Strategy",
+        labels: ["Decision traceability", "Leadership ownership", "Enterprise direction"],
+      },
+      {
+        title: "Execution",
+        labels: ["Organizational memory", "Process context", "Execution continuity"],
+      },
+      {
+        title: "Assurance",
+        labels: ["Accountability", "Control evidence", "Audit readiness"],
+      },
     ];
-    const x = 130, y = 431, cellW = 415, cellH = 150;
-    for (let r = 0; r < 3; r++) {
-      for (let c = 0; c < 4; c++) {
-        const i = r * 4 + c;
-        const left = x + c * cellW;
-        const top = y + r * cellH;
-        addRect(slide, left, top, cellW, cellH, "white", BORDER, 1);
-        addText(slide, { left: left + 28, top: top + 88, width: cellW - 56, height: 34, text: items[i], size: 28, bold: true });
-      }
-    }
-    addLine(slide, 130, 884, 1120, 1);
-    addText(slide, { left: 130, top: 900, width: 1120, height: 48, text: "Many functions inherit AI-enabled change\nbefore they own it.", size: 28, bold: true, color: BODY });
-    addFooter(slide, "Many functions inherit AI-enabled change before they own it.", 5);
-  }, 5);
+    const cardY = 420;
+    const cardH = 286;
+    const cardW = 500;
+    const gap = 30;
+    clusterCards.forEach((card, idx) => {
+      const left = 130 + idx * (cardW + gap);
+      addRect(slide, left, cardY, cardW, cardH, "white", BORDER, 1);
+      addText(slide, { left: left + 28, top: cardY + 28, width: 280, height: 36, text: card.title, size: 34, bold: true });
+      card.labels.forEach((label, i) => {
+        addText(slide, {
+          left: left + 28,
+          top: cardY + 92 + i * 52,
+          width: cardW - 56,
+          height: 32,
+          text: label,
+          size: 22,
+          bold: true,
+        });
+      });
+    });
+    addLine(slide, 130, 804, 1120, 1);
+    addText(slide, { left: 130, top: 836, width: 1120, height: 64, text: "Decision traceability keeps ownership visible across functions.", size: 34, bold: true, color: BODY });
+    addFooter(slide, "Function-level readiness.", 5);
+  }, 5));
 
-  addSlide((slide) => {
-    addHeader(slide, "REFERRAL TRIGGERS");
-    addText(slide, { left: 130, top: 148, width: 350, height: 24, text: "TYPICAL SITUATIONS", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 172, width: 890, height: 230, text: "When you hear this,\nthere may be a ShiftBy\nconversation.", size: 72, bold: true });
+  originalSlides.push(addSlide((slide) => {
+    addHeader(slide, "REFERRAL MOMENTS");
+    addText(slide, { left: 130, top: 148, width: 580, height: 24, text: "WHEN UNDERSTANDING STARTS TO FRAGMENT", size: 12, color: ACCENT, bold: true });
+    addText(slide, { left: 130, top: 172, width: 1200, height: 180, text: "These conditions often signal a\ndeeper need to preserve understanding.", size: 54, bold: true });
     const statements = [
-      "We are exploring AI but do not know where to start.",
-      "We have many AI ideas but cannot prioritize.",
-      "We need governance, audit readiness, and oversight.",
-      "We are introducing AI agents into operational workflows.",
-      "We are concerned about losing critical knowledge."
+      "AI direction needs a clearer starting point.",
+      "Opportunity signals are outpacing prioritization.",
+      "Governance and auditability are becoming unclear.",
+      "AI participation is entering live workflows.",
+      "Critical knowledge is becoming harder to retain."
     ];
-    const x = 130, y = 370, w = 335, h = 320;
+    const x = 130, y = 452, w = 335, h = 282;
     for (let i = 0; i < 5; i++) {
       const left = x + i * w;
       addRect(slide, left, y, w, h, "white", BORDER, 1);
       addText(slide, { left: left + 28, top: y + 28, width: 40, height: 20, text: String(i + 1).padStart(2, "0"), size: 12, color: ACCENT, bold: true });
-      addText(slide, { left: left + 28, top: y + 225, width: w - 56, height: 72, text: statements[i], size: 30, bold: true });
+      addText(slide, { left: left + 28, top: y + 150, width: w - 56, height: 110, text: statements[i], size: 23, bold: true });
     }
-    addFooter(slide, "This is the partner's recognition slide: listen for uncertainty, prioritization, trust, operations, and knowledge loss.", 6);
-  }, 6);
+    addLine(slide, 130, 804, 1120, 1);
+    addText(slide, { left: 130, top: 836, width: 1120, height: 64, text: "ShiftBy can be introduced before uncertainty becomes structural.", size: 34, bold: true, color: BODY });
+    addFooter(slide, "Recurring leadership questions.", 6);
+  }, 6));
 
-  addSlide((slide) => {
-    addHeader(slide, "CONVERSATION DOMAIN");
-    addRect(slide, 0, 110, 880, 530, "#F7F6FB", "#F7F6FB", 0);
+  originalSlides.push(addSlide((slide) => {
+    addHeader(slide, "READINESS PICTURE");
+    addRect(slide, 0, 110, 880, 883, "#F7F6FB", "#F7F6FB", 0);
     addText(slide, { left: 130, top: 241, width: 300, height: 24, text: "PREPARING FOR AI", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 314, width: 540, height: 185, text: "AI Readiness\n& Enablement", size: 64, bold: true });
-    addText(slide, { left: 130, top: 548, width: 540, height: 98, text: "REDUCE UNCERTAINTY BEFORE\nMAJOR AI DECISIONS.", size: 34, bold: true });
-    addWatermark(slide, { left: 1400, top: 170, size: 620, lineFill: WATERMARK, centerFill: WATERMARK, lineWidth: 18 });
+    addText(slide, { left: 130, top: 328, width: 540, height: 172, text: "AI Readiness\n& Enablement", size: 58, bold: true });
+    addText(slide, { left: 130, top: 570, width: 540, height: 92, text: "REDUCE UNCERTAINTY BEFORE\nMAJOR AI MOVES.", size: 30, bold: true });
     const cells = [
       { title: "Executive workshops" }, { title: "AI literacy" },
       { title: "Data readiness" }, { title: "Knowledge readiness" },
       { title: "Governance readiness" }, { title: "Workforce readiness" },
     ];
     addGrid(slide, 965, 281, 810, 385, 2, 3, cells);
-    addLine(slide, 965, 678, 810, 1);
-    addText(slide, { left: 965, top: 712, width: 760, height: 96, text: "Organizations often know AI matters.\nThe harder question is whether their data, knowledge,\npeople, governance, and operating model are ready.", size: 38, bold: true });
-    addFooter(slide, "Purpose: Map situations to conversation domain.", 7);
-  }, 7);
+    addLine(slide, 965, 804, 810, 1);
+    addText(slide, { left: 965, top: 826, width: 900, height: 78, text: "Understanding becomes easier to mobilize\nbefore major AI moves.", size: 32, bold: true, color: BODY });
+    addFooter(slide, "Readiness and enablement.", 7);
+  }, 7));
 
-  addSlide((slide) => {
-    addHeader(slide, "BUSINESS VALUE CONVERSATION");
-    addRect(slide, 0, 110, 880, 530, "#F7F6FB", "#F7F6FB", 0);
+  originalSlides.push(addSlide((slide) => {
+    addHeader(slide, "VALUE PRIORITIES");
+    addRect(slide, 0, 110, 880, 883, "#F7F6FB", "#F7F6FB", 0);
     addText(slide, { left: 130, top: 241, width: 350, height: 24, text: "CHOOSING WHERE TO ACT", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 314, width: 700, height: 140, text: "AI Adoption &\nTransformation", size: 60, bold: true });
-    addText(slide, { left: 130, top: 500, width: 620, height: 86, text: "TURN AI INTEREST INTO\nFOCUSED BUSINESS VALUE.", size: 30, bold: true });
-    addWatermark(slide, { left: 1410, top: 160, size: 620, lineFill: WATERMARK, centerFill: WATERMARK, lineWidth: 18 });
+    addText(slide, { left: 130, top: 328, width: 720, height: 172, text: "AI Adoption &\nTransformation", size: 58, bold: true });
+    addText(slide, { left: 130, top: 570, width: 620, height: 92, text: "TURN AI INTEREST INTO\nFOCUSED BUSINESS VALUE.", size: 30, bold: true });
     const boxes = [
       { title: "Opportunity assessment" },
       { title: "Use-case prioritization" },
       { title: "Business process analysis" },
       { title: "AI roadmaps" },
-      { title: "Operating model\nconsiderations", titleTop: 86, titleSize: 28 },
+      { title: "Operating model\nconsiderations", titleTop: 80, titleSize: 26 },
     ];
-    addRect(slide, 975, 280, 820, 135, "white", BORDER, 1);
-    addRect(slide, 975, 415, 820, 135, "white", BORDER, 1);
-    addRect(slide, 975, 550, 405, 135, "white", BORDER, 1);
-    addRect(slide, 1390, 550, 405, 135, "white", BORDER, 1);
-    addText(slide, { left: 1005, top: 330, width: 330, height: 30, text: boxes[0].title, size: 30, bold: true });
-    addText(slide, { left: 1420, top: 330, width: 330, height: 30, text: boxes[1].title, size: 30, bold: true });
-    addText(slide, { left: 1005, top: 464, width: 330, height: 30, text: boxes[2].title, size: 30, bold: true });
-    addText(slide, { left: 1420, top: 464, width: 250, height: 30, text: boxes[3].title, size: 30, bold: true });
-    addText(slide, { left: 1005, top: 586, width: 340, height: 70, text: boxes[4].title, size: 28, bold: true });
-    addLine(slide, 975, 680, 820, 1);
-    addText(slide, { left: 975, top: 714, width: 780, height: 94, text: "Organizations often have more AI ideas\nthan they can realistically pursue.\nThe challenge is determining where value\nmay emerge, what should be prioritized,\nand where ownership should remain visible.", size: 36, bold: true });
-    addFooter(slide, "Organizations often have more AI ideas than they can realistically pursue.", 8);
-  }, 8);
+    addRect(slide, 965, 280, 820, 135, "white", BORDER, 1);
+    addRect(slide, 965, 415, 820, 135, "white", BORDER, 1);
+    addRect(slide, 965, 550, 820, 135, "white", BORDER, 1);
+    addText(slide, { left: 995, top: 330, width: 330, height: 30, text: boxes[0].title, size: 30, bold: true });
+    addText(slide, { left: 1410, top: 330, width: 330, height: 30, text: boxes[1].title, size: 30, bold: true });
+    addText(slide, { left: 995, top: 464, width: 330, height: 30, text: boxes[2].title, size: 30, bold: true });
+    addText(slide, { left: 1410, top: 464, width: 250, height: 30, text: boxes[3].title, size: 30, bold: true });
+    addText(slide, { left: 995, top: 580, width: 740, height: 70, text: boxes[4].title, size: 26, bold: true });
+    addLine(slide, 965, 804, 820, 1);
+    addText(slide, { left: 965, top: 824, width: 820, height: 64, text: "Understanding helps leaders prioritize value\nafter ownership stays visible.", size: 32, bold: true, color: BODY });
+    addFooter(slide, "AI idea prioritization.", 8);
+  }, 8));
 
-  addSlide((slide) => {
-    addHeader(slide, "TRUST AND OVERSIGHT CONVERSATION");
-    addRect(slide, 0, 110, 880, 530, "#F7F6FB", "#F7F6FB", 0);
+  originalSlides.push(addSlide((slide) => {
+    addHeader(slide, "TRUST & OVERSIGHT");
+    addRect(slide, 0, 110, 880, 883, "#F7F6FB", "#F7F6FB", 0);
     addText(slide, { left: 130, top: 241, width: 460, height: 24, text: "PRESERVING TRUST AS EXECUTION CHANGES", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 314, width: 560, height: 190, text: "AI Governance,\nSafety & Resilience", size: 64, bold: true });
-    addText(slide, { left: 130, top: 548, width: 530, height: 92, text: "PRESERVE TRUST WHILE REDUCING\nOPERATIONAL AND GOVERNANCE RISK.", size: 34, bold: true });
-    addWatermark(slide, { left: 1410, top: 160, size: 620, lineFill: WATERMARK, centerFill: WATERMARK, lineWidth: 18 });
+    addText(slide, { left: 130, top: 328, width: 530, height: 172, text: "AI Governance,\nSafety & Resilience", size: 58, bold: true });
+    addText(slide, { left: 130, top: 570, width: 500, height: 92, text: "PRESERVE TRUST WHILE KEEPING\nOPERATIONAL AND GOVERNANCE RISK IN VIEW.", size: 30, bold: true });
     const gpos = [
       [965, 150, 405, 130, "Responsible AI"], [1370, 150, 405, 130, "AI governance"],
       [965, 280, 405, 130, "AI risk management"], [1370, 280, 405, 130, "AI security"],
@@ -597,118 +629,251 @@ async function main() {
       addRect(slide, x, y, w, h, "white", BORDER, 1);
       addText(slide, { left: x + 26, top: y + 45, width: w - 52, height: 28, text, size: 28, bold: true });
     });
-    addRect(slide, 965, 670, 405, 120, "white", BORDER, 1);
-    addText(slide, { left: 1000, top: 706, width: 320, height: 24, text: "Third-party AI risk", size: 28, bold: true });
-    addLine(slide, 965, 823, 820, 1);
-    addText(slide, { left: 965, top: 836, width: 820, height: 132, text: "As AI adoption grows, organizations\nincreasingly need decisions that can be\nexplained, reviewed, governed, and defended.", size: 36, bold: true });
-    addFooter(slide, "Purpose: Trust and oversight conversation.", 9);
-  }, 9);
+    addRect(slide, 965, 670, 820, 120, "white", BORDER, 1);
+    addText(slide, { left: 1000, top: 706, width: 760, height: 24, text: "Third-party AI exposure", size: 28, bold: true });
+    addLine(slide, 965, 804, 820, 1);
+    addText(slide, { left: 965, top: 836, width: 1100, height: 84, text: "Greater confidence in where to invest,\nwhat to prioritize, and who stays accountable.", size: 30, bold: true, color: BODY });
+    addFooter(slide, "Trust and oversight.", 9);
+  }, 9));
 
-  addSlide((slide) => {
-    addHeader(slide, "FUTURE-STATE OPERATIONS");
-    addRect(slide, 0, 110, 880, 530, "#F7F6FB", "#F7F6FB", 0);
+  originalSlides.push(addSlide((slide) => {
+    addHeader(slide, "FUTURE OPERATIONS");
+    addRect(slide, 0, 110, 880, 883, "#F7F6FB", "#F7F6FB", 0);
     addText(slide, { left: 130, top: 241, width: 470, height: 24, text: "IMPROVING WORK WITHOUT LOSING CONTEXT", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 314, width: 540, height: 250, text: "AI Agents &\nIntelligent\nOperations", size: 78, bold: true });
-    addText(slide, { left: 130, top: 595, width: 520, height: 96, text: "IMPROVE WORK WITHOUT LOSING\nACCOUNTABILITY OR CONTEXT.", size: 38, bold: true });
-    addWatermark(slide, { left: 1410, top: 160, size: 620, lineFill: WATERMARK, centerFill: WATERMARK, lineWidth: 18 });
+    addText(slide, { left: 130, top: 328, width: 620, height: 172, text: "AI Agents &\nIntelligent Operations", size: 58, bold: true });
+    addText(slide, { left: 130, top: 570, width: 520, height: 92, text: "IMPROVE WORK WHILE KEEPING\nACCOUNTABILITY AND CONTEXT IN PLACE.", size: 30, bold: true });
     const boxPos = [
       [965, 280, 405, 130, "AI agents"], [1370, 280, 405, 130, "Human-AI collaboration"],
       [965, 410, 405, 130, "Knowledge-\nconnected workflows"], [1370, 410, 405, 130, "Traceability"],
-      [965, 540, 405, 130, "Governed artifact generation"],
+      [965, 540, 820, 130, "Governed output generation"],
     ];
     boxPos.forEach(([x,y,w,h,text]) => {
       addRect(slide, x, y, w, h, "white", BORDER, 1);
       addText(slide, { left: x + 26, top: y + 45, width: w - 52, height: 65, text, size: 28, bold: true });
     });
-    addLine(slide, 965, 694, 820, 1);
-    addText(slide, { left: 965, top: 726, width: 790, height: 120, text: "As AI becomes part of operational\nexecution, understanding, traceability,\nand ownership must remain visible.", size: 46, bold: true });
-    addFooter(slide, "Purpose: Future-state operational conversation.", 10);
-  }, 10);
+    addLine(slide, 965, 804, 820, 1);
+    addText(slide, { left: 965, top: 836, width: 920, height: 72, text: "Greater confidence that trust can be demonstrated\nthrough clear ownership, evidence, oversight,\nand accountability.", size: 32, bold: true, color: BODY });
+    addFooter(slide, "Future-state operations.", 10);
+  }, 10));
 
-  addSlide((slide) => {
-    addHeader(slide, "DIFFERENTIATION");
+  originalSlides.push(addSlide((slide) => {
     addRect(slide, 0, 0, 1920, 1080, BG, BG, 0);
     addRect(slide, 0, 0, 1120, 1080, "#F7F0F8", "#F7F0F8", 0);
-    addText(slide, { left: 130, top: 231, width: 360, height: 24, text: "WHY SHIFTBY", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 286, width: 820, height: 260, text: "Organizations rarely need\nmore technology.", size: 66, bold: true });
-    addText(slide, { left: 130, top: 590, width: 980, height: 134, text: "They lose clarity when decisions, knowledge, ownership, and\naccountability become harder to preserve.", size: 34, color: BODY, bold: true });
-    addText(slide, { left: 130, top: 760, width: 1100, height: 88, text: "ShiftBy helps leaders preserve understanding as execution changes.", size: 34, color: BODY, bold: true });
-    addCircle(slide, 1340, 260, 580, "none", WATERMARK, 18);
-    addCircle(slide, 1485, 405, 300, WATERMARK, "none", 0);
-    addText(slide, { left: 1125, top: 585, width: 420, height: 64, text: "Ananda Krishna", size: 48, bold: true });
-    addLine(slide, 1125, 555, 650, 1);
-    addText(slide, { left: 1125, top: 650, width: 480, height: 24, text: "Founder-led advisory practice", size: 16, color: ACCENT, bold: true });
-    addText(slide, { left: 1125, top: 664, width: 320, height: 30, text: "Founder", size: 28, color: BODY });
-    addText(slide, { left: 1125, top: 708, width: 420, height: 30, text: "ShiftBy Pte. Ltd.", size: 28, color: BODY });
-    addText(slide, { left: 1125, top: 764, width: 500, height: 30, text: "https://www.shiftby.sg", size: 26, color: INK });
-    addText(slide, { left: 1125, top: 822, width: 620, height: 30, text: "linkedin.com/in/anandakrishnam", size: 26, color: INK });
-    addText(slide, { left: 1125, top: 880, width: 420, height: 30, text: "anandakrishnam@shiftby.sg", size: 26, color: INK });
-    addFooter(slide, "Purpose: Differentiation.", 11);
-  }, 11);
+    addHeader(slide, "DIFFERENTIATION");
+    addText(slide, { left: 130, top: 231, width: 430, height: 24, text: "WHY UNDERSTANDING MATTERS", size: 12, color: ACCENT, bold: true });
+    addText(slide, { left: 130, top: 286, width: 950, height: 230, text: "Organizations often preserve\nartifacts while losing the\nrationale behind them.", size: 58, bold: true });
+    addText(slide, { left: 130, top: 590, width: 980, height: 110, text: "Decision history, ownership, and accountability\nneed to stay visible as work changes.", size: 30, color: BODY, bold: true });
+    addLine(slide, 130, 804, 1100, 1);
+    addText(slide, { left: 130, top: 836, width: 1100, height: 64, text: "Decision history preserves rationale as change accelerates.", size: 34, color: BODY, bold: true });
+    addWatermark(slide, { left: 1335, top: 235, size: 590 });
+    addFooter(slide, "Differentiation.", 11);
+  }, 11));
 
-  addSlide((slide) => {
-    addHeader(slide, "CAPABILITY ARCHITECTURE");
-    addText(slide, { left: 130, top: 150, width: 390, height: 24, text: "THE SHIFTBY CAPABILITY SYSTEM", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 176, width: 860, height: 205, text: "Four capabilities support\nconfidence when\nexecution changes.", size: 78, bold: true });
+  originalSlides.push(addSlide((slide) => {
+    addHeader(slide, "CAPABILITIES");
+    addText(slide, { left: 130, top: 150, width: 520, height: 24, text: "CAPABILITIES THAT PRESERVE UNDERSTANDING", size: 12, color: ACCENT, bold: true });
+    addText(slide, { left: 130, top: 176, width: 1080, height: 200, text: "Four capabilities help\norganizations preserve\nunderstanding as execution changes.", size: 60, bold: true });
     const cells = [
-      { title: "Decision Traceability", body: "Rationale remains visible." },
-      { title: "Organizational\nMemory", body: "Meaning survives change." },
-      { title: "Human-AI\nAccountability", body: "Responsibility stays legible." },
-      { title: "Adaptive Execution", body: "Change remains coherent." },
+      { title: "Decision Traceability", body: "Decision rationale remains visible.", titleTop: 76, titleSize: 28, bodyTop: 205, bodySize: 17 },
+      { title: "Organizational\nMemory", body: "Operational meaning stays recoverable.", titleTop: 76, titleSize: 28, bodyTop: 205, bodySize: 17 },
+      { title: "Human-AI\nAccountability", body: "Ownership and escalation stay clear.", titleTop: 76, titleSize: 28, bodyTop: 205, bodySize: 17 },
+      { title: "Adaptive Execution", body: "Execution adapts without losing intent.", titleTop: 76, titleSize: 28, bodyTop: 205, bodySize: 17 },
     ];
-    addGrid(slide, 130, 444, 1660, 330, 4, 1, cells, { gap: 0 });
-    addFooter(slide, "Purpose: Reveal underlying capability architecture. No deep dive.", 12);
-  }, 12);
+    addGrid(slide, 130, 530, 1660, 290, 4, 1, cells, { gap: 0 });
+    addFooter(slide, "Capability architecture.", 12);
+  }, 12));
 
-  addSlide((slide) => {
+  originalSlides.push(addSlide((slide) => {
     addHeader(slide, "REFERRAL MOMENT");
-    addRect(slide, 0, 0, 700, 1080, "#F7F0F8", "#F7F0F8", 0);
+    addRect(slide, 0, 110, 660, 883, "#F7F0F8", "#F7F0F8", 0);
     addText(slide, { left: 130, top: 231, width: 400, height: 24, text: "INTRODUCE SHIFTBY WHEN...", size: 12, color: ACCENT, bold: true });
-    addText(slide, { left: 130, top: 290, width: 470, height: 340, text: "Confidence\nneeds to\nsurvive\nchange.", size: 74, bold: true });
-    addText(slide, { left: 130, top: 724, width: 450, height: 145, text: "A partner does not need to\ndiagnose the work. They only\nneed to recognize the moment.", size: 34, color: BODY });
+    addText(slide, { left: 130, top: 290, width: 500, height: 240, text: "Confidence needs to\nsurvive change.", size: 66, bold: true });
+    addText(slide, { left: 130, top: 724, width: 500, height: 145, text: "A referral works once the\nsignal is visible.\nThe moment matters.", size: 28, color: BODY });
     const rows = [
-      "A new AI initiative needs a clear starting point.",
-      "AI ideas exist, but prioritization is unclear.",
-      "Governance, auditability, or ownership is missing.",
+      "A starting point is missing.",
+      "AI priorities are unclear.",
+      "Ownership is not visible.",
       "AI agents are moving into live workflows.",
-      "Critical knowledge is at risk of being lost.",
+      "Critical knowledge is at risk of loss.",
     ];
-    const rx = 735;
+    const rx = 695;
     const ry = 260;
     addLine(slide, rx, ry, 1110, 1);
     rows.forEach((row, i) => {
       const y = ry + 40 + i * 121;
       addLine(slide, rx, y + 49, 1110, 1);
       addText(slide, { left: rx - 2, top: y + 4, width: 40, height: 20, text: String(i + 1).padStart(2, "0"), size: 12, color: ACCENT, bold: true });
-      addText(slide, { left: rx + 130, top: y, width: 920, height: 72, text: row, size: 36, bold: true });
+      addText(slide, { left: rx + 130, top: y, width: 920, height: 72, text: row, size: 34, bold: true });
     });
-    addLine(slide, rx, 854, 1110, 1);
-    addFooter(slide, "Most important referral slide.", 13);
-  }, 13);
+    // Footer rule intentionally removed to avoid a duplicate divider line.
+    addFooter(slide, "Referral moment.", 13);
+  }, 13));
 
-  addSlide((slide) => {
+  originalSlides.push(addSlide((slide) => {
     addHeader(slide, "CONTACT");
     addRect(slide, 0, 0, 1920, 1080, BG, BG, 0);
     addRect(slide, 0, 0, 1920, 1080, BG, BG, 0);
     addText(slide, { left: 130, top: 231, width: 370, height: 24, text: "MAKE AN INTRODUCTION", size: 12, color: ACCENT, bold: true });
     addText(slide, { left: 130, top: 286, width: 650, height: 340, text: "Execution\nchanges.\nUnderstanding\npreserves\nconfidence.", size: 78, bold: true });
-    addText(slide, { left: 130, top: 815, width: 500, height: 100, text: "Introduce ShiftBy when understanding\nneeds to survive change.", size: 38, color: BODY });
-    addCircle(slide, 1380, 260, 580, "none", WATERMARK, 18);
-    addCircle(slide, 1525, 405, 300, WATERMARK, "none", 0);
-    addLine(slide, 1120, 550, 680, 1);
-    addText(slide, { left: 1120, top: 585, width: 430, height: 44, text: "Ananda Krishna", size: 48, bold: true });
-    addText(slide, { left: 1120, top: 664, width: 250, height: 30, text: "Founder", size: 28, color: BODY });
-    addText(slide, { left: 1120, top: 706, width: 300, height: 30, text: "ShiftBy Pte. Ltd.", size: 28, color: BODY });
-    addText(slide, { left: 1120, top: 765, width: 500, height: 30, text: "https://www.shiftby.sg", size: 26, color: INK });
-    addText(slide, { left: 1120, top: 823, width: 560, height: 30, text: "linkedin.com/in/anandakrishnam", size: 26, color: INK });
-    addText(slide, { left: 1120, top: 881, width: 500, height: 30, text: "anandakrishnam@shiftby.sg", size: 26, color: INK });
-    addFooter(slide, "SHIFTBY_PARTNER_BRIEF_V1A_OPENDESIGN_IMPLEMENTATION_PASS", 14);
-  }, 14);
+    addText(slide, { left: 130, top: 800, width: 500, height: 100, text: "Introduce ShiftBy when understanding\nneeds to survive change.", size: 34, color: BODY });
+    addWatermark(slide, { left: 1390, top: 250, size: 540 });
+    addLine(slide, 1120, 560, 640, 1);
+    addText(slide, { left: 1120, top: 600, width: 430, height: 44, text: "Ananda Krishna", size: 46, bold: true });
+    addText(slide, { left: 1120, top: 678, width: 250, height: 30, text: "Founder", size: 26, color: BODY });
+    addText(slide, { left: 1120, top: 718, width: 300, height: 30, text: "ShiftBy Pte. Ltd.", size: 26, color: BODY });
+    addText(slide, { left: 1120, top: 778, width: 500, height: 30, text: "https://www.shiftby.sg", size: 24, color: INK });
+    addText(slide, { left: 1120, top: 834, width: 560, height: 30, text: "linkedin.com/in/anandakrishnam", size: 24, color: INK });
+    addText(slide, { left: 1120, top: 890, width: 500, height: 30, text: "anandakrishnam@shiftby.sg", size: 24, color: INK });
+    addFooter(slide, "Contact ShiftBy.", 14);
+  }, 14));
 
-  for (let i = 0; i < 4; i++) {
-    addSlide((slide) => {
-      addDarkMark(slide);
-    }, 15 + i);
+  function replaceExactText(slide, from, to) {
+    if (!from || !to) return false;
+    for (const shape of slide.shapes.items) {
+      try {
+        if (shape.text && String(shape.text) === from) {
+          shape.text = to;
+          return true;
+        }
+      } catch {}
+    }
+    return false;
+  }
+
+  function replacePageNumber(slide, fromPage, toPage, total = 14) {
+    const from = `${String(fromPage).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+    const to = `${String(toPage).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+    replaceExactText(slide, from, to);
+  }
+
+  const variantEdits = [
+    [
+      ["BRIEFING", "BRIEFING"],
+      [
+        ["AI advisory, coaching, and thought leadership for organizations navigating AI, governance, knowledge, and transformation.",
+         "Enterprise guidance for leaders navigating AI,\ngovernance, knowledge, and transformation."],
+      ],
+    ],
+    [
+      ["CORE OBSERVATION", "CORE OBSERVATION"],
+      [],
+    ],
+    [
+      ["WHY ORGANIZATIONS ENGAGE SHIFTBY", "WHY ORGANIZATIONS ENGAGE SHIFTBY"],
+      [
+        ["Value, risk, and trust are\nincreasingly connected.",
+         "Value, risk, and trust stay\nconnected through change."],
+        ["Understanding keeps value, risk, and trust connected.",
+         "Understanding keeps value, risk, and trust connected as change accelerates."],
+      ],
+    ],
+    [
+      ["INDUSTRIES WHERE SIMILAR CONVERSATIONS FREQUENTLY ARISE", "INDUSTRIES WHERE SIMILAR CONVERSATIONS FREQUENTLY ARISE"],
+      [
+        ["Different industries.\nSimilar enterprise questions.",
+         "Different industries.\nSimilar enterprise questions."],
+        ["Understanding helps leaders address recurring enterprise questions across sectors.",
+         "Recurring enterprise questions reappear across sectors as execution changes."],
+      ],
+    ],
+    [
+      ["FUNCTIONAL CONTEXT", "FUNCTIONAL CONTEXT"],
+      [
+        ["ShiftBy conversations often\nbegin where responsibility,\nchange, and control meet.",
+         "ShiftBy conversations often\nbegin where responsibility,\nchange, and control converge."],
+      ],
+    ],
+    [
+      ["REFERRAL MOMENTS", "REFERRAL MOMENTS"],
+      [],
+    ],
+    [
+      ["READINESS PICTURE", "READINESS PICTURE"],
+      [
+        ["PREPARING FOR AI", "READINESS TO SUPPORT ADOPTION"],
+        ["REDUCE UNCERTAINTY BEFORE\nMAJOR AI MOVES.",
+         "People, knowledge, governance,\nand ways of working need to be ready."],
+        ["Understanding becomes easier to mobilize\nbefore major AI moves.",
+         "Readiness becomes easier to mobilize\nbefore adoption proceeds."],
+      ],
+    ],
+    [
+      ["VALUE PRIORITIES", "VALUE PRIORITIES"],
+      [
+        ["CHOOSING WHERE TO ACT", "PRIORITIZING WHAT MATTERS"],
+        ["TURN AI INTEREST INTO\nFOCUSED BUSINESS VALUE.",
+         "Greater confidence in where to invest,\nwhat to prioritize, and how adoption should proceed."],
+        ["Understanding helps leaders prioritize value without losing ownership.",
+         "Investment choices stay visible as adoption proceeds."],
+      ],
+    ],
+    [
+      ["TRUST & OVERSIGHT", "TRUST & OVERSIGHT"],
+      [
+        ["PRESERVING TRUST AS EXECUTION CHANGES", "TRUST THAT CAN BE DEMONSTRATED"],
+        ["Trust stays demonstrable through\nclear ownership, evidence, oversight,\nand accountability.",
+         "Preserve trust while keeping\noperational and governance risk in view."],
+        ["Greater confidence in where to invest,\nwhat to prioritize, and who remains accountable\nas adoption proceeds.",
+         "Trust stays demonstrable through\nclear ownership, evidence, oversight,\nand accountability."],
+      ],
+    ],
+    [
+      ["FUTURE OPERATIONS", "FUTURE OPERATIONS"],
+      [
+        ["IMPROVING WORK WITHOUT LOSING CONTEXT", "EXPLAINABLE HUMAN-AI WORK"],
+        ["IMPROVE WORK WHILE KEEPING\nACCOUNTABILITY AND CONTEXT IN PLACE.",
+         "Human-AI work stays explainable as execution changes."],
+        ["Greater confidence that trust can be demonstrated\nthrough clear ownership, evidence, oversight,\nand accountability.",
+         "Accountability stays visible as human-AI work changes."],
+      ],
+    ],
+    [
+      ["DIFFERENTIATION", "DIFFERENTIATION"],
+      [
+        ["WHY SHIFTBY", "WHY UNDERSTANDING MATTERS"],
+        ["Organizations rarely need\nmore technology.",
+         "Organizations often preserve\nartifacts while losing the\nunderstanding behind them."],
+        ["Organizations preserve artifacts, but they often lose\nthe understanding behind them. As decisions, ownership,\nand accountability move through change, clarity becomes harder to sustain.",
+         "Understanding stays visible as decisions, ownership,\nand accountability move through change."],
+      ],
+    ],
+    [
+      ["CAPABILITIES", "CAPABILITIES"],
+      [
+        ["THE SHIFTBY CAPABILITY SYSTEM", "CAPABILITIES THAT PRESERVE UNDERSTANDING"],
+        ["Four capabilities support\nconfidence when\nexecution changes.",
+         "Four capabilities help\norganizations preserve\nunderstanding as execution changes."],
+      ],
+    ],
+    [
+      ["REFERRAL MOMENT", "REFERRAL MOMENT"],
+      [
+        ["INTRODUCE SHIFTBY WHEN...", "INTRODUCE SHIFTBY WHEN..."],
+        ["A partner does not need to\ndiagnose the work. They only\nneed to recognize the moment.",
+         "Introduce ShiftBy when\nunderstanding needs to survive\nchange."],
+        ["ShiftBy can be introduced before uncertainty becomes structural.",
+         "ShiftBy can be introduced when uncertainty becomes structural."],
+      ],
+    ],
+    [
+      ["CONTACT", "CONTACT"],
+      [],
+    ],
+  ];
+
+  for (let i = 0; i < originalSlides.length; i++) {
+    const sourceSlide = originalSlides[i];
+    const variant = sourceSlide.duplicate();
+    variant.moveTo(presentation.slides.items.length - 1);
+    const [headerPair, edits] = variantEdits[i];
+    replaceExactText(variant, headerPair[0], headerPair[1]);
+    for (const [from, to] of edits) {
+      replaceExactText(variant, from, to);
+    }
+  }
+
+  for (let i = originalSlides.length - 1; i >= 0; i--) {
+    presentation.slides.remove(i);
   }
 
   const pptx = await PresentationFile.exportPptx(presentation);
@@ -723,9 +888,15 @@ async function main() {
   }
   await fs.writeFile(REPORT_OUT, JSON.stringify(finalReport, null, 2));
 
+  await fs.rm(PREVIEW_DIR, { recursive: true, force: true });
+  await fs.mkdir(PREVIEW_DIR, { recursive: true });
   for (const [idx, slide] of presentation.slides.items.entries()) {
-    const png = await presentation.export({ slide, format: "png", scale: 1 });
-    await fs.writeFile(path.join(PREVIEW_DIR, `slide-${String(idx + 1).padStart(2, "0")}.png`), new Uint8Array(await png.arrayBuffer()));
+    try {
+      const png = await presentation.export({ slide, format: "png", scale: 1 });
+      await fs.writeFile(path.join(PREVIEW_DIR, `slide-${String(idx + 1).padStart(2, "0")}.png`), new Uint8Array(await png.arrayBuffer()));
+    } catch (err) {
+      console.warn(`Could not render preview for slide ${idx + 1}: ${err.message}`);
+    }
   }
 
   console.log(PPTX_OUT);
