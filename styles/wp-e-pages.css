@@ -1,0 +1,21 @@
+@layer wp-e-pages {
+  .wp-e-page { width: 100%; }
+  .wp-e-flow { display: grid; gap: var(--space-section-tight); }
+  .wp-e-flow > .section-frame, .wp-e-flow > .content-band { min-width: 0; }
+  .wp-e-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+  .wp-e-card-grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .wp-e-card-grid .card { min-width: 0; box-shadow: none; }
+  .wp-e-proof-note { display: grid; gap: var(--space-2); max-width: var(--measure); border-inline-start: 3px solid var(--color-accent); padding: var(--space-4) var(--space-5); background: var(--color-accent-soft); color: var(--color-ink-muted); }
+  .wp-e-proof-note strong, .wp-e-label { color: var(--color-accent); font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace; font-size: var(--label); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .wp-e-inline-links { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-6); }
+  .wp-e-inline-links a { color: var(--color-accent); font-weight: 650; text-decoration: underline; text-underline-offset: 0.25rem; }
+  .wp-e-stack { display: grid; gap: var(--space-6); }
+  .wp-e-detail { display: grid; gap: var(--space-3); border-block-start: 1px solid var(--color-line); padding-block-start: var(--space-5); }
+  .wp-e-detail h3, .wp-e-detail p, .wp-e-detail ul { margin: 0; }
+  .wp-e-detail h3 { font-family: var(--font-display); font-size: var(--heading-3); line-height: var(--line-heading); }
+  .wp-e-detail p, .wp-e-detail li { max-width: var(--measure); color: var(--color-ink-muted); font-size: var(--body-sm); }
+  .wp-e-detail ul { display: grid; gap: var(--space-2); padding-inline-start: 1.25rem; }
+  .wp-e-label { margin-block-start: var(--space-2) !important; }
+  @media (max-width: 64rem) { .wp-e-card-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 47.99rem) { .wp-e-card-grid, .wp-e-card-grid--four { grid-template-columns: 1fr; } .wp-e-flow { gap: var(--space-section-tight); } .wp-e-inline-links { display: grid; gap: var(--space-3); } }
+}

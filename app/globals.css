@@ -5,6 +5,8 @@
 @import "../styles/explorations.css";
 @import "../styles/services.css";
 @import "../styles/about.css";
+@import "../styles/wp-e-pages.css";
+@import "../styles/wp-f-capabilities.css";
 
 @layer app-globals {
 :root {
@@ -42,6 +44,8 @@
   --container-wide: min(100% - (var(--gutter) * 2), 84rem);
   --measure: 47.5rem;
   --measure-wide: 61.25rem;
+  --space-section: clamp(3.75rem, 8.5vw, 7rem);
+  --space-section-tight: clamp(2.875rem, 6.5vw, 5rem);
   --display: clamp(2.875rem, 6vw, 4.75rem);
   --heading-1: clamp(2.125rem, 4.6vw, 3.625rem);
   --heading-2: clamp(1.875rem, 3.7vw, 3rem);
@@ -55,6 +59,10 @@
   --line-tight: 1.02;
   --line-heading: 1.08;
   --line-copy: 1.56;
+  --breakpoint-xs: 430px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1180px;
 }
 
 * {
@@ -70,9 +78,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(circle at top right, color-mix(in oklch, var(--color-accent-soft), transparent 24%) 0, transparent 32rem),
-    linear-gradient(180deg, color-mix(in oklch, var(--color-surface-strong), var(--color-bg) 32%) 0%, var(--color-bg) 100%);
+  background: var(--color-bg);
   color: var(--color-ink);
   font-family: var(--font-body);
   line-height: var(--line-copy);
@@ -138,25 +144,11 @@ code {
 }
 
 .shell::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 15% 0%, color-mix(in oklch, var(--color-accent-soft), transparent 52%) 0, transparent 26rem),
-    radial-gradient(circle at 100% 70%, color-mix(in oklch, var(--color-line), transparent 35%) 0, transparent 24rem);
-  opacity: 0.9;
+  display: none;
 }
 
 .shell__backdrop {
-  position: absolute;
-  z-index: -1;
-  border-radius: 999px;
-  filter: blur(16px);
-  opacity: 0.9;
-  contain: paint;
-  will-change: transform;
+  display: none;
 }
 
 .shell__backdrop--north {
@@ -493,8 +485,7 @@ code {
   border: 1px solid var(--color-line);
   border-radius: var(--radius-xl);
   padding: clamp(1.5rem, 3vw, 2rem);
-  background:
-    linear-gradient(180deg, color-mix(in oklch, var(--color-accent-soft), white 42%) 0%, var(--color-surface-strong) 100%);
+  background: var(--color-surface-muted);
   box-shadow: var(--shadow-card);
 }
 
@@ -685,8 +676,7 @@ code {
     border: 1px solid var(--color-line);
     border-radius: var(--radius-lg);
     padding: 0.625rem;
-    background:
-      linear-gradient(180deg, color-mix(in oklch, var(--color-surface-strong), transparent 3%) 0%, var(--color-surface-muted) 100%);
+    background: var(--color-surface-strong);
     box-shadow: var(--shadow-card);
   }
 

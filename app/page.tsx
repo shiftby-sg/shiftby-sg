@@ -1,320 +1,90 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
-import { BrandDoctrineMark } from "@/components/BrandDoctrineMark";
+import { CTABlock } from "@/components/cta-block";
+import { PageIntro } from "@/components/page-intro";
+import { PageShell } from "@/components/page-shell";
+import { SectionFrame } from "@/components/section-frame";
+import { SignalCard } from "@/components/signal-card";
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "ShiftBy | Execution Changes. Understanding Preserves Confidence."
-  },
+  title: { absolute: "ShiftBy | Preserve Understanding as Execution Changes" },
   description:
-    "ShiftBy is an executive advisory practice focused on preserving understanding, accountability, and confidence as execution becomes distributed across people, systems, suppliers, automation, and AI.",
-  alternates: {
-    canonical: "/"
-  }
+    "ShiftBy helps leaders preserve understanding, authority and accountability as execution becomes distributed across people, systems, suppliers, automation and AI.",
+  alternates: { canonical: "/" }
 };
 
 export default function HomePage() {
   return (
-    <div className="home-design-port">
-      <style>{`
-        .home-design-port .hero-descriptor {
-          color: var(--accent);
-          font-size: var(--type-kicker);
-          font-weight: 700;
-          letter-spacing: var(--tracking-kicker);
-          line-height: 18px;
-          margin: 0 0 8px;
-          max-width: 620px;
-          position: relative;
-          text-transform: uppercase;
-          top: -7px;
-          white-space: nowrap;
-        }
-
-        @media (max-width: 720px) {
-          .home-design-port .hero-descriptor {
-            white-space: normal;
-          }
-
-          .homepage-doctrine-mark {
-            display: none;
-          }
-        }
-      `}</style>
-      <section aria-labelledby="hero-title" className="section hero">
-        <BrandDoctrineMark
-          className="homepage-doctrine-mark"
-          style={{
-            color: "var(--accent)",
-            opacity: 0.038,
-            pointerEvents: "none",
-            position: "absolute",
-            right: "-12%",
-            top: "50%",
-            transform: "translateY(-50%)",
-            width: "min(52vw, 700px)",
-            zIndex: 0
-          }}
+    <PageShell>
+      <div className="wp-e-page wp-e-home">
+        <PageIntro
+          body="ShiftBy is an executive advisory and consulting practice for consequential change. We help leaders see what must remain understood before action moves forward."
+          eyebrow="Execution changes"
+          lede="Understanding preserves confidence."
+          title="When execution becomes distributed, understanding becomes a leadership responsibility."
         />
-        <div>
-          <h1 id="hero-title">
-            <span className="hero-title-line">Execution changes.</span>
-            <span className="hero-title-line">
-              <span className="keep-together">Understanding preserves</span>{" "}
-              <span className="hero-break">confidence.</span>
-            </span>
-          </h1>
-          <p className="lead">
-            Organizations rarely face a technology shortage.
-            <br />
-            <br />
-            They lose clarity when decisions, knowledge, ownership, and
-            accountability become harder to preserve.
-            <br />
-            <br />
-            ShiftBy helps leaders preserve understanding as execution changes.
-          </p>
-          <div className="hero-actions">
-            <Link className="button primary" href="/contact">
-              Start a conversation →
-            </Link>
-            <a className="button secondary" href="#different-perspective">
-              Explore the perspective →
-            </a>
-          </div>
+        <div className="wp-e-flow">
+          <SectionFrame
+            description="Work now moves across people, systems, suppliers, automation and AI. Context, assumptions, evidence and authority can change while execution continues."
+            eyebrow="Why this becomes consequential"
+            title="A decision can remain visible while the conditions that made it valid move away."
+          />
+          <SectionFrame
+            description="Artifacts are necessary, but they do not automatically preserve the relationships that make action explainable. Enterprise Understanding connects intent, context, authority, decisions, evidence, dependencies, accountability and outcomes."
+            eyebrow="Enterprise Understanding"
+            title="Preserving understanding means preserving what connects the work."
+          >
+            <div className="wp-e-proof-note" role="note">
+              <strong>Proof control</strong>
+              <span>Home statistics and dated external claims remain provisional until their original sources are revalidated for publication.</span>
+            </div>
+          </SectionFrame>
+          <SectionFrame
+            description="Three complementary capabilities help keep understanding usable as work changes."
+            eyebrow="Three capabilities"
+            title="Decision Integrity, Organizational Memory and Human–AI Accountability work together."
+          >
+            <div className="wp-e-card-grid">
+              <SignalCard label="Capability" title="Decision Integrity">Keeps intent, rationale, assumptions, evidence, divergence and decision context reconstructable as conditions change.</SignalCard>
+              <SignalCard label="Capability" title="Organizational Memory">Keeps knowledge connected to provenance, context and changing meaning rather than treating storage as understanding.</SignalCard>
+              <SignalCard label="Capability" title="Human–AI Accountability">Keeps authority, ownership, oversight, intervention and escalation explicit as AI participates in execution.</SignalCard>
+            </div>
+          </SectionFrame>
+          <SectionFrame
+            description="The right starting point is often a concern or decision question, not a service selection."
+            eyebrow="Recognizable concerns"
+            title="The signal may appear in production, control, security or knowledge."
+          >
+            <div className="wp-e-card-grid wp-e-card-grid--four">
+              <SignalCard label="Production / scaling" title="Authority">Who can decide, delegate, intervene or escalate as execution scales?</SignalCard>
+              <SignalCard label="Control / evidence" title="Confidence">What evidence supports a consequential decision or control?</SignalCard>
+              <SignalCard label="Security" title="Attackability">Where could an agent, tool, identity or retrieval boundary be manipulated or bypassed?</SignalCard>
+              <SignalCard label="Knowledge / context" title="Reliability">Is the context current, attributable, permissioned and fit for reuse?</SignalCard>
+            </div>
+          </SectionFrame>
+          <SectionFrame
+            description="ShiftBy enters through a bounded concern, system, use case, agent or workflow and helps make the evidence, uncertainty and decision path clearer."
+            eyebrow="From understanding to action"
+            title="Start with the concern. Continue with an evidence-led conversation."
+          >
+            <div className="wp-e-inline-links">
+              <Link href="/where-shiftby-helps">Recognize the situation →</Link>
+              <Link href="/services">See how ShiftBy can engage →</Link>
+              <Link href="/explorations">Explore applied investigations →</Link>
+            </div>
+          </SectionFrame>
+          <CTABlock
+            actions={[
+              { href: "/discuss-a-concern", label: "Discuss a concern", variant: "primary" },
+              { href: "/capabilities", label: "Understand the capabilities", variant: "secondary" }
+            ]}
+            body="Bring a consequential concern, decision, system, use case, agent or workflow. The first conversation does not require you to select a service."
+            eyebrow="A bounded next step"
+            title="Discuss a concern before the context becomes harder to recover."
+          />
         </div>
-      </section>
-
-      <section aria-labelledby="what-changed" className="quiet-band">
-        <div className="section change-editorial">
-          <div>
-            <p className="kicker">WHAT CHANGED?</p>
-            <h2 id="what-changed">Execution no longer happens through people alone.</h2>
-            <p className="change-body">
-              Organizations increasingly execute across people, systems,
-              suppliers, automation, and AI.
-            </p>
-            <p className="change-takeaway">
-              As execution becomes more distributed, drift becomes harder to see
-              and confidence becomes harder to maintain.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section
-        aria-labelledby="why-shiftby-exists"
-        className="section challenge-section challenge-v2"
-      >
-        <span className="kicker">THE CHALLENGE</span>
-        <div className="challenge-v2__grid">
-          <div className="challenge-v2__intro">
-            <h2 id="why-shiftby-exists">
-              The challenge isn&apos;t <span className="keep-together">more information</span>
-            </h2>
-            <p className="challenge-v2__lead">Organizations preserve artifacts.</p>
-            <p className="challenge-v2__support">
-              <strong>Understanding is harder to preserve.</strong>
-            </p>
-            <p className="challenge-v2__support">
-              It connects decisions, evidence, accountability, and outcomes.
-            </p>
-          </div>
-
-          <div className="challenge-v2__proof" aria-label="Evidence signals">
-            <article className="challenge-v2__stat">
-              <b>42%</b>
-              <span>of institutional knowledge is unique to the individual.</span>
-            </article>
-            <article className="challenge-v2__stat">
-              <b>5.3 hours</b>
-              <span>per week are lost waiting for or recreating knowledge.</span>
-            </article>
-            <article className="challenge-v2__stat">
-              <b>45%</b>
-              <span>of product launches are delayed by at least one month.</span>
-            </article>
-            <article className="challenge-v2__stat challenge-v2__stat--compact">
-              <b>EU AI Act</b>
-              <span>requires human oversight for high-risk systems.</span>
-            </article>
-          </div>
-        </div>
-
-        <p className="challenge-v2__message">
-          As execution expands across people, systems, suppliers, automation,
-          and AI, preserving understanding becomes a capability organizations
-          must build.
-        </p>
-        <p className="challenge-v2__sources" aria-label="Challenge section sources">
-          (Sources: Organizational Memory - Panopto 2018, McKinsey Global
-          Institute 2012; Decision Traceability - SEI ATAM 2000, Panopto 2019,
-          traceability mapping study 2021; Human-AI Accountability - EU AI Act
-          Articles 14 and 99, NIST AI RMF 1.0 2023, NIST GenAI Profile 2024,
-          OECD AI Principles, ISO/IEC 42001; Adaptive Execution - PMI 2017,
-          Gartner 2019, Asana Anatomy of Work 2022)
-        </p>
-      </section>
-
-      <section
-        aria-labelledby="what-organizations-need"
-        className="section needs-section"
-      >
-        <span className="kicker">What preserving understanding requires</span>
-        <h2 id="what-organizations-need">Four capabilities preserve understanding.</h2>
-        <p className="needs-intro">
-          As operating environments become more complex, organizations need
-          capabilities that sustain continuity across change.
-        </p>
-        <p className="needs-bridge">
-          These capabilities connect decisions, knowledge, accountability, and
-          execution so understanding survives as work changes.
-        </p>
-        <div className="needs-grid" role="list">
-          <article className="need-item" role="listitem">
-            <h3>Decision Traceability</h3>
-            <p>Decisions remain connected to rationale, evidence, and approval over time.</p>
-          </article>
-          <article className="need-item" role="listitem">
-            <h3>Organizational Memory</h3>
-            <p>Knowledge remains connected to context, evidence, and organizational memory.</p>
-          </article>
-          <article className="need-item" role="listitem">
-            <h3>Human–AI Accountability</h3>
-            <p>Review, approval, and accountability remain visible as AI participates in execution.</p>
-          </article>
-          <article className="need-item" role="listitem">
-            <h3>Adaptive Execution</h3>
-            <p>Execution adapts while preserving context, alignment, and accountability.</p>
-          </article>
-        </div>
-      </section>
-
-      <section
-        aria-labelledby="how-shiftby-helps"
-        className="quiet-band focus-section"
-      >
-        <div className="section">
-          <div className="section-head">
-            <span className="kicker">From principle to practice</span>
-            <h2 id="how-shiftby-helps">Where ShiftBy helps.</h2>
-            <p>
-              These capabilities become valuable when organizations need
-              decisions, knowledge, accountability, and execution to remain
-              connected.
-            </p>
-          </div>
-          <div className="focus-grid" role="list">
-            <article className="focus-area" role="listitem">
-              <h3>Decisions</h3>
-              <p>Keeping rationale, evidence, and decision lineage recoverable across complex environments.</p>
-            </article>
-            <article className="focus-area" role="listitem">
-              <h3>Accountability</h3>
-              <p>Maintaining review, approval, and human-AI accountability as execution changes.</p>
-            </article>
-            <article className="focus-area" role="listitem">
-              <h3>Knowledge</h3>
-              <p>Preserving organizational memory so knowledge remains usable through change.</p>
-            </article>
-            <article className="focus-area" role="listitem">
-              <h3>Execution</h3>
-              <p>Helping organizations evolve without losing context, alignment, or assurance.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section
-        aria-labelledby="different-perspective-title"
-        className="section perspective-pause"
-        id="different-perspective"
-      >
-        <span className="kicker">A DIFFERENT PERSPECTIVE</span>
-        <h2 id="different-perspective-title">
-          Organizations preserve artifacts. Understanding is harder to preserve.
-        </h2>
-        <p className="perspective-primary">
-          Artifacts often remain after the decision, change, or execution path
-          that produced them.
-        </p>
-        <p className="perspective-secondary">
-          What is harder to preserve is the understanding that connects them:
-        </p>
-        <ul aria-label="Understanding signals" className="perspective-list">
-          <li>Why decisions were made.</li>
-          <li>What assumptions existed.</li>
-          <li>What dependencies mattered.</li>
-          <li>What context shaped outcomes.</li>
-        </ul>
-        <p className="perspective-secondary">
-          As organizations evolve, understanding becomes harder to retain and
-          more important to preserve.
-        </p>
-      </section>
-
-      <section
-        aria-labelledby="explorations"
-        className="section exploration-editorial"
-      >
-        <div className="section-head">
-          <b>Current explorations</b>
-          <p>The questions introduced above are not theoretical.</p>
-          <p>
-            ShiftBy explores these questions through a small number of ongoing
-            initiatives focused on how organizations understand, decide, adapt,
-            and execute.
-          </p>
-        </div>
-        <ul aria-label="ShiftBy explorations" className="exploration-list">
-          <li>
-            <h3>UnifyPlane</h3>
-            <p>Exploring how decisions, dependencies, and execution remain connected over time.</p>
-          </li>
-          <li>
-            <h3>CanonLens</h3>
-            <p>Exploring how artifacts are interpreted differently across people, systems, and AI.</p>
-          </li>
-          <li>
-            <h3>Inspiral</h3>
-            <p>Exploring how organizational knowledge develops, adapts, and survives change.</p>
-          </li>
-        </ul>
-        <p className="exploration-support">
-          These explorations help challenge and refine the perspective
-          presented throughout this site.
-        </p>
-        <Link className="inline-link" href="/explorations">
-          Explore the explorations →
-        </Link>
-      </section>
-
-      <section aria-labelledby="cta-title" className="section plain-cta">
-        <span className="kicker">Start the conversation</span>
-        <h2 id="cta-title">Understanding should survive change.</h2>
-        <p>
-          Organizations that preserve understanding are better positioned to
-          adapt, align, and execute as complexity increases.
-        </p>
-        <p>
-          Organizations pursuing AI strategy, AI readiness, or responsible AI
-          initiatives often discover that preserving understanding becomes a
-          critical capability.
-        </p>
-        <p>ShiftBy helps leaders build that capability.</p>
-        <div aria-label="Final calls to action" className="cta-links">
-          <Link className="text-cta primary" href="/contact">
-            Start a conversation →
-          </Link>
-          <Link className="text-cta" href="/services">
-            Explore Services →
-          </Link>
-          <Link className="text-cta" href="/perspective">
-            Explore the perspective →
-          </Link>
-        </div>
-      </section>
-    </div>
+      </div>
+    </PageShell>
   );
 }

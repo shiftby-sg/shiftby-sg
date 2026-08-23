@@ -1,3 +1,8 @@
+import {
+  v2PageAuthorityContract,
+  v2RouteContract
+} from "@/content/v2-contract";
+
 export const fallbackSiteUrl = "https://shiftby.sg";
 
 export const discoverabilityTopics = [
@@ -31,6 +36,24 @@ export type PageMetadataEntry = {
   seoTitle: string;
   title: string;
 };
+
+export type V2PageMetadataContract = {
+  page: string;
+  path: string;
+  routeClass: (typeof v2RouteContract)[number]["routeClass"];
+  authority: "WS4 — V2 Website Content & Proof Readiness";
+  finalWordingStatus: "AUTHORITY-CONTROLLED";
+};
+
+export const v2PageMetadataContract = v2PageAuthorityContract.map((page) => ({
+  page: page.page,
+  path: page.route,
+  routeClass:
+    v2RouteContract.find((route) => route.canonicalPath === page.route)
+      ?.routeClass ?? "PRIMARY",
+  authority: "WS4 — V2 Website Content & Proof Readiness",
+  finalWordingStatus: "AUTHORITY-CONTROLLED"
+})) satisfies readonly V2PageMetadataContract[];
 
 export const corporateEntity = {
   legalName: "ShiftBy Pte. Ltd.",

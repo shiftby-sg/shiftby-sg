@@ -32,3 +32,34 @@ export const designSystemContent = {
     }
   ]
 } as const;
+
+/**
+ * WP-D contract: shared styling establishes rhythm and behavior only.
+ * WS4 page packages remain authoritative for page composition and production copy.
+ */
+export const designSystemContract = {
+  authorityBoundary:
+    "Shared tokens and primitives support later page composition; they do not define page authority.",
+  narrativeGrammar: [
+    "Signal",
+    "Meaning",
+    "Relevance",
+    "Implication",
+    "Bridge"
+  ] as const,
+  surfacePrinciples: [
+    "Typography-led hierarchy",
+    "Generous whitespace",
+    "Continuous narrative sections",
+    "Bounded cards where they clarify meaning",
+    "Mobile-first reading order"
+  ] as const,
+  accessibilityPrinciples: [
+    "Visible keyboard focus",
+    "Tap-safe controls",
+    "Readable content measure",
+    "Reduced-motion support",
+    "Semantic structure"
+  ] as const,
+  placeholderContentStatus: "scaffolding-only"
+} as const;

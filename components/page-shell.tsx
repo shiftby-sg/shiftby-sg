@@ -5,5 +5,9 @@ type PageShellProps = {
 };
 
 export function PageShell({ children }: PageShellProps) {
-  return <div className="page-shell">{children}</div>;
+  return (
+    <div className="page-shell" data-design-system="shared">
+      {children}
+    </div>
+  );
 }
