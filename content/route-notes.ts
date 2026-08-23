@@ -1,21 +1,17 @@
-import {
-  v1RouteDispositions,
-  v2CarriedRemediations,
-  v2PageAuthorityContract,
-  v2RepositorySurfaceContract,
-  v2RouteContract,
-  v2SemanticGuardrails,
-  wpAReadiness
-} from "@/content/v2-contract";
-
 export const routeNotes = {
-  authority: "WS4 — V2 Website Content & Proof Readiness",
-  scope: "8 primary IA roles / 11 implementation pages",
-  routeContract: v2RouteContract,
-  pageAuthorityContract: v2PageAuthorityContract,
-  semanticGuardrails: v2SemanticGuardrails,
-  v1RouteDispositions,
-  repositorySurfaceContract: v2RepositorySurfaceContract,
-  carriedRemediations: v2CarriedRemediations,
-  readiness: wpAReadiness
+  home: "Approved narrative and design content will be applied in later phases.",
+  capabilities:
+    "Capability-specific messaging is intentionally deferred until page materialization.",
+  whereShiftByHelps:
+    "Page structure exists; the approved visual system is not yet materialized.",
+  perspective:
+    "Perspective route preserves the observation and doctrine behind ShiftBy.",
+  explorations:
+    "Explorations remain a placeholder investigation route until later phases.",
+  services:
+    "Services architecture is prepared without final commercial content.",
+  about:
+    "About route exists with semantic structure only.",
+  contact:
+    "Contact remains future site scope with no design-parity requirement at this stage."
 } as const;
