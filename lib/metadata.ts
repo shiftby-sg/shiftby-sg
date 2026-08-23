@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import {
   discoverabilityTopics,
   fallbackSiteUrl,
-  type PageMetadataEntry
+  pageMetadataEntries
 } from "@/content/discoverability";
 import { siteDescription, siteTitle } from "@/lib/site-data";
 
@@ -16,7 +16,7 @@ function getMetadataBase() {
 }
 
 export function getPageMetadata(
-  entry: PageMetadataEntry
+  entry: (typeof pageMetadataEntries)[keyof typeof pageMetadataEntries]
 ): Metadata {
   const pageTitle = entry.seoTitle ?? `${entry.title} | ${siteTitle}`;
 
