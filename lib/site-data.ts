@@ -1,7 +1,12 @@
-export type RouteDefinition = {
+import {
+  v2PrimaryNavigation,
+  v2RouteContract,
+  type V2RouteContract
+} from "@/content/v2-contract";
+
+export type RouteDefinition = V2RouteContract & {
   href: string;
-  label: string;
-  status: "live";
+  status: "contracted";
 };
 
 export const siteTitle = "ShiftBy";
@@ -9,17 +14,26 @@ export const siteTitle = "ShiftBy";
 export const siteDescription =
   "Execution changes. Understanding preserves confidence as organizations work across people, systems, suppliers, automation, and AI.";
 
-export const routeDefinitions: RouteDefinition[] = [
-  { href: "/", label: "Home", status: "live" },
-  { href: "/capabilities", label: "Capabilities", status: "live" },
-  {
-    href: "/where-shiftby-helps",
-    label: "Where ShiftBy Helps",
-    status: "live"
-  },
-  { href: "/perspective", label: "Perspective", status: "live" },
-  { href: "/explorations", label: "Explorations", status: "live" },
-  { href: "/services", label: "Services", status: "live" },
-  { href: "/about", label: "About", status: "live" },
-  { href: "/contact", label: "Contact", status: "live" }
-];
+export const routeDefinitions: RouteDefinition[] = v2PrimaryNavigation.map(
+  (route) => ({ ...route, href: route.canonicalPath, status: "contracted" })
+);
+
+export function getActivePrimaryRoute(pathname: string): string | undefined {
+  const primaryRoute = routeDefinitions.find((route) => route.href === pathname);
+
+  if (primaryRoute) {
+    return primaryRoute.href;
+  }
+
+  const childRoute = v2RouteContract.find(
+    (route) =>
+      route.routeClass === "CHILD-DETAIL" &&
+      "parent" in route &&
+      route.parent &&
+      pathname.startsWith(`${route.parent}/`)
+  );
+
+  return childRoute && "parent" in childRoute
+    ? childRoute.parent
+    : undefined;
+}

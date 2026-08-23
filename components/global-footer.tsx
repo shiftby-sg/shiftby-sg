@@ -20,7 +20,7 @@ export function GlobalFooter() {
               <Link href="/">Home</Link>
               <Link href="/capabilities">Capabilities</Link>
               <Link href="/where-shiftby-helps">Where ShiftBy Helps</Link>
-              <Link href="/perspective">Perspective</Link>
+              <Link href="/insights">Insights</Link>
               <Link href="/explorations">Explorations</Link>
               <Link href="/services">Services</Link>
             </div>
@@ -29,7 +29,7 @@ export function GlobalFooter() {
             <h2 id="footer-shiftby">ShiftBy</h2>
             <div className="site-footer__links">
               <Link href="/about">About</Link>
-              <Link href="/contact">Contact</Link>
+              <Link href="/discuss-a-concern">Discuss a Concern</Link>
               <Link href="/ai-policy">AI Policy</Link>
             </div>
           </section>

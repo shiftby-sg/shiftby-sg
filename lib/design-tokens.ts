@@ -49,3 +49,14 @@ export const designTokens = {
     lg: "1180px"
   }
 } as const;
+
+export type DesignTokens = typeof designTokens;
+
+export const designTokenCategories = [
+  "colors",
+  "type",
+  "spacing",
+  "radius",
+  "shadows",
+  "breakpoints"
+] as const satisfies readonly (keyof DesignTokens)[];

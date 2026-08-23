@@ -5,11 +5,16 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { routeDefinitions, siteTitle } from "@/lib/site-data";
+import {
+  getActivePrimaryRoute,
+  routeDefinitions,
+  siteTitle
+} from "@/lib/site-data";
 
 export function GlobalHeader() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const activePrimaryRoute = getActivePrimaryRoute(pathname);
 
   return (
     <header className="site-header">
@@ -56,7 +61,9 @@ export function GlobalHeader() {
           >
             {routeDefinitions.map((route) => (
               <Link
-                aria-current={pathname === route.href ? "page" : undefined}
+                aria-current={
+                  activePrimaryRoute === route.href ? "page" : undefined
+                }
                 className="site-nav__link"
                 href={route.href}
                 key={route.href}
