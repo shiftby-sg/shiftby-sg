@@ -119,7 +119,7 @@ export default function AiPolicyPage() {
       <section className={styles.ctaBand} aria-labelledby="policy-cta-title">
         <div className={styles.ctaInner}>
           <span className={styles.kicker}>Advisory Dialogue</span>
-          <h2 id="policy-cta-title">Discuss Your Organization's AI Governance Boundaries</h2>
+          <h2 id="policy-cta-title">Discuss Your Organization&apos;s AI Governance Boundaries</h2>
           <p style={{ maxWidth: "700px" }}>
             Whether establishing initial responsible AI policies or engineering runtime
             safeguards for autonomous agents, connect directly with our principal advisory team.

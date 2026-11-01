@@ -65,7 +65,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.proseStack}>
               <p>
-                "Across global enterprise landscapes, technologies changed, operating models
+                &ldquo;Across global enterprise landscapes, technologies changed, operating models
                 restructured, and regulatory pressures intensified. Yet the same core questions
                 consistently recurred:
               </p>
@@ -77,7 +77,7 @@ export default function AboutPage() {
               <p>
                 The consistency of this pattern across decades made it clear: organizations
                 do not suffer from a deficit of documentation. They suffer from systemic
-                context decay."
+                context decay.&rdquo;
               </p>
             </div>
           </aside>

@@ -1,8 +1,7 @@
 import {
   corporateEntity,
   discoverabilityTopics,
-  fallbackSiteUrl,
-  getAbsoluteUrl
+  fallbackSiteUrl
 } from "@/content/discoverability";
 import { siteDescription, siteTitle } from "@/lib/site-data";
 

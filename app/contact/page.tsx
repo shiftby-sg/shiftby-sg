@@ -232,7 +232,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               <span className={styles.contactIndex}>02</span>
               <h3>Email</h3>
               <p>
-                Send a brief overview of your organization's context, ongoing AI initiatives,
+                Send a brief overview of your organization&apos;s context, ongoing AI initiatives,
                 or specific scoping questions.
               </p>
               <p className={styles.contactDetail} style={{ marginTop: "auto" }}>
