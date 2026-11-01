@@ -293,11 +293,19 @@ export default function HomePage() {
               <h3 className={styles.serviceClusterTitle}>Knowledge &amp; Context Architecture</h3>
             </div>
             <p className={styles.breakdownText}>
-              Diagnosing context decay and evaluating enterprise retrieval suitability.
+              Diagnosing context decay and structuring knowledge for lasting operational reuse.
             </p>
             <ul className={styles.serviceClusterItems}>
-              <li>Knowledge &amp; Context Architecture Assessment</li>
-              <li>RAG &amp; Enterprise Retrieval Assessment</li>
+              <li>
+                <Link href="/services#ai-knowledge-context-architecture">
+                  AI Knowledge &amp; Context Architecture
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#rag-retrieval-assessment">
+                  Enterprise Retrieval &amp; Grounding Assessment
+                </Link>
+              </li>
             </ul>
           </article>
 
@@ -306,11 +314,14 @@ export default function HomePage() {
               <h3 className={styles.serviceClusterTitle}>Bounded Workflow Design</h3>
             </div>
             <p className={styles.breakdownText}>
-              Setting explicit reasoning and tool-calling boundaries for AI tasks and multi-agent chains.
+              Setting explicit operational, reasoning, and tool boundaries for AI tasks and workflows.
             </p>
             <ul className={styles.serviceClusterItems}>
-              <li>Bounded AI &amp; Multi-Agent Workflow Design</li>
-              <li>Context Drift &amp; Diagnostic Investigation</li>
+              <li>
+                <Link href="/services#ai-task-agent-workflow-advisory">
+                  AI Task, Agent &amp; Workflow Advisory
+                </Link>
+              </li>
             </ul>
           </article>
 
@@ -319,24 +330,40 @@ export default function HomePage() {
               <h3 className={styles.serviceClusterTitle}>Governance &amp; Oversight Architecture</h3>
             </div>
             <p className={styles.breakdownText}>
-              Designing legitimate authority structures and non-delegable accountability protocols.
+              Establishing legitimate authority structures and defensible reliance evidence.
             </p>
             <ul className={styles.serviceClusterItems}>
-              <li>AI Governance &amp; Human Oversight Architecture</li>
-              <li>Enterprise Understanding Executive Advisory</li>
+              <li>
+                <Link href="/services#ai-governance-human-oversight">
+                  AI Governance &amp; Human Oversight
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#ai-assurance-evidence-review">
+                  AI Assurance &amp; Evidence Review
+                </Link>
+              </li>
             </ul>
           </article>
 
           <article className={styles.serviceClusterCard}>
             <div className={styles.serviceClusterHeader}>
-              <h3 className={styles.serviceClusterTitle}>AI Assurance &amp; Boundary Testing</h3>
+              <h3 className={styles.serviceClusterTitle}>Security &amp; Operational Reliability</h3>
             </div>
             <p className={styles.breakdownText}>
-              Stress-testing system boundaries against drift, prompt manipulation, and policy non-conformance.
+              Stress-testing trust boundaries and measuring behavioral drift across system changes.
             </p>
             <ul className={styles.serviceClusterItems}>
-              <li>AI Assurance &amp; Adversarial Red Teaming</li>
-              <li>Continuous Evaluation &amp; Retesting Protocols</li>
+              <li>
+                <Link href="/services#ai-security-red-teaming">
+                  AI Security Assessment &amp; Red Teaming
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#ai-evaluation-continuous-retesting">
+                  AI Evaluation &amp; Continuous Retesting
+                </Link>
+              </li>
             </ul>
           </article>
         </div>

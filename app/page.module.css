@@ -584,6 +584,17 @@
   font-weight: bold;
 }
 
+.serviceClusterItems a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.serviceClusterItems a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
 /* =========================================================================
    6. CONVERSION BLOCK (WHAT HAPPENS ON FIRST CALL)
    ========================================================================= */
