@@ -396,8 +396,8 @@ export default function HomePage() {
             <span className={styles.stepNumber}>1</span>
             <h3 className={styles.stepTitle}>30-Minute Context Discussion</h3>
             <p className={styles.stepDescription}>
-              Direct conversation with founder Ananda Krishna (AIGP) to examine your current friction,
-              systems at risk, and operating boundaries. No generic slides or junior triage.
+              Direct conversation with founder Ananda Krishna (AIGP) to examine where context is fading,
+              workflows experiencing drift, or boundaries needing definition. No generic slides or junior triage.
             </p>
           </div>
 
@@ -422,7 +422,7 @@ export default function HomePage() {
 
         <div className={styles.conversionCtaWrapper}>
           <p className={styles.conversionCtaText}>
-            Ready to establish boundaries and preserve understanding in your organization?
+            Have a specific workflow, context transition, or AI deployment to evaluate?
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link className={styles.buttonPrimary} href="/contact">
