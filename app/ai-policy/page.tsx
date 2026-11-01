@@ -100,9 +100,9 @@ export default function AiPolicyPage() {
               </Link>
               <Link
                 className={styles.textLink}
-                href="/services#ai-assurance-red-teaming"
+                href="/services#ai-security-red-teaming"
               >
-                AI Assurance &amp; Red Teaming Services &rarr;
+                AI Security Assessment &amp; Red Teaming &rarr;
               </Link>
               <Link
                 className={styles.textLink}

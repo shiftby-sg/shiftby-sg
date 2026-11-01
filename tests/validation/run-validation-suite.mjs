@@ -11,7 +11,7 @@ import lighthouse from "lighthouse";
 const ROOT = process.cwd();
 const RUN_ID = process.env.VALIDATION_RUN_ID || "run_001";
 const BASELINE_MODE = String(process.env.VALIDATION_BASELINE_MODE || "false") === "true";
-let baseUrl = process.env.VALIDATION_BASE_URL || "http://localhost:3000";
+let baseUrl = process.env.VALIDATION_BASE_URL || "http://127.0.0.1:3000";
 
 const validationRoot = path.join(ROOT, "tests", "validation");
 const fixturesRoot = path.join(validationRoot, "fixtures");
@@ -57,10 +57,6 @@ async function ensureDir(dir) {
 async function writeJson(file, value) {
   await ensureDir(path.dirname(file));
   await fs.writeFile(file, `${JSON.stringify(value, null, 2)}\n`);
-}
-
-async function readText(file) {
-  return fs.readFile(path.join(ROOT, file), "utf8");
 }
 
 async function fileSha256(file) {
@@ -135,7 +131,10 @@ async function startLocalApp() {
     }
   }
   baseUrl = `${parsed.protocol}//${parsed.hostname}:${port}`;
-  const args = ["run", "dev", "--", "--hostname", "127.0.0.1", "--port", String(port)];
+  const useProd = String(process.env.VALIDATION_USE_PROD || "false") === "true";
+  const args = useProd
+    ? ["run", "start", "--", "--hostname", "127.0.0.1", "--port", String(port)]
+    : ["run", "dev", "--", "--hostname", "127.0.0.1", "--port", String(port)];
   const child = spawn("npm", args, { cwd: ROOT, env: process.env, stdio: ["ignore", "pipe", "pipe"] });
   const logFile = path.join(runRoot, "logs", "next-dev-server.log");
   let serverLog = "";
@@ -173,7 +172,6 @@ async function stopLocalApp(server) {
 async function createCssFixtures() {
   const cssDir = path.join(fixturesRoot, "css-baseline");
   await ensureDir(cssDir);
-  const globals = await readText("app/globals.css");
   const fixtures = [];
   for (const route of routes.filter((item) => item.css)) {
     const cssPath = path.join(ROOT, route.css);
@@ -224,7 +222,6 @@ async function createCssFixtures() {
 }
 
 async function validateStaticStructure(cssFixtures) {
-  const globals = await readText("app/globals.css");
   const routeResults = routes.map((route) => ({
     page: route.page,
     route: route.route,
@@ -250,8 +247,17 @@ async function validateStaticStructure(cssFixtures) {
   };
 }
 
+function getChromeExecutablePath() {
+  const defaultChrome = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+  if (existsSync(defaultChrome)) return defaultChrome;
+  return undefined;
+}
+
 async function runPlaywrightValidation() {
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    executablePath: getChromeExecutablePath()
+  });
   const requestLogs = [];
   const consoleLogs = [];
   const routeResults = [];
@@ -445,6 +451,7 @@ async function runLighthouseValidation() {
     const debuggingPort = await findFreePort(49300);
     browser = await chromium.launch({
       headless: true,
+      executablePath: getChromeExecutablePath(),
       args: [`--remote-debugging-port=${debuggingPort}`]
     });
     commandLog.push({

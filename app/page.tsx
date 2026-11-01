@@ -303,7 +303,7 @@ export default function HomePage() {
               </li>
               <li>
                 <Link href="/services#rag-retrieval-assessment">
-                  Enterprise Retrieval &amp; Grounding Assessment
+                  RAG &amp; Enterprise Retrieval Assessment
                 </Link>
               </li>
             </ul>
@@ -335,7 +335,7 @@ export default function HomePage() {
             <ul className={styles.serviceClusterItems}>
               <li>
                 <Link href="/services#ai-governance-human-oversight">
-                  AI Governance &amp; Human Oversight
+                  AI Governance &amp; Human-Oversight Architecture
                 </Link>
               </li>
               <li>
@@ -360,8 +360,8 @@ export default function HomePage() {
                 </Link>
               </li>
               <li>
-                <Link href="/services#ai-evaluation-continuous-retesting">
-                  AI Evaluation &amp; Continuous Retesting
+                <Link href="/services#ai-evaluation-reliability">
+                  AI Evaluation &amp; Reliability Testing
                 </Link>
               </li>
             </ul>

@@ -6,13 +6,13 @@ import styles from "./page.module.css";
 export const metadata = getPageMetadata(pageMetadataEntries.contact);
 
 const SERVICE_TITLES: Record<string, string> = {
-  "organizational-knowledge-context-architecture": "Knowledge & Context Architecture Assessment",
-  "context-drift-investigation": "Context Drift & Diagnostic Investigation",
-  "bounded-ai-workflow-design": "Bounded AI & Multi-Agent Workflow Design",
+  "ai-knowledge-context-architecture": "AI Knowledge & Context Architecture",
   "rag-retrieval-assessment": "RAG & Enterprise Retrieval Assessment",
-  "ai-governance-human-oversight": "AI Governance & Human Oversight Architecture",
-  "ai-assurance-red-teaming": "AI Assurance & Red Teaming",
-  "enterprise-understanding-advisory": "Enterprise Understanding Executive Advisory"
+  "ai-task-agent-workflow-advisory": "AI Task, Agent & Workflow Advisory",
+  "ai-governance-human-oversight": "AI Governance & Human-Oversight Architecture",
+  "ai-assurance-evidence-review": "AI Assurance & Evidence Review",
+  "ai-security-red-teaming": "AI Security Assessment & Red Teaming",
+  "ai-evaluation-reliability": "AI Evaluation & Reliability Testing"
 };
 
 const CAPABILITY_TITLES: Record<string, string> = {
@@ -22,13 +22,13 @@ const CAPABILITY_TITLES: Record<string, string> = {
 };
 
 const conversationTopics = [
-  { name: "Knowledge & Context Architecture", serviceSlug: "organizational-knowledge-context-architecture" },
+  { name: "AI Knowledge & Context Architecture", serviceSlug: "ai-knowledge-context-architecture" },
   { name: "RAG & Enterprise Retrieval Assessment", serviceSlug: "rag-retrieval-assessment" },
-  { name: "Bounded AI & Multi-Agent Workflows", serviceSlug: "bounded-ai-workflow-design" },
-  { name: "AI Governance & Human Oversight", serviceSlug: "ai-governance-human-oversight" },
-  { name: "AI Assurance & Red Teaming", serviceSlug: "ai-assurance-red-teaming" },
-  { name: "Context Drift & Diagnostic Investigation", serviceSlug: "context-drift-investigation" },
-  { name: "Enterprise Understanding Advisory", serviceSlug: "enterprise-understanding-advisory" },
+  { name: "AI Task, Agent & Workflow Advisory", serviceSlug: "ai-task-agent-workflow-advisory" },
+  { name: "AI Governance & Human-Oversight Architecture", serviceSlug: "ai-governance-human-oversight" },
+  { name: "AI Assurance & Evidence Review", serviceSlug: "ai-assurance-evidence-review" },
+  { name: "AI Security Assessment & Red Teaming", serviceSlug: "ai-security-red-teaming" },
+  { name: "AI Evaluation & Reliability Testing", serviceSlug: "ai-evaluation-reliability" },
   { name: "Other Strategic & Operational Challenges", serviceSlug: null }
 ];
 
@@ -175,9 +175,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   (!serviceSlug &&
                     capabilitySlug &&
                     ((capabilitySlug === "organizational-memory" &&
-                      topic.serviceSlug === "organizational-knowledge-context-architecture") ||
+                      topic.serviceSlug === "ai-knowledge-context-architecture") ||
                       (capabilitySlug === "bounded-ai" &&
-                        topic.serviceSlug === "bounded-ai-workflow-design") ||
+                        topic.serviceSlug === "ai-task-agent-workflow-advisory") ||
                       (capabilitySlug === "human-ai-accountability" &&
                         topic.serviceSlug === "ai-governance-human-oversight")));
 

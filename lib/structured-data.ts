@@ -69,24 +69,9 @@ export function getStructuredData() {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Organizational Knowledge & Context Architecture Assessment",
-                description: "Evaluates enterprise knowledge graphs, documentation systems, and context pipelines to establish structured organizational memory."
-              }
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Context Drift & Diagnostic Investigation",
-                description: "Diagnostic forensic investigation into where and why institutional rationale degrades across cross-system handoffs."
-              }
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Bounded AI & Multi-Agent Workflow Design",
-                description: "Architectural definition and enforcement of operational boundaries for autonomous agents, reasoning scopes, and tool access."
+                name: "AI Knowledge & Context Architecture",
+                url: `${siteUrl}/services#ai-knowledge-context-architecture`,
+                description: "Evaluates semantic models, knowledge graphs, and enterprise context integration to build enduring organizational memory."
               }
             },
             {
@@ -94,31 +79,53 @@ export function getStructuredData() {
               itemOffered: {
                 "@type": "Service",
                 name: "RAG & Enterprise Retrieval Assessment",
-                description: "Evaluates enterprise retrieval pipelines, vector stores, and citation grounding to eliminate synthetic hallucination."
+                url: `${siteUrl}/services#rag-retrieval-assessment`,
+                description: "Assesses source suitability, retrieval quality, attribution, and citation grounding to eliminate hallucination."
               }
             },
             {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "AI Governance & Human Oversight Architecture",
-                description: "Designs legitimate authority structures, operational escalation boundaries, and non-delegable accountability protocols."
+                name: "AI Task, Agent & Workflow Advisory",
+                url: `${siteUrl}/services#ai-task-agent-workflow-advisory`,
+                description: "Defines and enforces explicit operational boundaries on inputs, reasoning responsibilities, tool calls, and costs."
               }
             },
             {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "AI Assurance & Red Teaming",
-                description: "Adversarial stress-testing, boundary-violation simulation, and policy conformance evaluations for enterprise AI systems."
+                name: "AI Governance & Human-Oversight Architecture",
+                url: `${siteUrl}/services#ai-governance-human-oversight`,
+                description: "Designs legitimate authority structures, operational escalation boundaries, and non-delegable human accountability."
               }
             },
             {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Enterprise Understanding Executive Advisory",
-                description: "Retained strategic advisory for leadership teams navigating AI transformations and distributed execution."
+                name: "AI Assurance & Evidence Review",
+                url: `${siteUrl}/services#ai-assurance-evidence-review`,
+                description: "Audits reliance evidence, decision provenance, and compliance documentation for AI systems."
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "AI Security Assessment & Red Teaming",
+                url: `${siteUrl}/services#ai-security-red-teaming`,
+                description: "Adversarial stress-testing, boundary-violation simulation, and security evaluations across LLMs and tool execution."
+              }
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "AI Evaluation & Reliability Testing",
+                url: `${siteUrl}/services#ai-evaluation-reliability`,
+                description: "Measures behavioral drift, empirical task quality, and verifies remediation of identified issues."
               }
             }
           ]
