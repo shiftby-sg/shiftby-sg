@@ -1,0 +1,18 @@
+{
+  "page": "Resources",
+  "route": "/resources",
+  "css_file": "app/resources/resources.module.css",
+  "sha256": "80a05a8c28b4c557e28c56f95f93927cd5cdfb9e4bd3f1724b6ef1d5a7b26810",
+  "byte_size": 5234,
+  "line_count": 259,
+  "selector_count_estimate": 32,
+  "import_required": true,
+  "imported_in_globals": true,
+  "baseline_mode": true,
+  "baseline_fixture_path": "tests/validation/fixtures/css-baseline/resources.json",
+  "baseline_fixture_exists": true,
+  "baseline_sha256": "80a05a8c28b4c557e28c56f95f93927cd5cdfb9e4bd3f1724b6ef1d5a7b26810",
+  "matches_baseline": true,
+  "generated_from_current_release_candidate": true,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+}

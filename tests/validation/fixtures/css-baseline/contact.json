@@ -1,0 +1,18 @@
+{
+  "page": "Contact",
+  "route": "/contact",
+  "css_file": "app/contact/page.module.css",
+  "sha256": "5e99047c66b286576a5edb1037888ced0dd1e22913f02d81a8da410675876e1c",
+  "byte_size": 8876,
+  "line_count": 424,
+  "selector_count_estimate": 62,
+  "import_required": true,
+  "imported_in_globals": true,
+  "baseline_mode": true,
+  "baseline_fixture_path": "tests/validation/fixtures/css-baseline/contact.json",
+  "baseline_fixture_exists": true,
+  "baseline_sha256": "5e99047c66b286576a5edb1037888ced0dd1e22913f02d81a8da410675876e1c",
+  "matches_baseline": true,
+  "generated_from_current_release_candidate": true,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+}

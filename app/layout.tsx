@@ -8,7 +8,6 @@ import { rootMetadata } from "@/lib/metadata";
 import { getStructuredData } from "@/lib/structured-data";
 
 import "./globals.css";
-import "../styles/page-materialization.css";
 
 export const metadata: Metadata = rootMetadata;
 

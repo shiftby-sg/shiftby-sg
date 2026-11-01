@@ -20,15 +20,15 @@ This master plan governs the full transition of the ShiftBy.sg website from the 
 
 ## 2. Workpacket Registry
 
-| Workpacket ID | Title | Scope | Dependencies | Est. Impact |
+| Workpacket ID | Title | Scope | Dependencies | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| [**WP01**](./WP01-foundation-tokens-assets.md) | **Core Architecture, Design Tokens & Asset Optimization** | Logo replacement (vector SVG/WebP), design tokens, modular CSS setup, layout shell | None | P0 / Foundation |
-| [**WP02**](./WP02-homepage-and-doctrine.md) | **Homepage Doctrine & Enterprise Understanding** | Homepage rewrite, 3 capabilities preview, persona buying cues, services preview, doctrine mark | WP01 | P1 / Core Experience |
-| [**WP03**](./WP03-three-capabilities-system.md) | **Three Capabilities Hub & Dedicated Routes** | `/capabilities` hub + 3 dedicated sub-pages, capability switcher strip, legacy route redirect | WP01 | P1 / Architecture |
-| [**WP04**](./WP04-revamped-service-catalog.md) | **Revamped Service Catalog & Engagement Model** | Rebuild `/services` with 7 offerings, typical outputs, engagement process, and `?service=` intent passing | WP01, WP03 | P1 / Conversion |
-| [**WP05**](./WP05-resources-and-insights-engine.md) | **Resources & Insights Content Engine** | `/resources` hub, `/resources/[slug]` dynamic route, React 19-safe parser, reframe explorations | WP01 | P2 / Authority |
-| [**WP06**](./WP06-supporting-routes-and-contact-funnel.md) | **Supporting Routes & Contact Funnel Optimization** | `/about`, `/contact` (with intent listener & timeline), `/perspective`, `/ai-policy`, external link security | WP01, WP04 | P2 / Trust & Funnel |
-| [**WP07**](./WP07-seo-metadata-and-cleanup.md) | **SEO Harmonization, CSS Decommissioning & Verification** | Metadata unification, Schema.org normalization, legacy CSS pruning, validation suite manifest update | All WPs | P2 / Quality Gate |
+| [**WP01**](./WP01-foundation-tokens-assets.md) | **Core Architecture, Design Tokens & Asset Optimization** | Logo replacement (vector SVG), design tokens, modular CSS setup, layout shell | None | **Completed** (`d7bc7fe`) |
+| [**WP02**](./WP02-homepage-and-doctrine.md) | **Homepage Doctrine & Enterprise Understanding** | Homepage rewrite, 3 capabilities preview, persona buying cues, services preview, doctrine mark | WP01 | **Completed** (`a0f3f4f`) |
+| [**WP03**](./WP03-three-capabilities-system.md) | **Three Capabilities Hub & Dedicated Routes** | `/capabilities` hub + 3 dedicated sub-pages, capability switcher strip, legacy route redirect | WP01 | **Completed** (`31dfb58`) |
+| [**WP04**](./WP04-revamped-service-catalog.md) | **Revamped Service Catalog & Engagement Model** | Rebuild `/services` with 7 offerings, typical outputs, engagement process, and `?service=` intent passing | WP01, WP03 | **Completed** (`4a5dba1`) |
+| [**WP05**](./WP05-resources-and-insights-engine.md) | **Resources & Insights Content Engine** | `/resources` hub, `/resources/[slug]` dynamic route, React 19-safe parser, reframe explorations | WP01 | **Completed** (`e235a93`) |
+| [**WP06**](./WP06-supporting-routes-and-contact-funnel.md) | **Supporting Routes & Contact Funnel Optimization** | `/about`, `/contact` (with intent listener & timeline), `/perspective`, `/ai-policy`, external link security | WP01, WP04 | **Completed** (`32510c4`) |
+| [**WP07**](./WP07-seo-metadata-and-cleanup.md) | **SEO Harmonization, CSS Decommissioning & Verification** | Metadata unification, Schema.org normalization, legacy CSS pruning, validation suite manifest update | All WPs | **Completed** |
 
 ---
 

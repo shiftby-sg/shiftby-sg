@@ -1,0 +1,18 @@
+{
+  "page": "AI Policy",
+  "route": "/ai-policy",
+  "css_file": "app/ai-policy/ai-policy.module.css",
+  "sha256": "cdaa296a7749b3ab9db1043e8d2e3da16907b8f76fc261f253018673c624568e",
+  "byte_size": 3906,
+  "line_count": 208,
+  "selector_count_estimate": 29,
+  "import_required": true,
+  "imported_in_globals": true,
+  "baseline_mode": true,
+  "baseline_fixture_path": "tests/validation/fixtures/css-baseline/ai-policy.json",
+  "baseline_fixture_exists": true,
+  "baseline_sha256": "cdaa296a7749b3ab9db1043e8d2e3da16907b8f76fc261f253018673c624568e",
+  "matches_baseline": true,
+  "generated_from_current_release_candidate": true,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+}

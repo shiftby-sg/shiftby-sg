@@ -1,14 +1,22 @@
 {
   "imports": [
-    "styles/homepage.css",
-    "styles/capabilities.css",
-    "styles/where-shiftby-helps.css",
-    "styles/perspective.css",
-    "styles/explorations.css",
-    "styles/services.css",
-    "styles/about.css"
+    "app/page.module.css",
+    "app/capabilities/capabilities.module.css",
+    "components/capabilities/capability.module.css",
+    "components/capabilities/capability.module.css",
+    "components/capabilities/capability.module.css",
+    "app/services/services.module.css",
+    "app/resources/resources.module.css",
+    "app/about/about.module.css",
+    "app/perspective/perspective.module.css",
+    "app/contact/page.module.css",
+    "app/ai-policy/ai-policy.module.css"
   ],
   "globals_file": "app/globals.css",
   "all_required_imports_present": true,
+  "baseline_mode": true,
+  "baseline_fixture_path": "tests/validation/fixtures/css-baseline/import-order.json",
+  "baseline_fixture_exists": true,
+  "matches_baseline": true,
   "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
 }

@@ -1,13 +1,18 @@
 {
   "page": "Home",
   "route": "/",
-  "css_file": "styles/homepage.css",
-  "sha256": "dfb0a145965a69b8ce745f1e96dd5d49b0fb50987343385f635e0d0687688a88",
-  "byte_size": 20270,
-  "line_count": 810,
-  "selector_count_estimate": 142,
+  "css_file": "app/page.module.css",
+  "sha256": "d7bd2e43bb62795e9ad27783f8ad9bcc0c78055979e455a513cf141da3a412d4",
+  "byte_size": 11148,
+  "line_count": 520,
+  "selector_count_estimate": 67,
   "import_required": true,
   "imported_in_globals": true,
+  "baseline_mode": true,
+  "baseline_fixture_path": "tests/validation/fixtures/css-baseline/home.json",
+  "baseline_fixture_exists": true,
+  "baseline_sha256": "d7bd2e43bb62795e9ad27783f8ad9bcc0c78055979e455a513cf141da3a412d4",
+  "matches_baseline": true,
   "generated_from_current_release_candidate": true,
   "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
 }

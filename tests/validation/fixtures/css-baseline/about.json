@@ -1,13 +1,18 @@
 {
   "page": "About",
   "route": "/about",
-  "css_file": "styles/about.css",
-  "sha256": "604d9f62949709e65b244f6ee44bb110b17158dadb1a952e4bbc5690f2332403",
-  "byte_size": 26845,
-  "line_count": 943,
-  "selector_count_estimate": 172,
+  "css_file": "app/about/about.module.css",
+  "sha256": "f3785b7459caf217979cd99f6b1f66815b96fe08e8ec82b48befe0448c757ac3",
+  "byte_size": 6287,
+  "line_count": 311,
+  "selector_count_estimate": 40,
   "import_required": true,
   "imported_in_globals": true,
+  "baseline_mode": true,
+  "baseline_fixture_path": "tests/validation/fixtures/css-baseline/about.json",
+  "baseline_fixture_exists": true,
+  "baseline_sha256": "f3785b7459caf217979cd99f6b1f66815b96fe08e8ec82b48befe0448c757ac3",
+  "matches_baseline": true,
   "generated_from_current_release_candidate": true,
   "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
 }

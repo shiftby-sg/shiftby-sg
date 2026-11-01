@@ -1,11 +1,3 @@
-@import "../styles/homepage.css";
-@import "../styles/capabilities.css";
-@import "../styles/where-shiftby-helps.css";
-@import "../styles/perspective.css";
-@import "../styles/explorations.css";
-@import "../styles/services.css";
-@import "../styles/about.css";
-
 @layer app-globals {
 :root {
   color-scheme: light;

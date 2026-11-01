@@ -1,0 +1,18 @@
+{
+  "page": "Organizational Memory",
+  "route": "/capabilities/organizational-memory",
+  "css_file": "components/capabilities/capability.module.css",
+  "sha256": "4a4816c2e403d9dd06e808e3b638b369937ff3382d64b3352626d827c9c302c8",
+  "byte_size": 8652,
+  "line_count": 393,
+  "selector_count_estimate": 49,
+  "import_required": true,
+  "imported_in_globals": true,
+  "baseline_mode": true,
+  "baseline_fixture_path": "tests/validation/fixtures/css-baseline/organizational-memory.json",
+  "baseline_fixture_exists": true,
+  "baseline_sha256": "4a4816c2e403d9dd06e808e3b638b369937ff3382d64b3352626d827c9c302c8",
+  "matches_baseline": true,
+  "generated_from_current_release_candidate": true,
+  "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
+}

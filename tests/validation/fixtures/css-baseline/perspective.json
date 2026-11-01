@@ -1,13 +1,18 @@
 {
   "page": "Perspective",
   "route": "/perspective",
-  "css_file": "styles/perspective.css",
-  "sha256": "2e5bff8613b2f37f131e4ecb0a5032dbd844e8000d357079bdf7a065bd212ad6",
-  "byte_size": 35746,
-  "line_count": 1283,
-  "selector_count_estimate": 225,
+  "css_file": "app/perspective/perspective.module.css",
+  "sha256": "08d81ec06e18c051f68623086ed1c7188230cddda4bc0fdebc1ca77ca747e230",
+  "byte_size": 5666,
+  "line_count": 304,
+  "selector_count_estimate": 42,
   "import_required": true,
   "imported_in_globals": true,
+  "baseline_mode": true,
+  "baseline_fixture_path": "tests/validation/fixtures/css-baseline/perspective.json",
+  "baseline_fixture_exists": true,
+  "baseline_sha256": "08d81ec06e18c051f68623086ed1c7188230cddda4bc0fdebc1ca77ca747e230",
+  "matches_baseline": true,
   "generated_from_current_release_candidate": true,
   "fixture_update_policy": "Only update in a governed future validation-baseline refresh phase."
 }

@@ -53,11 +53,11 @@ Finalize the v2 migration by wiring all routes to centralized metadata, normaliz
   4. Lighthouse / validation suite check across mobile and desktop viewports.
 
 ## 4. Deliverables
-* [ ] Fully unified `content/discoverability.ts` and `lib/structured-data.ts`
-* [ ] All routes using `getPageMetadata`
-* [ ] Legacy CSS and dead scaffold components purged
-* [ ] Updated `tests/validation/run-validation-suite.mjs` matching v2 routes
-* [ ] Updated validation suite reporting passing scores across all pages
+* [x] Fully unified `content/discoverability.ts` and `lib/structured-data.ts`
+* [x] All routes using `getPageMetadata`
+* [x] Legacy CSS and dead scaffold components purged
+* [x] Updated `tests/validation/run-validation-suite.mjs` matching v2 routes
+* [x] Updated validation fixtures matching v2 routes and CSS Modules
 
 ## 5. Verification & Acceptance Criteria
 * 100% route coverage with valid HTML, sitemap XML, and robots.txt.
