@@ -1,95 +1,135 @@
-import type { Metadata } from "next";
+import Link from "next/link";
+import { pageMetadataEntries } from "@/content/discoverability";
+import { getPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "AI Policy | ShiftBy"
-  },
-  description:
-    "How ShiftBy uses artificial intelligence to support research, drafting, analysis, exploration, and understanding while preserving human responsibility.",
-  alternates: {
-    canonical: "/ai-policy"
-  }
-};
+import styles from "./ai-policy.module.css";
+
+export const metadata = getPageMetadata(pageMetadataEntries.aiPolicy);
 
 const policySections = [
   {
-    title: "Purpose",
+    title: "1. Purpose & Governance Doctrine",
     paragraphs: [
-      "ShiftBy explores how organizations preserve understanding as decisions, knowledge, accountability, and execution evolve.",
-      "Artificial Intelligence may assist in research, analysis, drafting, exploration, and content development.",
-      "AI is used to support understanding, not replace human judgment."
+      "ShiftBy investigates and advises on how organizations preserve understanding, reduce drift, and maintain legitimate accountability across distributed human and AI execution.",
+      "Artificial intelligence systems and autonomous workflows are utilized to support research, drafting, synthesis, and exploratory analysis. AI is deployed strictly to assist human reasoning—never to substitute for professional judgment or organizational decision-making."
     ]
   },
   {
-    title: "Human Responsibility",
+    title: "2. Non-Delegable Human Accountability",
     paragraphs: [
-      "All conclusions, recommendations, published content, and advisory outcomes remain subject to human review.",
-      "Humans remain accountable for decisions and actions.",
-      "AI assistance does not transfer responsibility."
+      "Legitimate authority and ultimate answerability remain non-transferably human. An algorithm, model, or autonomous agent cannot be held legally or operationally accountable for organizational outcomes.",
+      "All findings, strategic recommendations, client deliverables, and published research are rigorously reviewed, validated, and signed off by qualified human principals."
     ]
   },
   {
-    title: "Accuracy and Verification",
+    title: "3. Bounded Discretion & Operational Constraints",
     paragraphs: [
-      "AI-generated content may be incomplete, inaccurate, or outdated.",
-      "Important decisions should not rely solely on AI-generated outputs.",
-      "Information should be reviewed, validated, and assessed within its intended context."
+      "ShiftBy adheres strictly to the principle of Bounded AI: autonomous agents and model pipelines must operate within defined, enforceable constraints.",
+      "We enforce explicit input boundaries, constrained tool invocation permissions, verified context retrieval, and strict token/compute quotas to prevent reasoning drift and unpredictable agentic behaviors."
     ]
   },
   {
-    title: "Confidentiality",
+    title: "4. Grounding, Verification & Hallucination Defense",
     paragraphs: [
-      "ShiftBy does not intentionally use confidential client information in public AI systems without appropriate authorization.",
-      "Sensitive information should be handled according to applicable agreements and obligations."
+      "We reject the assumption that retrieval-augmented generation (RAG) citation presence guarantees factual truth. Synthetic outputs can exhibit citation hallucination and semantic drift.",
+      "All AI-assisted outputs undergo systematic verification against underlying source evidence, operational constraints, and domain logic prior to reliance."
     ]
   },
   {
-    title: "Transparency",
+    title: "5. Data Confidentiality & Client Privacy",
     paragraphs: [
-      "Where appropriate, ShiftBy may use AI tools to support research, drafting, analysis, and exploration activities.",
-      "The focus remains on the quality of understanding, reasoning, and human oversight."
+      "ShiftBy strictly prohibits the submission of client confidential data, proprietary source code, or non-public operational records into public, multi-tenant AI training pipelines.",
+      "Any AI tooling utilized in client advisory engagements operates under zero-data-retention agreements, enterprise-isolated tenant boundaries, or local compute environments."
     ]
   },
   {
-    title: "Continuous Learning",
+    title: "6. Auditability, Traceability & Continuous Evaluation",
     paragraphs: [
-      "AI technologies evolve rapidly.",
-      "ShiftBy continuously evaluates how AI can support better understanding, accountability, and organizational learning while maintaining appropriate human governance."
+      "Where automated steps or multi-agent workflows assist analytical work, the execution pathway, prompt templates, model versions, and intermediate outputs are logged and inspectable.",
+      "As AI capabilities and regulatory frameworks (such as ISO/IEC 42001, NIST AI RMF, and the EU AI Act) evolve, ShiftBy continuously stress-tests and refines our internal governance and red-teaming methodologies."
     ]
   }
 ];
 
 export default function AiPolicyPage() {
   return (
-    <div className="ai-policy-design-port">
-      <section aria-labelledby="ai-policy-title" className="section ai-policy-hero">
-        <div>
-          <span className="kicker">AI Policy</span>
-          <h1 id="ai-policy-title">AI is used to support understanding.</h1>
-          <p className="lead">
-            ShiftBy uses AI assistance carefully, with human review,
-            accountability, and context remaining central to the work.
+    <div className={styles.page}>
+      {/* 1. Policy Hero */}
+      <section className={styles.section} aria-labelledby="ai-policy-title">
+        <div className={styles.proseStack}>
+          <span className={styles.kicker}>Governance &amp; Accountability</span>
+          <h1 id="ai-policy-title">AI is deployed to support understanding, not replace judgment.</h1>
+          <p className={styles.lead}>
+            ShiftBy applies the same rigorous governance standards to our internal operations
+            that we design for our enterprise clients: explicit boundaries, verified retrieval,
+            and non-delegable human answerability.
           </p>
         </div>
       </section>
 
-      <section aria-label="AI Policy details" className="quiet-band">
-        <div className="section ai-policy-sections">
-          {policySections.map((section) => (
-            <article className="ai-policy-section" key={section.title}>
-              <h2>{section.title}</h2>
-              <div>
-                {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-            </article>
-          ))}
+      {/* 2. Structured Policy Sections */}
+      <section className={styles.quietBand} aria-label="ShiftBy AI Policy Principles">
+        <div className={styles.section}>
+          <div className={styles.policyGrid}>
+            {policySections.map((section) => (
+              <article className={styles.policyCard} key={section.title}>
+                <h2>{section.title}</h2>
+                <div className={styles.policyParagraphs}>
+                  {section.paragraphs.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Cross-link to related services and capabilities */}
+          <div className={styles.crossLinkBox}>
+            <span className={styles.kicker}>Enterprise Application</span>
+            <h3>Explore Our AI Governance &amp; Assurance Services</h3>
+            <p>
+              Looking to establish verifiable human oversight, design bounded multi-agent
+              workflows, or conduct rigorous red-teaming across your enterprise AI initiatives?
+            </p>
+            <div className={styles.crossLinkActions}>
+              <Link
+                className={styles.textLink}
+                href="/services#ai-governance-human-oversight"
+              >
+                AI Governance &amp; Human Oversight Architecture &rarr;
+              </Link>
+              <Link
+                className={styles.textLink}
+                href="/services#ai-assurance-red-teaming"
+              >
+                AI Assurance &amp; Red Teaming Services &rarr;
+              </Link>
+              <Link
+                className={styles.textLink}
+                href="/capabilities/human-ai-accountability"
+              >
+                Human–AI Accountability Capability &rarr;
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section aria-labelledby="ai-policy-close" className="section ai-policy-close">
-        <p id="ai-policy-close">Understanding should survive change.</p>
+      {/* 3. Conversion CTA */}
+      <section className={styles.ctaBand} aria-labelledby="policy-cta-title">
+        <div className={styles.ctaInner}>
+          <span className={styles.kicker}>Advisory Dialogue</span>
+          <h2 id="policy-cta-title">Discuss Your Organization's AI Governance Boundaries</h2>
+          <p style={{ maxWidth: "700px" }}>
+            Whether establishing initial responsible AI policies or engineering runtime
+            safeguards for autonomous agents, connect directly with our principal advisory team.
+          </p>
+          <div className={styles.ctaActions}>
+            <Link className={styles.primaryButton} href="/contact">
+              Schedule an Advisory Scoping Call &rarr;
+            </Link>
+          </div>
+        </div>
       </section>
     </div>
   );

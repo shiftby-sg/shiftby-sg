@@ -1,287 +1,204 @@
 import Link from "next/link";
-import type { Metadata } from "next";
+import { pageMetadataEntries } from "@/content/discoverability";
+import { getPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Perspective | ShiftBy"
-  },
-  description:
-    "The ShiftBy perspective on why preserving context matters as execution changes across people, systems, suppliers, automation, and AI.",
-  alternates: {
-    canonical: "/perspective"
-  }
-};
+import styles from "./perspective.module.css";
+
+export const metadata = getPageMetadata(pageMetadataEntries.perspective);
 
 export default function PerspectivePage() {
   return (
-    <div className="perspective-design-port">
-      <section aria-labelledby="hero-title" className="section hero">
-        <div>
-          <span className="kicker">Perspective</span>
-          <h1 id="hero-title">
-            The perspective came from observing the same pattern in different
-            places.
+    <div className={styles.page}>
+      {/* 1. Perspective Hero */}
+      <section className={styles.section} aria-labelledby="perspective-hero-title">
+        <div className={styles.proseStack}>
+          <span className={styles.kicker}>Strategic Perspective</span>
+          <h1 id="perspective-hero-title">
+            The perspective came from observing the same pattern in different places.
           </h1>
-        </div>
-        <div className="hero-copy">
-          <div className="hero-lines">
-            <p className="lead">Not from one technology.</p>
-            <p className="lead">Not from one industry.</p>
-            <p className="lead">Not from one transformation.</p>
-          </div>
-          <p className="hero-note">
-            Again and again, the surface changed. The underlying question
-            remained familiar.
+          <p className={styles.lead}>
+            Not from one technology stack. Not from one industry. Not from one transformation.
+          </p>
+          <p>
+            Across enterprise architecture, cybersecurity investigations, and complex AI
+            deployments, the operational surface changed constantly. The underlying structural
+            question remained strikingly familiar.
           </p>
         </div>
       </section>
 
-      <section aria-labelledby="pattern-title" className="quiet-band">
-        <div className="section split">
-          <div>
-            <span className="kicker">Observation</span>
-            <h2 id="pattern-title">
-              The same questions
-              <br />
-              kept returning.
-            </h2>
-          </div>
-          <ul
-            aria-label="Different environments where the pattern appeared"
-            className="pattern-list"
-          >
-            <li>
-              <b>A cybersecurity investigation.</b>
-              <span>What evidence shaped the response?</span>
-            </li>
-            <li>
-              <b>A technology transformation.</b>
-              <span>Which assumptions moved with the systems?</span>
-            </li>
-            <li>
-              <b>An AI initiative.</b>
-              <span>Who remained accountable for the outcome?</span>
-            </li>
-            <li className="pattern-synthesis">
-              <span>
-                The environments changed.
-                <br />
-                The questions remained familiar.
-              </span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section aria-labelledby="similar-title" className="section">
-        <div className="split">
-          <div>
-            <span className="kicker">Pattern</span>
-            <h2 id="similar-title">Different environments. Similar questions.</h2>
-          </div>
-          <div className="pattern-observation">
+      {/* 2. The Recurring Pattern Across Environments */}
+      <section className={styles.quietBand} aria-labelledby="pattern-title">
+        <div className={styles.section}>
+          <div className={styles.proseStack}>
+            <span className={styles.kicker}>The Three Questions</span>
+            <h2 id="pattern-title">Different environments. Similar questions.</h2>
             <p>
-              The artifacts remained.
-              <br />
-              The explanation was harder to recover.
-            </p>
-            <p>
-              Organizations preserve artifacts.
-              <br />
-              Understanding is harder to preserve.
+              Whenever operational complexity outpaced shared understanding, the same
+              critical questions reappeared:
             </p>
           </div>
-        </div>
-      </section>
 
-      <section aria-labelledby="harder-title" className="quiet-band">
-        <div className="section">
-          <article
-            aria-labelledby="harder-title"
-            className="comparison recovery-section"
-          >
-            <div>
-              <span className="kicker">What becomes harder to preserve</span>
-              <h2 id="harder-title">The artifact remained.</h2>
-            </div>
-            <div className="recovery-flow">
-              <ul aria-label="Records that remain" className="record-proof">
-                <li>Decision approved</li>
-                <li>System updated</li>
-                <li>Control implemented</li>
-              </ul>
-              <ul
-                aria-label="Understanding that becomes harder to recover"
-                className="missing-questions"
-              >
-                <li>Why?</li>
-                <li>Based on what?</li>
-                <li>What changed?</li>
-              </ul>
-              <p className="record-missing">
-                The understanding became
-                <br />
-                harder to recover.
+          <div className={styles.patternGrid} aria-label="Pattern occurrences across environments">
+            <article className={styles.patternCard}>
+              <span className={styles.kicker}>Cybersecurity Investigation</span>
+              <b>What evidence shaped the response?</b>
+              <p>
+                When a security incident unfolds across cloud environments, logs record
+                events, but the rationale connecting actions to threat assessments
+                often evaporates.
               </p>
-            </div>
+            </article>
+
+            <article className={styles.patternCard}>
+              <span className={styles.kicker}>Technology Transformation</span>
+              <b>Which assumptions moved with the systems?</b>
+              <p>
+                When legacy cores are migrated to modern platforms, specifications record
+                data schemas, but unstated operational assumptions fail to carry forward.
+              </p>
+            </article>
+
+            <article className={styles.patternCard}>
+              <span className={styles.kicker}>Autonomous AI Deployment</span>
+              <b>Who remains accountable for the outcome?</b>
+              <p>
+                When autonomous agents and multi-model pipelines execute work, outputs
+                proliferate rapidly, but legitimate authority and human answerability
+                become diffused.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. The Contrast: Artifacts vs Understanding */}
+      <section className={styles.section} aria-labelledby="contrast-title">
+        <div className={styles.proseStack}>
+          <span className={styles.kicker}>The Decay Pattern</span>
+          <h2 id="contrast-title">The artifacts remain. The explanation fades.</h2>
+          <p className={styles.lead}>
+            Organizations invest heavily in capturing artifacts—tickets, documentation,
+            code commits, and dashboard metrics. Yet when a key decision is challenged six
+            months later, the context that justified it is nearly impossible to reconstruct.
+          </p>
+        </div>
+
+        <div className={styles.contrastTrio} aria-label="Artifacts versus Understanding comparison">
+          <div className={styles.contrastBox}>
+            <span className={styles.kicker}>What Organizations Retain</span>
+            <h3>The Surface Artifacts</h3>
+            <ul className={styles.contrastList}>
+              <li>Decision formally signed off in a system</li>
+              <li>Source code merged and deployed to production</li>
+              <li>Control implemented and marked compliant</li>
+              <li>RAG retrieval documents returned with similarity scores</li>
+              <li>Autonomous agent execution traces recorded in telemetry</li>
+            </ul>
+          </div>
+
+          <div className={styles.contrastBox}>
+            <span className={styles.kicker}>What Organizations Lose</span>
+            <h3>The Underlying Understanding</h3>
+            <ul className={styles.contrastList}>
+              <li>Why this alternative was chosen over competing options</li>
+              <li>Which unstated assumptions made the architecture viable</li>
+              <li>What operational boundaries the agent was expected to observe</li>
+              <li>Whether cited retrieval chunks actually ground the final answer</li>
+              <li>Which human leader retains non-transferable answerability</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. The Governing Doctrine */}
+      <section className={styles.quietBand} aria-labelledby="doctrine-title">
+        <div className={styles.section}>
+          <div className={styles.doctrineHero}>
+            <span className={styles.kicker}>ShiftBy Governing Doctrine</span>
+            <h2 id="doctrine-title">
+              <span>Execution changes.</span>
+              <span>Understanding preserves confidence.</span>
+            </h2>
+            <p>
+              Tools, frameworks, models, and organizational charts will continue to cycle.
+              Attempting to preserve stability by freezing execution is futile.
+              Confidence is sustained only when understanding—the context connecting
+              decisions, boundaries, and accountability—survives technological change.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. The Bridges to Capabilities, Services & Resources */}
+      <section className={styles.section} aria-labelledby="bridges-title">
+        <div className={styles.proseStack}>
+          <span className={styles.kicker}>Operationalizing The Perspective</span>
+          <h2 id="bridges-title">How the perspective is put into practice.</h2>
+          <p>
+            ShiftBy translates this strategic perspective into concrete organizational
+            capabilities, defined advisory engagements, and ongoing research investigations:
+          </p>
+        </div>
+
+        <div className={styles.bridgesGrid} aria-label="Bridges to ShiftBy solutions">
+          <article className={styles.bridgeCard}>
+            <span className={styles.kicker}>Architecture</span>
+            <h3>The Three Capabilities</h3>
+            <p>
+              Explore our core disciplines: Organizational Memory, Bounded AI,
+              and Human–AI Accountability.
+            </p>
+            <Link className={styles.cardLink} href="/capabilities">
+              View Capabilities Hub &rarr;
+            </Link>
+          </article>
+
+          <article className={styles.bridgeCard}>
+            <span className={styles.kicker}>Advisory</span>
+            <h3>The Service Catalog</h3>
+            <p>
+              Review our 7 structured advisory, assessment, and assurance engagements
+              with explicit deliverables and boundaries.
+            </p>
+            <Link className={styles.cardLink} href="/services">
+              Browse Service Offerings &rarr;
+            </Link>
+          </article>
+
+          <article className={styles.bridgeCard}>
+            <span className={styles.kicker}>Research</span>
+            <h3>Insights &amp; Investigations</h3>
+            <p>
+              Read our doctrine essays, executive briefs, and technical investigations into
+              semantic drift and boundary architecture.
+            </p>
+            <Link className={styles.cardLink} href="/resources">
+              Read Publications &rarr;
+            </Link>
           </article>
         </div>
       </section>
 
-      <section aria-labelledby="why-title" className="section why-section">
-        <div>
-          <span className="kicker">Why this matters</span>
-          <h2 id="why-title">
-            Important questions
-            <br />
-            do not disappear.
-          </h2>
-          <div className="section-copy">
-            <p>
-              Organizations continue operating on decisions long after they are
-              made.
-            </p>
-            <p>Change arrives.</p>
-            <p>The questions return.</p>
+      {/* 6. Conversion CTA */}
+      <section className={styles.ctaBand} aria-labelledby="perspective-cta-title">
+        <div className={styles.ctaInner}>
+          <span className={styles.kicker}>Next Step</span>
+          <h2 id="perspective-cta-title">Explore where understanding is drifting in your stack.</h2>
+          <p style={{ maxWidth: "700px" }}>
+            Whether you are deploying agentic systems, navigating audit scrutiny, or seeking
+            to prevent context loss during organizational change, we invite a direct, unhurried
+            conversation with our advisory team.
+          </p>
+          <div className={styles.ctaActions}>
+            <Link className={styles.primaryButton} href="/contact">
+              Start a Conversation &rarr;
+            </Link>
+            <Link className={styles.secondaryButton} href="/capabilities">
+              Explore Our Capabilities
+            </Link>
           </div>
         </div>
-        <div>
-          <ul
-            aria-label="Organizational moments when questions return"
-            className="moment-list"
-          >
-            <li>A new leader arrives.</li>
-            <li>An incident occurs.</li>
-            <li>A system is replaced.</li>
-            <li>An AI capability is introduced.</li>
-            <li>A decision is challenged.</li>
-          </ul>
-          <p className="answers-matter">
-            The answers
-            <br />
-            still matter.
-          </p>
-        </div>
-      </section>
-
-      <section aria-labelledby="ai-title" className="quiet-band">
-        <div className="section ai-section">
-          <div>
-            <span className="kicker">AI and visibility</span>
-            <h2 id="ai-title">
-              The problem is not new.
-              <br />
-              AI amplifies it.
-            </h2>
-          </div>
-          <div className="ai-lines">
-            <div className="ai-line-group ai-context">
-              <p>The challenge existed before AI.</p>
-              <p>AI participation makes decision traceability more visible.</p>
-              <p>
-                Governance and responsible AI make the need harder to ignore.
-              </p>
-              <p>
-                Organizations pursuing enterprise AI, responsible AI, and AI
-                governance often encounter these questions more frequently.
-              </p>
-            </div>
-            <div className="ai-line-group ai-amplification">
-              <p>AI amplifies visibility.</p>
-              <p>AI amplifies scale.</p>
-              <p>AI amplifies speed.</p>
-            </div>
-            <div className="ai-line-group ai-clarification">
-              <p>It did not create the challenge.</p>
-            </div>
-            <div className="ai-line-group ai-realization">
-              <p>The visibility of the challenge is new.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="doctrine-title" className="section doctrine">
-        <div className="doctrine-inner">
-          <span className="kicker">Doctrine</span>
-          <h2 id="doctrine-title">
-            <span className="doctrine-line">Execution changes.</span>
-            <span className="doctrine-line">
-              Understanding preserves confidence.
-            </span>
-          </h2>
-          <p className="doctrine-note">
-            The observation became simple only after the pattern appeared across
-            enough different contexts: organizations preserve artifacts, and
-            understanding is harder to preserve.
-          </p>
-        </div>
-      </section>
-
-      <section aria-labelledby="next-question" className="quiet-band">
-        <div className="section question-bridge">
-          <span className="kicker">Investigation</span>
-          <p className="bridge-intro">
-            If the pattern continues to appear, it deserves investigation.
-          </p>
-          <h2 id="next-question">
-            The next question cannot be answered through theory alone.
-          </h2>
-          <div className="bridge-lines">
-            <p>The pattern cannot be understood through assertion alone.</p>
-            <div className="bridge-support">
-              <p>It requires observation.</p>
-              <p>It requires investigation.</p>
-              <p>It requires experimentation.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        aria-labelledby="exploration-title"
-        className="section exploration-section"
-      >
-        <div className="exploration-copy">
-          <span className="kicker">Continue to explorations</span>
-          <h2 id="exploration-title">This is why the explorations exist.</h2>
-          <p>
-            They are investigations into how understanding can be preserved as
-            execution, organizational memory, decision traceability,
-            accountability, and discovery change.
-          </p>
-          <p>
-            The questions appear across AI adoption, organizational
-            transformation, and knowledge-intensive environments.
-          </p>
-          <p>Each explores a different aspect of that challenge.</p>
-          <Link className="text-link" href="/explorations">
-            Continue to explorations
-          </Link>
-        </div>
-        <ul aria-label="ShiftBy explorations" className="exploration-list">
-          <li>
-            <b>UnifyPlane</b>
-            <p>
-              Asks what needs to remain traceable when execution moves across
-              people, artifacts, AI governance expectations, and decisions.
-            </p>
-          </li>
-          <li>
-            <b>CanonLens</b>
-            <p>
-              Asks how meaning survives when context is carried through people,
-              artifacts, and responsible AI participation.
-            </p>
-          </li>
-          <li>
-            <b>Inspiral</b>
-            <p>
-              Asks how observation becomes knowledge before it hardens into
-              assumption.
-            </p>
-          </li>
-        </ul>
       </section>
     </div>
   );

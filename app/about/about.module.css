@@ -1,0 +1,310 @@
+.page {
+  --about-bg: oklch(98% 0.004 250);
+  --about-surface: oklch(100% 0 0);
+  --about-fg: oklch(17% 0.012 250);
+  --about-muted: oklch(47% 0.014 250);
+  --about-border: oklch(88% 0.008 250);
+  --about-accent: oklch(48% 0.15 280);
+  --about-accent-soft: oklch(94% 0.028 280);
+  --about-slate: oklch(62% 0.018 250);
+  --about-max: 980px;
+  --about-gutter: clamp(18px, 4vw, 32px);
+  --about-section: clamp(60px, 8vw, 104px);
+  --about-tight: clamp(40px, 6vw, 72px);
+
+  display: grid;
+  color: var(--about-fg);
+}
+
+.page h1,
+.page h2,
+.page h3,
+.page p {
+  margin: 0;
+}
+
+.page h1,
+.page h2,
+.page h3 {
+  color: var(--about-fg);
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.page h1 {
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 690;
+  line-height: 1.05;
+}
+
+.page h2 {
+  font-size: clamp(26px, 3.4vw, 42px);
+  font-weight: 670;
+  line-height: 1.1;
+}
+
+.page h3 {
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.page p {
+  color: var(--about-muted);
+  font-size: clamp(17px, 1.35vw, 19px);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.kicker {
+  display: inline-flex;
+  margin: 0 0 14px;
+  color: var(--about-accent);
+  font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lead {
+  color: var(--about-fg);
+  font-size: clamp(19px, 1.8vw, 23px);
+  line-height: 1.45;
+  font-weight: 450;
+}
+
+.section {
+  width: min(100%, var(--about-max));
+  margin: 0 auto;
+  padding-inline: var(--about-gutter);
+  padding-block: var(--about-section);
+  display: grid;
+  gap: clamp(24px, 3.5vw, 40px);
+}
+
+.quietBand {
+  border-block: 1px solid var(--about-border);
+  background: color-mix(in oklch, var(--about-surface), var(--about-bg) 40%);
+}
+
+.proseStack {
+  display: grid;
+  gap: 20px;
+  max-width: 780px;
+}
+
+.observationBox {
+  border-left: 3px solid var(--about-accent);
+  padding: clamp(20px, 3vw, 28px);
+  background: color-mix(in oklch, var(--about-accent-soft), white 60%);
+  border-radius: 0 12px 12px 0;
+  display: grid;
+  gap: 8px;
+}
+
+.observationBox p:first-child {
+  color: var(--about-fg);
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.observationBox p:last-child {
+  color: var(--about-accent);
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.founderCard {
+  border: 1px solid var(--about-border);
+  border-radius: 16px;
+  padding: clamp(24px, 3.5vw, 36px);
+  background: var(--about-surface);
+  box-shadow: 0 12px 32px color-mix(in oklch, var(--about-fg), transparent 94%);
+  display: grid;
+  gap: 20px;
+}
+
+.founderHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--about-border);
+}
+
+.founderName {
+  color: var(--about-fg);
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.8vw, 32px);
+  font-weight: 680;
+  line-height: 1.1;
+}
+
+.founderRole {
+  color: var(--about-accent);
+  font-weight: 650;
+  font-size: 15px;
+}
+
+.founderBadge {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: color-mix(in oklch, var(--about-accent), transparent 90%);
+  color: var(--about-accent);
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.contrastTrio {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.contrastItem {
+  border: 1px solid var(--about-border);
+  border-radius: 10px;
+  padding: 20px;
+  background: var(--about-surface);
+  display: grid;
+  gap: 8px;
+}
+
+.contrastItem span {
+  font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--about-slate);
+}
+
+.contrastItem p {
+  color: var(--about-fg);
+  font-size: clamp(16px, 1.4vw, 18px);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.capabilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.capabilityCard {
+  border: 1px solid var(--about-border);
+  border-radius: 12px;
+  padding: clamp(20px, 2.6vw, 28px);
+  background: var(--about-surface);
+  display: grid;
+  gap: 12px;
+}
+
+.capabilityCard h3 {
+  font-size: clamp(18px, 1.8vw, 22px);
+}
+
+.capabilityCard p {
+  font-size: clamp(14px, 1.15vw, 16px);
+  line-height: 1.5;
+}
+
+.cardLink {
+  color: var(--about-accent);
+  font-weight: 650;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.investigationsNote {
+  border: 1px solid var(--about-border);
+  border-radius: 12px;
+  padding: clamp(22px, 3vw, 30px);
+  background: color-mix(in oklch, var(--about-surface), transparent 6%);
+  display: grid;
+  gap: 14px;
+}
+
+.ctaBand {
+  border-top: 1px solid var(--about-border);
+  background: linear-gradient(180deg, color-mix(in oklch, var(--about-accent-soft), white 60%) 0%, var(--about-bg) 100%);
+  padding-block: var(--about-section);
+}
+
+.ctaInner {
+  width: min(100%, var(--about-max));
+  margin: 0 auto;
+  padding-inline: var(--about-gutter);
+  display: grid;
+  gap: 20px;
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 26px;
+  border-radius: 8px;
+  background: var(--about-fg);
+  color: var(--about-surface);
+  font-weight: 650;
+  font-size: 15px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.primaryButton:hover {
+  opacity: 0.9;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--about-border);
+  background: var(--about-surface);
+  color: var(--about-fg);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background: color-mix(in oklch, var(--about-surface), var(--about-fg) 4%);
+}
+
+@media (max-width: 56rem) {
+  .contrastTrio,
+  .capabilitiesGrid {
+    grid-template-columns: 1fr;
+  }
+}

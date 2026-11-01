@@ -41,10 +41,10 @@ Upgrade supporting brand and governance routes (`/about`, `/perspective`, `/ai-p
   * Cross-link back to the *AI Governance & Human Oversight* service offering.
 
 ## 4. Deliverables
-* [ ] Enhanced `app/contact/page.tsx` with service query parameter listener and 3-step timeline
-* [ ] Refined `app/about/page.tsx` with founder positioning & AIGP credential
-* [ ] Updated `app/perspective/page.tsx` and `app/ai-policy/page.tsx`
-* [ ] External link attributes (`target="_blank" rel="noopener noreferrer"`) secured across all pages
+* [x] Enhanced `app/contact/page.tsx` with service query parameter listener and 3-step timeline
+* [x] Refined `app/about/page.tsx` with founder positioning & AIGP credential
+* [x] Updated `app/perspective/page.tsx` and `app/ai-policy/page.tsx`
+* [x] External link attributes (`target="_blank" rel="noopener noreferrer"`) secured across all pages
 
 ## 5. Verification & Acceptance Criteria
 * Navigating to `/contact?service=rag-retrieval-assessment` dynamically acknowledges the selected service.

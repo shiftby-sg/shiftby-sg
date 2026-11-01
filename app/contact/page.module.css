@@ -146,6 +146,60 @@
   font-weight: 650;
 }
 
+.founderBadge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: color-mix(in oklch, var(--contact-accent), transparent 90%);
+  color: var(--contact-accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.intentBanner {
+  display: grid;
+  gap: 10px;
+  grid-column: 1 / -1;
+  padding: clamp(16px, 2.5vw, 22px);
+  border: 1px solid var(--contact-accent);
+  border-radius: 12px;
+  background: color-mix(in oklch, var(--contact-accent-soft), white 50%);
+  box-shadow: 0 4px 16px color-mix(in oklch, var(--contact-accent), transparent 88%);
+}
+
+.intentBadge {
+  display: inline-flex;
+  align-items: center;
+  align-self: start;
+  gap: 6px;
+  color: var(--contact-accent);
+  font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.intentContent {
+  display: grid;
+  gap: 4px;
+}
+
+.intentTitle {
+  color: var(--contact-fg);
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 680;
+  line-height: 1.2;
+}
+
+.intentSubtitle {
+  color: var(--contact-muted);
+  font-size: var(--contact-small);
+  line-height: 1.45;
+}
+
 .band {
   border-block: 1px solid var(--contact-border);
   background: color-mix(in oklch, var(--contact-surface), var(--contact-bg) 45%);
@@ -167,17 +221,29 @@
 
 .nextStepList {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .nextStepList article {
   display: grid;
-  gap: 10px;
+  align-content: start;
+  gap: 12px;
   border: 1px solid var(--contact-border);
-  border-radius: 10px;
-  padding: clamp(18px, 2.4vw, 24px);
-  background: color-mix(in oklch, var(--contact-surface), transparent 6%);
+  border-radius: 12px;
+  padding: clamp(20px, 2.5vw, 26px);
+  background: color-mix(in oklch, var(--contact-surface), transparent 4%);
+}
+
+.nextStepList h3 {
+  font-size: clamp(17px, 1.4vw, 20px);
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.nextStepList p {
+  font-size: var(--contact-small);
+  line-height: 1.5;
 }
 
 .sectionGrid {
@@ -207,6 +273,13 @@
   font-size: var(--contact-small);
   font-weight: 650;
   line-height: 1.25;
+  transition: all 0.2s ease;
+}
+
+.topicSelected {
+  border-color: var(--contact-accent) !important;
+  background: color-mix(in oklch, var(--contact-accent-soft), white 40%) !important;
+  box-shadow: 0 0 0 1px var(--contact-accent);
 }
 
 .section {
@@ -309,6 +382,18 @@
 
 .closingInner p {
   max-width: 760px;
+}
+
+@media (max-width: 64rem) {
+  .nextStepsInner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 50rem) {
+  .nextStepList {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 56rem) {

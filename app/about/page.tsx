@@ -1,235 +1,212 @@
 import Link from "next/link";
-import type { Metadata } from "next";
+import { pageMetadataEntries } from "@/content/discoverability";
+import { getPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "About | ShiftBy"
-  },
-  description:
-    "Why ShiftBy exists: organizations preserve artifacts, but understanding is harder to preserve.",
-  alternates: {
-    canonical: "/about"
-  }
-};
+import styles from "./about.module.css";
+
+export const metadata = getPageMetadata(pageMetadataEntries.about);
 
 export default function AboutPage() {
   return (
-    <div className="about-design-port">
-      <section className="movement" aria-labelledby="observation-title">
-        <div className="movement-inner">
-          <article className="essay wide">
-            <span className="kicker">About ShiftBy</span>
-            <h1 id="observation-title">The perspective begins with an observation.</h1>
-            <div className="intro-copy">
-              <p className="lead">
-                Organizations constantly change. Strategies evolve. Teams reorganize.
-                Systems are replaced. Processes adapt. Technologies advance. AI
-                accelerates decision-making and execution.
-              </p>
-            </div>
-            <div className="intro-copy">
-              <p>Yet confidence does not come from preserving execution.</p>
-              <p>Confidence comes from preserving understanding.</p>
-              <p>ShiftBy exists to help organizations preserve understanding through change.</p>
-            </div>
-            <div className="observation-destination" aria-label="Core observation">
-              <p>Organizations preserve artifacts.</p>
-              <p>Understanding is harder to preserve.</p>
-            </div>
-            <div className="observation-bridge">
-              <p>
-                Understanding is not information. Organizations already possess
-                information. They have documents, systems, dashboards, controls,
-                reports, records, and data.
-              </p>
-              <p>
-                Understanding is the context that connects decisions, assumptions,
-                evidence, accountability, dependencies, and outcomes.
-              </p>
-              <p>
-                Information records what happened. Understanding explains why it
-                mattered.
-              </p>
-            </div>
-          </article>
+    <div className={styles.page}>
+      {/* 1. Observation Hero */}
+      <section className={styles.section} aria-labelledby="observation-title">
+        <div className={styles.proseStack}>
+          <span className={styles.kicker}>About ShiftBy</span>
+          <h1 id="observation-title">The perspective begins with an observation.</h1>
+          <p className={styles.lead}>
+            Organizations constantly change. Strategies evolve. Leadership rotates.
+            Systems are decommissioned and replaced. Operating models restructure.
+            AI accelerates execution across autonomous workflows.
+          </p>
+          <p>
+            Yet confidence does not come from preserving execution.
+            Confidence comes from preserving understanding.
+          </p>
+          <div className={styles.observationBox} aria-label="Core doctrine contrast">
+            <p>Organizations preserve artifacts.</p>
+            <p>Understanding is harder to preserve.</p>
+          </div>
+          <p>
+            Understanding is not merely information. Enterprises already possess immense
+            quantities of information: repositories, tickets, logs, design documents,
+            and data warehouses.
+          </p>
+          <p>
+            Understanding is the context that connects decisions, assumptions,
+            evidence, boundaries, accountability, and outcomes. Information records
+            what happened. Understanding explains why it mattered, what constraints
+            governed it, and who holds legitimate authority over it.
+          </p>
         </div>
       </section>
 
-      <section className="movement" aria-label="The evidence">
-        <div className="movement-inner">
-          <article className="essay wide">
-            <div className="evidence-flow">
-              <div className="intro-copy evidence-opening">
-                <p className="lead">The problem shows up across different environments.</p>
-              </div>
-              <div className="intro-copy">
-                <p>
-                  The observation did not emerge from a single domain. It appeared
-                  across enterprise work in SAP, Johnson &amp; Johnson, and Kenvue,
-                  including APAC leadership contexts where technology, architecture,
-                  cybersecurity, operational resilience, manufacturing, supply chain,
-                  data, governance, and AI all made the same pattern visible from
-                  different directions.
-                </p>
-                <p>Different environments. Similar questions.</p>
-                <p>The same questions continued to appear.</p>
-              </div>
-              <div className="observer-note">
-                <div className="observer-name">
-                  <b>Ananda Krishna Marri</b>
-                  <span>Founder, ShiftBy</span>
-                  <span>IAPP Certified AI Governance Professional (AIGP)</span>
-                </div>
-                <div>
-                  <p>
-                    ShiftBy grew from a pattern observed across technology,
-                    operations, data, governance, and AI environments, not from a
-                    single discipline.
-                  </p>
-                  <p>
-                    Across those environments, the technologies changed, the operating
-                    models changed, and the conditions changed, yet the same
-                    underlying questions continued to emerge: what had been decided,
-                    what evidence supported it, what assumptions shaped it, who
-                    understood the context, how accountability carried forward, and
-                    what drifted.
-                  </p>
-                  <p className="credential-line">
-                    The consistency of the pattern became difficult to ignore.
-                  </p>
-                </div>
-              </div>
-              <div className="meaning-lines" aria-label="Meaning pattern">
-                <p>Data remained available.</p>
-                <p>Knowledge remained visible.</p>
-                <p>Meaning became harder to preserve.</p>
-              </div>
-              <div className="origin-thread">
-                <p>
-                  Over time, the observations began to reveal different dimensions
-                  of the same challenge.
-                </p>
-                <p>
-                  Some questions were about execution: how decisions, actions,
-                  evidence, dependencies, and accountability remained connected
-                  over time.
-                </p>
-                <p>
-                  Some were about meaning: how information, knowledge, context,
-                  and interpretation remained connected as organizations evolved.
-                </p>
-                <p>
-                  Some were about discovery: how observations became knowledge and
-                  how knowledge informed decisions.
-                </p>
-              </div>
-              <div className="intro-copy">
-                <p>
-                  Across data platforms, analytics environments, knowledge systems,
-                  research environments, and AI-enabled ecosystems, the relationships
-                  that explain why something matters often became harder to recover
-                  than the information itself.
-                </p>
-              </div>
-              <div className="ai-lines" aria-label="AI visibility">
-                <p>AI did not create the challenge.</p>
-                <p>AI makes the challenge more visible.</p>
-                <p>
-                  Organizations pursuing enterprise AI, AI adoption strategies, and
-                  responsible AI programs often discover the challenge more quickly.
-                </p>
-              </div>
-              <div className="intro-copy">
-                <p>
-                  As execution expands across people, systems, automation, and AI,
-                  organizations face the same underlying need with greater scale,
-                  speed, participation, automation, and complexity.
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="movement" aria-labelledby="response-title">
-        <div className="movement-inner">
-          <article className="essay">
-            <h2 id="response-title">How ShiftBy Explores The Challenge</h2>
-            <div className="response-text">
-              <p className="lead">
-                ShiftBy explores the challenge through advisory work, coaching,
-                consulting, thought leadership, and ongoing investigations.
-              </p>
-              <ul className="inline-series" aria-label="Four complementary lenses">
-                <li>Decision Traceability</li>
-                <li>Organizational Memory</li>
-                <li>Human-AI Accountability</li>
-                <li>Adaptive Execution</li>
-              </ul>
-              <p>
-                Over time, the recurring questions began to separate into three
-                related dimensions: execution, meaning, and discovery.
-              </p>
-              <ul className="plain-list" aria-label="ShiftBy investigations">
-                <li>
-                  UnifyPlane <span>explores how execution remains understandable over time.</span>
-                </li>
-                <li>
-                  CanonLens <span>explores how meaning remains connected to information and context.</span>
-                </li>
-                <li>
-                  Inspiral <span>explores how discovery becomes knowledge and informs decisions.</span>
-                </li>
-              </ul>
-              <p>
-                Together, they helped shape the leadership perspective that
-                became ShiftBy.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="movement doctrine" aria-labelledby="doctrine-title">
-        <div className="movement-inner">
-          <article className="essay wide">
-            <h2 id="doctrine-title">Understanding Should Survive Change</h2>
-            <div className="intro-copy">
-              <p>Organizations change.</p>
-              <p>People change.</p>
-              <p>Technology changes.</p>
-              <p>Operating models change.</p>
-              <p>AI participates.</p>
-              <p>The artifacts may remain.</p>
-              <p>Drift may appear.</p>
-              <p>Understanding should remain with them.</p>
-              <p>That is the purpose of ShiftBy.</p>
-              <p>To help understanding survive change.</p>
-            </div>
-            <div className="final-doctrine" aria-label="ShiftBy doctrine">
-              <span>The observation became the source.</span>
-              <span>The work is preserving understanding through change.</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="movement about-contact-cta" aria-labelledby="about-contact-title">
-        <div className="movement-inner">
-          <article className="essay wide about-contact-cta-inner">
-            <span className="kicker">Start a conversation</span>
-            <h2 id="about-contact-title">Start with the question.</h2>
+      {/* 2. Founder Credential & Observation Origin */}
+      <section className={styles.quietBand} aria-labelledby="origin-title">
+        <div className={styles.section}>
+          <div className={styles.proseStack}>
+            <span className={styles.kicker}>Observation Across Scale</span>
+            <h2 id="origin-title">A pattern observed across disparate environments.</h2>
             <p>
-              If the pattern feels familiar, the next step can begin with a
-              conversation about what needs to remain understood as decisions,
-              knowledge, accountability, or execution changes.
+              The observation did not emerge in the abstract. It arose from direct,
+              cross-disciplinary leadership spanning enterprise architecture,
+              cybersecurity investigations, operational resilience, and complex
+              digital transformations across SAP, Johnson &amp; Johnson, and Kenvue in APAC.
             </p>
-            <div className="about-cta-actions" aria-label="About page next step">
-              <Link className="button primary" href="/contact">
-                Start a conversation
-              </Link>
+          </div>
+
+          <aside className={styles.founderCard} aria-label="Founder credentials and framing">
+            <div className={styles.founderHeader}>
+              <p className={styles.founderName}>Ananda Krishna Marri</p>
+              <p className={styles.founderRole}>Founder &amp; Principal Advisor, ShiftBy</p>
+              <span className={styles.founderBadge}>
+                IAPP Certified AI Governance Professional (AIGP)
+              </span>
             </div>
-          </article>
+            <div className={styles.proseStack}>
+              <p>
+                "Across global enterprise landscapes, technologies changed, operating models
+                restructured, and regulatory pressures intensified. Yet the same core questions
+                consistently recurred:
+              </p>
+              <p style={{ fontStyle: "italic", color: "var(--about-fg)" }}>
+                What was decided? What evidence supported it? What unstated assumptions
+                shaped it? Who understood the operating context? How does accountability carry
+                forward when the team turns over or the agent executes autonomously?
+              </p>
+              <p>
+                The consistency of this pattern across decades made it clear: organizations
+                do not suffer from a deficit of documentation. They suffer from systemic
+                context decay."
+              </p>
+            </div>
+          </aside>
+
+          <div className={styles.contrastTrio} aria-label="The decay pattern">
+            <div className={styles.contrastItem}>
+              <span>Storage</span>
+              <p>Data remained available in databases.</p>
+            </div>
+            <div className={styles.contrastItem}>
+              <span>Visibility</span>
+              <p>Artifacts remained indexed in search.</p>
+            </div>
+            <div className={styles.contrastItem}>
+              <span>Decay</span>
+              <p>Understanding became harder to recover.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. AI and Drift Amplification */}
+      <section className={styles.section} aria-labelledby="ai-amplification-title">
+        <div className={styles.proseStack}>
+          <span className={styles.kicker}>The Impact of AI</span>
+          <h2 id="ai-amplification-title">AI did not create the challenge. AI makes it urgent.</h2>
+          <p className={styles.lead}>
+            When humans execute tasks slowly, tacit context and verbal alignment
+            often mask structural gaps in organizational understanding.
+          </p>
+          <p>
+            When autonomous agents, multi-model pipelines, and RAG architectures are introduced,
+            they execute at speeds that rapidly outrun informal human alignment. An agent
+            given unbounded discretion will generate plausible, cited answers that slowly
+            drift from institutional policy. A workflow spanning multiple models will lose
+            provenance across hops.
+          </p>
+          <p>
+            AI accelerates execution. Without explicit boundaries and structured memory,
+            it accelerates drift just as efficiently.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. The Three Capabilities & Governing Outcome */}
+      <section className={styles.quietBand} aria-labelledby="capabilities-title">
+        <div className={styles.section}>
+          <div className={styles.proseStack}>
+            <span className={styles.kicker}>The Three Capabilities</span>
+            <h2 id="capabilities-title">How ShiftBy addresses the challenge.</h2>
+            <p>
+              ShiftBy establishes three interlocking capabilities designed to ensure that
+              understanding survives technological and organizational change:
+            </p>
+          </div>
+
+          <div className={styles.capabilitiesGrid} aria-label="ShiftBy Three Capabilities">
+            <article className={styles.capabilityCard}>
+              <span className={styles.kicker}>Capability 01</span>
+              <h3>Organizational Memory</h3>
+              <p>
+                Preserves context, rationale, and provenance beyond individual tenure.
+                Ensures that institutional learning remains accessible, queryable, and
+                verifiable over time.
+              </p>
+              <Link className={styles.cardLink} href="/capabilities/organizational-memory">
+                Explore Organizational Memory &rarr;
+              </Link>
+            </article>
+
+            <article className={styles.capabilityCard}>
+              <span className={styles.kicker}>Capability 02</span>
+              <h3>Bounded AI</h3>
+              <p>
+                Constrains reasoning and execution drift across tasks, agents, and pipelines
+                by enforcing explicit operational boundaries, verified retrieval, and resource caps.
+              </p>
+              <Link className={styles.cardLink} href="/capabilities/bounded-ai">
+                Explore Bounded AI &rarr;
+              </Link>
+            </article>
+
+            <article className={styles.capabilityCard}>
+              <span className={styles.kicker}>Capability 03</span>
+              <h3>Human–AI Accountability</h3>
+              <p>
+                Ensures legitimate authority and non-transferable answerability across
+                autonomous systems. Defines explicit human ownership boundaries that cannot
+                be delegated.
+              </p>
+              <Link className={styles.cardLink} href="/capabilities/human-ai-accountability">
+                Explore Human–AI Accountability &rarr;
+              </Link>
+            </article>
+          </div>
+
+          <div className={styles.investigationsNote}>
+            <span className={styles.kicker}>Research Investigations</span>
+            <h3>From Explorations to Codified Methodology</h3>
+            <p>
+              Our internal investigative prototypes—formerly known as <em>UnifyPlane</em> (execution traceability),
+              <em>CanonLens</em> (semantic boundary enforcement), and <em>Inspiral</em> (observation-to-knowledge synthesis)—have
+              been reframed as ongoing research investigations into context drift and boundary architecture.
+            </p>
+            <Link className={styles.cardLink} href="/resources/investigations-in-context-drift">
+              Read the Research Brief on Context Drift Investigations &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Conversion CTA */}
+      <section className={styles.ctaBand} aria-labelledby="about-cta-title">
+        <div className={styles.ctaInner}>
+          <span className={styles.kicker}>Begin Here</span>
+          <h2 id="about-cta-title">Start with the question that matters most.</h2>
+          <p style={{ maxWidth: "700px" }}>
+            If your organization is navigating AI adoption, agentic workflow scaling,
+            or enterprise knowledge decay, the most effective next step is a direct conversation
+            with our advisory team.
+          </p>
+          <div className={styles.ctaActions}>
+            <Link className={styles.primaryButton} href="/contact">
+              Start a Conversation &rarr;
+            </Link>
+            <Link className={styles.secondaryButton} href="/services">
+              Explore Our Service Catalog
+            </Link>
+          </div>
         </div>
       </section>
     </div>
