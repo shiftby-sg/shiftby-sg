@@ -695,7 +695,32 @@
 
   .timelineGrid {
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    gap: 2rem;
+  }
+
+  .timelineStep {
+    display: grid;
+    grid-template-columns: 2.25rem 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 1.125rem;
+    row-gap: 0.5rem;
+    align-items: start;
+  }
+
+  .stepNumber {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .stepTitle {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+  }
+
+  .stepDescription {
+    grid-row: 2;
+    grid-column: 2;
   }
 
   .servicesGrid {
@@ -717,7 +742,14 @@
   }
 
   .conversionSection {
-    margin: 1rem 1rem 3rem;
-    padding: 2rem 1.25rem;
+    margin: 1.5rem auto 3rem;
+    width: 100%;
+    padding: 2.25rem 1.25rem;
+  }
+
+  .conversionCtaWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
   }
 }
