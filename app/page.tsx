@@ -61,56 +61,55 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          VIEWPORT 2: THE ROOT PROBLEM (4–8s)
+          VIEWPORT 2: THE STORAGE TRAP (4–8s)
           Storyline: Information vs. Understanding
           =================================================================== */}
       <section aria-labelledby="challenge-title" className={styles.quietBand}>
         <div className={styles.section}>
           <div className={styles.challengeHeader}>
-            <span className={styles.kicker}>The Root Problem</span>
+            <span className={styles.kicker}>The Storage Trap</span>
             <h2 className={styles.sectionTitle} id="challenge-title">
-              Organizations preserve records. Understanding is what fades.
+              Enterprises store records. Understanding is what fades.
             </h2>
             <p className={styles.sectionSubtitle}>
-              Long before AI, enterprises struggled with the same pattern: systems retain files,
-              tickets, and data, but the context connecting decisions, trade-offs, and authority
-              quietly dissolves when teams change:
+              Storing more documentation does not solve the problem—it simply creates more
+              dead files that nobody reads or trusts. Systems preserve artifacts, but context dissolves:
             </p>
           </div>
 
-          <div className={styles.contrastBox} aria-label="Artifacts versus Understanding comparison">
+          <div className={styles.contrastBox} aria-label="Stored Artifacts versus Understanding comparison">
             <div className={styles.contrastColumn}>
               <div className={styles.contrastHeader}>
-                <span className={styles.contrastBadgeSurvives}>Survives in Systems</span>
-                <h3 className={styles.contrastTitle}>Artifacts &amp; Curated Records</h3>
+                <span className={styles.contrastBadgeSurvives}>Survives in Enterprise Systems</span>
+                <h3 className={styles.contrastTitle}>Business Data &amp; Stored Artifacts</h3>
               </div>
               <ul className={styles.contrastList}>
                 <li className={`${styles.contrastItem} ${styles.contrastItemSurvives}`}>
-                  Approved policy documents in repositories and wikis
+                  ERP ledgers, master data tables, and lakehouse storage
                 </li>
                 <li className={`${styles.contrastItem} ${styles.contrastItemSurvives}`}>
-                  Deployed source code, configurations, and pipeline checkpoints
+                  Compliance registers, audit filings, and signed policies
                 </li>
                 <li className={`${styles.contrastItem} ${styles.contrastItemSurvives}`}>
-                  System telemetry, execution logs, and curated vector stores
+                  Curated vector stores, API schemas, and pipeline logs
                 </li>
               </ul>
             </div>
 
             <div className={styles.contrastColumn}>
               <div className={styles.contrastHeader}>
-                <span className={styles.contrastBadgeLost}>Fades Over Time</span>
-                <h3 className={styles.contrastTitle}>Organizational Understanding</h3>
+                <span className={styles.contrastBadgeLost}>Fades Across Transitions</span>
+                <h3 className={styles.contrastTitle}>Systemic Context &amp; Intent</h3>
               </div>
               <ul className={styles.contrastList}>
                 <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
-                  Why a specific trade-off was accepted over competing alternatives
+                  Why a specific transaction structure or trade-off was approved
                 </li>
                 <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
-                  Unstated assumptions, operating conditions, and fragile constraints
+                  The boundary conditions under which business data remains valid
                 </li>
                 <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
-                  Who holds legitimate authority and answerability when things break
+                  Who holds legitimate authority and answerability for the outcome
                 </li>
               </ul>
             </div>
@@ -129,19 +128,19 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          VIEWPORT 3: THE ACCELERATION (8–12s)
-          Storyline: AI Exposes the Context Gap at Scale
+          VIEWPORT 3: THE AI COLLISION (8–12s)
+          Storyline: AI Queries Data but Cannot Infer Intent
           =================================================================== */}
       <section aria-labelledby="ai-danger-title" className={styles.section}>
         <div className={styles.challengeHeader}>
-          <span className={styles.kicker}>The Acceleration</span>
+          <span className={styles.kicker}>The AI Collision</span>
           <h2 className={styles.sectionTitle} id="ai-danger-title">
-            AI did not create the context gap. It exposes it at scale.
+            AI queries your stored data. It cannot infer your intent.
           </h2>
           <p className={styles.sectionSubtitle}>
-            When work was manual, informal human conversations masked missing documentation.
-            When AI models and multi-step workflows execute across systems, they cannot rely on
-            hallway chats—they fill the gaps with plausible guesswork:
+            When work was manual, informal human conversations patched over missing documentation.
+            When AI models, RAG pipelines, and multi-step workflows execute, they cannot ask colleagues
+            in the hallway—they bridge the context gap with plausible guesswork:
           </p>
         </div>
 
@@ -150,7 +149,7 @@ export default function HomePage() {
             <span className={styles.driftIndex}>01 / Retrieval Drift</span>
             <h3 className={styles.driftTitle}>Retrieval Without Authority</h3>
             <p className={styles.driftText}>
-              Semantic search retrieves text by keyword proximity, not enterprise status.
+              Vector search retrieves text by keyword proximity, not enterprise status.
               Outdated proposals appear just as relevant as active board-approved policy.
             </p>
           </article>
@@ -177,18 +176,18 @@ export default function HomePage() {
 
       {/* ===================================================================
           VIEWPORT 4: THE ARCHITECTURE (12–17s)
-          Storyline: The Three Complementary Capabilities
+          Storyline: You Cannot "Store" Understanding
           =================================================================== */}
       <section aria-labelledby="capabilities-title" className={styles.quietBand}>
         <div className={styles.section}>
           <div className={styles.challengeHeader}>
-            <span className={styles.kicker}>The Three Disciplines</span>
+            <span className={styles.kicker}>The Transformation</span>
             <h2 className={styles.sectionTitle} id="capabilities-title">
-              Enterprise Understanding through 3 complementary capabilities.
+              You cannot &ldquo;store&rdquo; understanding. You must connect, bound, and govern it.
             </h2>
             <p className={styles.sectionSubtitle}>
               We don&apos;t offer a silver bullet or a promise of risk-free automation.
-              We help organizations establish the boundaries and continuity needed to reduce drift:
+              ShiftBy establishes three interlocking disciplines that keep execution grounded:
             </p>
           </div>
 
@@ -202,7 +201,7 @@ export default function HomePage() {
                   Continuity of understanding beyond individual memory.
                 </p>
                 <p className={styles.capabilityDescription}>
-                  Preserves rationale, provenance, and decision lineage so knowledge survives personnel turnover and system upgrades.
+                  Connects rationale and decision lineage directly to enterprise data so knowledge survives personnel turnover and system migrations.
                 </p>
                 <ul className={styles.capabilityList}>
                   <li className={styles.capabilityListItem}>Reconstructable decision lineage</li>
@@ -227,7 +226,7 @@ export default function HomePage() {
                   Reduced drift across tasks, workflows &amp; tool calls.
                 </p>
                 <p className={styles.capabilityDescription}>
-                  Establishes explicit boundaries for inputs, reasoning responsibilities, tool access, and resource caps.
+                  Enforces explicit operational boundaries on inputs, reasoning responsibilities, tool calls, and costs so models cannot drift.
                 </p>
                 <ul className={styles.capabilityList}>
                   <li className={styles.capabilityListItem}>Explicit reasoning &amp; tool boundaries</li>
@@ -252,7 +251,7 @@ export default function HomePage() {
                   Sustained human &amp; organizational answerability.
                 </p>
                 <p className={styles.capabilityDescription}>
-                  Ensures legitimate human authority, active intervention rights, and inspectable audit trails remain non-delegable.
+                  Ensures legitimate human authority, active intervention rights, and audit trails remain non-delegable.
                 </p>
                 <ul className={styles.capabilityList}>
                   <li className={styles.capabilityListItem}>Non-delegable human decision rights</li>
