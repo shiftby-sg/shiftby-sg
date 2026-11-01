@@ -146,7 +146,7 @@ export default function PerspectivePage() {
             <span className={styles.kicker}>Architecture</span>
             <h3>The Three Capabilities</h3>
             <p>
-              Explore our core disciplines: Organizational Memory, Bounded AI,
+              Explore our core architectural disciplines: Organizational Memory, Bounded AI,
               and Human–AI Accountability.
             </p>
             <Link className={styles.cardLink} href="/capabilities">

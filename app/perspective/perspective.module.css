@@ -205,9 +205,9 @@
   border-radius: 12px;
   padding: clamp(20px, 2.5vw, 28px);
   background: var(--persp-surface);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
-  align-content: start;
 }
 
 .bridgeCard h3 {
@@ -217,6 +217,16 @@
 .bridgeCard p {
   font-size: 14px;
   line-height: 1.5;
+}
+
+@media (min-width: 56rem) {
+  .bridgeCard h3 {
+    min-height: 3.5rem;
+  }
+
+  .bridgeCard p {
+    min-height: 5.5rem;
+  }
 }
 
 .cardLink {
