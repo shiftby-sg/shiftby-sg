@@ -202,7 +202,7 @@ export default function HomePage() {
                   Continuity of understanding beyond individual memory.
                 </p>
                 <p className={styles.capabilityDescription}>
-                  Connects rationale and decision lineage directly to enterprise data so knowledge survives personnel turnover and system migrations.
+                  Connects rationale and decision lineage to enterprise data so knowledge survives turnover and system migrations.
                 </p>
                 <ul className={styles.capabilityList}>
                   <li className={styles.capabilityListItem}>Reconstructable decision lineage</li>
