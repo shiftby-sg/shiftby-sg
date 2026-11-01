@@ -1,816 +1,413 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: {
-    absolute:
-      "AI Advisory Services | AI Adoption, Governance & Intelligent Operations | ShiftBy"
-  },
-  description:
-    "ShiftBy helps organizations adopt AI with confidence through AI readiness, governance, intelligent operations, decision traceability, and responsible transformation.",
-  alternates: {
-    canonical: "/services"
-  }
-};
+import { ServiceCard } from "@/components/services/ServiceCard";
+import { pageMetadataEntries } from "@/content/discoverability";
+import { getPageMetadata } from "@/lib/metadata";
+
+import styles from "./services.module.css";
+
+export const metadata: Metadata = getPageMetadata(pageMetadataEntries.services);
 
 export default function ServicesPage() {
   return (
-    <div className="services-design-port">
-      <style>{`
-        .services-design-port .service-example-item {
-          font-size: clamp(14px, 0.95rem, 16px);
-          font-weight: 400;
-          line-height: 1.34;
-        }
+    <div className={styles.page}>
+      {/* ===================================================================
+          1. HERO & JUMP ANCHORS
+          =================================================================== */}
+      <section aria-labelledby="services-catalog-title" className={`${styles.section} ${styles.hero}`}>
+        <span className={styles.kicker}>Defined Engagements</span>
+        <h1 className={styles.heroTitle} id="services-catalog-title">
+          ShiftBy Service Catalog
+        </h1>
+        <p className={styles.heroSubtitle}>
+          ShiftBy helps organizations prepare knowledge for AI, keep
+          AI-supported work aligned with its intended purpose, and sustain human
+          responsibility throughout its use. Each engagement starts with a
+          defined enterprise problem and concludes with evidence, findings,
+          practical deliverables, and agreed next steps.
+        </p>
 
-        .services-design-port .service-output-group {
-          display: grid;
-          gap: 8px;
-          margin-top: clamp(10px, 1.4vw, 14px);
-          padding-top: clamp(8px, 1vw, 12px);
-        }
-
-        .services-design-port .engagement-block {
-          align-items: start;
-          grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.38fr);
-          gap: clamp(10px, 1vw, 16px);
-        }
-
-        .services-design-port .engagement-copy {
-          max-width: none;
-        }
-
-        .services-design-port .service-story-label {
-          color: color-mix(in oklch, var(--muted), transparent 8%);
-          font-family: var(--font-display);
-          font-size: 10px;
-          font-weight: 680;
-          letter-spacing: 0.12em;
-          line-height: 1.2;
-          margin-top: clamp(8px, 1vw, 12px);
-          text-transform: uppercase;
-        }
-
-        .services-design-port .service-story-label + p {
-          margin-top: -2px;
-        }
-
-        .services-design-port .engagement-copy > p.signal-context.service-category {
-          color: color-mix(in oklch, var(--accent) 84%, var(--fg)) !important;
-          font-weight: 640;
-        }
-
-        .services-design-port .engagement-copy > p.signal-context.service-category strong {
-          color: inherit;
-          font-weight: inherit;
-        }
-
-        .services-design-port .engagement-copy > .service-lens {
-          color: color-mix(in oklch, var(--muted), var(--fg) 18%) !important;
-          font-size: 11px !important;
-          font-weight: 700 !important;
-          letter-spacing: 0.13em !important;
-          line-height: 1.32 !important;
-          margin: 3px 0 2px !important;
-          text-transform: uppercase;
-        }
-
-        .services-design-port .engagement-signals {
-          width: 100%;
-          max-width: none;
-          align-self: start;
-          justify-self: stretch;
-          margin-top: clamp(54px, 4.6vw, 70px);
-          padding-left: clamp(10px, 1vw, 14px);
-        }
-
-        .services-design-port .engagement-signals .signal-list {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 9px clamp(12px, 1.2vw, 16px);
-          width: 100%;
-        }
-
-        .services-design-port .engagement-signals > .topics-label {
-          color: color-mix(in oklch, var(--fg), var(--muted) 18%);
-          font-weight: 700;
-        }
-
-        .services-design-port .relevant-capabilities {
-          display: grid;
-          gap: 12px;
-          margin-top: clamp(13px, 1.6vw, 18px);
-          padding-top: clamp(12px, 1.4vw, 16px);
-          border-top: 1px solid color-mix(in oklch, var(--border), transparent 38%);
-        }
-
-        .services-design-port .relevant-capabilities h4 {
-          color: color-mix(in oklch, var(--muted), transparent 4%);
-          font-size: 9.5px;
-          font-weight: 620;
-          letter-spacing: 0.12em;
-          line-height: 1.2;
-          margin: 0;
-          text-transform: uppercase;
-        }
-
-        .services-design-port .relevant-capabilities dl {
-          display: grid;
-          gap: 15px;
-          margin: 0;
-        }
-
-        .services-design-port .relevant-capabilities div {
-          display: grid;
-          gap: 4px;
-        }
-
-        .services-design-port .relevant-capabilities dt {
-          color: color-mix(in oklch, var(--fg), var(--muted) 16%);
-          font-size: clamp(12px, 0.8rem, 14px);
-          font-weight: 650;
-          line-height: 1.24;
-        }
-
-        .services-design-port .relevant-capabilities dd {
-          color: color-mix(in oklch, var(--muted), var(--fg) 3%);
-          font-size: clamp(12px, 0.78rem, 13px);
-          font-weight: 400;
-          line-height: 1.42;
-          margin: 0;
-        }
-
-        .services-design-port .engagement-signals::before {
-          display: block;
-          top: 0;
-          bottom: 0;
-          background: color-mix(in oklch, var(--border), transparent 36%);
-        }
-
-        .services-design-port .engagement-signals > .signal-context,
-        .services-design-port .service-output-group > .signal-context {
-          padding-bottom: 8px;
-          border-bottom: 1px solid color-mix(in oklch, var(--border), transparent 26%);
-        }
-
-        .services-design-port .engagement-signals > .signal-context {
-          color: color-mix(in oklch, var(--fg), var(--muted) 24%);
-          font-weight: 680;
-        }
-
-        .services-design-port .service-output-list {
-          display: grid;
-          gap: 8px;
-          margin: 0;
-          padding-left: 1.05rem;
-        }
-
-        .services-design-port .service-output-item {
-          color: var(--muted);
-          font-size: clamp(13px, 0.88rem, 15px);
-          font-weight: 400;
-          line-height: 1.32;
-        }
-
-        .services-design-port .clarity-group {
-          display: grid;
-          gap: 10px;
-        }
-
-        .services-design-port .clarity-line {
-          color: color-mix(in oklch, var(--muted), var(--fg) 5%);
-          font-size: clamp(13px, 0.9rem, 15px);
-          font-weight: 430;
-          line-height: 1.42;
-          margin: 0;
-          max-width: 680px;
-        }
-
-        .services-design-port .clarity-line strong {
-          color: color-mix(in oklch, var(--fg), var(--muted) 18%);
-          font-weight: 610;
-        }
-
-        .services-design-port .signal-list li,
-        .services-design-port .signal-list li.is-primary {
-          border-top: 0;
-          padding-top: 0;
-        }
-
-        .services-design-port .engagement-signals .signal-list li {
-          position: relative;
-          padding-left: 14px;
-          color: color-mix(in oklch, var(--muted), var(--fg) 4%);
-          line-height: 1.34;
-        }
-
-        .services-design-port .engagement-signals .signal-list li::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0.62em;
-          width: 5px;
-          height: 5px;
-          border-radius: 999px;
-          background: color-mix(in oklch, var(--muted), transparent 38%);
-        }
-
-        @media (min-width: 961px) {
-          .services-design-port .engagement-signals > .signal-context,
-          .services-design-port .service-output-group > .signal-context {
-            border-bottom-color: color-mix(in oklch, var(--border), transparent 42%);
-          }
-
-          .services-design-port .signal-list {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 9px clamp(12px, 1.2vw, 16px);
-          }
-
-          .services-design-port .relevant-capabilities dl {
-            grid-template-columns: 1fr;
-          }
-
-          .services-design-port .service-output-list {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 7px clamp(14px, 1.6vw, 20px);
-          }
-        }
-
-        @media (max-width: 960px) {
-          .services-design-port .engagement-block {
-            grid-template-columns: 1fr;
-          }
-
-          .services-design-port .engagement-signals {
-            max-width: none;
-            justify-self: stretch;
-            margin-top: clamp(14px, 3vw, 24px);
-            padding-left: 0;
-          }
-
-          .services-design-port .engagement-signals::before {
-            display: none;
-          }
-
-          .services-design-port .relevant-capabilities {
-            margin-top: clamp(12px, 3vw, 18px);
-          }
-        }
-
-        .services-design-port .doctrine-takeaway-polished {
-          max-width: 860px;
-        }
-      `}</style>
-      <section aria-labelledby="hero-title" className="section hero">
-        <div>
-          <span className="kicker">Services</span>
-          <h1 id="hero-title">From understanding to action.</h1>
-        </div>
-        <div className="hero-copy">
-          <div className="hero-lines">
-            <p className="lead">
-              The practical challenge is knowing how to move forward when
-              decisions, knowledge, accountability, and execution must remain
-              connected as change and drift appear.
-            </p>
-            <p className="lead">
-              AI is one current setting where that challenge becomes visible,
-              but the work is broader than AI.
-            </p>
-          </div>
-          <div>
-            <p className="hero-note">
-              ShiftBy helps organizations move from uncertainty to
-              understanding, assurance, and action.
-            </p>
-            <div aria-label="Services page links" className="hero-actions">
-              <Link className="button primary" href="/contact">
-                Start a conversation
-              </Link>
-              <Link className="button secondary" href="/capabilities">
-                Explore capabilities
-              </Link>
-            </div>
-          </div>
-        </div>
+        <nav aria-label="Jump to service cluster" className={styles.jumpPills}>
+          <a className={styles.pill} href="#organizational-memory">
+            Organizational Memory (2)
+          </a>
+          <a className={styles.pill} href="#bounded-ai">
+            Bounded AI (1)
+          </a>
+          <a className={styles.pill} href="#human-ai-accountability">
+            Human–AI Accountability (2)
+          </a>
+          <a className={styles.pill} href="#cross-cutting">
+            Security & Evaluation (2)
+          </a>
+          <a className={styles.pill} href="#engagement-model">
+            How Engagements Work
+          </a>
+        </nav>
       </section>
 
-      <section aria-labelledby="intro-title" className="quiet-band">
-        <div className="section split compact-bridge">
-          <div>
-            <span className="kicker">From understanding to action</span>
-            <h2 id="intro-title">Uncertainty remains when context is unclear.</h2>
-          </div>
-          <div aria-label="Practical introduction" className="stacked-lines">
-            <p className="lead">
-              Opportunities may exist. Technology may be available. The harder
-              question is whether the organization understands where to act,
-              what assumptions are being made, who remains accountable, and
-              what must remain connected as execution changes.
-            </p>
-            <ul aria-label="What must be worked through" className="progression-list">
-              <li>
-                <span className="progression-term">Priorities</span>
-                <span className="progression-line">need to be understood.</span>
-              </li>
-              <li>
-                <span className="progression-term">People</span>
-                <span className="progression-line">need shared context.</span>
-              </li>
-              <li>
-                <span className="progression-term">Accountability</span>
-                <span className="progression-line">must remain clear.</span>
-              </li>
-              <li>
-                <span className="progression-term">Trust</span>
-                <span className="progression-line">has to be earned.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="questions-title" className="section">
-        <div className="question-head">
-          <div>
-            <span className="kicker">Common questions</span>
-            <h2 id="questions-title">The questions are often familiar.</h2>
-          </div>
-          <p className="lead">
-            Different organizations arrive from different starting points. The
-            questions often sound similar.
-          </p>
-        </div>
-        <div aria-label="Common organizational questions" className="question-grid">
-          <article className="question-card">
-            <small>01</small>
-            <h3>Where should we start?</h3>
-            <p>
-              Opportunities may be visible. Knowing where value,
-              responsibility, and risk can be understood is harder.
-            </p>
-          </article>
-          <article className="question-card">
-            <small>02</small>
-            <h3>Are we ready?</h3>
-            <p>
-              People, knowledge, data, suppliers, ownership, and ways of
-              working may not be equally prepared.
-            </p>
-          </article>
-          <article className="question-card">
-            <small>03</small>
-            <h3>How should work improve?</h3>
-            <p>
-              Execution can improve only when rationale, traceability,
-              ownership, organizational memory, and drift visibility remain
-              available.
-            </p>
-          </article>
-          <article className="question-card">
-            <small>04</small>
-            <h3>Can we trust it?</h3>
-            <p>
-              Trust depends on accountability, oversight, evidence, safety,
-              security, resilience, and understanding as execution changes.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section aria-labelledby="themes-title" className="quiet-band">
-        <div className="section">
-          <div className="engagement-intro">
-            <div>
-              <span className="kicker">How ShiftBy helps</span>
-              <h2 id="themes-title">How ShiftBy helps in practice</h2>
-            </div>
-            <div className="stacked-lines">
-              <p className="lead">
-                The questions come first. The support follows the organizational
-                reality.
-              </p>
-              <p className="lead">
-                ShiftBy helps leaders clarify what needs to be understood, what
-                needs to be decided, and what must remain explainable.
-              </p>
-              <p className="lead">
-                The work may take different forms, but the purpose remains
-                consistent: make understanding durable enough for action.
-              </p>
-            </div>
-          </div>
-          <div className="service-zone">
-            <div aria-label="How ShiftBy helps in practice" className="engagement-list">
-              <article className="engagement-block service-section-ai-adoption">
-              <div className="engagement-copy">
-                <p className="engagement-challenge">Choosing Where To Act</p>
-                <p className="signal-context service-category">
-                  <strong>AI Adoption &amp; Transformation</strong>
-                </p>
-                <h3 className="service-lens">AI direction and decision clarity</h3>
-                <span className="service-story-label">Challenge</span>
-                <p>The challenge is rarely finding opportunities.</p>
-                <p>
-                  The harder question is where AI should focus, where value may
-                  emerge, and where ownership must remain visible.
-                </p>
-                <span className="service-story-label">How ShiftBy helps</span>
-                <p>
-                  ShiftBy helps clarify{" "}
-                  <strong>AI adoption strategy</strong>,{" "}
-                  <strong>AI transformation strategy</strong>, roadmap choices,
-                  and the <strong>AI operating model</strong> needed to keep
-                  decisions explainable.
-                </p>
-                <span className="service-story-label">Outcome</span>
-                <p>
-                  Greater confidence in where to invest, what to prioritize,
-                  who remains accountable, and how adoption should proceed.
-                </p>
-              </div>
-                <div className="engagement-signals">
-                <p className="signal-context topics-label">Topics may include</p>
-                <ul aria-label="AI direction and decision clarity topics" className="signal-list">
-                  <li className="is-primary service-example-item">Business value assessment</li>
-                  <li className="is-primary service-example-item">AI opportunity prioritization</li>
-                  <li className="is-primary service-example-item">AI roadmap development</li>
-                  <li className="is-primary service-example-item">Business process analysis</li>
-                  <li className="is-primary service-example-item">Business process redesign</li>
-                  <li className="is-primary service-example-item">POC-to-scale decision support</li>
-                </ul>
-                <section
-                  aria-label="Relevant ShiftBy capabilities for AI direction and decision clarity"
-                  className="relevant-capabilities"
-                >
-                  <h4>Relevant ShiftBy capabilities</h4>
-                  <dl>
-                    <div>
-                      <dt>Decision Traceability</dt>
-                      <dd>Connects AI priorities, rationale, and decision ownership.</dd>
-                    </div>
-                    <div>
-                      <dt>Adaptive Execution</dt>
-                      <dd>Sequences change without losing decision context.</dd>
-                    </div>
-                    <div>
-                      <dt>Human-AI Accountability</dt>
-                      <dd>Keeps ownership visible across AI adoption decisions.</dd>
-                    </div>
-                  </dl>
-                </section>
-              </div>
-              </article>
-
-              <article className="engagement-block service-section-ai-readiness">
-              <div className="engagement-copy">
-                <p className="engagement-challenge">
-                  Preparing The Organization To Act
-                </p>
-                <p className="signal-context service-category">
-                  <strong>AI Readiness &amp; Enablement</strong>
-                </p>
-                <h3 className="service-lens">Readiness before adoption</h3>
-                <span className="service-story-label">Challenge</span>
-                <p>Readiness rarely begins with tools.</p>
-                <p>
-                  Leaders need clarity, teams need confidence, and
-                  organizations need shared understanding before{" "}
-                  <strong>AI adoption</strong> can succeed.
-                </p>
-                <span className="service-story-label">How ShiftBy helps</span>
-                <p>
-                  ShiftBy helps assess <strong>people</strong>, ways of
-                  working, <strong>knowledge</strong>, <strong>data</strong>,{" "}
-                  <strong>suppliers</strong>, and{" "}
-                  <strong>governance</strong> so readiness is grounded in
-                  organizational reality.
-                </p>
-                <span className="service-story-label">Outcome</span>
-                <p>
-                  Greater confidence that people, knowledge, governance, and
-                  ways of working are ready to support adoption.
-                </p>
-              </div>
-                <div className="engagement-signals">
-                <p className="signal-context topics-label">Topics may include</p>
-                <ul
-                  aria-label="Readiness before adoption topics"
-                  className="signal-list"
-                >
-                  <li className="is-primary service-example-item">Executive workshops</li>
-                  <li className="is-primary service-example-item">Leadership coaching</li>
-                  <li className="is-primary service-example-item">AI literacy</li>
-                  <li className="is-primary service-example-item">Workforce readiness</li>
-                  <li className="is-primary service-example-item">Shared understanding baseline</li>
-                  <li className="is-primary service-example-item">Decision ownership mapping</li>
-                  <li className="is-primary service-example-item">Data readiness</li>
-                  <li className="is-primary service-example-item">Knowledge readiness</li>
-                  <li className="is-primary service-example-item">Supplier readiness</li>
-                  <li className="is-primary service-example-item">Governance readiness</li>
-                </ul>
-                <section
-                  aria-label="Relevant ShiftBy capabilities for readiness before adoption"
-                  className="relevant-capabilities"
-                >
-                  <h4>Relevant ShiftBy capabilities</h4>
-                  <dl>
-                    <div>
-                      <dt>Organizational Memory</dt>
-                      <dd>Preserves shared understanding and readiness baseline context.</dd>
-                    </div>
-                    <div>
-                      <dt>Human-AI Accountability</dt>
-                      <dd>Clarifies ownership for enablement, governance, and adoption decisions.</dd>
-                    </div>
-                    <div>
-                      <dt>Adaptive Execution</dt>
-                      <dd>Supports staged action without losing readiness context.</dd>
-                    </div>
-                  </dl>
-                </section>
-              </div>
-              </article>
-
-              <article className="engagement-block service-section-ai-agents">
-              <div className="engagement-copy">
-                <p className="engagement-challenge">
-                  Improving Work Without Losing Context
-                </p>
-                <p className="signal-context service-category">
-                  <strong>AI Agents &amp; Intelligent Operations</strong>
-                </p>
-                <h3 className="service-lens">Human-AI work that remains explainable</h3>
-                <span className="service-story-label">Challenge</span>
-                <p>Deploying AI is not the same as improving work.</p>
-                <p>
-                  <strong>AI agents</strong>,{" "}
-                  intelligent operations,{" "}
-                  <strong>knowledge-connected AI systems</strong>, and{" "}
-                  <strong>enterprise AI workflows</strong> need intent,
-                  rationale, traceability, ownership, and organizational memory
-                  to remain explainable.
-                </p>
-                <span className="service-story-label">How ShiftBy helps</span>
-                <p>
-                  ShiftBy helps shape <strong>human-AI collaboration</strong>,{" "}
-                  governed artifact generation, requirements generation,{" "}
-                  <strong>traceability matrices</strong>, and quality
-                  documentation.
-                </p>
-                <span className="service-story-label">Outcome</span>
-                <p>
-                  Improved execution without losing the context needed to
-                  explain, govern, and trust the work.
-                </p>
-              </div>
-                <div className="engagement-signals">
-                <p className="signal-context topics-label">Topics may include</p>
-                <ul aria-label="Human-AI work topics" className="signal-list">
-                  <li className="is-primary service-example-item">AI agent governance</li>
-                  <li className="is-primary service-example-item">Knowledge-connected workflows</li>
-                  <li className="is-primary service-example-item">Enterprise knowledge graph patterns</li>
-                  <li className="is-primary service-example-item">Governed artifact generation</li>
-                  <li className="is-primary service-example-item">Requirements generation</li>
-                  <li className="is-primary service-example-item">Traceability matrices</li>
-                  <li className="is-primary service-example-item">Quality documentation</li>
-                  <li className="is-primary service-example-item">Human-AI collaboration</li>
-                  <li className="is-primary service-example-item">
-                    Organizational memory preservation
-                  </li>
-                </ul>
-                <section
-                  aria-label="Relevant ShiftBy capabilities for human-AI work"
-                  className="relevant-capabilities"
-                >
-                  <h4>Relevant ShiftBy capabilities</h4>
-                  <dl>
-                    <div>
-                      <dt>Organizational Memory</dt>
-                      <dd>Preserves meaning across generated artifacts and workflows.</dd>
-                    </div>
-                    <div>
-                      <dt>Human-AI Accountability</dt>
-                      <dd>Keeps human ownership clear as AI participates in work.</dd>
-                    </div>
-                    <div>
-                      <dt>Decision Traceability</dt>
-                      <dd>Connects intent, rationale, and workflow decisions.</dd>
-                    </div>
-                  </dl>
-                </section>
-              </div>
-              </article>
-
-              <article className="engagement-block service-section-ai-governance">
-              <div className="engagement-copy">
-                <p className="engagement-challenge">
-                  Preserving Trust As Execution Changes
-                </p>
-                <p className="signal-context service-category">
-                  <strong>AI Governance, Safety &amp; Resilience</strong>
-                </p>
-                <h3 className="service-lens">Trust, accountability, and assurance</h3>
-                <span className="service-story-label">Challenge</span>
-                <p>Governance is not the outcome. Trust is.</p>
-                <p>
-                  <strong>Responsible AI</strong>,{" "}
-                  <strong>AI governance</strong>,{" "}
-                  <strong>AI risk management</strong>,{" "}
-                  AI assurance, and third-party AI risk depend on clear
-                  evidence, ownership, safety, security, privacy, and
-                  resilience.
-                </p>
-                <span className="service-story-label">How ShiftBy helps</span>
-                <p>
-                  ShiftBy helps map oversight, assurance evidence,{" "}
-                  <strong>audit readiness</strong>, and{" "}
-                  <strong>operational resilience</strong> to how execution
-                  actually changes.
-                </p>
-                <span className="service-story-label">Outcome</span>
-                <p>
-                  Greater confidence that trust can be demonstrated through
-                  clear ownership, evidence, oversight, and accountability.
-                </p>
-              </div>
-                <div className="engagement-signals">
-                <p className="signal-context topics-label">Topics may include</p>
-                <ul aria-label="Trust accountability and assurance topics" className="signal-list">
-                  <li className="is-primary service-example-item">Responsible AI</li>
-                  <li className="is-primary service-example-item">AI governance</li>
-                  <li className="is-primary service-example-item">AI risk management</li>
-                  <li className="is-primary service-example-item">AI safety</li>
-                  <li className="is-primary service-example-item">AI security</li>
-                  <li className="is-primary service-example-item">Data privacy</li>
-                  <li className="is-primary service-example-item">Data protection</li>
-                  <li className="is-primary service-example-item">Third-party AI risk</li>
-                  <li className="is-primary service-example-item">Operational resilience</li>
-                  <li className="is-primary service-example-item">Audit readiness</li>
-                  <li className="is-primary service-example-item">AI assurance</li>
-                  <li className="is-primary service-example-item">Assurance evidence mapping</li>
-                </ul>
-                <section
-                  aria-label="Relevant ShiftBy capabilities for trust accountability and assurance"
-                  className="relevant-capabilities"
-                >
-                  <h4>Relevant ShiftBy capabilities</h4>
-                  <dl>
-                    <div>
-                      <dt>Human-AI Accountability</dt>
-                      <dd>Clarifies ownership across AI risk, safety, and oversight.</dd>
-                    </div>
-                    <div>
-                      <dt>Decision Traceability</dt>
-                      <dd>Connects assurance evidence to decisions that can be reviewed.</dd>
-                    </div>
-                    <div>
-                      <dt>Organizational Memory</dt>
-                      <dd>Preserves governance context and assurance history.</dd>
-                    </div>
-                  </dl>
-                </section>
-              </div>
-              </article>
-            </div>
-          </div>
-
-          <div
-            aria-labelledby="help-examples-title"
-            className="help-examples"
-            style={{
-              gap: "clamp(24px, 3.4vw, 48px)",
-              marginTop: 0,
-              paddingTop: "clamp(22px, 3vw, 34px)"
-            }}
-          >
-            <div>
-              <h3 id="help-examples-title">Where conversations often begin</h3>
-              <p>
-                These are common situations where decisions, knowledge,
-                ownership, and execution need to remain explainable before
-                action can move forward.
-              </p>
-            </div>
-            <div style={{ display: "grid", gap: "clamp(20px, 3vw, 30px)" }}>
-              <ul className="example-list" style={{ marginTop: 0 }}>
-                <li>
-                  Choosing where AI effort and investment should focus
-                </li>
-                <li>
-                  Preparing people, knowledge, data, and suppliers for AI adoption
-                </li>
-                <li>
-                  Scaling execution across R&amp;D, manufacturing, supply chain,
-                  and knowledge work
-                </li>
-                <li>
-                  Introducing AI participation without losing accountability or
-                  decision lineage
-                </li>
-                <li>
-                  Maintaining trust, traceability, assurance, and audit readiness
-                  in regulated environments
-                </li>
-              </ul>
-              <div>
-                <p className="signal-context" style={{ marginTop: 0 }}>
-                  Enterprise patterns may include
-                </p>
-                <ul
-                  aria-label="Enterprise recognition examples"
-                  className="example-list"
-                  style={{ marginTop: "10px" }}
-                >
-                  <li>
-                    AI opportunities are visible, but priority, ownership,
-                    readiness, and governance remain unclear.
-                  </li>
-                  <li>
-                    A major decision still shapes execution, but the rationale,
-                    assumptions, approvals, and evidence are hard to reconstruct.
-                  </li>
-                  <li>
-                    Teams rely on AI-assisted outputs, but ownership,
-                    validation, escalation, and accountability are not yet easy
-                    to explain.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="support-title" className="section support-columns">
-        <div className="support-copy">
-          <span className="kicker">Where this work applies</span>
-          <h2 id="support-title">Where these challenges often appear</h2>
-          <p>
-            These challenges become most visible where decisions, knowledge,
-            accountability, risk, and execution must remain connected despite
-            organizational complexity and change.
-          </p>
-        </div>
-        <div aria-label="Organizations and functions" className="recognition">
-          <div>
-            <h3>Industries</h3>
-            <ul>
-              <li>Pharmaceuticals</li>
-              <li>MedTech</li>
-              <li>Consumer Health</li>
-              <li>Manufacturing</li>
-              <li>Industrial Operations</li>
-              <li>Regulated Environments</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Functions</h3>
-            <ul>
-              <li>Executive Leadership</li>
-              <li>Business Transformation</li>
-              <li>Research &amp; Development</li>
-              <li>Manufacturing Operations</li>
-              <li>Supply Chain</li>
-              <li>Quality &amp; Compliance</li>
-              <li>Technology</li>
-              <li>Cybersecurity &amp; Risk</li>
-              <li>Audit &amp; Assurance</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
+      {/* ===================================================================
+          2. ORGANIZATIONAL MEMORY SERVICES
+          =================================================================== */}
       <section
-        aria-labelledby="conversation-title"
-        className="section conversation"
+        aria-labelledby="org-memory-services-heading"
+        className={styles.quietBand}
+        id="organizational-memory"
       >
-        <div>
-          <span className="kicker">Start a conversation</span>
-          <h2 id="conversation-title">
-            Start with the challenge. Continue with the conversation.
-          </h2>
-          <div className="conversation-copy">
-            <p>
-              Whether your organization is deciding where to act, preparing
-              for AI, improving work with AI, or strengthening governance and
-              accountability, the first step is understanding the challenge
-              clearly.
+        <div className={styles.section}>
+          <div className={styles.clusterHeader}>
+            <span className={styles.kicker}>Capability: Organizational Memory</span>
+            <h2 className={styles.clusterTitle} id="org-memory-services-heading">
+              Preserve the context that makes knowledge useful through change.
+            </h2>
+            <p className={styles.clusterDescription}>
+              Organizational Memory helps organizations preserve, connect,
+              recover, and responsibly reuse knowledge, relationships, provenance,
+              prior state, uncertainty, and learning.
             </p>
-          </div>
-          <div aria-label="Final Services page links" className="cta-actions">
-            <Link className="button primary" href="/contact">
-              Start a conversation
+            <Link
+              className={styles.clusterCapabilityLink}
+              href="/capabilities/organizational-memory"
+            >
+              Learn more about the Organizational Memory capability →
             </Link>
           </div>
+
+          <div className={styles.servicesGrid}>
+            <ServiceCard
+              capabilityBadge="Knowledge Architecture"
+              note="Knowledge-continuity work can examine context at risk during personnel, supplier, or system changes without requiring an active AI system or commissioning full architecture design."
+              scopeOptions={[
+                "Semantic modeling and relationship design across key domains",
+                "Knowledge-graph architecture and enterprise context integration",
+                "Lifecycle definition for retained AI context and long-term memory",
+                "Clarifying ownership, review rights, and change acceptance"
+              ]}
+              slug="ai-knowledge-context-architecture"
+              targetNeed="For organizations whose knowledge is fragmented, difficult to interpret, or unsuitable for reuse by people and AI systems."
+              title="AI Knowledge & Context Architecture"
+              typicalOutputs={[
+                "Knowledge and context architecture specification",
+                "Semantic relationship model and domain taxonomy",
+                "Retained context lifecycle and ownership requirements",
+                "Prioritized remediation backlog for knowledge fragmentation"
+              ]}
+            />
+
+            <ServiceCard
+              capabilityBadge="Retrieval & RAG"
+              note="Retrieval quality and answer quality remain distinct. A relevant source or citation does not by itself establish a correct, grounded, or suitable answer."
+              scopeOptions={[
+                "Readiness & Architecture: source suitability, permissions, metadata, data quality, content structure, freshness, and retrieval design",
+                "Quality Evaluation: retrieval coverage, answer grounding, attribution, conflicting source resolution, and unsupported-answer handling"
+              ]}
+              slug="rag-retrieval-assessment"
+              targetNeed="For organizations preparing a retrieval use case or investigating unsuitable, conflicting, or hallucinated search and RAG results."
+              title="RAG & Enterprise Retrieval Assessment"
+              typicalOutputs={[
+                "Readiness findings and source suitability scorecard",
+                "Retrieval relevance and grounding evaluation report",
+                "Failure analysis across complex and conflicting queries",
+                "Prioritized improvements and verification criteria"
+              ]}
+            />
+          </div>
         </div>
-        <div className="cta-note">
-          <p>A conversation can begin with:</p>
-          <ul>
-            <li>A decision that needs clarity</li>
-            <li>A readiness question</li>
-            <li>A workflow that is changing</li>
-            <li>A governance or accountability concern</li>
-          </ul>
+      </section>
+
+      {/* ===================================================================
+          3. BOUNDED AI SERVICES
+          =================================================================== */}
+      <section
+        aria-labelledby="bounded-ai-services-heading"
+        className={styles.section}
+        id="bounded-ai"
+      >
+        <div className={styles.clusterHeader}>
+          <span className={styles.kicker}>Capability: Bounded AI</span>
+          <h2 className={styles.clusterTitle} id="bounded-ai-services-heading">
+            Keep AI reasoning and execution aligned with the work intended.
+          </h2>
+          <p className={styles.clusterDescription}>
+            Bounded AI aims to reduce drift from agreed purpose, context,
+            responsibilities, result requirements, and permitted progression
+            across individual tasks, autonomous agents, and multi-agent workflows.
+          </p>
+          <Link
+            className={styles.clusterCapabilityLink}
+            href="/capabilities/bounded-ai"
+          >
+            Learn more about the Bounded AI capability →
+          </Link>
+        </div>
+
+        <div className={styles.servicesGrid}>
+          <ServiceCard
+            capabilityBadge="Tasks, Agents & Workflows"
+            note="A design review assesses intended arrangements, not proof of operating effectiveness. Measured performance requires appropriate empirical testing."
+            scopeOptions={[
+              "Readiness & Boundary Assessment: verify whether purpose, context, delegated discretion, permitted actions, and acceptance conditions are sufficiently defined",
+              "Task & Control Design: specify input/output semantic contracts, reusable reasoning guidance (skills), tool permissions, validation gates, and stopping conditions",
+              "Workflow Review: examine handoffs, branches, correction paths, and the distinction between deterministic rules and autonomous agent discretion",
+              "Observability & Resource Planning: review execution traceability, validation tracking, and cumulative token, cost, time, and retry allowances"
+            ]}
+            slug="ai-task-agent-workflow-advisory"
+            targetNeed="For organizations that need an AI contribution to remain aligned with a defined business requirement across single tasks or multi-stage workflows."
+            title="AI Task, Agent & Workflow Advisory"
+            typicalOutputs={[
+              "Readiness findings and boundary gap assessment",
+              "Task/workflow boundary model and input-output contracts",
+              "Reusable reasoning guidance and skill specifications",
+              "Observability, resource allowance, and validation plan"
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* ===================================================================
+          4. HUMAN–AI ACCOUNTABILITY SERVICES
+          =================================================================== */}
+      <section
+        aria-labelledby="accountability-services-heading"
+        className={styles.quietBand}
+        id="human-ai-accountability"
+      >
+        <div className={styles.section}>
+          <div className={styles.clusterHeader}>
+            <span className={styles.kicker}>Capability: Human–AI Accountability</span>
+            <h2 className={styles.clusterTitle} id="accountability-services-heading">
+              Keep human ownership, authority, and answerability explicit.
+            </h2>
+            <p className={styles.clusterDescription}>
+              Human–AI Accountability applies across knowledge and AI systems.
+              It covers who owns knowledge, who authorizes AI participation, who
+              reviews results, and who can intervene or accept residual risk.
+            </p>
+            <Link
+              className={styles.clusterCapabilityLink}
+              href="/capabilities/human-ai-accountability"
+            >
+              Learn more about Human–AI Accountability →
+            </Link>
+          </div>
+
+          <div className={styles.servicesGrid}>
+            <ServiceCard
+              capabilityBadge="Governance & Oversight"
+              note="Oversight is proportionate to consequence and risk; not every output requires individual human approval. Relevant policies can inform the work without constituting legal advice."
+              scopeOptions={[
+                "Ownership & Decision Rights: map legitimate authority, permitted use, supplier boundaries, and risk acceptance for a bounded use case",
+                "Human Oversight Design: establish review conditions, escalation paths, and verify whether reviewers have the competence, information, time, and authority to challenge or override AI work"
+              ]}
+              slug="ai-governance-human-oversight"
+              targetNeed="For organizations with unclear responsibility for AI-enabled work, or oversight that exists on paper but is difficult to exercise in practice."
+              title="AI Governance & Human Oversight"
+              typicalOutputs={[
+                "Accountability and decision-rights matrix",
+                "Meaningful human oversight operating procedure",
+                "Intervention, challenge, and override requirements",
+                "Evidence expectations for risk acceptance"
+              ]}
+            />
+
+            <ServiceCard
+              capabilityBadge="Assurance & Evidence"
+              note="Distinguishes documented policy design from evidence of actual operating effectiveness. Testing does not assume controls work merely because they are written."
+              scopeOptions={[
+                "Evidence Sufficiency Review: connect requirements, controls, test evidence, findings, decisions, owners, and verification",
+                "Decision Traceability: reconstruct purpose, evidence, rationale, authority, resulting action, observed state, and subsequent review",
+                "Incident & Learning Review: examine selected incidents, exceptions, and remediation records to identify recurring systemic weaknesses"
+              ]}
+              slug="ai-assurance-evidence-review"
+              targetNeed="For organizations deciding whether available evidence supports reliance on an AI-enabled activity, or preparing for internal or independent examination."
+              title="AI Assurance & Evidence Review"
+              typicalOutputs={[
+                "Evidence and traceability assessment report",
+                "Control effectiveness gap analysis",
+                "Unresolved limitations register",
+                "Defensible reliance decision recommendations"
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ===================================================================
+          5. CROSS-CUTTING SERVICES: SECURITY & RELIABILITY
+          =================================================================== */}
+      <section
+        aria-labelledby="cross-cutting-services-heading"
+        className={styles.section}
+        id="cross-cutting"
+      >
+        <div className={styles.clusterHeader}>
+          <span className={styles.kicker}>Cross-Cutting Services</span>
+          <h2 className={styles.clusterTitle} id="cross-cutting-services-heading">
+            Security, red teaming, and measured reliability testing.
+          </h2>
+          <p className={styles.clusterDescription}>
+            Security and evaluation services apply across knowledge systems, AI
+            tasks, autonomous agents, and workflows. They can be commissioned
+            independently or combined with advisory engagements.
+          </p>
+        </div>
+
+        <div className={styles.servicesGrid}>
+          <ServiceCard
+            capabilityBadge="Security & Red Teaming"
+            note="Testing remains strictly within agreed client authorization, targets, data handling, and operating constraints. A review does not imply attacks were executed unless red teaming is scoped."
+            scopeOptions={[
+              "Security Assessment: review attack surface, trust boundaries, and controls across AI applications, RAG pipelines, agents, and workflows",
+              "Adversarial Red Teaming: execute authorized adversarial scenarios examining prompt injection, retrieval/memory manipulation, sensitive data exposure, unsafe tool use, and approval bypass"
+            ]}
+            slug="ai-security-red-teaming"
+            targetNeed="For organizations that need to identify security vulnerabilities or examine system behavior under adversarial attack conditions."
+            title="AI Security Assessment & Red Teaming"
+            typicalOutputs={[
+              "Adversarial test findings and attack path evidence",
+              "Trust boundary and control gap analysis",
+              "Remediation priorities and retest verification criteria"
+            ]}
+          />
+
+          <ServiceCard
+            capabilityBadge="Evaluation & Reliability"
+            note="Claims of reduced drift require a documented baseline comparator and comparable empirical evidence. Valid output formatting alone does not demonstrate reliability."
+            scopeOptions={[
+              "Empirical Quality Evaluation: evaluate defined tasks or workflows against agreed criteria under normal, exceptional, and changing conditions",
+              "Behavioral Drift Testing: measure task performance, semantic fidelity, grounding, boundary adherence, and regression after changes",
+              "Remediation Verification & Retesting: independently verify whether previously identified quality, security, or control findings have been resolved"
+            ]}
+            slug="ai-evaluation-reliability"
+            targetNeed="For organizations seeking measured, empirical evidence that an AI task, agent, or workflow reliably performs its intended responsibility."
+            title="AI Evaluation & Reliability Testing"
+            typicalOutputs={[
+              "Comprehensive evaluation plan and acceptance criteria",
+              "Observed benchmark results and failure analysis",
+              "Baseline comparator report for drift verification",
+              "Retest findings and residual risk limitations"
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* ===================================================================
+          6. HOW ENGAGEMENTS WORK
+          =================================================================== */}
+      <section
+        aria-labelledby="engagement-model-heading"
+        className={`${styles.quietBand} ${styles.howSection}`}
+        id="engagement-model"
+      >
+        <div className={styles.section}>
+          <div className={styles.clusterHeader}>
+            <span className={styles.kicker}>Engagement Lifecycle</span>
+            <h2 className={styles.clusterTitle} id="engagement-model-heading">
+              How ShiftBy engagements work in practice.
+            </h2>
+            <p className={styles.clusterDescription}>
+              An engagement can focus on one specialized service or combine
+              disciplines around a single enterprise problem. We work through
+              bounded advisory sprints, control design, and empirical testing:
+            </p>
+          </div>
+
+          <div className={styles.processGrid}>
+            <article className={styles.processCard}>
+              <span className={styles.processStepNum}>1</span>
+              <h3 className={styles.processTitle}>Scope & Authorize</h3>
+              <p className={styles.processBody}>
+                Before work begins, we agree on the business problem, accountable
+                executive owner, decisions the work must support, systems included,
+                required data access and authorizations, and acceptance criteria.
+              </p>
+            </article>
+
+            <article className={styles.processCard}>
+              <span className={styles.processStepNum}>2</span>
+              <h3 className={styles.processTitle}>Analyze, Design or Test</h3>
+              <p className={styles.processBody}>
+                We execute the agreed assessment, boundary modeling, adversarial
+                testing, or governance review in collaboration with your teams,
+                avoiding disruption to production environments.
+              </p>
+            </article>
+
+            <article className={styles.processCard}>
+              <span className={styles.processStepNum}>3</span>
+              <h3 className={styles.processTitle}>Deliver & Enable</h3>
+              <p className={styles.processBody}>
+                Every engagement concludes with tangible artifacts, findings,
+                defensible recommendations, retest criteria, and enablement
+                guidance so your teams retain full operational capability.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================================================================
+          7. DELIVERY BOUNDARIES & GOVERNANCE
+          =================================================================== */}
+      <section
+        aria-labelledby="boundaries-heading"
+        className={styles.section}
+      >
+        <div className={styles.clusterHeader}>
+          <span className={styles.kicker}>Governance & Independence</span>
+          <h2 className={styles.clusterTitle} id="boundaries-heading">
+            Delivery boundaries and client responsibilities.
+          </h2>
+          <p className={styles.clusterDescription}>
+            Clear boundaries protect independence and ensure client leadership
+            retains full institutional control throughout our work:
+          </p>
+        </div>
+
+        <div className={styles.boundariesGrid}>
+          <article className={`${styles.boundaryCard} ${styles.boundaryCardShiftby}`}>
+            <div className={styles.boundaryHeader}>
+              <h3 className={styles.boundaryTitle}>ShiftBy Responsibilities</h3>
+            </div>
+            <ul className={styles.boundaryList}>
+              <li>Independent advisory, assessment, control design, testing, and enablement within the agreed scope.</li>
+              <li>Producing actionable evidence, gap analyses, boundary specifications, and remediation criteria.</li>
+              <li>Maintaining strict confidentiality and operating solely within agreed testing authorizations.</li>
+              <li>Delivering clear findings that inform leadership decisions without bias or software vendor lock-in.</li>
+            </ul>
+          </article>
+
+          <article className={`${styles.boundaryCard} ${styles.boundaryCardClient}`}>
+            <div className={styles.boundaryHeader}>
+              <h3 className={styles.boundaryTitle}>Client Responsibilities</h3>
+            </div>
+            <ul className={styles.boundaryList}>
+              <li>Retaining full operational authority, system deployment, production integration, and daily operation.</li>
+              <li>Making all consequential business decisions, policy approvals, and formal risk acceptances.</li>
+              <li>Meeting legal, statutory, and regulatory obligations applicable to their industry and jurisdiction.</li>
+              <li>Providing necessary access, operational context, and testing permissions required for the engagement.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      {/* ===================================================================
+          8. CONVERSION CTA
+          =================================================================== */}
+      <section aria-labelledby="services-cta-heading" className={styles.quietBand}>
+        <div className={styles.ctaSection}>
+          <h2 className={styles.ctaTitle} id="services-cta-heading">
+            Ready to scope a bounded engagement?
+          </h2>
+          <p className={styles.ctaSubtitle}>
+            Whether investigating an underperforming RAG pipeline, establishing
+            agent boundaries, or preparing for an assurance review, start with a
+            30-minute discovery call.
+          </p>
+          <Link className={styles.buttonPrimary} href="/contact">
+            Start a conversation →
+          </Link>
         </div>
       </section>
     </div>

@@ -117,10 +117,10 @@ export const pageMetadataEntries = {
   },
   services: {
     title: "Services",
-    seoTitle: "ShiftBy Services | Executive Advisory, Coaching, and Consulting",
+    seoTitle: "ShiftBy Service Catalog | Enterprise Advisory, Boundary Design & AI Assurance",
     path: "/services",
     description:
-      "Advisory, coaching, and consulting for organizations that need understanding, accountability, and assurance to remain connected through change."
+      "Defined advisory, assessment, control design, red teaming, and evaluation services across Organizational Memory, Bounded AI, and Human–AI Accountability."
   },
   about: {
     title: "About",

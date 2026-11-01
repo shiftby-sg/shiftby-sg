@@ -45,10 +45,12 @@ Implement the full catalog according to `v2docs/Service Catalog.md`:
   * Advisory informs decisions; does not replace client authority.
 
 ## 4. Deliverables
-* [ ] Rewritten `app/services/page.tsx` using CSS Modules (`services.module.css`)
-* [ ] Component `components/services/ServiceCard.tsx` with `?service=` URL generation
-* [ ] Inline `<style>` overrides completely removed
-* [ ] Updated services metadata in `content/discoverability.ts`
+* [x] Rewritten `app/services/page.tsx` using CSS Modules (`services.module.css`)
+* [x] Reusable component `components/services/ServiceCard.tsx` with `?service=` URL intent generation
+* [x] Inline `<style>` overrides completely purged (240+ lines removed)
+* [x] All 7 defined services from `v2docs/Service Catalog.md` implemented with typical outputs
+* [x] Engagement lifecycle ("How Engagements Work") and Delivery Boundaries implemented
+* [x] Updated services metadata in `content/discoverability.ts` via `getPageMetadata`
 
 ## 5. Verification & Acceptance Criteria
 * The 7 services and their typical outputs are clearly displayed and searchable/filterable.
