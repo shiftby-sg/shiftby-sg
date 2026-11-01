@@ -21,7 +21,7 @@ export default function HomePage() {
 
         <div className={styles.heroContent}>
           <p className={styles.categoryDescriptor}>
-            Executive Advisory &amp; AI Governance
+            Executive Advisory · Distributed Execution &amp; AI
           </p>
           <h1 className={styles.heroTitle} id="hero-title">
             <span className={styles.heroTitleLine}>Execution changes.</span>
@@ -149,8 +149,8 @@ export default function HomePage() {
             <h3 className={styles.driftTitle}>Context Has Always Faded</h3>
             <p className={styles.driftText}>
               Long before AI, organizations struggled with context loss. When staff leave or systems
-              migrate, databases preserve the final transactions, but the human rationale that validated
-              them vanishes.
+              migrate, enterprise systems preserve recorded transactions, but the human rationale
+              that validated them vanishes.
             </p>
           </article>
 
@@ -231,7 +231,7 @@ export default function HomePage() {
                 </p>
                 <ul className={styles.capabilityList}>
                   <li className={styles.capabilityListItem}>Explicit reasoning &amp; tool boundaries</li>
-                  <li className={styles.capabilityListItem}>Verified RAG retrieval grounding</li>
+                  <li className={styles.capabilityListItem}>Verified operational context grounding</li>
                   <li className={styles.capabilityListItem}>Multi-agent coordination safeguards</li>
                 </ul>
               </div>
