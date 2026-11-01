@@ -1,409 +1,214 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Capabilities | ShiftBy"
-  },
-  description:
-    "ShiftBy capabilities for preserving understanding as execution changes: decision traceability, organizational memory, human-AI accountability, and adaptive execution.",
-  alternates: {
-    canonical: "/capabilities"
-  }
-};
+import { pageMetadataEntries } from "@/content/discoverability";
+import { getPageMetadata } from "@/lib/metadata";
 
-export default function CapabilitiesPage() {
+import styles from "./capabilities.module.css";
+
+export const metadata: Metadata = getPageMetadata(
+  pageMetadataEntries.capabilities
+);
+
+export default function CapabilitiesHubPage() {
   return (
-    <div className="capabilities-design-port">
-      <section aria-labelledby="hero-title" className="section hero">
-        <div>
-          <span className="kicker">Capabilities</span>
-          <h1
-            aria-label="Four capabilities help organizations preserve understanding."
-            id="hero-title"
-          >
-            <span className="hero-title-line">Four capabilities help</span>
-            <span className="hero-title-line">organizations preserve</span>
-            <span className="hero-title-line">understanding.</span>
-          </h1>
-          <p className="lead">
-            Organizations now execute across people, systems, suppliers,
-            automation, and AI.
+    <div className={styles.page}>
+      {/* 1. Hero: Enterprise Understanding */}
+      <section aria-labelledby="capabilities-hub-title" className={`${styles.section} ${styles.hero}`}>
+        <span className={styles.kicker}>The Transformation Outcome</span>
+        <h1 className={styles.heroTitle} id="capabilities-hub-title">
+          Enterprise Understanding through 3 complementary capabilities.
+        </h1>
+
+        <div className={styles.quoteBlock}>
+          <p className={styles.quoteText}>
+            &ldquo;Enterprise Understanding is the organizational ability to
+            preserve, connect, retrieve, apply appropriately, and govern the
+            context required to understand, decide, act, adapt, and remain
+            accountable through change.&rdquo;
           </p>
-          <p className="lead">
-            As execution becomes more distributed, understanding becomes harder
-            to preserve and confidence becomes harder to maintain.
-          </p>
-          <div className="hero-actions">
-            <Link className="button primary" href="/where-shiftby-helps">
-              See where they apply
-            </Link>
-            <Link className="button secondary" href="/contact">
-              Start a conversation
-            </Link>
-          </div>
-        </div>
-        <aside aria-label="ShiftBy authority doctrine" className="doctrine-panel">
-          <b>Capability bridge</b>
-          <p className="doctrine-line">Execution changes.</p>
-          <p className="doctrine-line">Understanding preserves confidence.</p>
-          <p className="doctrine-note">
-            This is the bridge into the capabilities that follow.
-          </p>
-        </aside>
-      </section>
-
-      <section aria-labelledby="why-capabilities-matter" className="quiet-band">
-        <div className="section split">
-          <div>
-            <span className="kicker">Why capabilities matter</span>
-            <h2 id="why-capabilities-matter">
-              Artifacts alone do not preserve understanding.
-            </h2>
-            <p>
-              Artifacts may remain while rationale, evidence, and
-              accountability become harder to recover.
-            </p>
-          </div>
-          <div className="statement-list">
-            <article className="statement">
-              <b>Preserved</b>
-              <p>
-                Artifacts can survive long after the work, decision, or change
-                that produced them.
-              </p>
-            </article>
-            <article className="statement">
-              <b>At risk</b>
-              <p>
-                What fades is the why: intent, trade-offs, decision lineage,
-                evidence, and how outcomes were achieved.
-              </p>
-            </article>
-            <article className="statement">
-              <b>Required</b>
-              <p>
-                Capabilities help keep that understanding usable as execution
-                continues to change.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="multiple-capabilities" className="section">
-        <div className="bridge-panel">
-          <div>
-            <span className="kicker">Why four capabilities</span>
-            <h2 id="multiple-capabilities">
-              No single capability preserves understanding.
-            </h2>
-            <p className="bridge-intro">
-              Most organizations recognize these challenges immediately. They
-              appear as decision drift, knowledge drift, accountability drift,
-              and execution drift.
-            </p>
-            <p className="bridge-intro">
-              No single capability preserves understanding on its own.
-            </p>
-            <p className="bridge-intro">
-              Together, Decision Traceability, Organizational Memory, Human-AI
-              Accountability, and Adaptive Execution help keep rationale,
-              context, responsibility, and intent connected as execution changes.
-            </p>
-          </div>
-          <div className="bridge-points">
-            <span className="bridge-list-label">Failure modes</span>
-            <article className="bridge-point">
-              <i>01</i>
-              <p>Decisions lose rationale, evidence, and approval context over time.</p>
-            </article>
-            <article className="bridge-point">
-              <i>02</i>
-              <p>Organizational memory fragments across people, artifacts, and change.</p>
-            </article>
-            <article className="bridge-point">
-              <i>03</i>
-              <p>Review, approval, and accountability become harder to locate.</p>
-            </article>
-            <article className="bridge-point">
-              <i>04</i>
-              <p>Transformation can outpace shared understanding.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section aria-label="Foundational capabilities" className="quiet-band" id="capabilities">
-        <div className="section">
-          <div className="capability-sections">
-            <article className="capability-detail" id="decision-traceability">
-              <div>
-                <h3>Decision Traceability</h3>
-                <p className="executive-takeaway">
-                  Important decisions should remain explainable long after they are made.
-                </p>
-                <p className="failure-mode">
-                  <b>Addresses failure mode</b>
-                  Decisions lose rationale, evidence, and approval context over time.
-                </p>
-                <p className="why">
-                  Decision Traceability keeps reasoning, assumptions, evidence,
-                  approval, and decision lineage recoverable as execution
-                  changes. It helps make decision drift visible before context
-                  becomes difficult to reconstruct.
-                </p>
-              </div>
-              <div className="detail-grid">
-                <div className="detail-cell">
-                  <b>Organizational challenge</b>
-                  <p>
-                    Decisions often outlive the people, meetings, assumptions, and
-                    evidence that shaped them.
-                  </p>
-                </div>
-                <div className="detail-cell">
-                  <b>Questions leaders ask</b>
-                  <ul>
-                    <li>Why was this decision made?</li>
-                    <li>What changed after approval?</li>
-                    <li>What evidence supported it?</li>
-                  </ul>
-                </div>
-                <div className="detail-cell span-wide">
-                  <b>Why this matters now</b>
-                  <p>
-                    AI can accelerate recommendations, summaries, and execution steps
-                    faster than organizations can preserve decision intelligence and
-                    explain their rationale.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article className="capability-detail" id="organizational-memory">
-              <div>
-                <h3>Organizational Memory</h3>
-                <p className="executive-takeaway">
-                  Understanding should survive personnel and organizational change.
-                </p>
-                <p className="failure-mode">
-                  <b>Addresses failure mode</b>
-                  Knowledge fragments across people, artifacts, systems, and
-                  change.
-                </p>
-                <p className="why">
-                  Organizational Memory keeps critical context, knowledge
-                  relationships, and evidence usable as people, teams, systems,
-                  and operating models evolve. It helps reduce knowledge drift
-                  when artifacts survive but meaning disappears.
-                </p>
-              </div>
-              <div className="detail-grid">
-                <div className="detail-cell">
-                  <b>Organizational challenge</b>
-                  <p>
-                    Knowledge fragments across people, artifacts, and informal context
-                    that may never be captured together.
-                  </p>
-                </div>
-                <div className="detail-cell">
-                  <b>Questions leaders ask</b>
-                  <ul>
-                    <li>What do we know and why?</li>
-                    <li>Where does critical context live?</li>
-                    <li>What disappears when people move?</li>
-                  </ul>
-                </div>
-                <div className="detail-cell span-wide">
-                  <b>Why this matters now</b>
-                  <p>
-                    AI can generate, summarize, and transform artifacts faster than
-                    organizations can preserve the context and knowledge relationships
-                    behind them.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article className="capability-detail" id="human-ai-accountability">
-              <div>
-                <h3>Human-AI Accountability</h3>
-                <p className="executive-takeaway">
-                  AI participation should not obscure review, approval, or responsibility.
-                </p>
-                <p className="failure-mode">
-                  <b>Addresses failure mode</b>
-                  Review, approval, and responsibility become harder to locate
-                  as AI participates in work.
-                </p>
-                <p className="why">
-                  Human-AI Accountability keeps ownership, review, escalation,
-                  evidence, judgment, and decision lineage visible across
-                  people, AI, systems, and artifacts. It helps reduce
-                  accountability drift before responsibility becomes difficult
-                  to trace.
-                </p>
-                <p className="why">
-                  This matters for Responsible AI, AI governance, enterprise AI,
-                  AI-assisted decisions, and AI-generated artifacts.
-                </p>
-              </div>
-              <div className="detail-grid">
-                <div className="detail-cell">
-                  <b>Organizational challenge</b>
-                  <p>
-                    Responsibility becomes harder to see when judgment, automation,
-                    delegation, evidence, and review are spread across humans, AI,
-                    and artifacts.
-                  </p>
-                </div>
-                <div className="detail-cell">
-                  <b>Questions leaders ask</b>
-                  <ul>
-                    <li>Who approved this?</li>
-                    <li>Who reviewed this?</li>
-                    <li>What evidence supports this outcome?</li>
-                  </ul>
-                </div>
-                <div className="detail-cell span-wide">
-                  <b>Why this matters now</b>
-                  <p>
-                    Enterprise AI and human-AI collaboration introduce new
-                    participation without automatically clarifying authority,
-                    review, reliance, evidence, or responsibility.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article className="capability-detail" id="adaptive-execution">
-              <div>
-                <h3>Adaptive Execution</h3>
-                <p className="executive-takeaway">
-                  Organizations must adapt without losing operational intent.
-                </p>
-                <p className="failure-mode">
-                  <b>Addresses failure mode</b>
-                  Transformation can outpace shared understanding.
-                </p>
-                <p className="why">
-                  Adaptive Execution helps organizations adapt while preserving
-                  operating intent, dependencies, assumptions, and context. It
-                  helps detect execution drift before work changes faster than
-                  understanding can follow.
-                </p>
-              </div>
-              <div className="detail-grid">
-                <div className="detail-cell">
-                  <b>Organizational challenge</b>
-                  <p>
-                    Transformation can move faster than the organization&apos;s
-                    ability to retain context, dependencies, and operating intent.
-                  </p>
-                </div>
-                <div className="detail-cell">
-                  <b>Questions leaders ask</b>
-                  <ul>
-                    <li>What changed and why?</li>
-                    <li>What remains consistent?</li>
-                    <li>How do we adapt without losing intent?</li>
-                  </ul>
-                </div>
-                <div className="detail-cell span-wide">
-                  <b>Why this matters now</b>
-                  <p>
-                    AI, automation, and continuous transformation can change
-                    operating models faster than shared understanding can adapt.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="what-this-enables" className="section synthesis-section">
-        <div className="synthesis">
-          <div>
-            <span className="kicker">What this enables</span>
-            <h2 id="what-this-enables">What these capabilities make possible.</h2>
-          </div>
-          <div>
-            <p>
-              When decisions remain explainable, organizational memory remains
-              usable, accountability remains visible, and intent survives
-              change, leaders have enough context to act with confidence.
-            </p>
-            <p>
-              Together, these capabilities keep decisions, knowledge,
-              accountability, and execution connected as work moves across
-              people, systems, suppliers, automation, and AI, so understanding
-              stays usable as execution continues to change.
-            </p>
-            <Link className="text-link" href="/where-shiftby-helps">
-              See how these capabilities apply →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="from-capability-to-practice" className="section practice-bridge">
-        <div className="section-head">
-          <span className="kicker">From capability to practice</span>
-          <h2 id="from-capability-to-practice">
-            Capabilities are explored through ongoing investigations.
-          </h2>
-          <p>ShiftBy explores these capabilities through a small number of ongoing initiatives.</p>
-          <p>These are not products.</p>
-          <p>
-            They investigate how understanding can remain connected across
-            decisions, knowledge, accountability, and change.
+          <p className={styles.quoteSource}>
+            ShiftBy Doctrine on Enterprise Understanding
           </p>
         </div>
-        <div className="initiative-list">
-          <article className="initiative-row">
-            <b>UnifyPlane</b>
-            <p>Explores decision traceability, accountability, and adaptive execution.</p>
-          </article>
-          <article className="initiative-row">
-            <b>CanonLens</b>
-            <p>Explores organizational memory and shared understanding across people, systems, and AI.</p>
-          </article>
-          <article className="initiative-row">
-            <b>Inspiral</b>
-            <p>Explores how organizational knowledge forms, changes, and survives over time.</p>
-          </article>
-        </div>
-        <Link className="text-link" href="/explorations">
-          Explore the explorations →
-        </Link>
-      </section>
 
-      <section
-        aria-labelledby="understanding-confidence"
-        className="section closing doctrine-close"
-      >
-        <div>
-          <span className="kicker">Understanding and confidence</span>
-          <h2 id="understanding-confidence">
-            Organizations preserve confidence when they preserve understanding.
-          </h2>
-          <p>
-            As execution becomes more distributed across people, systems,
-            automation, suppliers, and AI, preserving understanding becomes
-            more difficult.
-          </p>
-          <p>
-            Organizations that sustain confidence over time are not necessarily
-            those with the most artifacts.
-          </p>
-          <p>They are the ones that preserve understanding.</p>
-        </div>
-        <div className="cta-links">
-          <Link className="button primary" href="/contact">
-            Start a conversation
+        <p className={styles.heroSubtitle}>
+          Enterprise Understanding is the broader business transformation outcome.
+          It is not a software product, single tool, or maturity ladder. ShiftBy has
+          developed and practises three complementary capabilities that operate
+          together to enable it:
+        </p>
+
+        <div className={styles.heroActions}>
+          <Link className={styles.buttonPrimary} href="/contact">
+            Start a conversation →
           </Link>
+          <Link className={styles.buttonSecondary} href="/services">
+            View service engagements →
+          </Link>
+        </div>
+      </section>
+
+      {/* 2. The 3 Capabilities Grid */}
+      <section aria-labelledby="capabilities-list-title" className={styles.quietBand}>
+        <div className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.kicker}>Core Capabilities</span>
+            <h2 className={styles.sectionTitle} id="capabilities-list-title">
+              The three complementary capabilities.
+            </h2>
+            <p className={styles.sectionLead}>
+              Each capability contributes a distinct, indispensable dimension to
+              Enterprise Understanding. Their contributions are complementary, not interchangeable:
+            </p>
+          </div>
+
+          <div className={styles.capabilityGrid}>
+            {/* Capability 1: Organizational Memory */}
+            <article className={styles.capabilityCard}>
+              <div className={styles.capabilityHeader}>
+                <span className={styles.capabilityBadge}>Knowledge Continuity</span>
+                <h3 className={styles.capabilityName}>Organizational Memory</h3>
+                <p className={styles.capabilityContribution}>
+                  Continuity of organizational understanding beyond individual memory.
+                </p>
+              </div>
+              <p className={styles.capabilityBody}>
+                Preserves relevant knowledge, connected relationships, provenance,
+                prior state, uncertainty, and learning so that context remains
+                recoverable through personnel changes, re-organizations, and system migrations.
+              </p>
+              <div className={styles.capabilityFooter}>
+                <Link
+                  className={styles.capabilityLink}
+                  href="/capabilities/organizational-memory"
+                >
+                  Explore Organizational Memory →
+                </Link>
+              </div>
+            </article>
+
+            {/* Capability 2: Bounded AI */}
+            <article className={styles.capabilityCard}>
+              <div className={styles.capabilityHeader}>
+                <span className={styles.capabilityBadge}>Alignment & Drift Reduction</span>
+                <h3 className={styles.capabilityName}>Bounded AI</h3>
+                <p className={styles.capabilityContribution}>
+                  Reduced drift in AI-supported reasoning and execution.
+                </p>
+              </div>
+              <p className={styles.capabilityBody}>
+                Keeps AI tasks, autonomous agents, and coordinated workflows aligned
+                with their intended purpose through prepared inputs, explicit reasoning
+                guidance, validation gates, controlled progression, and cumulative resource caps.
+              </p>
+              <div className={styles.capabilityFooter}>
+                <Link
+                  className={styles.capabilityLink}
+                  href="/capabilities/bounded-ai"
+                >
+                  Explore Bounded AI →
+                </Link>
+              </div>
+            </article>
+
+            {/* Capability 3: Human-AI Accountability */}
+            <article className={styles.capabilityCard}>
+              <div className={styles.capabilityHeader}>
+                <span className={styles.capabilityBadge}>Governance & Oversight</span>
+                <h3 className={styles.capabilityName}>Human–AI Accountability</h3>
+                <p className={styles.capabilityContribution}>
+                  Sustained human and organizational answerability for AI-enabled work.
+                </p>
+              </div>
+              <p className={styles.capabilityBody}>
+                Ensures that AI participation does not obscure who holds legitimate
+                authority, what was reviewed, what evidence supported action, and
+                who can intervene, pause, override, or accept residual operational risk.
+              </p>
+              <div className={styles.capabilityFooter}>
+                <Link
+                  className={styles.capabilityLink}
+                  href="/capabilities/human-ai-accountability"
+                >
+                  Explore Human–AI Accountability →
+                </Link>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Doctrinal Clarification: How They Operate Together */}
+      <section aria-labelledby="interaction-title" className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <span className={styles.kicker}>Doctrinal Integration</span>
+          <h2 className={styles.sectionTitle} id="interaction-title">
+            How the capabilities operate together.
+          </h2>
+          <p className={styles.sectionLead}>
+            The capabilities do not function as a sequential maturity ladder or
+            competing silos. They operate as simultaneous conditions:
+          </p>
+        </div>
+
+        <div className={styles.integrationGrid}>
+          <div className={styles.integrationBlock}>
+            <h3 className={styles.integrationTitle}>Memory Sustains Context</h3>
+            <p className={styles.integrationText}>
+              Organizational Memory provides the historical context, provenance,
+              and semantic grounding needed for decisions and AI systems.
+            </p>
+          </div>
+
+          <div className={styles.integrationBlock}>
+            <h3 className={styles.integrationTitle}>Bounded AI Reduces Drift</h3>
+            <p className={styles.integrationText}>
+              Bounded AI ensures that when AI interprets, applies, or acts upon
+              that context, it does not depart from agreed business boundaries.
+            </p>
+          </div>
+
+          <div className={styles.integrationBlock}>
+            <h3 className={styles.integrationTitle}>Accountability Cross-Cuts Both</h3>
+            <p className={styles.integrationText}>
+              Human–AI Accountability is not an afterthought or final check—it
+              establishes legitimate ownership and oversight across both memory and AI.
+            </p>
+          </div>
+        </div>
+
+        {/* Note on Adaptive Execution */}
+        <div className={styles.noteBox}>
+          <h4 className={styles.noteTitle}>On Execution and Adaptation</h4>
+          <p className={styles.noteText}>
+            In ShiftBy doctrine, execution and adaptation are operational
+            activities and business outcomes supported by the three capabilities,
+            rather than a separate canonical capability. When memory, boundaries,
+            and accountability are preserved, organizations can adapt execution
+            rapidly without losing continuity or control.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. Action Banner */}
+      <section aria-labelledby="hub-cta-title" className={styles.quietBand}>
+        <div className={styles.ctaContainer}>
+          <h2 className={styles.ctaTitle} id="hub-cta-title">
+            Ready to assess where these capabilities apply to your stack?
+          </h2>
+          <p className={styles.ctaSubtitle}>
+            We work with enterprise teams through bounded advisory, control design,
+            and testing engagements.
+          </p>
+          <div className={styles.heroActions}>
+            <Link className={styles.buttonPrimary} href="/contact">
+              Start a conversation →
+            </Link>
+            <Link className={styles.buttonSecondary} href="/services">
+              View the service catalog →
+            </Link>
+          </div>
         </div>
       </section>
     </div>

@@ -79,13 +79,13 @@ Replace the single monolithic 4-capability page with a **Hub-and-Spoke architect
 * Safely decommission `app/where-shiftby-helps/page.tsx` and `styles/where-shiftby-helps.css`.
 
 ## 4. Deliverables
-* [ ] New capability hub page `app/capabilities/page.tsx`
-* [ ] New page `app/capabilities/organizational-memory/page.tsx`
-* [ ] New page `app/capabilities/bounded-ai/page.tsx`
-* [ ] New page `app/capabilities/human-ai-accountability/page.tsx`
-* [ ] Components: `CapabilityDetailLayout.tsx` and `CapabilitySwitcher.tsx`
-* [ ] 308 redirect configured in `next.config.mjs` for `/where-shiftby-helps`
-* [ ] Metadata entries updated in `content/discoverability.ts`
+* [x] New capability hub page `app/capabilities/page.tsx` with `capabilities.module.css`
+* [x] Dedicated page `app/capabilities/organizational-memory/page.tsx`
+* [x] Dedicated page `app/capabilities/bounded-ai/page.tsx`
+* [x] Dedicated page `app/capabilities/human-ai-accountability/page.tsx`
+* [x] Shared components `CapabilityDetailLayout.tsx` and `CapabilitySwitcher.tsx` with `capability.module.css`
+* [x] Permanent HTTP 308 redirect in `next.config.mjs` for `/where-shiftby-helps` $\to$ `/capabilities`
+* [x] Updated metadata entries in `content/discoverability.ts` for all 4 capability routes
 
 ## 5. Verification & Acceptance Criteria
 * All 4 routes render cleanly and are indexed in sitemap.

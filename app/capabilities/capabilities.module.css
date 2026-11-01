@@ -1,0 +1,321 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section {
+  width: min(100%, 78rem);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 6vw, 6rem) clamp(1rem, 3.5vw, 2rem);
+}
+
+.quietBand {
+  background: color-mix(in oklch, var(--color-surface-strong, #ffffff) 65%, var(--color-bg));
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.kicker {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.875rem;
+}
+
+/* Hero */
+.hero {
+  padding-top: clamp(4rem, 7vw, 6.5rem);
+  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+  max-width: 52rem;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--color-ink);
+  margin: 0 0 1.5rem;
+}
+
+.quoteBlock {
+  padding: 1.5rem 1.75rem;
+  background: var(--color-surface, #ffffff);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0 var(--radius-md, 0.75rem) var(--radius-md, 0.75rem) 0;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 2rem;
+}
+
+.quoteText {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 1.8vw, 1.3125rem);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--color-ink);
+  margin: 0 0 0.5rem;
+}
+
+.quoteSource {
+  font-size: 0.875rem;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  margin: 0 0 2rem;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttonPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8125rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-md, 0.75rem);
+  background: var(--color-accent);
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.buttonPrimary:hover {
+  background: color-mix(in oklch, var(--color-accent) 88%, black);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.buttonSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8125rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-md, 0.75rem);
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.buttonSecondary:hover {
+  border-color: var(--color-ink-muted);
+  background: color-mix(in oklch, var(--color-line) 40%, transparent);
+}
+
+/* Sections */
+.sectionHeader {
+  max-width: 48rem;
+  margin-bottom: 2.75rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  margin: 0 0 1rem;
+}
+
+.sectionLead {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+/* Capability Grid */
+.capabilityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.capabilityCard {
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-xl, 1.25rem);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.capabilityCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card);
+}
+
+.capabilityHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+}
+
+.capabilityBadge {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.capabilityName {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.capabilityContribution {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.capabilityBody {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  margin: 0 0 2rem;
+}
+
+.capabilityFooter {
+  margin-top: auto;
+}
+
+.capabilityLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: gap 0.15s ease;
+}
+
+.capabilityCard:hover .capabilityLink {
+  gap: 0.625rem;
+}
+
+/* Integration Grid */
+.integrationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.integrationBlock {
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg, 1rem);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.integrationTitle {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.integrationText {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+/* Note on Adaptive Execution */
+.noteBox {
+  background: color-mix(in oklch, var(--color-accent) 5%, var(--color-surface, #ffffff));
+  border: 1px dashed color-mix(in oklch, var(--color-accent) 45%, var(--color-line));
+  border-radius: var(--radius-lg, 1rem);
+  padding: 1.75rem 2rem;
+}
+
+.noteTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0 0 0.5rem;
+}
+
+.noteText {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+/* CTA Container */
+.ctaContainer {
+  width: min(100%, 78rem);
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 4.5rem) clamp(1rem, 3.5vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0 0 1rem;
+  max-width: 44rem;
+}
+
+.ctaSubtitle {
+  font-size: 1.0625rem;
+  color: var(--color-ink-muted);
+  max-width: 36rem;
+  margin: 0 0 2rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .capabilityGrid,
+  .integrationGrid {
+    grid-template-columns: 1fr;
+  }
+}

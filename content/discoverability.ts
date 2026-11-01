@@ -68,10 +68,31 @@ export const pageMetadataEntries = {
   },
   capabilities: {
     title: "Capabilities",
-    seoTitle: "Core Capabilities for Preserving Understanding | ShiftBy",
+    seoTitle: "Three Complementary Capabilities for Enterprise Understanding | ShiftBy",
     path: "/capabilities",
     description:
-      "Four capabilities help organizations preserve understanding: decision traceability, organizational memory, accountability, and adaptive execution."
+      "ShiftBy practices three complementary capabilities to enable Enterprise Understanding: Organizational Memory, Bounded AI, and Human–AI Accountability."
+  },
+  organizationalMemory: {
+    title: "Organizational Memory",
+    seoTitle: "Organizational Memory | Continuity Beyond Individual Memory | ShiftBy",
+    path: "/capabilities/organizational-memory",
+    description:
+      "Preserving relevant knowledge, context, relationships, provenance, prior state, uncertainty, and learning so understanding survives change."
+  },
+  boundedAi: {
+    title: "Bounded AI",
+    seoTitle: "Bounded AI | Drift Reduction in AI Reasoning & Workflows | ShiftBy",
+    path: "/capabilities/bounded-ai",
+    description:
+      "Reducing drift in AI tasks, agents, and coordinated workflows by establishing explicit boundaries for inputs, reasoning responsibilities, flow, and resource use."
+  },
+  humanAiAccountability: {
+    title: "Human–AI Accountability",
+    seoTitle: "Human–AI Accountability | Sustained Answerability & Authority | ShiftBy",
+    path: "/capabilities/human-ai-accountability",
+    description:
+      "Sustaining human and organizational answerability for AI-enabled work through explicit responsibility, legitimate authority, and meaningful oversight."
   },
   whereShiftByHelps: {
     title: "Where ShiftBy Helps",
