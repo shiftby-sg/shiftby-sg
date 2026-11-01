@@ -128,47 +128,46 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          VIEWPORT 3: THE AI COLLISION (8–12s)
-          Storyline: AI Queries Data but Cannot Infer Intent
+          VIEWPORT 3: THE UNDERSTANDING PARADOX (8–12s)
+          Storyline: If Humans Cannot Understand, How Will AI?
           =================================================================== */}
       <section aria-labelledby="ai-danger-title" className={styles.section}>
         <div className={styles.challengeHeader}>
-          <span className={styles.kicker}>The AI Collision</span>
+          <span className={styles.kicker}>The Understanding Paradox</span>
           <h2 className={styles.sectionTitle} id="ai-danger-title">
-            AI queries your stored data. It cannot infer your intent.
+            If humans cannot understand the records, how will AI?
           </h2>
           <p className={styles.sectionSubtitle}>
-            When work was manual, informal human conversations patched over missing documentation.
-            When AI models, RAG pipelines, and multi-step workflows execute, they cannot ask colleagues
-            in the hallway—they bridge the context gap with plausible guesswork:
+            Understanding has always degraded across human handoffs and system migrations. AI did
+            not create this breakdown—it inherits the context gap and amplifies it at machine speed:
           </p>
         </div>
 
         <div className={styles.driftGrid}>
           <article className={styles.driftCard}>
-            <span className={styles.driftIndex}>01 / Retrieval Drift</span>
-            <h3 className={styles.driftTitle}>Retrieval Without Authority</h3>
+            <span className={styles.driftIndex}>01 / An Enduring Problem</span>
+            <h3 className={styles.driftTitle}>Context Has Always Faded</h3>
             <p className={styles.driftText}>
-              Vector search retrieves text by keyword proximity, not enterprise status.
-              Outdated proposals appear just as relevant as active board-approved policy.
+              Long before AI, organizations struggled with lost context. People leave, handoffs blur
+              intent, and records survive while the rationale behind waivers and approvals disappears.
             </p>
           </article>
 
           <article className={styles.driftCard}>
-            <span className={styles.driftIndex}>02 / Reasoning Drift</span>
-            <h3 className={styles.driftTitle}>Unbounded Workflow Inference</h3>
+            <span className={styles.driftIndex}>02 / The AI Illusion</span>
+            <h3 className={styles.driftTitle}>AI Cannot Infer What Humans Lost</h3>
             <p className={styles.driftText}>
-              When models or multi-step agentic chains encounter ambiguity between steps,
-              they bridge it with statistical plausibility instead of enterprise policy.
+              If domain experts cannot reconstruct why a decision was made from stored records, an AI
+              model cannot either. It substitutes statistical plausibility for true understanding.
             </p>
           </article>
 
           <article className={styles.driftCard}>
-            <span className={styles.driftIndex}>03 / Authority Drift</span>
-            <h3 className={styles.driftTitle}>Diffused Human Responsibility</h3>
+            <span className={styles.driftIndex}>03 / The Amplification</span>
+            <h3 className={styles.driftTitle}>Machine Speed Multiplies Drift</h3>
             <p className={styles.driftText}>
-              As automated workflows touch more systems, human oversight becomes passive,
-              blurring who is actually answerable to auditors and regulators.
+              Humans hesitate or ask when context is missing. Automated AI workflows execute with
+              unwavering confidence at scale—silently compounding unverified assumptions across systems.
             </p>
           </article>
         </div>
