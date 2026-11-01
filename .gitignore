@@ -12,5 +12,6 @@ tests/validation/reports/
 playwright-report
 test-results
 plan/
-workpackets/
 docs/
+.DS_Store
+mockups/
