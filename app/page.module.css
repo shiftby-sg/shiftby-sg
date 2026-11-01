@@ -1,0 +1,519 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Common Section Container */
+.section {
+  width: min(100%, 78rem);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 6vw, 6rem) clamp(1rem, 3.5vw, 2rem);
+}
+
+.quietBand {
+  background: color-mix(in oklch, var(--color-surface-strong, #ffffff) 65%, var(--color-bg));
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.kicker {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.875rem;
+}
+
+/* =========================================================================
+   1. HERO SECTION
+   ========================================================================= */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(4rem, 8vw, 7.5rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 52rem;
+}
+
+.heroWatermark {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-accent);
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+  width: min(50vw, 600px);
+  height: auto;
+}
+
+.categoryDescriptor {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 1.25rem;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--color-ink);
+  margin: 0 0 1.75rem;
+}
+
+.heroTitleLine {
+  display: block;
+}
+
+.heroTitleAccent {
+  color: var(--color-accent);
+}
+
+.heroLead {
+  font-size: clamp(1.125rem, 1.6vw, 1.3125rem);
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  margin: 0 0 2.25rem;
+  max-width: 44rem;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttonPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.625rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md, 0.75rem);
+  background: var(--color-accent);
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.buttonPrimary:hover {
+  background: color-mix(in oklch, var(--color-accent) 88%, black);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.buttonSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.625rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md, 0.75rem);
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-line);
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.buttonSecondary:hover {
+  border-color: var(--color-ink-muted);
+  background: color-mix(in oklch, var(--color-line) 40%, transparent);
+}
+
+/* =========================================================================
+   2. THE CHALLENGE (THE TENSION)
+   ========================================================================= */
+.challengeHeader {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  margin: 0 0 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+.tensionQuoteBlock {
+  padding: 1.75rem 2rem;
+  background: var(--color-surface, #ffffff);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0 var(--radius-md, 0.75rem) var(--radius-md, 0.75rem) 0;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 2.75rem;
+}
+
+.tensionQuote {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-ink);
+  margin: 0 0 0.5rem;
+}
+
+.tensionSupport {
+  font-size: 0.9375rem;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+.breakdownGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+}
+
+.breakdownCard {
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg, 1rem);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.breakdownCard:hover {
+  border-color: color-mix(in oklch, var(--color-accent) 45%, var(--color-line));
+}
+
+.breakdownTitle {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.breakdownText {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+/* =========================================================================
+   3. THE THREE CAPABILITIES (ENTERPRISE UNDERSTANDING)
+   ========================================================================= */
+.capabilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.capabilityCard {
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-xl, 1.25rem);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.capabilityCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card);
+}
+
+.capabilityTop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+.capabilityBadge {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.capabilityName {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.capabilityContribution {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.capabilityDescription {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+.capabilityLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: gap 0.15s ease;
+}
+
+.capabilityCard:hover .capabilityLink {
+  gap: 0.625rem;
+}
+
+/* =========================================================================
+   4. PERSONA BUYING CUES (WHERE SHIFTBY ENGAGES)
+   ========================================================================= */
+.personaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.personaCard {
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg, 1rem);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.personaRole {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.personaDescription {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+/* =========================================================================
+   5. SERVICES & ENGAGEMENTS PREVIEW
+   ========================================================================= */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0 2rem;
+}
+
+.serviceClusterCard {
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg, 1rem);
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.serviceClusterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.serviceClusterTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.serviceClusterItems {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.serviceClusterItems li {
+  font-size: 0.9375rem;
+  color: var(--color-ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.serviceClusterItems li::before {
+  content: "•";
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* =========================================================================
+   6. CONVERSION BLOCK (WHAT HAPPENS ON FIRST CALL)
+   ========================================================================= */
+.conversionSection {
+  background: color-mix(in oklch, var(--color-surface-strong, #ffffff) 90%, var(--color-bg));
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-xl, 1.5rem);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+  margin: 2rem auto clamp(3rem, 6vw, 5rem);
+  width: min(100%, 78rem);
+  box-shadow: var(--shadow-card);
+}
+
+.conversionHeader {
+  max-width: 44rem;
+  margin-bottom: 2.5rem;
+}
+
+.timelineGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timelineStep {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  position: relative;
+}
+
+.stepNumber {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.stepDescription {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+.conversionCtaWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.conversionCtaText {
+  font-size: 1.0625rem;
+  color: var(--color-ink);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* =========================================================================
+   RESPONSIVE QUERIES
+   ========================================================================= */
+@media (max-width: 992px) {
+  .capabilitiesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .timelineGrid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .heroWatermark {
+    display: none;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .conversionSection {
+    margin: 1rem 1rem 3rem;
+    padding: 2rem 1.25rem;
+  }
+}

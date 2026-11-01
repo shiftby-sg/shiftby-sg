@@ -60,11 +60,13 @@ Rebuild the homepage (`app/page.tsx`) to reflect the v2 doctrine from `v2docs/Do
 * Address Audit Finding R1: Explain what happens upon contact ("A 30-minute introductory call to explore context, identify boundaries, and assess readiness—no boilerplate proposals").
 
 ## 4. Deliverables
-* [ ] Rewritten `app/page.tsx` using `app/page.module.css`
-* [ ] Inline `<style>` block completely removed from `app/page.tsx`
-* [ ] Role-specific persona cues implemented
-* [ ] Updated homepage metadata wired to `content/discoverability.ts`
-* [ ] Responsive desktop, tablet, and mobile layouts
+* [x] Rewritten `app/page.tsx` using `app/page.module.css`
+* [x] Inline `<style>` block completely removed from `app/page.tsx`
+* [x] Role-specific persona cues implemented (CIO, CTO, CISO, CDO, Transformation)
+* [x] Updated homepage metadata wired to `content/discoverability.ts` via `getPageMetadata`
+* [x] Grounded in `v2docs/Doctrine.md` and 3-capability model
+* [x] Clear "What happens on first call" timeline (Audit Finding R1)
+* [x] Responsive desktop, tablet, and mobile layouts
 
 ## 5. Verification & Acceptance Criteria
 * Homepage renders cleanly with zero console warnings and no dependency on legacy `homepage.css` or `page-materialization.css`.
