@@ -13,14 +13,15 @@ export default function HomePage() {
   return (
     <div className={styles.page}>
       {/* ===================================================================
-          1. HERO VIEWPORT (3–5 Second Signal: What is ShiftBy & Core Thesis)
+          VIEWPORT 1: THE HOOK (0–4s)
+          Storyline: The Inevitable Reality
           =================================================================== */}
       <section aria-labelledby="hero-title" className={`${styles.section} ${styles.hero}`}>
         <BrandLogo className={styles.heroWatermark} size={580} />
 
         <div className={styles.heroContent}>
           <p className={styles.categoryDescriptor}>
-            Executive Advisory &amp; AI Governance Practice
+            Executive Advisory &amp; AI Governance
           </p>
           <h1 className={styles.heroTitle} id="hero-title">
             <span className={styles.heroTitleLine}>Execution changes.</span>
@@ -29,14 +30,13 @@ export default function HomePage() {
             </span>
           </h1>
           <p className={styles.heroLead}>
-            As AI workflows, autonomous agents, and digital transformations accelerate execution,
-            organizations lose the rationale behind critical decisions. ShiftBy establishes the
-            structured memory, operational boundaries, and human accountability needed to govern
-            and scale with confidence.
+            Teams reorganize. Systems migrate. Autonomous AI accelerates work.
+            Confidence does not come from freezing execution—it comes from preserving
+            the understanding required to govern it.
           </p>
           <div className={styles.heroActions}>
             <Link className={styles.buttonPrimary} href="/contact">
-              Start a Conversation &rarr;
+              Schedule Scoping Call &rarr;
             </Link>
             <Link className={styles.buttonSecondary} href="/capabilities">
               Explore Capabilities &rarr;
@@ -50,7 +50,7 @@ export default function HomePage() {
             </span>
             <span className={styles.heroSignalItem}>
               <span className={styles.heroSignalDot} />
-              7 Defined Advisory Services
+              7 Fixed-Boundary Services
             </span>
             <span className={styles.heroSignalItem}>
               <span className={styles.heroSignalDot} />
@@ -61,19 +61,58 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          2. THE TENSION (3–5 Second Signal: The Core Dilemma Executives Feel)
+          VIEWPORT 2: THE TRAP (4–8s)
+          Storyline: Information vs. Understanding
           =================================================================== */}
       <section aria-labelledby="challenge-title" className={styles.quietBand}>
         <div className={styles.section}>
           <div className={styles.challengeHeader}>
-            <span className={styles.kicker}>The Executive Dilemma</span>
+            <span className={styles.kicker}>The Core Dilemma</span>
             <h2 className={styles.sectionTitle} id="challenge-title">
-              Organizations preserve artifacts. Understanding is harder to preserve.
+              Enterprises preserve artifacts. Understanding is what gets lost.
             </h2>
             <p className={styles.sectionSubtitle}>
-              Enterprises retain tickets, logs, code, and documents. Yet when a key decision
-              or AI output is challenged months later, the underlying context has dissolved:
+              Even your most curated records, clean databases, and vector stores only show
+              what happened. They do not preserve why it mattered:
             </p>
+          </div>
+
+          <div className={styles.contrastBox} aria-label="Artifacts versus Understanding comparison">
+            <div className={styles.contrastColumn}>
+              <div className={styles.contrastHeader}>
+                <span className={styles.contrastBadgeSurvives}>Survives in Systems</span>
+                <h3 className={styles.contrastTitle}>Artifacts &amp; Curated Records</h3>
+              </div>
+              <ul className={styles.contrastList}>
+                <li className={`${styles.contrastItem} ${styles.contrastItemSurvives}`}>
+                  Approved policy documents in repositories and wikis
+                </li>
+                <li className={`${styles.contrastItem} ${styles.contrastItemSurvives}`}>
+                  Deployed source code, pipelines, and model checkpoints
+                </li>
+                <li className={`${styles.contrastItem} ${styles.contrastItemSurvives}`}>
+                  System telemetry, execution logs, and vector embeddings
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.contrastColumn}>
+              <div className={styles.contrastHeader}>
+                <span className={styles.contrastBadgeLost}>Dissolves Over Time</span>
+                <h3 className={styles.contrastTitle}>Organizational Understanding</h3>
+              </div>
+              <ul className={styles.contrastList}>
+                <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
+                  Why the decision was approved and what trade-offs were rejected
+                </li>
+                <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
+                  Unstated assumptions, operating conditions, and fragile constraints
+                </li>
+                <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
+                  Who holds legitimate authority and answerability for the outcome
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className={styles.tensionQuoteBlock}>
@@ -85,199 +124,163 @@ export default function HomePage() {
               ShiftBy Doctrine on Enterprise Understanding
             </p>
           </div>
-
-          <div className={styles.breakdownGrid}>
-            <article className={styles.breakdownCard}>
-              <h3 className={styles.breakdownTitle}>Context Decay</h3>
-              <p className={styles.breakdownText}>
-                When key leaders rotate or systems migrate, the rationale, trade-offs, and
-                rejected alternatives vanish from organizational memory.
-              </p>
-            </article>
-
-            <article className={styles.breakdownCard}>
-              <h3 className={styles.breakdownTitle}>Invisible Prompt Dogmas</h3>
-              <p className={styles.breakdownText}>
-                Unexamined assumptions hardcoded in complex prompts and pipelines create
-                quiet reasoning drift across enterprise workflows.
-              </p>
-            </article>
-
-            <article className={styles.breakdownCard}>
-              <h3 className={styles.breakdownTitle}>Diffused Accountability</h3>
-              <p className={styles.breakdownText}>
-                As autonomous agents generate outputs and execute steps, human oversight becomes
-                nominal, obscuring who holds legitimate decision authority.
-              </p>
-            </article>
-
-            <article className={styles.breakdownCard}>
-              <h3 className={styles.breakdownTitle}>Autonomous Execution Drift</h3>
-              <p className={styles.breakdownText}>
-                Without explicit boundaries, multi-agent systems substitute general plausibility
-                for verified policy compliance and regulatory truth.
-              </p>
-            </article>
-          </div>
         </div>
       </section>
 
       {/* ===================================================================
-          3. THE 3 CAPABILITIES (3–5 Second Signal: The Solution Architecture)
+          VIEWPORT 3: THE DANGER (8–12s)
+          Storyline: When AI Meets Curated Data
           =================================================================== */}
-      <section aria-labelledby="capabilities-title" className={styles.section}>
+      <section aria-labelledby="ai-danger-title" className={styles.section}>
         <div className={styles.challengeHeader}>
-          <span className={styles.kicker}>The Architecture</span>
-          <h2 className={styles.sectionTitle} id="capabilities-title">
-            Enterprise Understanding through 3 complementary capabilities.
+          <span className={styles.kicker}>The Drift Catalyst</span>
+          <h2 className={styles.sectionTitle} id="ai-danger-title">
+            AI processes curated data. It does not possess understanding.
           </h2>
           <p className={styles.sectionSubtitle}>
-            Three interlocking disciplines that ensure institutional understanding survives
-            personnel turnover, system replacements, and AI scaling:
+            When autonomous agents and pipelines query clean data without explicit boundaries
+            and context, they do not stop—they guess:
           </p>
         </div>
 
-        <div className={styles.capabilitiesGrid}>
-          {/* Capability 1: Organizational Memory */}
-          <article className={styles.capabilityCard}>
-            <div className={styles.capabilityTop}>
-              <span className={styles.capabilityBadge}>Knowledge Continuity</span>
-              <h3 className={styles.capabilityName}>Organizational Memory</h3>
-              <p className={styles.capabilityContribution}>
-                Continuity of understanding beyond individual memory.
-              </p>
-              <p className={styles.capabilityDescription}>
-                Preserves context, rationale, and provenance across personnel transitions and system migrations.
-              </p>
-              <ul className={styles.capabilityList}>
-                <li className={styles.capabilityListItem}>Reconstructable decision lineage</li>
-                <li className={styles.capabilityListItem}>Connected enterprise context graphs</li>
-                <li className={styles.capabilityListItem}>Context retention across handoffs</li>
-              </ul>
-            </div>
-            <Link
-              className={styles.capabilityLink}
-              href="/capabilities/organizational-memory"
-            >
-              Explore Organizational Memory &rarr;
-            </Link>
+        <div className={styles.driftGrid}>
+          <article className={styles.driftCard}>
+            <span className={styles.driftIndex}>01 / Retrieval Drift</span>
+            <h3 className={styles.driftTitle}>Vector Similarity &ne; Truth</h3>
+            <p className={styles.driftText}>
+              Semantic search retrieves text by keyword proximity, not authority.
+              Outdated proposals appear just as relevant as board-approved enterprise policy.
+            </p>
           </article>
 
-          {/* Capability 2: Bounded AI */}
-          <article className={styles.capabilityCard}>
-            <div className={styles.capabilityTop}>
-              <span className={styles.capabilityBadge}>Drift Reduction</span>
-              <h3 className={styles.capabilityName}>Bounded AI</h3>
-              <p className={styles.capabilityContribution}>
-                Constrained reasoning across tasks, agents &amp; workflows.
-              </p>
-              <p className={styles.capabilityDescription}>
-                Keeps AI workflows aligned by enforcing explicit boundaries for inputs, tools, reasoning, and costs.
-              </p>
-              <ul className={styles.capabilityList}>
-                <li className={styles.capabilityListItem}>Explicit reasoning &amp; tool boundaries</li>
-                <li className={styles.capabilityListItem}>Verified RAG retrieval grounding</li>
-                <li className={styles.capabilityListItem}>Multi-agent coordination safeguards</li>
-              </ul>
-            </div>
-            <Link
-              className={styles.capabilityLink}
-              href="/capabilities/bounded-ai"
-            >
-              Explore Bounded AI &rarr;
-            </Link>
+          <article className={styles.driftCard}>
+            <span className={styles.driftIndex}>02 / Reasoning Drift</span>
+            <h3 className={styles.driftTitle}>Invisible Prompt Dogmas</h3>
+            <p className={styles.driftText}>
+              Hidden assumptions hardcoded in complex prompts quietly replace enterprise
+              governance with plausible synthetic fiction.
+            </p>
           </article>
 
-          {/* Capability 3: Human-AI Accountability */}
-          <article className={styles.capabilityCard}>
-            <div className={styles.capabilityTop}>
-              <span className={styles.capabilityBadge}>Legitimate Authority</span>
-              <h3 className={styles.capabilityName}>Human–AI Accountability</h3>
-              <p className={styles.capabilityContribution}>
-                Sustained answerability and non-delegable oversight.
-              </p>
-              <p className={styles.capabilityDescription}>
-                Ensures human authority remains active with explicit intervention rights and inspectable audit evidence.
-              </p>
-              <ul className={styles.capabilityList}>
-                <li className={styles.capabilityListItem}>Non-delegable human decision rights</li>
-                <li className={styles.capabilityListItem}>Verifiable audit &amp; reliance trails</li>
-                <li className={styles.capabilityListItem}>Escalation &amp; kill-switch protocols</li>
-              </ul>
-            </div>
-            <Link
-              className={styles.capabilityLink}
-              href="/capabilities/human-ai-accountability"
-            >
-              Explore Human–AI Accountability &rarr;
-            </Link>
+          <article className={styles.driftCard}>
+            <span className={styles.driftIndex}>03 / Authority Drift</span>
+            <h3 className={styles.driftTitle}>Diffused Human Authority</h3>
+            <p className={styles.driftText}>
+              As agents execute autonomously across APIs and tools, human oversight becomes
+              nominal, obscuring who remains legally accountable.
+            </p>
           </article>
         </div>
       </section>
 
       {/* ===================================================================
-          4. PERSONA RELEVANCE (3–5 Second Signal: "Which one am I?")
+          VIEWPORT 4: THE ARCHITECTURE (12–17s)
+          Storyline: The Three Complementary Capabilities
           =================================================================== */}
-      <section aria-labelledby="personas-title" className={styles.quietBand}>
+      <section aria-labelledby="capabilities-title" className={styles.quietBand}>
         <div className={styles.section}>
           <div className={styles.challengeHeader}>
-            <span className={styles.kicker}>Leadership Remit</span>
-            <h2 className={styles.sectionTitle} id="personas-title">
-              Where ShiftBy engages across enterprise leadership.
+            <span className={styles.kicker}>The Architecture</span>
+            <h2 className={styles.sectionTitle} id="capabilities-title">
+              Enterprise Understanding through 3 complementary capabilities.
             </h2>
             <p className={styles.sectionSubtitle}>
-              We partner with executive leaders at the point where distributed execution
-              puts organizational confidence at risk:
+              Three interlocking disciplines that ensure institutional understanding survives
+              technological change, personnel turnover, and agentic scaling:
             </p>
           </div>
 
-          <div className={styles.personaGrid}>
-            <article className={styles.personaCard}>
-              <h3 className={styles.personaRole}>For the CIO &amp; CTO</h3>
-              <p className={styles.personaDescription}>
-                Scale production-grade agentic workflows with explicit reasoning boundaries,
-                verifiable tool permissions, and zero runaway compute drift.
-              </p>
+          <div className={styles.capabilitiesGrid}>
+            {/* Capability 1: Organizational Memory */}
+            <article className={styles.capabilityCard}>
+              <div className={styles.capabilityTop}>
+                <span className={styles.capabilityBadge}>Knowledge Continuity</span>
+                <h3 className={styles.capabilityName}>Organizational Memory</h3>
+                <p className={styles.capabilityContribution}>
+                  Continuity of understanding beyond individual memory.
+                </p>
+                <p className={styles.capabilityDescription}>
+                  Preserves context, rationale, and provenance across personnel transitions and system migrations.
+                </p>
+                <ul className={styles.capabilityList}>
+                  <li className={styles.capabilityListItem}>Reconstructable decision lineage</li>
+                  <li className={styles.capabilityListItem}>Connected enterprise context graphs</li>
+                  <li className={styles.capabilityListItem}>Context retention across handoffs</li>
+                </ul>
+              </div>
+              <Link
+                className={styles.capabilityLink}
+                href="/capabilities/organizational-memory"
+              >
+                Explore Organizational Memory &rarr;
+              </Link>
             </article>
 
-            <article className={styles.personaCard}>
-              <h3 className={styles.personaRole}>For the CISO &amp; Risk Officer</h3>
-              <p className={styles.personaDescription}>
-                Establish verified AI trust boundaries, defend against prompt injection and tool
-                manipulation, and satisfy rigorous compliance scrutiny.
-              </p>
+            {/* Capability 2: Bounded AI */}
+            <article className={styles.capabilityCard}>
+              <div className={styles.capabilityTop}>
+                <span className={styles.capabilityBadge}>Drift Reduction</span>
+                <h3 className={styles.capabilityName}>Bounded AI</h3>
+                <p className={styles.capabilityContribution}>
+                  Constrained reasoning across tasks, agents &amp; workflows.
+                </p>
+                <p className={styles.capabilityDescription}>
+                  Keeps AI workflows aligned by enforcing explicit boundaries for inputs, tools, reasoning, and costs.
+                </p>
+                <ul className={styles.capabilityList}>
+                  <li className={styles.capabilityListItem}>Explicit reasoning &amp; tool boundaries</li>
+                  <li className={styles.capabilityListItem}>Verified RAG retrieval grounding</li>
+                  <li className={styles.capabilityListItem}>Multi-agent coordination safeguards</li>
+                </ul>
+              </div>
+              <Link
+                className={styles.capabilityLink}
+                href="/capabilities/bounded-ai"
+              >
+                Explore Bounded AI &rarr;
+              </Link>
             </article>
 
-            <article className={styles.personaCard}>
-              <h3 className={styles.personaRole}>For the CDO &amp; Data Leader</h3>
-              <p className={styles.personaDescription}>
-                Architect enterprise context graphs and eliminate hallucinated, stale, or
-                unvetted retrieval pipelines in production RAG systems.
-              </p>
-            </article>
-
-            <article className={styles.personaCard}>
-              <h3 className={styles.personaRole}>For Assurance &amp; Governance</h3>
-              <p className={styles.personaDescription}>
-                Reconstruct decision lineage, enforce legitimate human authority, and establish
-                unambiguous audit trails before regulatory reliance.
-              </p>
+            {/* Capability 3: Human-AI Accountability */}
+            <article className={styles.capabilityCard}>
+              <div className={styles.capabilityTop}>
+                <span className={styles.capabilityBadge}>Legitimate Authority</span>
+                <h3 className={styles.capabilityName}>Human–AI Accountability</h3>
+                <p className={styles.capabilityContribution}>
+                  Sustained answerability and non-delegable oversight.
+                </p>
+                <p className={styles.capabilityDescription}>
+                  Ensures human authority remains active with explicit intervention rights and inspectable audit evidence.
+                </p>
+                <ul className={styles.capabilityList}>
+                  <li className={styles.capabilityListItem}>Non-delegable human decision rights</li>
+                  <li className={styles.capabilityListItem}>Verifiable audit &amp; reliance trails</li>
+                  <li className={styles.capabilityListItem}>Escalation &amp; kill-switch protocols</li>
+                </ul>
+              </div>
+              <Link
+                className={styles.capabilityLink}
+                href="/capabilities/human-ai-accountability"
+              >
+                Explore Human–AI Accountability &rarr;
+              </Link>
             </article>
           </div>
         </div>
       </section>
 
       {/* ===================================================================
-          5. SERVICES PREVIEW (3–5 Second Signal: Concrete, Fixed Deliverables)
+          VIEWPORT 5: ENGAGEMENTS & RELEVANCE (17–21s)
+          Storyline: Concrete Service Offerings
           =================================================================== */}
       <section aria-labelledby="services-preview-title" className={styles.section}>
         <div className={styles.challengeHeader}>
           <span className={styles.kicker}>Defined Engagements</span>
           <h2 className={styles.sectionTitle} id="services-preview-title">
-            Structured advisory, assessment, and testing services.
+            Fixed-boundary advisory, diagnostics, and assurance.
           </h2>
           <p className={styles.sectionSubtitle}>
-            Seven defined service offerings with explicit deliverables, clear boundaries,
+            Seven structured service offerings with explicit deliverables, clear boundaries,
             and fixed-scope engagement models:
           </p>
         </div>
@@ -288,7 +291,7 @@ export default function HomePage() {
               <h3 className={styles.serviceClusterTitle}>Knowledge &amp; Context Architecture</h3>
             </div>
             <p className={styles.breakdownText}>
-              Preserve context and provenance for human and AI reuse.
+              Forensic diagnostics of context decay and enterprise retrieval pipelines.
             </p>
             <ul className={styles.serviceClusterItems}>
               <li>Knowledge &amp; Context Architecture Assessment</li>
@@ -301,7 +304,7 @@ export default function HomePage() {
               <h3 className={styles.serviceClusterTitle}>Bounded AI Advisory</h3>
             </div>
             <p className={styles.breakdownText}>
-              Constrain agentic reasoning and execution drift.
+              Setting runtime reasoning boundaries and tool permissions for multi-agent systems.
             </p>
             <ul className={styles.serviceClusterItems}>
               <li>Bounded AI &amp; Multi-Agent Workflow Design</li>
@@ -314,7 +317,7 @@ export default function HomePage() {
               <h3 className={styles.serviceClusterTitle}>Governance &amp; Human Oversight</h3>
             </div>
             <p className={styles.breakdownText}>
-              Sustain legitimate authority and non-delegable accountability.
+              Designing legitimate authority structures and non-delegable accountability protocols.
             </p>
             <ul className={styles.serviceClusterItems}>
               <li>AI Governance &amp; Human Oversight Architecture</li>
@@ -327,7 +330,7 @@ export default function HomePage() {
               <h3 className={styles.serviceClusterTitle}>Assurance &amp; Red Teaming</h3>
             </div>
             <p className={styles.breakdownText}>
-              Adversarial evaluation, boundary testing, and retesting.
+              Stress-testing boundaries against prompt injection, drift, and regulatory failure.
             </p>
             <ul className={styles.serviceClusterItems}>
               <li>AI Assurance &amp; Adversarial Red Teaming</li>
@@ -336,7 +339,7 @@ export default function HomePage() {
           </article>
         </div>
 
-        <div style={{ marginTop: "2rem" }}>
+        <div style={{ marginTop: "2.25rem" }}>
           <Link className={styles.buttonSecondary} href="/services">
             Browse All 7 Service Offerings &rarr;
           </Link>
@@ -344,17 +347,18 @@ export default function HomePage() {
       </section>
 
       {/* ===================================================================
-          6. CONVERSION VIEWPORT (3–5 Second Signal: Zero Friction Scoping)
+          VIEWPORT 6: THE RESOLUTION (21–25s)
+          Storyline: Zero-Friction Conversion Protocol
           =================================================================== */}
       <section aria-labelledby="first-call-title" className={styles.conversionSection}>
         <div className={styles.conversionHeader}>
-          <span className={styles.kicker}>Zero-Risk Evaluation</span>
+          <span className={styles.kicker}>Evaluation Protocol</span>
           <h2 className={styles.sectionTitle} id="first-call-title">
-            What happens when you reach out?
+            Start with the question, not a sales pitch.
           </h2>
           <p className={styles.sectionSubtitle}>
-            A structured, unhurried evaluation process designed to respect your time
-            and establish immediate clarity with zero sales pressure:
+            A predictable, zero-pressure evaluation process designed to respect your time
+            and establish immediate clarity:
           </p>
         </div>
 
@@ -370,7 +374,7 @@ export default function HomePage() {
 
           <div className={styles.timelineStep}>
             <span className={styles.stepNumber}>2</span>
-            <h3 className={styles.stepTitle}>48-Hour Boundary Summary</h3>
+            <h3 className={styles.stepTitle}>48-Hour Boundary Outline</h3>
             <p className={styles.stepDescription}>
               Within 48 hours, you receive a scoped summary of potential engagement boundaries,
               required authorizations, and expected concrete outputs.
@@ -393,7 +397,7 @@ export default function HomePage() {
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link className={styles.buttonPrimary} href="/contact">
-              Schedule an Scoping Call &rarr;
+              Schedule Scoping Call &rarr;
             </Link>
             <Link className={styles.buttonSecondary} href="/resources">
               Read Executive Briefs &rarr;

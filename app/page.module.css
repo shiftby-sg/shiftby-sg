@@ -223,6 +223,137 @@
   gap: 1.5rem;
 }
 
+.contrastBox {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-xl, 1.25rem);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 2.5rem;
+}
+
+.contrastColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contrastHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-bottom: 0.875rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.contrastBadgeLost {
+  font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.contrastBadgeSurvives {
+  font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+.contrastTitle {
+  font-family: var(--font-display);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.contrastList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contrastItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-ink);
+}
+
+.contrastItemSurvives::before {
+  content: "•";
+  color: var(--color-ink-muted);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.contrastItemLost::before {
+  content: "✕";
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.driftGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.driftCard {
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg, 1rem);
+  padding: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.driftCard:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.driftIndex {
+  font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.driftTitle {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.driftText {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
 .breakdownCard {
   background: var(--color-surface, #ffffff);
   border: 1px solid var(--color-line);
@@ -536,6 +667,16 @@
    RESPONSIVE QUERIES
    ========================================================================= */
 @media (max-width: 992px) {
+  .contrastBox {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .driftGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
   .capabilitiesGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
