@@ -7,6 +7,11 @@ const nextConfig = {
         source: "/where-shiftby-helps",
         destination: "/capabilities",
         permanent: true
+      },
+      {
+        source: "/explorations",
+        destination: "/resources",
+        permanent: true
       }
     ];
   }

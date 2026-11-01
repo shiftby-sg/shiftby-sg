@@ -44,12 +44,12 @@ Implement a content-driven **Resources / Insights** section (`/resources` and `/
 * Decommission `app/explorations/page.tsx` and `styles/explorations.css`.
 
 ## 4. Deliverables
-* [ ] Content loader in `lib/resources.ts`
-* [ ] Hub page `app/resources/page.tsx` with `resources.module.css`
-* [ ] Dynamic route `app/resources/[slug]/page.tsx` with `article.module.css`
-* [ ] 4 seeded articles in `content/resources/`
-* [ ] 308 redirect configured in `next.config.mjs` for `/explorations`
-* [ ] Updated navigation in header/footer to include "Resources"
+* [x] Content loader in `lib/resources.ts`
+* [x] Hub page `app/resources/page.tsx` with `resources.module.css`
+* [x] Dynamic route `app/resources/[slug]/page.tsx` with `article.module.css`
+* [x] 4 seeded articles in `lib/resources-data.ts`
+* [x] 308 redirect configured in `next.config.mjs` for `/explorations`
+* [x] Updated navigation in header/footer to include "Resources"
 
 ## 5. Verification & Acceptance Criteria
 * Zero React 19 / Next.js 15 build warnings during markdown compilation.

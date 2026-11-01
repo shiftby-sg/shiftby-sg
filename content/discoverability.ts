@@ -115,6 +115,13 @@ export const pageMetadataEntries = {
     description:
       "Investigations into how organizations preserve understanding of execution, meaning, and discovery as they change. These explorations are not products."
   },
+  resources: {
+    title: "Resources & Insights",
+    seoTitle: "ShiftBy Resources & Insights | Doctrine Essays, Briefs & Research",
+    path: "/resources",
+    description:
+      "Essays, executive briefs, and technical guidance on preserving understanding, reducing AI drift, and sustaining human accountability across distributed execution."
+  },
   services: {
     title: "Services",
     seoTitle: "ShiftBy Service Catalog | Enterprise Advisory, Boundary Design & AI Assurance",
