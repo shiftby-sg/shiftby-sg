@@ -148,8 +148,9 @@ export default function HomePage() {
             <span className={styles.driftIndex}>01 / An Enduring Problem</span>
             <h3 className={styles.driftTitle}>Context Has Always Faded</h3>
             <p className={styles.driftText}>
-              Long before AI, organizations struggled with lost context. People leave, handoffs blur
-              intent, and records survive while the rationale behind waivers and approvals disappears.
+              Long before AI, organizations struggled with context loss. When staff leave or systems
+              migrate, databases preserve the final transactions, but the human rationale that validated
+              them vanishes.
             </p>
           </article>
 
