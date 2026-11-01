@@ -72,8 +72,8 @@ export default function HomePage() {
               Enterprises store records. Understanding is what fades.
             </h2>
             <p className={styles.sectionSubtitle}>
-              Storing more documentation does not solve the problem—it simply creates more
-              dead files that nobody reads or trusts. Systems preserve artifacts, but context dissolves:
+              Storing more documentation does not solve the problem—it simply creates
+              static records that preserve what happened, but lose the living rationale behind it. Systems preserve artifacts, but context dissolves:
             </p>
           </div>
 
@@ -135,7 +135,7 @@ export default function HomePage() {
         <div className={styles.challengeHeader}>
           <span className={styles.kicker}>The Understanding Paradox</span>
           <h2 className={styles.sectionTitle} id="ai-danger-title">
-            If humans cannot understand the records, how will AI?
+            If domain experts cannot reconstruct the context, AI will not infer it either.
           </h2>
           <p className={styles.sectionSubtitle}>
             Understanding has always degraded across human handoffs and system migrations. AI did
@@ -186,8 +186,8 @@ export default function HomePage() {
               Understanding cannot be archived or automated away. It must be connected, bounded, and governed.
             </h2>
             <p className={styles.sectionSubtitle}>
-              Institutional capability does not come from accumulating documentation or delegating
-              decisions to automated workflows. ShiftBy establishes three interlocking disciplines
+              Sustaining capability through change requires more than accumulating documentation or relying
+              on automated workflows. ShiftBy establishes three interlocking disciplines
               that keep enterprise execution grounded:
             </p>
           </div>
@@ -397,7 +397,7 @@ export default function HomePage() {
             <h3 className={styles.stepTitle}>30-Minute Context Discussion</h3>
             <p className={styles.stepDescription}>
               Direct conversation with founder Ananda Krishna (AIGP) to examine where context is fading,
-              workflows experiencing drift, or boundaries needing definition. No generic slides or junior triage.
+              workflows experiencing drift, or boundaries needing definition. Direct peer advisory with zero sales decks or intermediate hand-offs.
             </p>
           </div>
 
