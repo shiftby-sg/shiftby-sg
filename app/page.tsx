@@ -103,13 +103,13 @@ export default function HomePage() {
               </div>
               <ul className={styles.contrastList}>
                 <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
-                  Why a supplier substitution, material variance, or operational waiver was approved
+                  Why an operational waiver or supplier substitution was approved
                 </li>
                 <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
-                  The unstated regulatory, safety, and operating assumptions under which data remains valid
+                  Operating and safety assumptions under which data remains valid
                 </li>
                 <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
-                  Who holds legitimate authority and answerability when exceptions or failures occur
+                  Who holds legitimate authority and answerability when exceptions occur
                 </li>
               </ul>
             </div>
