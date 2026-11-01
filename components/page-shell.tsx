@@ -1,9 +1,28 @@
 import type { ReactNode } from "react";
 
-type PageShellProps = {
-  children: ReactNode;
-};
+import styles from "./page-shell.module.css";
 
-export function PageShell({ children }: PageShellProps) {
-  return <div className="page-shell">{children}</div>;
+interface PageShellProps {
+  children: ReactNode;
+  variant?: "default" | "narrow" | "wide";
+  className?: string;
+}
+
+export function PageShell({
+  children,
+  variant = "default",
+  className = ""
+}: PageShellProps) {
+  const variantClass =
+    variant === "narrow"
+      ? styles.narrow
+      : variant === "wide"
+      ? styles.wide
+      : "";
+
+  return (
+    <div className={`${styles.shell} ${variantClass} ${className}`.trim()}>
+      {children}
+    </div>
+  );
 }

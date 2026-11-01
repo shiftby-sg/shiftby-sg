@@ -40,11 +40,12 @@ Establish a lean, modern design token foundation and component shell for the v2 
 * Provide a clean `<PageShell>` component for standard max-width, container gutters, and ambient background styling.
 
 ## 4. Deliverables
-* [ ] New optimized vector logo in `components/BrandLogo.tsx` / `public/logo/`
-* [ ] Refactored `components/global-header.tsx` with `global-header.module.css`
-* [ ] Refactored `components/global-footer.tsx` with `global-footer.module.css`
-* [ ] Cleaned `app/globals.css` without monolithic `@import` calls
-* [ ] `app/layout.tsx` decoupled from `page-materialization.css`
+* [x] New optimized vector logo in `components/BrandLogo.tsx` / `public/logo/shiftby-mark.svg` (588 bytes)
+* [x] Refactored `components/global-header.tsx` with `global-header.module.css`
+* [x] Refactored `components/global-footer.tsx` with `global-footer.module.css`
+* [x] Modernized `components/page-shell.tsx` with `page-shell.module.css`
+* [x] Updated `lib/site-data.ts` with v2 navigation architecture and primary CTA
+* [ ] Full decommission of `styles/page-materialization.css` (scheduled for WP07 following page migrations)
 
 ## 5. Verification & Acceptance Criteria
 * `npm run build` succeeds without CSS import warnings.

@@ -1,73 +1,118 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import { routeDefinitions, siteTitle } from "@/lib/site-data";
+import { BrandLogo } from "@/components/BrandLogo";
+import { contactCta, primaryNavLinks, siteTitle } from "@/lib/site-data";
+
+import styles from "./global-header.module.css";
 
 export function GlobalHeader() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Close mobile drawer on route navigation
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   return (
-    <header className="site-header">
-      <div className="site-header__inner">
-        <div className="site-header__bar">
-          <Link className="site-mark" href="/">
-            <Image
-              alt=""
-              aria-hidden="true"
-              className="site-mark__logo"
-              height={4000}
-              priority
-              src="/logo/ShiftBy-Logo-4000px.png"
-              width={4000}
-            />
-            {siteTitle}
+    <header className={styles.header}>
+      <div className={styles.inner}>
+        <Link className={styles.brand} href="/" aria-label={`${siteTitle} Home`}>
+          <span className={styles.logoIcon}>
+            <BrandLogo size={26} />
+          </span>
+          <span>{siteTitle}</span>
+        </Link>
+
+        <nav aria-label="Primary" className={styles.nav}>
+          {primaryNavLinks.map((route) => {
+            const isActive =
+              pathname === route.href ||
+              (route.href !== "/" && pathname.startsWith(route.href));
+            return (
+              <Link
+                aria-current={isActive ? "page" : undefined}
+                className={`${styles.navLink} ${isActive ? styles.navLinkActive : ""}`}
+                href={route.href}
+                key={route.href}
+              >
+                {route.label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        <div className={styles.actions}>
+          <Link className={styles.ctaButton} href={contactCta.href}>
+            {contactCta.label}
           </Link>
         </div>
-        <div className="site-nav-shell" data-open={isMenuOpen ? "true" : "false"}>
-          <button
-            aria-controls="primary-navigation"
-            aria-expanded={isMenuOpen}
-            className="site-nav-toggle"
-            onClick={() => setIsMenuOpen((current) => !current)}
-            type="button"
-          >
-            <span className="site-nav-toggle__label">Menu</span>
-            <span aria-hidden="true" className="site-nav-toggle__icon">
-              <span />
-              <span />
-              <span />
-            </span>
-          </button>
-          <button
-            aria-label="Close navigation"
-            className="site-nav-backdrop"
-            onClick={() => setIsMenuOpen(false)}
-            type="button"
-          />
-          <nav
-            aria-label="Primary"
-            className="site-nav"
-            id="primary-navigation"
-          >
-            {routeDefinitions.map((route) => (
+
+        <button
+          aria-controls="mobile-navigation"
+          aria-expanded={isMenuOpen}
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          className={`${styles.menuToggle} ${isMenuOpen ? styles.menuOpen : ""}`}
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          type="button"
+        >
+          <span className={styles.menuIcon}>
+            <span className={styles.menuBar} />
+            <span className={styles.menuBar} />
+            <span className={styles.menuBar} />
+          </span>
+        </button>
+      </div>
+
+      {isMenuOpen ? (
+        <nav
+          aria-label="Mobile Navigation"
+          className={styles.mobileDrawer}
+          id="mobile-navigation"
+        >
+          {primaryNavLinks.map((route) => {
+            const isActive =
+              pathname === route.href ||
+              (route.href !== "/" && pathname.startsWith(route.href));
+            return (
               <Link
-                aria-current={pathname === route.href ? "page" : undefined}
-                className="site-nav__link"
+                aria-current={isActive ? "page" : undefined}
+                className={`${styles.mobileNavLink} ${
+                  isActive ? styles.mobileNavLinkActive : ""
+                }`}
                 href={route.href}
                 key={route.href}
                 onClick={() => setIsMenuOpen(false)}
               >
-                <span>{route.label}</span>
+                {route.label}
               </Link>
-            ))}
-          </nav>
-        </div>
-      </div>
+            );
+          })}
+          <Link
+            className={styles.mobileCta}
+            href={contactCta.href}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {contactCta.label}
+          </Link>
+        </nav>
+      ) : null}
     </header>
   );
 }
