@@ -85,10 +85,10 @@ export default function HomePage() {
               </div>
               <ul className={styles.contrastList}>
                 <li className={`${styles.contrastItem} ${styles.contrastItemSurvives}`}>
-                  ERP ledgers, master data tables, and lakehouse storage
+                  ERP batch logs, supplier records, and lakehouse master data
                 </li>
                 <li className={`${styles.contrastItem} ${styles.contrastItemSurvives}`}>
-                  Compliance registers, audit filings, and signed policies
+                  Compliance registers, audit inspection files, and signed policies
                 </li>
                 <li className={`${styles.contrastItem} ${styles.contrastItemSurvives}`}>
                   Curated vector stores, API schemas, and pipeline logs
@@ -103,13 +103,13 @@ export default function HomePage() {
               </div>
               <ul className={styles.contrastList}>
                 <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
-                  Why a specific transaction structure or trade-off was approved
+                  Why a supplier substitution, material variance, or operational waiver was approved
                 </li>
                 <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
-                  The boundary conditions under which business data remains valid
+                  The unstated regulatory, safety, and operating assumptions under which data remains valid
                 </li>
                 <li className={`${styles.contrastItem} ${styles.contrastItemLost}`}>
-                  Who holds legitimate authority and answerability for the outcome
+                  Who holds legitimate authority and answerability when exceptions or failures occur
                 </li>
               </ul>
             </div>
