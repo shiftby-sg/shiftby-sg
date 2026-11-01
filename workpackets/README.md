@@ -2,7 +2,7 @@
 
 ## 1. Overview & Objective
 
-This plan details the full transition of the ShiftBy.sg website from the v1 prototype/scaffold to the **v2 Architecture & Experience**, incorporating the latest authoritative documentation in [`v2docs/`](../v2docs):
+This master plan governs the full transition of the ShiftBy.sg website from the v1 prototype/scaffold to the **v2 Architecture & Experience**, incorporating the latest authoritative documentation in [`v2docs/`](../v2docs):
 
 * **Doctrine.md**: The foundational proposition: **Enterprise Understanding** ("*preserve, connect, retrieve, apply appropriately, and govern context through change*").
 * **Three Complementary Capabilities**:
@@ -10,10 +10,11 @@ This plan details the full transition of the ShiftBy.sg website from the v1 prot
   2. **Bounded AI** (reduced drift in AI-supported reasoning and execution).
   3. **Human–AI Accountability** (sustained human and organizational answerability).
   *(Note: Adaptive Execution was reclassified as an operating outcome of the three, and Decision Traceability was integrated as an assurance dimension).*
-* **Individual Capability Routes**: Dedicated deep-dive pages for each capability (`/capabilities/[slug]`).
-* **Service Catalog.md**: Complete revamp of `/services` into 7 defined offerings with concrete scopes, "Typical outputs", and clear engagement models.
-* **Resources & Insights Section**: A new content-driven hub (`/resources`) for doctrine essays, executive briefs, and technical guidance.
-* **Technical Debt Elimination**: Eradication of the 6,400-line `page-materialization.css`, modular CSS migration, 2.5 MB logo asset optimization, and unified metadata.
+* **Individual Capability Routes**: Dedicated deep-dive pages for each capability (`/capabilities/[slug]`) linked via a shared capability switcher strip.
+* **Service Catalog.md**: Complete revamp of `/services` into 7 defined offerings with concrete scopes, "Typical outputs", clear engagement models, and query-parameter intent passing to the contact funnel.
+* **Resources & Insights Section**: A new content-driven hub (`/resources`) for doctrine essays, executive briefs, and method explorations (reframing legacy prototypes).
+* **Legacy Route Governance**: Permanent 308 redirect from `/where-shiftby-helps` to `/capabilities`, and reframing `/explorations` into `/resources`.
+* **Technical Debt Elimination**: Eradication of the 6,400-line `page-materialization.css`, modular CSS migration (`.module.css`), 2.5 MB logo asset optimization, and unified metadata.
 
 ---
 
@@ -21,13 +22,13 @@ This plan details the full transition of the ShiftBy.sg website from the v1 prot
 
 | Workpacket ID | Title | Scope | Dependencies | Est. Impact |
 | :--- | :--- | :--- | :--- | :--- |
-| [**WP01**](./WP01-foundation-tokens-assets.md) | **Core Architecture, Design Tokens & Asset Optimization** | Logo replacement, design tokens, modular CSS setup, layout shell | None | P0 / Foundation |
-| [**WP02**](./WP02-homepage-and-doctrine.md) | **Homepage Doctrine & Enterprise Understanding** | Homepage rewrite, 3 capabilities preview, services preview, doctrine mark | WP01 | P1 / Core Experience |
-| [**WP03**](./WP03-three-capabilities-system.md) | **Three Capabilities Hub & Dedicated Routes** | `/capabilities` hub + 3 dedicated sub-pages with structured capability layouts | WP01 | P1 / Architecture |
-| [**WP04**](./WP04-revamped-service-catalog.md) | **Revamped Service Catalog & Engagement Model** | Rebuild `/services` with 7 offerings, typical outputs, and engagement process | WP01, WP03 | P1 / Conversion |
-| [**WP05**](./WP05-resources-and-insights-engine.md) | **Resources & Insights Content Engine** | `/resources` hub, `/resources/[slug]` dynamic route, MDX/Markdown loader | WP01 | P2 / Authority |
-| [**WP06**](./WP06-supporting-routes-and-contact-funnel.md) | **Supporting Routes & Contact Funnel Optimization** | `/about`, `/contact` (with "What happens after contact"), `/perspective`, `/ai-policy` | WP01, WP04 | P2 / Trust & Funnel |
-| [**WP07**](./WP07-seo-metadata-and-cleanup.md) | **SEO Harmonization, CSS Decommissioning & Verification** | Metadata unification, Schema.org normalization, legacy CSS pruning, validation | All WPs | P2 / Quality Gate |
+| [**WP01**](./WP01-foundation-tokens-assets.md) | **Core Architecture, Design Tokens & Asset Optimization** | Logo replacement (vector SVG/WebP), design tokens, modular CSS setup, layout shell | None | P0 / Foundation |
+| [**WP02**](./WP02-homepage-and-doctrine.md) | **Homepage Doctrine & Enterprise Understanding** | Homepage rewrite, 3 capabilities preview, persona buying cues, services preview, doctrine mark | WP01 | P1 / Core Experience |
+| [**WP03**](./WP03-three-capabilities-system.md) | **Three Capabilities Hub & Dedicated Routes** | `/capabilities` hub + 3 dedicated sub-pages, capability switcher strip, legacy route redirect | WP01 | P1 / Architecture |
+| [**WP04**](./WP04-revamped-service-catalog.md) | **Revamped Service Catalog & Engagement Model** | Rebuild `/services` with 7 offerings, typical outputs, engagement process, and `?service=` intent passing | WP01, WP03 | P1 / Conversion |
+| [**WP05**](./WP05-resources-and-insights-engine.md) | **Resources & Insights Content Engine** | `/resources` hub, `/resources/[slug]` dynamic route, React 19-safe parser, reframe explorations | WP01 | P2 / Authority |
+| [**WP06**](./WP06-supporting-routes-and-contact-funnel.md) | **Supporting Routes & Contact Funnel Optimization** | `/about`, `/contact` (with intent listener & timeline), `/perspective`, `/ai-policy`, external link security | WP01, WP04 | P2 / Trust & Funnel |
+| [**WP07**](./WP07-seo-metadata-and-cleanup.md) | **SEO Harmonization, CSS Decommissioning & Verification** | Metadata unification, Schema.org normalization, legacy CSS pruning, validation suite manifest update | All WPs | P2 / Quality Gate |
 
 ---
 
@@ -59,6 +60,7 @@ flowchart TD
    * All OpenGraph images, titles, descriptions, and canonical URLs must be verified.
 3. **Content Authority**:
    * All doctrinal definitions, capability descriptions, and service scope offerings must cite and maintain fidelity to `v2docs/`.
-4. **Performance Budgets**:
-   * All images must be optimized (SVG for vector marks, WebP/AVIF for photos, sub-100KB total page weight for critical path).
+4. **Performance & Asset Budgets**:
+   * All vector marks must be SVGs; images must be optimized WebP/AVIF (< 25 KB critical asset budget).
+   * React 19 compatibility must be preserved across all markdown and content utilities.
    * Lighthouse targets: Performance >= 90, Accessibility >= 95, Best Practices >= 95, SEO >= 95.
