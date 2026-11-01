@@ -103,7 +103,7 @@ export default function ServicesPage() {
                 "Quality Evaluation: retrieval coverage, answer grounding, attribution, conflicting source resolution, and unsupported-answer handling"
               ]}
               slug="rag-retrieval-assessment"
-              targetNeed="For organizations preparing a retrieval use case or investigating unsuitable, conflicting, or hallucinated search and RAG results."
+              targetNeed="For organizations preparing retrieval systems or investigating conflicting, ungrounded, or hallucinated RAG results."
               title="RAG & Enterprise Retrieval Assessment"
               typicalOutputs={[
                 "Readiness findings and source suitability scorecard",
@@ -267,7 +267,8 @@ export default function ServicesPage() {
             typicalOutputs={[
               "Adversarial test findings and attack path evidence",
               "Trust boundary and control gap analysis",
-              "Remediation priorities and retest verification criteria"
+              "Remediation priorities and retest verification criteria",
+              "Defensible threat model and risk mitigation roadmap"
             ]}
           />
 
@@ -275,9 +276,9 @@ export default function ServicesPage() {
             capabilityBadge="Evaluation & Reliability"
             note="Claims of reduced drift require a documented baseline comparator and comparable empirical evidence. Valid output formatting alone does not demonstrate reliability."
             scopeOptions={[
-              "Empirical Quality Evaluation: evaluate defined tasks or workflows against agreed criteria under normal, exceptional, and changing conditions",
-              "Behavioral Drift Testing: measure task performance, semantic fidelity, grounding, boundary adherence, and regression after changes",
-              "Remediation Verification & Retesting: independently verify whether previously identified quality, security, or control findings have been resolved"
+              "Empirical Quality Evaluation: evaluate defined tasks and workflows against agreed criteria under normal and exceptional conditions",
+              "Behavioral Drift Testing: measure task performance, semantic fidelity, grounding, boundary adherence, and regressions",
+              "Remediation Verification & Retesting: independently verify whether previously identified quality, security, or control findings are resolved"
             ]}
             slug="ai-evaluation-reliability"
             targetNeed="For organizations seeking measured, empirical evidence that an AI task, agent, or workflow reliably performs its intended responsibility."
