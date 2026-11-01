@@ -11,16 +11,16 @@ export const metadata: Metadata = getPageMetadata(
 
 const relatedServices = [
   {
-    title: "AI Knowledge and Context Architecture",
+    title: "AI Knowledge & Context Architecture",
     description:
       "Assess or design how defined knowledge domains preserve meaning, relationships, provenance, and historical state across transitions.",
-    href: "/services?service=ai-knowledge-context-architecture"
+    href: "/services#ai-knowledge-context-architecture"
   },
   {
-    title: "RAG and Enterprise Retrieval Assessment",
+    title: "RAG & Enterprise Retrieval Assessment",
     description:
       "Evaluate source suitability, data freshness, permissions, and answer grounding to prevent corrupted or stale AI responses.",
-    href: "/services?service=rag-retrieval-assessment"
+    href: "/services#rag-retrieval-assessment"
   }
 ];
 

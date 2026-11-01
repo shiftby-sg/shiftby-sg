@@ -9,16 +9,16 @@ export const metadata: Metadata = getPageMetadata(pageMetadataEntries.boundedAi)
 
 const relatedServices = [
   {
-    title: "AI Task, Agent and Workflow Advisory",
+    title: "AI Task, Agent & Workflow Advisory",
     description:
       "Design explicit input/output boundaries, reasoning guidance, tool permissions, validation gates, and stopping conditions for tasks and agents.",
-    href: "/services?service=ai-task-agent-workflow-advisory"
+    href: "/services#ai-task-agent-workflow-advisory"
   },
   {
-    title: "AI Evaluation and Reliability",
+    title: "AI Evaluation & Reliability Testing",
     description:
       "Measure task performance, semantic fidelity, boundary adherence, and regression under exceptional or changing operational conditions.",
-    href: "/services?service=ai-evaluation-reliability"
+    href: "/services#ai-evaluation-reliability"
   }
 ];
 

@@ -11,16 +11,16 @@ export const metadata: Metadata = getPageMetadata(
 
 const relatedServices = [
   {
-    title: "AI Governance and Human Oversight",
+    title: "AI Governance & Human-Oversight Architecture",
     description:
       "Assess or design decision-rights maps, legitimate authority, review conditions, and practical intervention capabilities for AI-supported work.",
-    href: "/services?service=ai-governance-human-oversight"
+    href: "/services#ai-governance-human-oversight"
   },
   {
-    title: "AI Assurance and Evidence Review",
+    title: "AI Assurance & Evidence Review",
     description:
       "Review the connections among requirements, controls, test evidence, decisions, and outcomes to support defensible reliance decisions.",
-    href: "/services?service=ai-assurance-evidence-review"
+    href: "/services#ai-assurance-evidence-review"
   }
 ];
 
