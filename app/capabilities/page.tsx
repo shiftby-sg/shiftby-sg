@@ -70,7 +70,7 @@ export default function CapabilitiesHubPage() {
                 <span className={styles.capabilityBadge}>Knowledge Continuity</span>
                 <h3 className={styles.capabilityName}>Organizational Memory</h3>
                 <p className={styles.capabilityContribution}>
-                  Continuity of organizational understanding beyond individual memory.
+                  Continuity of understanding beyond individual memory.
                 </p>
               </div>
               <p className={styles.capabilityBody}>
