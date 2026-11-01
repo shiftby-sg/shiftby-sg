@@ -362,6 +362,9 @@
 .contactDetail a {
   color: var(--contact-accent);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
 }
 
 .contactDetail a:hover {
