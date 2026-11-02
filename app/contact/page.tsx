@@ -1,3 +1,9 @@
+import { Suspense } from "react";
+import {
+  ContactIntentBanner,
+  ContactTopicGrid
+} from "@/components/contact/ContactIntent";
+import { conversationTopics } from "@/content/contact-topics";
 import { pageMetadataEntries } from "@/content/discoverability";
 import { getPageMetadata } from "@/lib/metadata";
 
@@ -5,70 +11,23 @@ import styles from "./page.module.css";
 
 export const metadata = getPageMetadata(pageMetadataEntries.contact);
 
-const SERVICE_TITLES: Record<string, string> = {
-  "ai-knowledge-context-architecture": "AI Knowledge & Context Architecture",
-  "rag-retrieval-assessment": "RAG & Enterprise Retrieval Assessment",
-  "ai-task-agent-workflow-advisory": "AI Task, Agent & Workflow Advisory",
-  "ai-governance-human-oversight": "AI Governance & Human-Oversight Architecture",
-  "ai-assurance-evidence-review": "AI Assurance & Evidence Review",
-  "ai-security-red-teaming": "AI Security Assessment & Red Teaming",
-  "ai-evaluation-reliability": "AI Evaluation & Reliability Testing"
-};
-
-const CAPABILITY_TITLES: Record<string, string> = {
-  "organizational-memory": "Organizational Memory",
-  "bounded-ai": "Bounded AI",
-  "human-ai-accountability": "Human–AI Accountability"
-};
-
-const conversationTopics = [
-  { name: "AI Knowledge & Context Architecture", serviceSlug: "ai-knowledge-context-architecture" },
-  { name: "RAG & Enterprise Retrieval Assessment", serviceSlug: "rag-retrieval-assessment" },
-  { name: "AI Task, Agent & Workflow Advisory", serviceSlug: "ai-task-agent-workflow-advisory" },
-  { name: "AI Governance & Human-Oversight Architecture", serviceSlug: "ai-governance-human-oversight" },
-  { name: "AI Assurance & Evidence Review", serviceSlug: "ai-assurance-evidence-review" },
-  { name: "AI Security Assessment & Red Teaming", serviceSlug: "ai-security-red-teaming" },
-  { name: "AI Evaluation & Reliability Testing", serviceSlug: "ai-evaluation-reliability" },
-  { name: "Other Strategic & Operational Challenges", serviceSlug: null }
-];
-
-interface ContactPageProps {
-  searchParams?: Promise<{
-    service?: string;
-    capability?: string;
-  }>;
+function StaticTopicFallback() {
+  return (
+    <ul className={styles.topicGrid} aria-label="Useful conversation topics">
+      {conversationTopics.map((topic) => (
+        <li key={topic.name}>{topic.name}</li>
+      ))}
+    </ul>
+  );
 }
 
-export default async function ContactPage({ searchParams }: ContactPageProps) {
-  const resolvedParams = searchParams ? await searchParams : {};
-  const serviceSlug = resolvedParams.service;
-  const capabilitySlug = resolvedParams.capability;
-
-  const matchedServiceTitle = serviceSlug ? SERVICE_TITLES[serviceSlug] : undefined;
-  const matchedCapabilityTitle = capabilitySlug ? CAPABILITY_TITLES[capabilitySlug] : undefined;
-
-  const activeIntent = matchedServiceTitle
-    ? { title: matchedServiceTitle, type: "service" }
-    : matchedCapabilityTitle
-      ? { title: matchedCapabilityTitle, type: "capability" }
-      : null;
-
+export default function ContactPage() {
   return (
     <div className={styles.page}>
       <section className={styles.hero} aria-labelledby="contact-title">
-        {activeIntent && (
-          <div className={styles.intentBanner} role="status" aria-live="polite">
-            <span className={styles.intentBadge}>Selected Focus Area</span>
-            <div className={styles.intentContent}>
-              <p className={styles.intentTitle}>{activeIntent.title}</p>
-              <p className={styles.intentSubtitle}>
-                {activeIntent.type === "service"
-                  ? "We have noted your interest in this service offering. Our introductory scoping conversation will be directly tailored to your operational boundaries and deliverable requirements."
-                  : "We have noted your interest in this strategic capability. Our discussion will focus on practical paths toward establishing this assurance discipline in your organization."}
-              </p>
-            </div>
-          </div>
-        )}
+        <Suspense fallback={null}>
+          <ContactIntentBanner />
+        </Suspense>
 
         <div className={styles.heroCopy}>
           <span className={styles.kicker}>Contact &amp; Scoping</span>
@@ -168,29 +127,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               Conversations typically anchor around areas where execution speed
               has outpaced understanding or governance:
             </p>
-            <ul className={styles.topicGrid} aria-label="Useful conversation topics">
-              {conversationTopics.map((topic) => {
-                const isSelected =
-                  (serviceSlug && topic.serviceSlug === serviceSlug) ||
-                  (!serviceSlug &&
-                    capabilitySlug &&
-                    ((capabilitySlug === "organizational-memory" &&
-                      topic.serviceSlug === "ai-knowledge-context-architecture") ||
-                      (capabilitySlug === "bounded-ai" &&
-                        topic.serviceSlug === "ai-task-agent-workflow-advisory") ||
-                      (capabilitySlug === "human-ai-accountability" &&
-                        topic.serviceSlug === "ai-governance-human-oversight")));
-
-                return (
-                  <li
-                    key={topic.name}
-                    className={isSelected ? styles.topicSelected : undefined}
-                  >
-                    {topic.name} {isSelected && " ✓"}
-                  </li>
-                );
-              })}
-            </ul>
+            <Suspense fallback={<StaticTopicFallback />}>
+              <ContactTopicGrid />
+            </Suspense>
           </div>
         </div>
       </section>
@@ -255,7 +194,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  linkedin.com/in/anandakrishnam &rarr;
+                  Connect on LinkedIn &rarr;
                 </a>
               </p>
             </article>
