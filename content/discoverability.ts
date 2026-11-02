@@ -57,7 +57,7 @@ export const getAbsoluteUrl = (path: string): string => {
 export const pageMetadataEntries = {
   home: {
     title: "Home",
-    seoTitle: "ShiftBy | Executive Advisory Practice for Distributed Execution & AI",
+    seoTitle: "ShiftBy | Executive Advisory for Distributed Execution & AI",
     path: "/",
     description:
       "Execution changes. Understanding preserves confidence as organizations work across people, systems, suppliers, automation, and AI.",
@@ -72,14 +72,14 @@ export const pageMetadataEntries = {
   },
   organizationalMemory: {
     title: "Organizational Memory",
-    seoTitle: "Organizational Memory | Continuity Beyond Individual Memory | ShiftBy",
+    seoTitle: "Organizational Memory | Context Continuity | ShiftBy",
     path: "/capabilities/organizational-memory",
     description:
       "Preserving relevant knowledge, context, relationships, provenance, prior state, uncertainty, and learning so understanding survives change."
   },
   boundedAi: {
     title: "Bounded AI",
-    seoTitle: "Bounded AI | Drift Reduction in AI Reasoning & Workflows | ShiftBy",
+    seoTitle: "Bounded AI | Drift Reduction in AI Workflows | ShiftBy",
     path: "/capabilities/bounded-ai",
     description:
       "Reducing drift in AI tasks, agents, and coordinated workflows by establishing explicit boundaries for inputs, reasoning responsibilities, flow, and resource use."
@@ -100,7 +100,7 @@ export const pageMetadataEntries = {
   },
   resources: {
     title: "Resources & Insights",
-    seoTitle: "ShiftBy Resources & Insights | Doctrine Essays, Briefs & Research",
+    seoTitle: "ShiftBy Resources | Doctrine Essays, Briefs & Research",
     path: "/resources",
     description:
       "Essays, executive briefs, and technical guidance on preserving understanding, reducing AI drift, and sustaining human accountability across distributed execution."
@@ -124,7 +124,7 @@ export const pageMetadataEntries = {
     seoTitle: "Governing Doctrine | ShiftBy Advisory Singapore",
     path: "/doctrine",
     description:
-      "The foundational doctrine of ShiftBy: Execution changes. Understanding preserves confidence. Codified principles for enterprise memory, bounded AI, and human answerability."
+      "ShiftBy Governing Doctrine: Execution changes. Understanding preserves confidence. Codified principles for enterprise memory, bounded AI, and human answerability."
   },
   contact: {
     title: "Contact",

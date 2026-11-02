@@ -43,7 +43,7 @@ export const resourceArticles: ResourceArticle[] = [
       credential: "IAPP Certified AI Governance Professional (AIGP)"
     },
     excerpt:
-      "When key architects transition or AI accelerates analysis, documents remain while rationale, assumptions, and dependencies fade. Confidence comes from preserving understanding.",
+      "When architects transition or AI accelerates analysis, artifacts remain while rationale and dependencies fade. Confidence comes from preserving understanding.",
     executiveSummary: [
       "Information records what happened; understanding explains why it happened, what supported it, who authorized it, and what has changed.",
       "Preserving artifacts alone (code, tickets, wikis) fails because operational context, rejected alternatives, and edge-case exceptions are lost.",
@@ -90,7 +90,7 @@ export const resourceArticles: ResourceArticle[] = [
       credential: "IAPP Certified AI Governance Professional (AIGP)"
     },
     excerpt:
-      "General domain knowledge does not establish an enterprise's own operating rules. Without explicit boundaries, AI substitutes general plausibility for enterprise suitability.",
+      "Without explicit boundaries, AI substitutes general plausibility for enterprise suitability. How to reduce execution drift across tasks, agents, and workflows.",
     executiveSummary: [
       "AI execution drift is an unintended departure in reasoning or flow progression, distinct from statistical model drift.",
       "LLMs naturally substitute general plausibility for missing enterprise context, generating syntactically valid answers that violate business rules.",
@@ -140,7 +140,7 @@ export const resourceArticles: ResourceArticle[] = [
       credential: "IAPP Certified AI Governance Professional (AIGP)"
     },
     excerpt:
-      "A relevant citation does not prove an answer is correct. Examining source readiness, permission boundaries, and conflicting-source resolution in enterprise retrieval.",
+      "A citation does not prove an answer is correct. Examining source readiness, permission boundaries, and conflicting sources in enterprise retrieval.",
     executiveSummary: [
       "Retrieval quality (relevance, coverage) and answer quality (grounding, attribution) are fundamentally distinct dimensions.",
       "Most RAG failures stem from uncurated source readiness: stale documents, conflicting policies, and missing permission scopes.",

@@ -67,8 +67,36 @@ export default async function ResourceArticlePage({ params }: PageProps) {
     notFound();
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? fallbackSiteUrl;
+  const pageUrl = `${siteUrl}/resources/${article.slug}`;
+
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.excerpt,
+    datePublished: article.publishDate,
+    author: {
+      "@type": "Person",
+      name: article.author.name,
+      jobTitle: article.author.role
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ShiftBy",
+      url: siteUrl
+    },
+    mainEntityOfPage: pageUrl
+  };
+
   return (
     <div className={styles.articleWrapper}>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleStructuredData)
+        }}
+        type="application/ld+json"
+      />
       <article className={styles.container}>
         {/* Back Link */}
         <Link className={styles.backLink} href="/resources">
