@@ -28,7 +28,7 @@ export default function DoctrinePage() {
       {/* Hero Section */}
       <section className={styles.heroSection} aria-labelledby="doctrine-hero-title">
         <div className={styles.heroStack}>
-          <span className={styles.kicker}>ShiftBy Foundational Codex</span>
+          <span className={styles.kicker}>Foundational Doctrine</span>
           <h1 id="doctrine-hero-title">ShiftBy Governing Doctrine</h1>
           <div className={styles.heroLead}>
             <span>Execution changes.</span>
@@ -60,11 +60,11 @@ export default function DoctrinePage() {
         </div>
       </section>
 
-      {/* Main Codex Content */}
-      <div className={styles.codexLayout}>
+      {/* Main Document Content */}
+      <div className={styles.layout}>
         {/* Sticky Table of Contents Sidebar */}
-        <aside className={styles.outlineSidebar} aria-label="Codex Table of Contents">
-          <div className={styles.outlineTitle}>Codex Sections</div>
+        <aside className={styles.outlineSidebar} aria-label="Doctrine Table of Contents">
+          <div className={styles.outlineTitle}>Sections</div>
           <nav>
             <ul className={styles.outlineList}>
               {outlineItems.map((item) => (

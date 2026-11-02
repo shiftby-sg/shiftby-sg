@@ -138,8 +138,8 @@
   letter-spacing: 0.05em;
 }
 
-/* 2. Main Codex Layout: Sidebar + Document Stream */
-.codexLayout {
+/* 2. Main Layout: Sidebar + Document Stream */
+.layout {
   width: min(100%, var(--doc-max));
   margin: 0 auto;
   padding-inline: var(--doc-gutter);
@@ -454,7 +454,7 @@
 
 /* Responsive Breakpoints */
 @media (max-width: 1024px) {
-  .codexLayout {
+  .layout {
     grid-template-columns: 1fr;
   }
 
