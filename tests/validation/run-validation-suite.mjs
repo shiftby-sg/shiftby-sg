@@ -30,7 +30,8 @@ const routes = [
   { page: "About", slug: "about", route: "/about", file: "app/about/page.tsx", css: "app/about/about.module.css", keyText: "About" },
   { page: "Perspective", slug: "perspective", route: "/perspective", file: "app/perspective/page.tsx", css: "app/perspective/perspective.module.css", keyText: "Perspective" },
   { page: "Contact", slug: "contact", route: "/contact", file: "app/contact/page.tsx", css: "app/contact/page.module.css", keyText: "Contact" },
-  { page: "AI Policy", slug: "ai-policy", route: "/ai-policy", file: "app/ai-policy/page.tsx", css: "app/ai-policy/ai-policy.module.css", keyText: "AI Policy" }
+  { page: "AI Policy", slug: "ai-policy", route: "/ai-policy", file: "app/ai-policy/page.tsx", css: "app/ai-policy/ai-policy.module.css", keyText: "AI Policy" },
+  { page: "Doctrine", slug: "doctrine", route: "/doctrine", file: "app/doctrine/page.tsx", css: "app/doctrine/doctrine.module.css", keyText: "Governing Doctrine" }
 ];
 
 const viewports = [

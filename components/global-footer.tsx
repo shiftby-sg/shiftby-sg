@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { BrandLogo } from "@/components/BrandLogo";
-import { siteDescription, siteTitle } from "@/lib/site-data";
+import { siteDescription, siteTagline, siteTitle } from "@/lib/site-data";
 
 import styles from "./global-footer.module.css";
 
@@ -60,13 +60,18 @@ export function GlobalFooter() {
                 </Link>
               </li>
               <li>
-                <Link className={styles.link} href="/contact">
-                  Contact
+                <Link className={styles.link} href="/doctrine">
+                  Governing Doctrine
                 </Link>
               </li>
               <li>
                 <Link className={styles.link} href="/ai-policy">
                   AI Policy
+                </Link>
+              </li>
+              <li>
+                <Link className={styles.link} href="/contact">
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -119,8 +124,13 @@ export function GlobalFooter() {
       </div>
 
       <div className={styles.legal}>
-        <p>© 2026 ShiftBy Pte. Ltd., Singapore. All rights reserved. UEN: 202426424E</p>
-        <p>Enterprise Advisory for Distributed Execution & AI</p>
+        <div className={styles.doctrineStatement}>
+          &ldquo;{siteTagline}&rdquo;
+        </div>
+        <div className={styles.legalDetails}>
+          <p>© 2026 ShiftBy Pte. Ltd., Singapore. All rights reserved. UEN: 202426424E</p>
+          <p>Enterprise Advisory for Distributed Execution &amp; AI</p>
+        </div>
       </div>
     </footer>
   );

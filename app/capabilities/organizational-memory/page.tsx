@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 import { CapabilityDetailLayout } from "@/components/capabilities/CapabilityDetailLayout";
@@ -31,7 +32,14 @@ export default function OrganizationalMemoryPage() {
       ctaTitle="Preserve the context that makes your enterprise knowledge usable"
       currentSlug="organizational-memory"
       formalQuote="Organizational Memory is the organizational capability to preserve, connect, recover, distinguish, and responsibly reuse significant knowledge, context, relationships, provenance, prior state, uncertainty, and learning so continuity of organizational understanding can be maintained across time and change."
-      formalQuoteTag="ShiftBy Capability Definition: Organizational Memory"
+      formalQuoteTag={
+        <>
+          From the{" "}
+          <Link href="/doctrine#the-three-capabilities">
+            ShiftBy Governing Doctrine &rarr;
+          </Link>
+        </>
+      }
       kicker="Capability / Knowledge Continuity"
       relatedServices={relatedServices}
       subtitle="Organizations preserve documents and repositories, yet the rationale that makes those records usable is often distributed across people, informal conversations, prior states, and unrecorded exceptions. ShiftBy helps organizations sustain continuity of understanding beyond individual memory."

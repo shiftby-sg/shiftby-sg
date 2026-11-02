@@ -86,12 +86,31 @@
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-line);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   gap: 1rem;
   font-size: 0.8125rem;
   color: var(--color-ink-soft);
+}
+
+.doctrineStatement {
+  font-family: var(--font-display);
+  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+}
+
+.legalDetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  width: 100%;
+}
+
+.legalDetails p {
+  margin: 0;
 }
 
 @media (max-width: 768px) {

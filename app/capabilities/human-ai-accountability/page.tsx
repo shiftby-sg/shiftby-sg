@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 import { CapabilityDetailLayout } from "@/components/capabilities/CapabilityDetailLayout";
@@ -31,7 +32,14 @@ export default function HumanAiAccountabilityPage() {
       ctaTitle="Sustain human and organizational answerability throughout AI use"
       currentSlug="human-ai-accountability"
       formalQuote="Human–AI Accountability is the organizational capability to assign, preserve, exercise, evidence, review, challenge, and adapt explicit human and organizational responsibility and authority throughout AI-enabled work, across people, systems, suppliers, decisions, policies, controls, lifecycle changes, incidents, and outcomes."
-      formalQuoteTag="ShiftBy Capability Definition: Human–AI Accountability"
+      formalQuoteTag={
+        <>
+          From the{" "}
+          <Link href="/doctrine#the-three-capabilities">
+            ShiftBy Governing Doctrine &rarr;
+          </Link>
+        </>
+      }
       kicker="Capability / Governance & Oversight"
       relatedServices={relatedServices}
       subtitle="AI participation can obscure who made a decision, what was reviewed, what evidence supported action, and who remains answerable. ShiftBy ensures that human and organizational responsibility remains explicit, legitimate, and evidenced throughout AI-enabled execution."

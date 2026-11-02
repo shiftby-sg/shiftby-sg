@@ -70,6 +70,17 @@
   margin: 0;
 }
 
+.formalQuoteTag a {
+  color: var(--color-ink-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.formalQuoteTag a:hover {
+  color: var(--color-accent);
+}
+
 .heroSubtitle {
   font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
   line-height: 1.6;

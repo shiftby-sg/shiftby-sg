@@ -119,6 +119,13 @@ export const pageMetadataEntries = {
     description:
       "The ShiftBy perspective on preserving understanding as execution changes across people, systems, suppliers, automation, and AI."
   },
+  doctrine: {
+    title: "Governing Doctrine",
+    seoTitle: "Governing Doctrine | ShiftBy Advisory Singapore",
+    path: "/doctrine",
+    description:
+      "The foundational doctrine of ShiftBy: Execution changes. Understanding preserves confidence. Codified principles for enterprise memory, bounded AI, and human answerability."
+  },
   contact: {
     title: "Contact",
     seoTitle: "Contact ShiftBy | Start a Conversation",
@@ -164,6 +171,7 @@ export const llmsTextLines = [
   "- /resources: Doctrine essays, executive briefs, and technical research investigations.",
   "- /about: Origin of the advisory practice and founder credentials (Ananda Krishna Marri, AIGP).",
   "- /perspective: Strategic doctrine on why understanding preserves confidence.",
+  "- /doctrine: The foundational 11-clause governing doctrine of ShiftBy: execution changes, understanding preserves confidence.",
   "- /contact: 3-step conversation timeline and direct advisory contact channels.",
   "- /ai-policy: Governance doctrine, bounded discretion, and non-delegable human responsibility.",
   "",

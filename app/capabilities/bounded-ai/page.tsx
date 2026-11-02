@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 import { CapabilityDetailLayout } from "@/components/capabilities/CapabilityDetailLayout";
@@ -29,7 +30,14 @@ export default function BoundedAiPage() {
       ctaTitle="Keep AI reasoning and execution aligned with intended purpose"
       currentSlug="bounded-ai"
       formalQuote="Bounded AI is the organizational capability to reduce drift in AI tasks, AI agents, and coordinated workflows by establishing and maintaining explicit boundaries for their inputs, reasoning responsibilities, execution flow, outputs, and resource use."
-      formalQuoteTag="ShiftBy Capability Definition: Bounded AI"
+      formalQuoteTag={
+        <>
+          From the{" "}
+          <Link href="/doctrine#the-three-capabilities">
+            ShiftBy Governing Doctrine &rarr;
+          </Link>
+        </>
+      }
       kicker="Capability / Alignment & Drift Reduction"
       relatedServices={relatedServices}
       subtitle="Enterprises introduce AI tasks and agents into processes that carry business requirements and legal obligations. General domain knowledge does not establish an enterprise’s own rules, definitions, and operating state. ShiftBy helps organizations retain control as execution passes across people, systems, and AI boundaries."

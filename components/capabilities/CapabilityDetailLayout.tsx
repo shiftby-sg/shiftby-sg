@@ -14,7 +14,7 @@ interface CapabilityDetailLayoutProps {
   kicker: string;
   title: string;
   formalQuote: string;
-  formalQuoteTag?: string;
+  formalQuoteTag?: ReactNode;
   subtitle: string;
   currentSlug: "organizational-memory" | "bounded-ai" | "human-ai-accountability";
   children: ReactNode;
