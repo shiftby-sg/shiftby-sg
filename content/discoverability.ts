@@ -4,7 +4,7 @@ export const discoverabilityTopics = [
   "Enterprise Understanding",
   "Organizational Memory",
   "Bounded AI",
-  "Human-AI Accountability",
+  "Human–AI Accountability",
   "AI Governance",
   "AI Assurance & Red Teaming",
   "RAG Retrieval Verification",
@@ -65,7 +65,7 @@ export const pageMetadataEntries = {
   },
   capabilities: {
     title: "Capabilities",
-    seoTitle: "Three Complementary Capabilities for Enterprise Understanding | ShiftBy",
+    seoTitle: "Enterprise Understanding Capabilities | ShiftBy",
     path: "/capabilities",
     description:
       "ShiftBy practices three complementary capabilities to enable Enterprise Understanding: Organizational Memory, Bounded AI, and Human–AI Accountability."
@@ -86,14 +86,14 @@ export const pageMetadataEntries = {
   },
   humanAiAccountability: {
     title: "Human–AI Accountability",
-    seoTitle: "Human–AI Accountability | Sustained Answerability & Authority | ShiftBy",
+    seoTitle: "Human–AI Accountability | Sustained Answerability | ShiftBy",
     path: "/capabilities/human-ai-accountability",
     description:
       "Sustaining human and organizational answerability for AI-enabled work through explicit responsibility, legitimate authority, and meaningful oversight."
   },
   services: {
     title: "Services",
-    seoTitle: "ShiftBy Service Catalog | Enterprise Advisory, Boundary Design & AI Assurance",
+    seoTitle: "ShiftBy Service Catalog | Enterprise Advisory & AI Assurance",
     path: "/services",
     description:
       "Defined advisory, assessment, control design, red teaming, and evaluation services across Organizational Memory, Bounded AI, and Human–AI Accountability."
