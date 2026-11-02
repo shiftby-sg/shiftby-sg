@@ -45,13 +45,14 @@ export default function AboutPage() {
       <section className={styles.quietBand} aria-labelledby="origin-title">
         <div className={styles.section}>
           <div className={styles.proseStack}>
-            <span className={styles.kicker}>Observation Across Scale</span>
-            <h2 id="origin-title">A pattern observed across disparate environments.</h2>
+            <span className={styles.kicker}>Practice Origin &amp; Scale</span>
+            <h2 id="origin-title">A pattern observed across decades of enterprise scale.</h2>
             <p>
               The observation did not emerge in the abstract. It arose from direct,
               cross-disciplinary leadership spanning enterprise architecture,
               cybersecurity investigations, operational resilience, and complex
-              digital transformations across SAP, Johnson &amp; Johnson, and Kenvue in APAC.
+              transformations across Fortune-scale technology, healthcare, and
+              consumer enterprises in APAC.
             </p>
           </div>
 
@@ -65,7 +66,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.proseStack}>
               <p>
-                &ldquo;Across global enterprise landscapes, technologies changed, operating models
+                &ldquo;Across global enterprise landscapes, technologies cycled, operating models
                 restructured, and regulatory pressures intensified. Yet the same core questions
                 consistently recurred:
               </p>
@@ -102,7 +103,7 @@ export default function AboutPage() {
       {/* 3. AI and Drift Amplification */}
       <section className={styles.section} aria-labelledby="ai-amplification-title">
         <div className={styles.proseStack}>
-          <span className={styles.kicker}>The Impact of AI</span>
+          <span className={styles.kicker}>The Catalyst: Autonomous AI</span>
           <h2 id="ai-amplification-title">AI did not create the challenge. AI makes it urgent.</h2>
           <p className={styles.lead}>
             When humans execute tasks slowly, tacit context and verbal alignment
@@ -126,7 +127,7 @@ export default function AboutPage() {
       <section className={styles.quietBand} aria-labelledby="capabilities-title">
         <div className={styles.section}>
           <div className={styles.proseStack}>
-            <span className={styles.kicker}>The Three Capabilities</span>
+            <span className={styles.kicker}>Codified Methodology</span>
             <h2 id="capabilities-title">How ShiftBy addresses the challenge.</h2>
             <p>
               ShiftBy establishes three interlocking capabilities designed to ensure that
@@ -192,7 +193,7 @@ export default function AboutPage() {
       {/* 5. Conversion CTA */}
       <section className={styles.ctaBand} aria-labelledby="about-cta-title">
         <div className={styles.ctaInner}>
-          <span className={styles.kicker}>Begin Here</span>
+          <span className={styles.kicker}>Next Step</span>
           <h2 id="about-cta-title">Start with the question that matters most.</h2>
           <p style={{ maxWidth: "700px" }}>
             If your organization is navigating AI adoption, agentic workflow scaling,
