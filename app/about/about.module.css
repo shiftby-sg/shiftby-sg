@@ -205,8 +205,13 @@
   border-radius: 12px;
   padding: clamp(20px, 2.6vw, 28px);
   background: var(--about-surface);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
+}
+
+.capabilityCard .kicker {
+  margin-bottom: 0;
 }
 
 .capabilityCard h3 {
@@ -216,6 +221,21 @@
 .capabilityCard p {
   font-size: clamp(14px, 1.15vw, 16px);
   line-height: 1.5;
+}
+
+@media (min-width: 56rem) {
+  .capabilityCard h3 {
+    min-height: 3.5rem;
+  }
+
+  .capabilityCard p {
+    min-height: 10.5rem;
+  }
+
+  .capabilityCard .cardLink {
+    min-height: 2.75rem;
+    align-items: flex-end;
+  }
 }
 
 .cardLink {
